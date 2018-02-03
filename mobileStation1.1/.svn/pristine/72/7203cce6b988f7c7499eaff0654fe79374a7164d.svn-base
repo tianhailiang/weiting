@@ -1,0 +1,115 @@
+/*请求数据接口方法*/
+
+/*清单首页数据接口 start*/
+// 获取筛选城市列表
+var getCityInfo = function (param, async, succfun) {
+    var testurl = "http://127.0.0.1:8080/testdata/account_list_city.json";
+    var useurl = config.getUrl() + "getDataCategoryCity";
+    $.ajax({
+        type: "GET",
+        url: testurl,
+        dataType: "JSON",
+        data: param,
+        async: true,
+        success: function (data, status) {
+            succfun(data);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+
+};
+
+//获取消息通知
+var getNoticeInfo = function (param, async, succfun) {
+    var testurl = "http://127.0.0.1:8080/testdata/notice_number.json";
+    var useurl = config.getUrl() + "getUserMsgNoticeNumber";
+    $.ajax({
+        type: "GET",
+        url: testurl,
+        dataType: "JSON",
+        data: param,
+        async: true,
+        success: function (data, status) {
+            succfun(data);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+};
+// 获取清单首页热门清单(前两个)
+var getHotItemInfo = function (param, async, succfun) {
+    var testurl = "http://127.0.0.1:8080/testdata/hot_item.json";
+    var useurl = config.getUrl() + "getHotDetailedList";
+    $.ajax({
+        type: "GET",
+        url: testurl,
+        dataType: "JSON",
+        data: param,
+        async: true,
+        success: function (data, status) {
+            succfun(data);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+};
+// 获取所有热门清单列表
+var getAllHotItemInfo = function (param, async, succfun) {
+    var testurl = "http://127.0.0.1:8080/testdata/hot_item_all.json";
+    var useurl = config.getUrl() + "getHotDetailedList";
+    $.ajax({
+        type: "GET",
+        url: testurl,
+        dataType: "JSON",
+        data: param,
+        async: true,
+        success: function (data, status) {
+            succfun(data);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+};
+//获取清单单品列表页
+var getHotItemDetailInfo = function (param, async, succfun) {
+    var testurl = "http://127.0.0.1:8080/testdata/hot_item_list.json";
+    var useurl = config.getUrl() + "getHotDetailedList";
+    $.ajax({
+        type: "GET",
+        url: testurl,
+        dataType: "JSON",
+        data: param,
+        async: true,
+        success: function (data, status) {
+            succfun(data);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+};
+// 获取清单详情页
+var getAccountDetailInfo = function (param, async, succfun) {
+    var testurl = "http://127.0.0.1:8080/testdata/account_detail.json";
+    var useurl = config.getUrl() + "getClothingDetails";
+    $.ajax({
+        type: "GET",
+        url: testurl,
+        dataType: "JSON",
+        data: param,
+        async: true,
+        success: function (data, status) {
+            succfun(data);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+};
+/*清单首页数据接口 end*/
+

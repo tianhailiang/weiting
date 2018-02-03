@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+	<title>策划师列表</title>
+
+	 <link rel="stylesheet" href="../src/css/reset.css" >
+
+     <link rel="stylesheet" href="../src/css/common.css" >
+ 
+     <link rel="stylesheet" href="../src/css/wish.css">
+
+
+</head>
+<body style="background:#f2f4f5;">
+
+   <header  class="header_box top_fixed" style="background:#fff;">
+
+            <ul>
+                <li class="first" id="btnBack">
+
+                       <i class="iconfont icon_back" >&#xe601;</i>
+
+                </li>
+
+
+              <li class="second">
+                
+                  <i class="ico-wish-title"></i>
+                  <span class="header_title">WISH LIST</span>
+
+              </li>
+
+              <li class="last">
+
+                        <span class="icon-bell-box">
+
+                           <i class="iconfont icon-bell">&#xe618;</i>
+                           <i class="icon-red-circle"></i>
+
+                        </span>
+
+
+                       <i class="iconfont icon-service " >&#xe70d;</i>
+                
+                 
+              </li>
+
+            
+            </ul>
+
+  </header>
+
+  <div class="alive-main-box planIntroduce" id="scr-main">
+   
+     <script type="text/html" id="template1" >
+      
+
+       <ul >
+
+            {{each data as value}}
+       
+                <li class="plan_list_li" onclick="detailClick('{{value.id}}','{{value.isView}}')">
+                      
+                      	  <img src="{{value.iconForList}}" />
+                          
+                          <div class="describe">
+                               
+    	                         <div class="introduce-works-title" >
+    	                         	  
+    	                         	  <span class="introduce-caption">{{value.theme}}</span>
+
+    	                         	   {{each value.style as item}}
+
+    	                         	  	<i>{{item}}</i>    	                         	  	
+    	                         	   
+                                   {{/each}}
+
+                                   {{if value.environment==1}}
+                                       
+                                       <i>室内</i>
+                                   {{else}}
+
+                                       <i>室外</i>
+
+                                   {{/if}}
+
+    	                         </div>  
+
+    	                           <ul class="planning-color">
+                                       
+
+                                        {{each value.main as item}}
+                                                        
+                                                         <li style="background:#{{item}}"></li>
+
+                                        {{/each}}
+
+                                   </ul>
+
+                                   <div class="introduce-planner" >
+                                   	   
+                                   	   <i>Wedding Planner</i> <span>{{value.planner}}</span>
+
+                                   </div>
+
+                          </div>
+
+
+                         <ul class="iconfont-ul">
+
+                             {{if value.isView==1}}
+
+                                  <li >
+
+                                           <a>
+
+                                              <i class="iconfont eye ">&#xe620;</i> <span class="num">{{value.viewNum}}</span>
+
+                                           </a>
+
+                
+
+                                  </li>
+
+
+
+                              {{else}}
+
+
+
+                                   <li  >
+
+                                         <a>
+
+                                            <i class="iconfont eye bg-c">&#xe620;</i> <span class="num">{{value.viewNum}}</span>
+
+                                         </a>
+
+                  
+
+                                    </li>
+
+                                   
+
+                             {{/if}}
+
+
+
+
+                            {{if value.isKeep==1}}
+
+                                  <li >
+
+                                       <a>
+
+                                          <i class="iconfont love ">&#xe616;</i><span class="num">{{value.keepNum}}</span>
+
+                                       </a>
+
+                                 </li>
+
+
+
+                             {{else}}
+
+
+
+                                   <li class="last-li" onclick="operateCollect(this,event,'{{value.id}}')" >
+
+                                           <a>
+
+                                              <i class="iconfont love bg-c">&#xe616;</i><span class="num">{{value.keepNum}}</span>
+
+                                           </a>
+
+                                   </li>
+
+
+                            {{/if}}
+
+                        
+
+                      </ul>
+
+                </li>
+
+          {{/each}}
+         
+      </ul>
+
+      </script>
+
+  </div>
+
+    <script src="../src/js/lib/jquery-2.2.1.min.js" ></script>
+    <script src="http://img.wishlist1314.com/artTamplate.js" ></script>
+    <script src="http://img.wishlist1314.com/fastclick.js" ></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js" ></script>
+    <script src="../src/js/webapp/wish/planning_division_list.js" ></script>
+	
+</body>
+</html>

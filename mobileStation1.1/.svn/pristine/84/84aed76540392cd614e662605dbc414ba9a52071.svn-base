@@ -1,0 +1,82 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+        <meta name="viewport"
+              content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>咨询客服</title>
+
+        <style type="text/css">
+            .hader {
+                margin-top: 6%;
+                height: 8%; /*36px*/
+                font-size: 140%;
+            }
+            a {
+                text-decoration: none;
+                color: #1881d3 !important;
+            }
+            .Iframe {
+                border-bottom: 1px solid #D3D3D3;
+                border-left: 1px solid #D3D3D3;
+            }
+
+        </style>
+        <script type="text/javascript">
+        </script>
+    </head>
+
+    <body>
+    <div class="hader">
+        <span><a href="http://m.wishlist1314.com/wishlist_mobile/mobileStation/miccenter/personal.html">close</a></span>
+    </div>
+    <div class="Iframe">
+        <iframe src="http://www.v5kf.com/public/chat/chat?sid=128324&entry=5&ref=link" width="100%" height="87%"
+                marginwidth="0" marginheight="0" scrolling="No" vspace="0" border="1" framespacing="0" frameborder="0"
+                noresize="noResize"></iframe>
+    </div>
+    </body>
+    <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script>
+         function getRequest() {
+            var url = window.location.search; //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    //就是这句的问题
+                    theRequest[strs[i].split("=")[0]] = decodeURI(strs[i].split("=")[1]);
+                    //之前用了unescape()
+                    //才会出现乱码
+                }
+            }
+            return theRequest;
+        }
+
+
+        var url = "http://www.v5kf.com/public/chat/chat?sid=128324&entry=5&ref=link";
+        var customInfo = getRequest().custromInfo;
+         console.log(customInfo);
+         if (customInfo !== undefined) {
+            var getInfo = JSON.parse(customInfo).data;
+            if(getInfo.type==7){//活动报名
+                var iframeSrc = url + "&oid=" + getInfo.phoneNum + "&magic=[{key:'手机号码',val:'" + getInfo.phoneNum + "'},{key:'姓名',val:'" + getInfo.name + "'},{key:'活动名称',val:'" + getInfo.title + "'},{key:'报名人数',val:'" + getInfo.inNum + "'},{key:'报名时间',val:'" + getInfo.time + "'}]";
+                $("iframe").attr('src', iframeSrc);
+            }else{//预约
+                var getInfo = JSON.parse(customInfo).data;
+
+                var iframeSrc = url + "&oid=" + getInfo.phoneNum + "&magic=[{key:'手机号码',val:'" + getInfo.phoneNum + "'},{key:'姓名',val:'" + getInfo.name + "'},{key:'预约单号',val:'" + getInfo.bookNum + "'},{key:'预约商品名称',val:'" + getInfo.pcName + "'}]";
+                $("iframe").attr('src', iframeSrc);
+            }
+            
+        } else {//正常联系客服
+            var getPhoneNum = OperationURL.getQueryString("phoneNum");
+            var custromUrl = url  +"&oid="+getPhoneNum +"&magic=[{key:'手机号码',val:'"+getPhoneNum+"'}]";
+            $("iframe").attr('src', custromUrl);
+        }
+
+    </script>
+    </html>

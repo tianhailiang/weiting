@@ -1,0 +1,74 @@
+{
+  "code": 0,
+  "msg": "请求成功",
+  "data": 
+   
+
+     [
+
+      {
+            "id":"8080",
+
+            "type":"7",     
+            "icon":"../src/images/miccenter/strategy-1.jpg",
+            "title":"今日的清空里,飘得是抹茶味的风",   
+
+            "subtitle":"萨满阳光的午后,缀满万花的从中。一口抹茶,融入我心",    
+            "price":"",     
+            "activityPrice":"", 
+            "activityName":"", 
+            "author":"元婴",       
+            "location":"北京",
+            "viewNum":"5782",
+            "likeNum":"4564",
+            "keepNum":"1500"   
+           
+        
+      
+      },
+        
+         {
+            "id":"8080",
+
+            "type":"7",     
+            "icon":"../src/images/miccenter/strategy-1.jpg",
+            "title":"今日的清空里,飘得是抹茶味的风",   
+
+            "subtitle":"萨满阳光的午后,缀满万花的从中。一口抹茶,融入我心",    
+            "price":"",     
+            "activityPrice":"", 
+            "activityName":"", 
+            "author":"元婴",       
+            "location":"北京",
+            "viewNum":"5782",
+            "likeNum":"4564",
+            "keepNum":"1500"   
+      
+      
+      },
+        {
+             "id":"8080",
+
+            "type":"7",     
+            "icon":"../src/images/miccenter/strategy-1.jpg",
+            "title":"今日的清空里,飘得是抹茶味的风",   
+
+            "subtitle":"萨满阳光的午后,缀满万花的从中。一口抹茶,融入我心",    
+            "price":"",     
+            "activityPrice":"", 
+            "activityName":"", 
+            "author":"元婴",       
+            "location":"北京",
+            "viewNum":"5782",
+            "likeNum":"4564",
+            "keepNum":"1500"   
+      
+      
+      }
+     
+       
+
+
+    ]
+  
+}

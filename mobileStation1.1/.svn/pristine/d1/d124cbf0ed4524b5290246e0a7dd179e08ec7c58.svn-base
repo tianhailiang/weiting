@@ -1,0 +1,76 @@
+{
+  "code": "0",
+  "msg": "请求成功",
+  "data": {
+    "isBook":"0",
+    "hName": "上海诺恒国际婚礼中心11111",
+    "hPrice": "15000",
+    "hLocation": "上海红桥区虹桥路1905号",
+    "introduce": " 上海诺恒国际婚礼中心婚礼堂位于市中心，地理位费体验服务。",
+    "hImgs": [
+      "../src/images/yarn_list13.png",
+      "../src/images/yarn_list13.png",
+      "../src/images/yarn_list13.png"
+    ],
+    "special": [
+      "全程统筹",
+      "个性定制",
+      "独家道具",
+      "1v1服务"
+    ],
+    "banquetHalls": [
+      {
+        "tName": "云霄厅",
+        "tLocation": "6F",
+        "height": "8m",
+        "area": "500",
+        "table": "90",
+        "hasPillar": "0",
+        "tImgs": [
+          "../src/images/yarn_list13.png",
+          "../src/images/yarn_list9.png",
+          "../src/images/yarn_list13.png"
+        ]
+      },
+      {
+        "tName": "云霄厅",
+        "tLocation": "6F",
+        "height": "8m",
+        "area": "500",
+        "table": "60",
+        "hasPillar": "1",
+        "tImgs": [
+          "../src/images/yarn_list13.png",
+          "../src/images/yarn_list11.png",
+          "../src/images/yarn_list12.png",
+          "../src/images/yarn_list10.png"
+        ]
+      },
+      {
+        "tName": "云霄厅",
+        "tLocation": "6F",
+        "height": "8m",
+        "area": "500",
+        "table": "60",
+        "hasPillar": "1",
+        "tImgs": [
+          "../src/images/yarn_list13.png",
+          "../src/images/yarn_list11.png",
+          "../src/images/yarn_list12.png",
+          "../src/images/yarn_list10.png"
+        ]
+      }
+    ],
+    "hardware": [
+      {
+        "yName": "平直音响",
+        "yImg": "../src/images/icon-music.png"
+      },
+      {
+        "yName": "平直音响22",
+        "yImg": "../src/images/icon-music.png"
+      }
+    ],
+    "recommended": "一段文字"
+  }
+}

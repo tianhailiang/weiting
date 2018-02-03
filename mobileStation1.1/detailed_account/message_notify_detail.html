@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="x5-orientation" content="portrait">
+    <title>消息通知详情</title>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/reset.css">
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/icont/iconfont.css"/>
+    <link rel="stylesheet" href="../src/css/account_list.css"/>
+<body>
+<!--头部导航-->
+<header class="fixed-header white-bg" id="fixed-header pr">
+    <div class="filter-header pa">
+        <span class="icon iconfont" onclick="window.history.go(-1)">&#xe601;</span>
+    </div>
+    <div class="logo pr">
+        <img src="../src/images/logo_03.png" alt="" class="img-width-100">
+    </div>
+    <div class="info-notice pa">
+        <div class="pr">
+            <span class="inline-b"><img src="../src/images/icon-customServices_03.png" alt=""
+                                        class="img-width-100"></span>
+        </div>
+
+    </div>
+</header>
+<div class="message-box">
+    <script id="message-box" type="text/html">
+        {{ each data as value}}
+        <div class="notice-content">
+            <p class="tc mt-20 mb-20 fs11 color-999">{{value.time}}</p>
+            <div class="notice-txt white-bg">
+                <p class="color-333 fs13">系统信息</p>
+                <p class="fs12 color-666 mt-15">【通知】{{value.content}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+</div>
+
+
+</body>
+
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js"></script>
+
+<script src="../src/js/util/common.js"></script>
+<script src="../src/js/config.js"></script>
+<script src="../src/js/util/global.js"></script>
+<script>
+    var queryType = OperationURL.getQueryString("type");
+    getNoticeInfoDetail({type: queryType}, true, function (result) {
+        var messageStr = template("message-box",result);
+        $(".message-box").html(messageStr);
+    })
+</script>
+
+</html>

@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>我的收藏</title>
+    <link rel="stylesheet" href="../src/css/reset.css">
+    <script src="http://img.wishlist1314.com/rem.js"></script>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel=stylesheet href="../src/js/widget/layer/need/layer.css" >
+    <link rel="stylesheet" href="../src/css/miccenter.css">
+
+</head>
+<body>
+
+
+
+            <div class="swiper-container fav-nav" id="swiper-container1">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide fav-slide active-nav" >
+                        <a>白纱</a>
+                    </div>
+
+                    <div class="swiper-slide fav-slide" >
+                        <a>礼服</a>
+                    </div>
+
+                    <div class="swiper-slide fav-slide ">
+                        <a>Gentle</a>
+                    </div>
+                    <div class="swiper-slide fav-slide" >
+                        <a>婚礼堂</a>
+                    </div>
+
+                    <div class="swiper-slide fav-slide" >
+                        <a>周边</a>
+                    </div>
+
+                    <div class="swiper-slide fav-slide">
+                        <a>活动</a>
+                    </div>
+                    <div class="swiper-slide fav-slide ">
+                        <a>攻略</a>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+             <!-- =====animate 指示器===== -->
+
+            <!--    <div class="indicate myfav-indicate" >
+                     
+                     <div class="ibox" id="ibox"></div>
+                     
+               </div> -->
+
+
+
+
+
+
+   <!--最外层box -->
+
+ <div class="wrapper-box " >
+
+        <div class="swiper-container fav-swiper-container" id="swiper-container2">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide wrapper1">
+
+
+
+                            <!-- ==瀑布流== -->
+                            <div class="waterfall1 water">
+
+                      
+
+                                <script type="text/html" id="template1">
+                                 
+                                  {{if data==""}}
+
+                                       <div class="no-favorite" >
+                                           
+                                              <p>你暂时没有收藏，快去心愿狂狂吧</p>
+
+                                              <div class="no-favorite-bg ico-no-fav"></div>
+
+                                       </div>
+
+                                  {{else}}
+
+
+                                             {{each data as value}}
+
+                                                    <div class="picList" onclick="favoriteDetail('{{value.id}}','{{value.type}}')">
+                                                        <div class="picList-box">
+                                                            <div class="picThumbnail">
+
+                                                                <img  class="lazy-img"   data-original="{{value.icon}}"  width="100%" height="{{value.h}}" style="height:{{value.h}}px;" />
+                                                                
+                                                              
+                                                            </div>
+
+                                                            <div class="picDescription">
+
+                                                                <p class="picDescription-title">
+                                                                     {{if value.isRent==1}}
+                                                                         
+                                                                        <span class="isRent">可租</span>
+
+                                                                      {{/if}}
+
+
+                                                                       <i>{{value.title}}</i>
+
+                                                                </p>
+
+                                                                <p class="picDescription-money">
+                                                                     &yen;<span class="fav-price">{{value.price}}</span>
+                                                                  
+                                                                    {{if value.isPreference==1}}
+                                                                     
+                                                                      <i class="isSign">{{value.activityName}}</i>
+
+                                                                    {{/if}}
+
+                                                                </p>
+                                                                <ul class=" iconfont-ul fav-operate">
+                                                                    <li>
+                                                                        <a>
+                                                                            <i class="iconfont eye">&#xe605;</i>
+                                                                            <span>{{value.viewNum}}</span>
+                                                                        </a>
+
+                                                                    </li>
+                                                                    <li onclick="removeFav(this,event,'{{value.id}}','{{value.type}}')">
+                                                                        <a>
+                                                                                <i class="iconfont star">
+                                                                                &#xe62e;</i><span>{{value.keepNum}}</span>
+
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="last-li">
+                                                                        <a>
+                                                                            <i class="iconfont love">
+                                                                                &#xe652;</i><span>{{value.likeNum}}</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                </ul>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                        {{/each}}
+
+
+
+                                  {{/if}}
+
+                              
+
+
+                                </script>
+
+                            </div>
+
+
+                   
+
+
+                </div>
+
+                <div class="swiper-slide wrapper2">
+
+                   
+
+
+                        <!-- ==瀑布流== -->
+                        <div class="waterfall2  water">
+
+                            <script type="text/html" id="template2">
+
+                               {{if data==""}}
+
+                                       <div class="no-favorite" >
+                                           
+                                              <p>你暂时没有收藏，快去心愿狂狂吧</p>
+
+                                              <div class="no-favorite-bg ico-no-fav"></div>
+
+                                       </div>
+
+                              {{else}}
+
+
+
+                                        {{each data as value}}
+
+                                        <div class="picList" onclick="favoriteDetail('{{value.id}}','{{value.type}}')">
+                                            <div class="picList-box">
+                                                <div class="picThumbnail">
+                                                   <img  class="lazy-img"   data-original="{{value.icon}}" width="100%" height="{{value.h}}" style="height:{{value.h}}px;" />
+                                                   
+
+                                                </div>
+
+                                                <div class="picDescription">
+
+                                                    <p class="picDescription-title">
+
+                                                         {{if value.isRent==1}}
+                                                             
+                                                            <span class="isRent">可租</span>
+
+                                                          {{/if}}
+
+
+                                                           <i>{{value.title}}</i>
+
+                                                    </p>
+
+                                                    <p class="picDescription-money">
+                                                         &yen;<span class="fav-price">{{value.price}}</span>
+                                                      
+                                                       {{if value.isPreference==1}}
+                                                                     
+                                                                      <i class="isSign">{{value.activityName}}</i>
+
+                                                        {{/if}}
+
+                                                    </p>
+
+                                                    <ul class=" iconfont-ul fav-operate">
+                                                        <li>
+                                                            <a>
+                                                                <i class="iconfont eye">&#xe605;</i>
+                                                                <span>{{value.viewNum}}</span>
+                                                            </a>
+
+                                                        </li>
+                                                        <li onclick="removeFav(this,event,'{{value.id}}','{{value.type}}')">
+                                                            <a>
+                                                                <i class="iconfont star">
+                                                                    &#xe62e;</i><span>{{value.keepNum}}</span>
+
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="last-li">
+                                                            <a>
+                                                                <i class="iconfont love">
+                                                                    &#xe652;</i><span>{{value.likeNum}}</span>
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        {{/each}}
+
+
+                                   {{/if}}     
+
+
+                            </script>
+
+                        </div>
+
+
+                   
+
+                </div>
+
+                <div class="swiper-slide wrapper3">
+
+                   
+
+
+                        <!-- ==瀑布流== -->
+                        <div class="waterfall3  water">
+
+                            <script type="text/html" id="template3">
+
+                               {{if data==""}}
+
+                                   <div class="no-favorite" >
+                                       
+                                          <p>你暂时没有收藏，快去心愿狂狂吧</p>
+
+                                          <div class="no-favorite-bg ico-no-fav"></div>
+
+                                   </div>
+
+                              {{else}}
+
+
+
+                                        {{each data as value}}
+
+                                        <div class="picList" onclick="favoriteDetail('{{value.id}}','{{value.type}}')">
+                                            <div class="picList-box">
+                                                <div class="picThumbnail">
+
+                                                    <img  class="lazy-img"   data-original="{{value.icon}}" width="100%" height="{{value.h}}" style="height:{{value.h}}px;" />
+
+
+                                                </div>
+
+                                                <div class="picDescription">
+                                                      <p class="picDescription-title">
+
+                                                           {{if value.isRent==1}}
+                                                               
+                                                              <span class="isRent">可租</span>
+
+                                                            {{/if}}
+
+
+                                                             <i>{{value.title}}</i>
+
+                                                     </p>
+
+                                                     <p class="picDescription-money">
+                                                         &yen;<span class="fav-price">{{value.price}}</span>
+                                                      
+                                                         {{if value.isPreference==1}}
+                                                                     
+                                                                      <i class="isSign">{{value.activityName}}</i>
+
+                                                          {{/if}}
+
+                                                    </p>
+                                                                
+
+                                                    <ul class=" iconfont-ul fav-operate">
+                                                        <li>
+                                                            <a>
+                                                                <i class="iconfont eye">&#xe605;</i>
+                                                                <span>{{value.viewNum}}</span>
+                                                            </a>
+
+                                                        </li>
+                                                        <li onclick="removeFav(this,event,'{{value.id}}','{{value.type}}')">
+                                                            <a>
+                                                                <i class="iconfont star">
+                                                                    &#xe62e;</i><span>{{value.keepNum}}</span>
+
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="last-li">
+                                                            <a>
+                                                                <i class="iconfont love">
+                                                                    &#xe652;</i><span>{{value.likeNum}}</span>
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        {{/each}}
+
+
+
+                                    {{/if}}    
+
+
+                            </script>
+
+                        </div>
+
+
+                   
+
+
+                </div>
+
+
+                <div class="swiper-slide wrapper4">
+
+                 
+
+                        <ul class="waterfall4 wrapper-ul water">
+
+                            <script type="text/html" id="template4">
+
+                                {{if data==""}}
+
+                                       <div class="no-favorite" >
+                                           
+                                              <p>你暂时没有收藏，快去心愿狂狂吧</p>
+
+                                              <div class="no-favorite-bg ico-no-fav"></div>
+
+                                       </div>
+
+                              {{else}}
+
+
+
+
+                                        {{each data as value}}
+
+                                        <li class="mar-t7"  onclick="favoriteDetail('{{value.id}}','{{value.type}}')" >
+
+                                            <dl>
+                                                <dt>
+                                                  <img  class="lazy-img widdingHouse-img"   data-original="{{value.icon}}" width="100%" height="200" />
+
+                                                </dt>
+
+                                                <dd>
+
+                                                    <div class="describe">
+
+                                                        <div class="title">
+                                                            <h3>{{value.title}}</h3><span
+                                                                class="address">{{value.location}}</span>
+                                                        </div>
+
+                                                        <p>{{value.subtitle}}</p>
+
+                                                    </div>
+
+                                                    <ul class="operate iconfont-ul">
+                                                        <li>
+                                                            <i class="iconfont eye">&#xe605;</i> <span>{{value.viewNum}}</span>
+
+                                                        </li>
+                                                        <li onclick="removeFav(this,event,'{{value.id}}','{{value.type}}')">
+                                                            <i class="iconfont star">&#xe62e;</i><span>{{value.keepNum}}</span>
+
+                                                        </li>
+
+                                                        <li>
+                                                            <i class="iconfont love">&#xe652;</i><span>{{value.likeNum}}</span>
+
+                                                        </li>
+
+                                                    </ul>
+
+                                                </dd>
+
+                                            </dl>
+
+                                        </li>
+
+                                        {{/each}}
+
+
+                                    {{/if}}    
+
+
+                            </script>
+                        </ul>
+
+                    
+
+
+                </div>
+
+                <div class="swiper-slide wrapper5">
+             
+                   
+
+                            <!-- ==瀑布流== -->
+                            <div class="waterfall5  water" >
+
+                                <script type="text/html" id="template5">
+                                    {{if data==""}}
+
+                                           <div class="no-favorite" >
+                                               
+                                                  <p>你暂时没有收藏，快去心愿狂狂吧</p>
+
+                                                  <div class="no-favorite-bg ico-no-fav"></div>
+
+                                           </div>
+
+                                      {{else}}
+
+
+
+                                                {{each data as value}}
+
+                                                <div class="picList" onclick="favoriteDetail('{{value.id}}','{{value.type}}')">
+                                                    <div class="picList-box">
+                                                        <div class="picThumbnail">
+                                                            <img  class="oImg lazy-img"   data-original="{{value.icon}}" width="100%" height="{{value.h}}" style="height:{{value.h}}px;" />
+                                                        </div>
+
+                                                        <div class="picDescription">
+                                                            <p class="picDescription-title">
+
+                                                               {{if value.isRent==1}}
+                                                                   
+                                                                  <span class="isRent">可租</span>
+
+                                                                {{/if}}
+
+
+                                                                 <i>{{value.title}}</i>
+
+                                                             </p>
+
+                                                             <p class="picDescription-money">
+                                                                     &yen;<span class="fav-price">{{value.price}}</span>
+                                                                  
+                                                                     {{if value.isPreference==1}}
+                                                                     
+                                                                      <i class="isSign">{{value.activityName}}</i>
+
+                                                                    {{/if}}
+
+                                                             </p>
+                                                                
+
+                                                            <ul class=" iconfont-ul fav-operate">
+                                                                <li>
+                                                                    <a>
+                                                                        <i class="iconfont eye">&#xe605;</i> <span>{{value.viewNum}}</span>
+                                                                    </a>
+
+                                                                </li>
+                                                                <li onclick="removeFav(this,event,'{{value.id}}','{{value.type}}')">
+                                                                    <a>
+                                                                        <i class="iconfont star">&#xe62e;</i><span>{{value.keepNum}}</span>
+
+                                                                    </a>
+                                                                </li>
+
+                                                                <li class="last-li">
+                                                                    <a>
+                                                                        <i class="iconfont love">&#xe652;</i><span>{{value.likeNum}}</span>
+                                                                    </a>
+                                                                </li>
+
+                                                            </ul>
+
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+
+                                                {{/each}}
+
+
+                                         {{/if}}       
+
+
+                                </script>
+
+                            </div>
+
+                     
+
+                </div>
+
+                <div class="swiper-slide wrapper6">
+
+                
+
+                                <ul class="waterfall6 wrapper-ul water">
+
+                                    <script type="text/html" id="template6">
+
+
+                                       {{if data==""}}
+
+                                           <div class="no-favorite" >
+                                               
+                                                  <p>你暂时没有收藏，快去心愿狂狂吧</p>
+
+                                                  <div class="no-favorite-bg ico-no-fav"></div>
+
+                                           </div>
+
+                                      {{else}}
+
+                                                    {{each data as value index}}
+
+                                                    <li class="mar-t7"  onclick="favoriteDetail('{{value.id}}','{{value.type}}')">
+
+                                                        <dl>
+
+                                                            <dt>
+                                                                <img  class="lazy-img experience-img"   data-original="{{value.icon}}" width="100%" height="200" />
+                                                            </dt>
+
+                                                            <dd>
+                                                                <div class="describe">
+                                                                    <div class="title">
+
+                                                                        <h3>{{value.title}}</h3><span
+                                                                            class="address">{{value.location}}</span>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="come">
+                                                                    <span>Form</span><i>{{value.author}}</i>
+
+                                                                </div>
+
+
+                                                                <ul class="operate iconfont-ul">
+                                                                    <li>
+                                                                        <i class="iconfont eye">&#xe605;</i> <span>{{value.viewNum}}</span>
+
+                                                                    </li>
+                                                                    <li onclick="removeFav(this,event,'{{value.id}}','{{value.type}}')">
+                                                                        <i class="iconfont star">&#xe62e;</i><span>{{value.keepNum}}</span>
+
+                                                                    </li>
+
+                                                                    <li>
+                                                                        <i class="iconfont love">&#xe652;</i><span>{{value.likeNum}}</span>
+
+                                                                    </li>
+
+                                                                </ul>
+
+                                                            </dd>
+
+                                                        </dl>
+
+                                                    </li>
+
+
+                                                    {{/each}}
+
+
+                                             {{/if}}       
+
+                                    </script>
+
+                                </ul>
+
+                   
+
+                </div>
+
+                <div class="swiper-slide wrapper7">
+
+                    
+
+                                <ul class="waterfall7 wrapper-ul water">
+
+                                    <script type="text/html" id="template7">
+
+                                        {{if data==""}}
+
+                                           <div class="no-favorite" >
+                                               
+                                                  <p>你暂时没有收藏，快去心愿狂狂吧</p>
+
+                                                  <div class="no-favorite-bg ico-no-fav"></div>
+
+                                           </div>
+
+                                      {{else}}
+
+
+
+                                                    {{each data as value index}}
+
+                                                    <li class="mar-t7"  onclick="favoriteDetail('{{value.id}}','{{value.type}}')">
+
+                                                        <dl>
+                                                            <dt class="alive">
+                                                            <p class="art-top">{{value.title}}</p>
+                                                           <img  class="lazy-img alive-img"   data-original="{{value.icon}}" width="152.5"  height="140" />
+                                                            <p class="art-bot">{{value.subtitle}}</p>
+
+                                                            </dt>
+
+                                                            <dd>
+
+                                                                <div class="come">
+                                                                    <span>Form</span><i>{{value.author}}</i>
+
+                                                                </div>
+                                                                <ul class="operate iconfont-ul">
+                                                                    <li>
+                                                                        <i class="iconfont eye">&#xe605;</i> <span>{{value.viewNum}}</span>
+
+
+                                                                    </li>
+                                                                    <li onclick="removeFav(this,event,'{{value.id}}','{{value.type}}')">
+                                                                        <i class="iconfont star">&#xe62e;</i><span>{{value.keepNum}}</span>
+
+                                                                    </li>
+
+                                                                    <li>
+                                                                        <i class="iconfont love">&#xe652;</i><span>{{value.likeNum}}</span>
+
+                                                                    </li>
+
+                                                                </ul>
+
+                                                            </dd>
+
+                                                        </dl>
+
+                                                    </li>
+
+                                                    {{/each}}
+
+
+                                                {{/if}}
+
+
+                                    </script>
+
+                                </ul>
+
+                    
+
+
+                </div>
+
+       
+
+              <!-- ====swiper-wrapper==== -->
+
+            </div>
+
+             <!-- ==滚动条== -->
+         
+            <!--  <div class="swiper-scrollbar"></div>  -->
+
+
+        </div>
+
+
+  </div>
+
+
+
+
+
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/swiper-3.3.1.min.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+
+<script src="http://img.wishlist1314.com/artTamplate.js"></script>
+<script src="../src/js/util/common.js"></script>
+
+<script src="../src/js/config.js"></script>
+<script src="../src/js/dbutil.js"></script>
+<script src="../src/js/widget/layer/layer.js" ></script>
+
+<script src="../src/js/widget/lazyload/jquery.lazyload.js"></script>
+
+<script type="text/javascript" src="../src/js/webapp/miccenter/myfavorite.js"></script>
+
+
+</body>
+</html>

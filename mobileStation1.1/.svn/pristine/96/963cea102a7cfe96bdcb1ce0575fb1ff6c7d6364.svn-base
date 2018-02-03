@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+	<title>策划师案列详情</title>
+    
+      
+
+     <link rel="stylesheet" href="../src/css/reset.css" >
+
+    <link rel="stylesheet" href="../src/css/common.css" >
+ 
+    <link rel="stylesheet" href="../src/css/wish.css">
+
+
+</head>
+<body style="background:#f2f4f5;">
+
+  <div class="alive-main-box" id="scr-main">
+
+     <script type="text/html" id="template1" >
+                
+                   <header  class="header_box top_fixed">
+                        <ul>
+                            <li class="first" id="btnBack">
+
+                               <span class="icon_back-box" > 
+                                   
+                                   <i class="icon_div"></i>
+                                   <i class="iconfont icon_back" style="color:#fff;">&#xe601;</i>
+
+                                </span>
+
+                            </li>
+
+                        
+                          
+                          <li class="last">
+
+                              <span class="icon_back-box mar-r10" > 
+                                   <i class="icon_div"></i>
+
+                                   {{if data.isKeep==0}}
+                                     
+                                         <i class="iconfont icon_love"  onclick="operateCollect(this)">&#xe616;</i>
+                                   {{else}}
+
+                                        <i class="iconfont icon_love bg-c"  >&#xe616;</i>
+
+                                    {{/if}}  
+
+                              </span>  
+
+                               <span class="icon_back-box " > 
+                                   <i class="icon_div"></i>   
+
+                                   <i class="iconfont icon-service " style="color:#fff;">&#xe70d;</i>
+                            
+                              </span>
+
+                          </li>
+
+                        
+                        </ul>
+
+               </header>
+
+                <div class="alive-banner" >
+             
+                    <img src="{{data.icon}}" alt=" " />
+
+                </div>
+
+                <h1 class="planning-h1" >{{data.title}}</h1>
+
+                 <div class="planning-theme" >
+                 	
+                         	<div class="planning-price">
+                         		
+                         		<i class="icon-free"></i><span>策划价格</span><i>{{data.price}}元</i>
+
+                         	</div>
+
+                           <div class="planning-price">
+                         		
+                         		<i class="icon-tint"></i><span>主题色彩</span> 
+                                 <ul class="planning-color">
+                                      {{each data.main as item}}
+                                                      
+                                                       <li style="background:#{{item}}"></li>
+
+                                      {{/each}}
+
+                                 </ul>
+                               
+                         	</div>
+
+                                <div class="planning-price">
+                        
+                                        <i class="iconfont icon-style">&#xe65e;</i><span>主题风格</span>
+                                         
+                                          {{each data.style as item}}
+                                                       
+                                                        <i class="planning-style">{{item}}</i>
+
+                                          {{/each}}  
+                                       
+
+                               </div>
+
+
+                                <div class="planning-price">
+                        
+                                        <i class="iconfont icon-site">&#xe70a;</i><span>场地环境</span>
+
+                                        {{if data.environment==1}}
+
+                                           <i>室内</i>
+
+                                        {{else}}
+
+                                             <i>室外</i>
+                                          
+                                        {{/if}}   
+
+                                </div>
+
+                                <div class="planning-price">
+                        
+                                        <i class="iconfont icon-date">&#xe607;</i><span>婚礼日期</span><i>{{data.weddingDate}}</i>
+
+                                </div>
+                               
+                                 <div class="planning-price planning-field">
+                        
+                                        <i class="iconfont icon-location">&#xe608;</i><span>举办场地</span><i>{{data.place}}</i>
+
+                                </div>
+
+                                 
+
+                 </div>
+
+
+                 <div class="planning-wedding" >
+                     
+                         <h2 class="planning-wedding-h2"><i class="icon-inspiration"></i><span>婚礼灵感</span></h2>
+                         
+                         <p class="planning-wedding-p" >
+                             
+                              {{data.inspiration}}
+
+                         </p>
+
+                 </div>
+
+                  <div class="planning-wedding" >
+                          <h2 class="planning-wedding-h2"><i class="icon-case"></i><span>案列详情</span></h2>
+                          
+                          <div class="planning_content" >
+                            
+                                {{data.detail}}
+
+                          </div>
+                          
+
+                          <div class="planning-wedding-division" >
+
+                               <div class="planning-wedding-division-box" onclick="introduce('{{data.plannerId}}')">
+                             
+                                     <div class="planning-wedding-division-left" >
+                                         
+                                         <span  style="background:url('{{data.plannerIcon}}') no-repeat center;background-size:cover;"></span>
+
+                                         <i class="icon-v"></i>
+
+                                     </div>
+                                     
+                                     <div class="planning-wedding-division-center" >
+                                          
+                                         <div class="planning-wedding-name">
+
+                                             <i>{{data.plannerName}}</i>
+
+                                             <span class="icon-author"></span>
+
+                                         </div>  
+
+                                         
+                                         <div class="planning-works" >
+                                             <span >全部作品</span>
+                                             <span>给Ta留言</span>
+
+                                         </div>
+
+
+                                     </div>
+
+                                 </div>    
+
+                               <div class="planning-wedding-division-right">
+                                      
+                                      {{if data.isfollow==0}}
+
+                                           <i class="iconfont icon-attention" onclick="attention(this,'{{data.plannerId}}','{{data.isfollow}}');">&#xe662;</i>
+                                      {{else}}
+                                         
+                                           <i class="iconfont icon-attention" style="color:#666;"  onclick="attention(this,'{{data.plannerId}}','{{data.isfollow}}');">&#xe662;</i>
+
+                                      {{/if}}   
+                                       
+                                       <span>{{data.followNum}}已关注</span>
+
+
+                               </div>
+
+
+
+                          </div>
+                       
+
+                  </div>
+
+
+                    <div class="planning-wedding planning-wedding-dependence" >
+                     
+                         <h2 class="planning-wedding-h2"><i class="icon-single"></i><span>相关单品</span></h2>
+
+
+                 </div>
+
+                    <ul class="dependence-ul">
+
+                           {{each data.abouts as value}}
+
+                             
+                                   <li onclick="dependence('{{value.id}}','{{value.type}}')">
+
+                                       <img src="{{value.iconForList}}" />
+
+                                       <div class="dependence-ul-name" >
+                                          
+                                            {{value.name}}
+
+                                       </div>
+
+                                       <div class="dependence-ul-price" >&yen;{{value.price}}</div>
+
+                                   </li>
+
+                            {{/each}}
+
+                         </ul>
+
+
+
+       </script>
+       
+   </div>                 
+	
+    <script src="../src/js/lib/jquery-2.2.1.min.js" ></script>
+    <script src="http://img.wishlist1314.com/artTamplate.js" ></script>
+    <script src="http://img.wishlist1314.com/fastclick.js" ></script>
+   <script src="../src/js/util/common.js"></script>
+   <script src="../src/js/config.js" ></script>
+   <script src="../src/js/webapp/wish/planning_division_detail.js" ></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="x5-orientation" content="portrait">
+    <title>心愿清单</title>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/reset.css">
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/icont/iconfont.css"/>
+    <link rel="stylesheet" href="../src/css/account_list.css"/>
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css"/>
+    <script src="http://img.wishlist1314.com/rem.js"></script>
+</head>
+<body>
+
+<div class="fixed-header" id="fixed-header">
+    <div class="filter-header">
+        <div class="pr">
+            <p class="tc all-kind"><span>全部</span><i class="icon-drop icon-drop-down"></i></p>
+            <p class="pa filter-btn hide">筛选<i class="icon-filter "></i></p>
+            <p class="pa city-select"><span>北京</span><i class="icon-drop icon-drop-down"></i></p>
+        </div>
+    </div>
+
+    <div class="pr">
+        <ul class="type city hide">
+            <script id="area" type="text/html">
+                {{each data.city as value index}}
+                <li class="pr" data-cid="{{value.cID}}">{{value.city}}</li>
+                {{/each}}
+            </script>
+        </ul>
+        <ul class="type clothes-type pa hide">
+            <script id="category" type="text/html">
+                {{each data.category as value index}}
+                <li class="pr" data-ischild="{{value.hasChild}}" data-categoryid="{{index}}">{{value.name}}</li>
+                {{/each}}
+            </script>
+        </ul>
+        <div class="type-part pa hide">
+            <script id="type-part-filter" type="text/html">
+                {{each data.child as value index}}
+                <div class="type-part-item">
+                    <p data-typecode="{{value.code}}">{{value.cName}}</p>
+                    <ul class="clearfix type-part-li">
+                        {{each value.terms as item}}
+                        <li data-typeid="{{item.tId}}">{{item.tName}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+
+                {{/each}}
+                <div class="filter-btn-box clearfix">
+                    <a href="javascript:;" class="fl tc reset-filter-btn">重置</a>
+                    <a href="javascript:;" class="fr bg-c59 tc submit-filter-btn">完成</a>
+                </div>
+            </script>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!--瀑布流加载-->
+<div class="wrapper0">
+    <div class="scroller">
+        <div class="banner-box">
+            <script type="text/html" id="shop-info">
+                console.log('here')
+                <div class="banner pr">
+                    <img src="{{data.img}}" alt=""/>
+                    <div class="pa"></div>
+                    <p class="pr shop-name">{{data.name}}</p>
+                </div>
+                <div class="shop-descr tc">{{data.description}}</div>
+            </script>
+        </div>
+
+        <div id="waterfall" class="waterfall0"></div>
+    </div>
+</div>
+<footer class="footer-box footer-fixed" id="infooter">
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html"> <span class="ico-wish "></span><i>心愿</i> </a>
+            </li>
+            <li>
+                <a href="../detailed_account/account_list.html"> <span
+                        class="ico-list ico-current-list"></span><i>清单</i> </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="fixed-order-btn"> <span class="ico-order"></span> <i>预约</i> </a>
+            </li>
+
+            <li>
+                <a onclick="personClick(event)"><span class="ico-miccenter "></span><i>我的</i></a>
+            </li>
+        </ul>
+    </nav>
+</footer>
+<!-- 遮罩层-->
+<div class="black-layer pa hide"></div>
+<!--登录弹窗-->
+<div class="login-dialog hide">
+    <div class="pa-15">
+        <ul class="form-box mt-30">
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-phone inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您的手机号码" class="inline-b fl tele-number"/>
+                <a href="javascript:;" class="bg-c59 fs12 inline-b fl boder-radius-5 get-invidate-code">获取验证码</a>
+                <span class="fl count-down fs13 color-7a7b"><i>120</i>s</span>
+            </li>
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-validate inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您收到的验证码" class="inline-b fl validate-code"/>
+            </li>
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-invite inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您的邀请码（选填）" class="inline-b fl invite-code"/>
+            </li>
+        </ul>
+        <p class="fs13 mt-15 pl-13 validate-code-tip" style="visibility: hidden">验证码已经发送至填写的手机中，请注意查收！</p>
+        <div class="submit-btn bg-c59 tc boder-radius-5" id="submit-region-btn">完成提交</div>
+    </div>
+</div>
+</body>
+
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/swiper-3.3.1.min.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js"></script>
+<script src="http://img.wishlist1314.com/iscroll.js"></script>
+
+<script src="../src/js/lib/iscroll-probe.js"></script>
+<script src="../src/js/util/pullIscroll.js"></script>
+<script src="../src/js/util/common.js"></script>
+<script src="../src/js/config.js"></script>
+<script src="../src/js/dbutil.js"></script>
+<script src="../src/js/widget/layer/layer.js"></script>
+<script src="../src/js/widget/layer.m/mobel.js"></script>
+<script src="../src/js/webapp/account/jquery.lazyload.min.js"></script>
+<script src="../src/js/webapp/account/account_list.js"></script>
+</html>

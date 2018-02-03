@@ -1,0 +1,930 @@
+html,body{
+    -webkit-overflow-scrolling:touch ;
+}
+.tc {
+    text-align: center;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.pr {
+    position: relative;
+}
+.pa {
+    position: absolute;
+}
+.filter-header {
+    height: .8rem;
+    line-height: .8rem;
+    background: #f8f8f8;
+    font-size: .3rem;
+
+}
+.icon-drop {
+    display: inline-block;
+    width: 8px;
+    height: 7px;
+    margin-left: 3px;
+}
+.icon-drop-down {
+    background: url("../images/icon-drop-down.png") no-repeat;
+    -webkit-background-size: 8px 7px;
+    background-size: 8px 7px;
+}
+.icon-drop-up {
+    background: url("../images/icon-drop-up.png") no-repeat;
+    -webkit-background-size: 8px 7px;
+    background-size: 8px 7px;
+}
+.icon-filter {
+    display: inline-block;
+    width: 10px;
+    height: 14px;
+    background: url("../images/icon-filter.gif") no-repeat;
+    -webkit-background-size: 10px 14px;
+    background-size: 10px 14px;
+    position: relative;
+    top: 3px;
+    left: 3px;
+}
+.filter-btn {
+    top: 0;
+    right: 13px;
+}
+.type li {
+    height: .65rem;
+    line-height: .65rem;
+    border-bottom: 1px solid #e1e1e1;
+    color: #7a7b87;
+    text-align: center;
+    font-size: 14px;
+}
+.type li:hover {
+    color: #2d2d34;
+}
+.hide {
+    display: none;
+}
+.banner {
+    height: 152px;
+    font-size: .28rem;
+    overflow: hidden;
+    margin-top: 40px;
+}
+.banner img {
+    display: block;
+    width: 100%;
+    height: 152px;
+}
+.banner div {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    background: white;
+    opacity: 0.5;
+    bottom: 0;
+
+}
+.banner div p {
+    padding-left: 10px;
+}
+.shop-name {
+    top: -24px;
+    left: 10px;
+}
+.shop-descr {
+    font-size: .23rem;
+    padding: .35rem .56rem;
+    line-height: .4rem;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 10px;
+}
+.type {
+    left: 0;
+    top: 0;
+    background: white;
+    z-index: 9;
+    width: 100%;
+}
+.black-layer {
+    background: black;
+    opacity: 0.8;
+    width: 100%;
+    top: 0;
+    z-index: 12;
+}
+.exhibition {
+    width: 100%;
+}
+.exhibi-fixed {
+    width:100%;
+    position: fixed;
+    background: url("../images/album-bg.png");
+    -webkit-background-size: 100% 100%;
+            background-size: 100%;
+    z-index: 999;
+    top: 0;
+}
+/*鐎戝竷娴?*/
+#waterfall {
+    margin: 0 auto;
+    position: relative;
+}
+.picList {
+
+  /*  -webkit-box-shadow: 0 0 3px #CCC;
+    box-shadow: 0 0 3px #CCC;*/
+    background: #FFF;
+    position: absolute;
+    display: block;
+    border: 1px solid #E1E1E1;
+    overflow: hidden;
+    // width:47%;
+     width: 48.5%;
+    position: absolute;
+    margin: 0 2.5px 5px 2.5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  
+
+
+}
+/*.picList:nth-child(odd){
+    background: lightgoldenrodyellow;
+    width:49%;
+}
+.picList:nth-child(even){
+    background: lightgreen;
+    width:48%;
+}*/
+/*.picList{
+    min-height: 170px;
+}*/
+.picList:hover {
+    -webkit-box-shadow: 1px 1px 5px #BBB;
+    box-shadow: 1px 1px 5px #BBB;
+}
+.picList:hover .shareIcon {
+    display: block;
+}
+.picList .shareIcon {
+    display: none;
+    width: 100px;
+    height: 24px;
+    /* background: url(images/share_icon.png) no-repeat;*/
+    cursor: pointer;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    z-index: 2;
+    opacity: .9;
+}
+.picThumbnail a {
+    display: block;
+    max-height: 600px;
+    overflow: hidden;
+}
+.picThumbnail img {
+    width: 100%;
+    display: block;
+}
+.picDescription {
+    padding:0 5px;
+    margin-top: 1px;
+    font-size: .2rem;
+    padding-bottom: 20px;
+}
+.picDescription p {
+    margin-top: 7px;
+}
+
+.clothes-label{
+    display: inline-block;
+    width: 0.45rem;
+    background-color: #c59721;
+    color: #fff;
+    font-size: 0.15rem;
+    text-align: center;
+    line-height: 0.15rem;
+    padding: 0.05rem 0;
+    margin-bottom: 5px;
+    -webkit-border-radius: 2.5px;
+            border-radius: 2.5px;
+    margin-right: 0.1rem;
+}
+.border-radius-5{
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+}
+.mr-5{
+    margin-right: 5px;
+}
+.ml-15{
+    margin-left: 15px;
+}
+.info {
+    line-height: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #E2E2E2;
+    background: rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+.icon{
+    -webkit-text-size-adjust:none;
+    margin-left: 5px;
+}
+.type-part{
+    width: 100%;
+    background: white;
+    z-index: 10;
+    padding-bottom: 10px;
+}
+.type-part p{
+    font-size: .15rem;
+    color: #7a7b87;
+    padding: 10px;
+}
+.type-part ul{
+    padding: 0 .12rem 0.1rem .22rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+.type-part-li li.selected{
+    background: #ffdc95;
+    border:1px solid #c59721;
+}
+.type-part ul li{
+    font-size: .15rem;
+    background: #d7d7d7;
+    padding: .13rem .15rem;
+    float: left;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    margin-right: .1rem;
+    margin-bottom: .1rem;
+    border:1px solid #FFFFFF;
+}
+.filter-btn-box{
+    display: inline-block;
+    width:96%;
+    margin-top: 10px;
+}
+.filter-btn-box a{
+    width:1rem;
+    height:.4rem;
+    line-height: .4rem;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    color: #FFFFFF;
+    font-size: .24rem;
+    margin-left: .2rem;
+    margin-top: .1rem;
+}
+.filter-btn-box a:nth-child(1){
+    color: #2d2d34;
+    border:1px solid #9a9a9a;
+}
+.fixed-header {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    height:80px;
+}
+.icon-look{
+    color: #c0c0c9;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+.icon-looked{
+    color: #e2cb90;
+}
+.icon-collected{
+    color: #e5a400;
+}
+.icon-praised{
+    color: #a84eda;
+}
+/*清单详情*/
+.pa-10{
+    padding: 0 10px;
+}
+.product-img{
+
+}
+.product-img-box{
+    font-size: .18rem;
+    background: #f8f8f8;
+    margin-bottom: 80px;
+}
+.product-img-box img{
+    margin: 0 auto;
+}
+.mt-30{
+    margin-top: .3rem;
+}
+.product-price{
+    font-size: .36rem;
+    color: #c59721;
+}
+.user-operate >span{
+    margin-right: 5px;
+    font-size: 12px;
+}
+.wedding-user-operate >span{
+    margin-right: .75rem;
+}
+.wedding-user-operate{
+    padding-top: 0 !important;
+    margin-top: 8px;
+}
+.marry-sale{
+    font-size: 12px;
+    color: white;
+    background: #c59721;
+    padding: 2px 4px;
+    margin-left: 15px;
+}
+.sale-price{
+    color: #2d2d34;
+    font-size: .24rem;
+
+}
+.sale-price span{
+    text-decoration: line-through;
+}
+.exprice{
+    margin-top: 20px;
+    background: #f9fafa;
+}
+.exprice h2{
+    border-bottom: 1px solid #e1e1e1;
+    height: 32px;
+    line-height: 32px;
+    background: white;
+}
+.exprice p span{
+    margin-right: 10px;
+    line-height: 20px;
+    display: inline-block;
+    padding-top: 5px;
+}
+.exprice p i{
+    font-size: .22rem;
+    vertical-align: middle;
+    color: #c99065;
+    margin-right: 5px;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.drap-view-details{
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #e1e1e1;
+    font-size: .18rem;
+}
+.drap-view-details p{
+    width: 25%;
+    border-top: 1px solid #e1e1e1;
+    margin-top: 30px;
+}
+.tab-btn{
+    height: 53px;
+    line-height: 53px;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: .55rem;
+}
+.tab-btn{
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+    box-pack:justify;
+}
+
+.tab-btn li{
+    text-align: center;
+    color: #7b7a87;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    font-size: .28rem;
+    height: 40px;
+}
+.tab-btn li.selected{
+    color: #c59721;
+    border-bottom: 1px solid #c59721;
+}
+.swiper-container>div{
+
+}
+.swiper-container>div.selected{
+    display: block;
+}
+.product-details{
+    padding: 0 10px;
+}
+.product-details img{
+    margin-bottom: .15rem;
+}
+.mt-55{
+    margin-top: .55rem;
+}
+.mb-55{
+    margin-bottom: .55rem;
+}
+.no-border{
+    border: 0;
+}
+.guess-like {
+    display: -webkit-box;
+    display: box;
+    box-pack: justify;
+}
+.guess-like li{
+    margin-right: .2rem;
+    text-align: left;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+}
+/*.guess-like li:last-child{
+    margin-right: 0;
+}*/
+.guess-like li img{
+    margin-bottom: .2rem;
+    height: 115px;
+}
+.tab-hide{
+    visibility: hidden;
+}
+#tab-btn-fixed{
+    height: 53px;
+    line-height: 53px;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    background: #FFFFFF;
+    z-index: 111;
+
+}
+#tab-btn-fixed li{
+    line-height:40px;
+}
+#tab-btn-fixed li.selected {
+    color: #c59721;
+    border-bottom: 1px solid #c59721;
+}
+.order-btn{
+    height: .4rem;
+    line-height: .4rem;
+    width: 1.65rem;
+    text-align: center;
+    color: white;
+    background: #c59721;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    margin: 0 auto;
+    border: 3px solid #f6f0de;
+}
+.tab-content-2 ul li{
+    height:.73rem;
+    line-height: .73rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+.tab-content-2 ul li span:nth-child(1){
+    font-size: .26rem;
+    color: #7b7a87;
+    margin-right: 0.45rem;
+    display: inline-block;
+    width: 1.5rem;
+}
+.tab-content-2 ul li span:nth-child(2){
+    font-size: .26rem;
+    color: #2d2d34;
+}
+.mt-140{
+    margin-top: 140px;
+}
+.mt-80{
+    margin-top: .8rem;
+}
+.mb-80{
+    margin-bottom: .8rem;
+}
+.product-infor h2{
+    font-size: .3rem;
+}
+.product-intro{
+    font-size: .24rem;
+    padding-bottom: 10px;
+}
+.swiper-nav-fixed{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 18;
+    background: white;
+}
+/*婚礼堂详情*/
+.wedding-house-img img{
+    display: block;
+    height: 150px;
+    width: 100%;
+    border-bottom:10px solid #f8f8f8 ;
+}
+.wedding-house-address{
+    height: .54rem;
+    line-height: .54rem;
+    background: #f9fafa;
+    padding-left: 10px;
+}
+.fs26{
+    font-size: .26rem;
+}
+.fs22{
+    font-size: .22rem;
+}
+.fs20{
+    font-size: .2rem;
+}
+.fs24{
+    font-size: .24rem;
+}
+.font-bold{
+    font-weight: bold;
+}
+.exprice p.server-feature{
+    height: 61px;
+    line-height: inherit;
+    margin-left: 15px;
+}
+.exprice p.server-feature span{
+    display: inline-block;
+    margin-right: 10px;
+    float: left;
+}
+.boder-t-10{
+    border-top: 10px solid #f8f8f8;
+}
+.boder-b-10{
+    border-bottom: 10px solid #f8f8f8;
+}
+.white-bg{
+    background: white;
+}
+.wedding-house-title{
+    display: block;
+    width: 100%;
+    height: 42px;
+    background: url("../images/wedding-house-title.png") no-repeat;
+    -webkit-background-size:100% 100%;
+            background-size:100% ;
+}
+.wedding-house-title a{
+    display: inline-block;
+    width:50%;
+    height:40px;
+}
+.plan-dialog{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 19;
+}
+.fs12{
+    font-size: 12px !important;
+}
+.color-gray{
+    color: #c2c3cb;
+}
+.room-pic{
+    width: 150px;
+    height: 105px;
+    margin-right: .42rem;
+}
+.room-pic img{
+    width: 150px;
+    height: 105px;
+}
+.room-pic span{
+    display: inline-block;
+    padding: 3px 10px;
+    color: white;
+    background: black;
+    opacity: 0.7;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    font-size: 12px;
+    right: 5px;
+    bottom: 5px;
+}
+.room-parameter h2 span{
+    color: #c59721;
+    border: 1px solid #c59721;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.room-parameter p{
+    line-height: 23px;
+    width: 2.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.room-introduce{
+    margin-top: 10px;
+    height: 115px;
+    border-bottom: 1px solid #e1e1e1;
+}
+.exhibition-box{
+    height: 252px;
+    overflow: hidden;
+}
+.check-all{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-bottom: 10px solid #f8f8f8;
+    background: white;
+}
+.check-all i{
+    width:14px;
+    height:8px;
+    display: inline-block;
+    -webkit-background-size:14px 8px;
+            background-size:14px 8px;
+}
+.check-all i.icon-down{
+    background: url("../images/icon-down.png");
+}
+.check-all i.icon-up{
+    background: url("../images/icon-up.png");
+}
+.special-device ul li{
+    text-align: center;
+    width: 31%;
+    margin-top: 16px;
+}
+.special-device ul li p{
+    margin-top: 5px;
+}
+.special-device ul li span{
+    display: block;
+    width: 16px;
+    height: 16px;
+    -webkit-background-size: 16px 16px;
+    background-size: 16px 16px;
+    margin: 0 auto;
+}
+.icon-music{
+    background: url("../images/icon-music.png") no-repeat;
+}
+.icon-stage{
+    background: url("../images/icon-stage.png") no-repeat;
+}
+.icon-display{
+    background: url("../images/icon-display.png") no-repeat;
+}
+.city-select{
+    left: 10px;
+    top: 0;
+}
+.packge-tab{
+    margin-top: 20px;
+    background: #f8f8f8;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.packge-tab >ul{
+    display: -webkit-box;
+    display: box;
+    box-pack: justify;
+}
+.packge-tab >ul >li{
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    color: white;
+    width: 33%;
+    height: .9rem;
+    background: #7a7b87;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    font-size: .24rem;
+}
+.packge-tab >ul >li.selected{
+    background: #c59721;
+}
+.packge-tab >ul li p{
+    margin-top: 6px;
+}
+.w-33{
+    width: 33%;
+}
+.w-66{
+    width: 66%;
+}
+.w-66 >ul>li{
+    height:38px;
+    line-height: 38px;
+    border-bottom: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+}
+.w-66 >ul>li a{
+    padding: 1px 1px;
+    color: white;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background: #c59721;
+    border:3px solid #f0ead8;
+    margin-right: 10px;
+}
+.w-66 >ul>li span:nth-child(1){
+    padding-left: .7rem;
+    padding-right: 57px;
+    font-size:.26rem;
+}
+.w-66 >ul>li span:nth-child(2){
+    line-height: 36px;
+    -webkit-border-radius: 6px;
+            border-radius: 6px;
+
+}
+.table-border{
+    border: 1px solid #e1e1e1;
+}
+.no-border-t{
+    border-top: 0;
+}
+.no-border-b{
+    border-bottom: 0;
+}
+.w-66:nth-child(2)>li:last-child{
+    border: 0;
+}
+.review{
+    padding-top: 5px;
+    padding-bottom: 12px;
+}
+.review p{
+    margin-top: 12px;
+    line-height: 20px;
+    margin-bottom: 80px;
+}
+.editer-title{
+    height: 24px;
+    line-height: 24px;
+}
+.editer-title img{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: relative;
+    top: 5px;
+}
+.editer-title span{
+    font-size: .26rem;
+}
+.mt-0{
+    margin-top: 0;
+}
+.package-tab-content >div:nth-child(2),.package-tab-content >div:nth-child(3){
+    display: none;
+}
+.menu-content{
+    z-index: 99;
+    color: white;
+    top: -60px;
+    left: 0;
+    width: 100%;
+}
+.menu-content >ul >li{
+    border-bottom: 1px solid white;
+    font-size: 13px;
+}
+.menu-content >ul >li p{
+    line-height: 15px;
+    margin-bottom: 15px;
+    display: none;
+}
+.menu-content >h2{
+    color: #c59721;
+    font-size: 16px;
+    border-bottom: 1px solid white;
+    margin-bottom: 5px;
+}
+.menu-content >h2 i{
+    font-size: 17px;
+    color: white;
+}
+.menu-content >ul{
+    max-height: 156px;
+    overflow: hidden;
+}
+.additional-info span{
+    font-size: 14px;
+    color: #c59721;
+    padding-left: 0 !important;
+}
+.w-66 >ul>li .additional-info p{
+    line-height: 20px;
+    margin-top: -6px;
+
+}
+.exhibition-album{
+    z-index: 555;
+    width: 375px;
+    left: 0;
+    position: fixed;
+    top: 30%;
+}
+.exhibition-album img{
+    display: block;
+    width: 100%;
+}
+.icon-arrow{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url("../images/icon-left-arrow.png") no-repeat;
+    -webkit-background-size: 7px 13px;
+            background-size: 7px 13px;
+    margin-top: 13px;
+}
+.icon-arrow-bottom{
+    background: url("../images/icon-bottom-arrow.png") no-repeat;
+    -webkit-background-size: 13px 7px;
+            background-size: 13px 7px;
+}
+/*==========*/
+#waterfall{
+    /*position:absolute;*/
+    width:100%;
+    height:100%;
+    position:relative;
+    margin: 0 auto 80px;
+}
+
+body{
+    background: #f8f8f8;
+}
+#waterfall >dl{
+    border-bottom: 15px solid #f8f8f8;
+    background: white;
+    padding-bottom: 10px;
+}
+#waterfall >dl >dt{
+    padding-top: 10px;
+}
+#waterfall >dl >dt img{
+    width:100%;
+    height:200px;
+}
+.iconfont-ul{
+    margin-bottom: 10px;
+}
+/*登录弹窗样式*/
+.login-dialog{
+    position: fixed;
+    z-index:99;
+    left:0;
+    top:0;
+    background: #FFFFFF;
+    width:100%;
+}
+.scroller {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+}
+.picList,.wedding-house-list{
+    cursor: pointer;
+    /*margin-bottom: 15px;*/
+}
+.fixed-box{
+    position: fixed;
+    top:0;
+    overflow: scroll;
+    bottom:50px;
+    z-index: 22;
+}
+#scroll-div{
+    height:100%;
+    overflow: scroll;
+}
+@media screen and (min-width: 415px) and (max-width: 736px){
+    #infooter{
+        height:90px;
+    }
+}

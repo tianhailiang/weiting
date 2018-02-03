@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>参与报名</title>
+   <link rel="stylesheet" href="http://img.wishlist1314.com/reset.css">
+    <script src="http://img.wishlist1314.com/rem.js"></script>
+    <link rel="stylesheet" href="../src/css/common.css"/>
+    <link rel="stylesheet" href="../src/css/wish.css"/>
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">   
+   
+</head>
+<body class="bg-f8">
+<!-- ==我要报名== -->
+
+ <div class="act-myapply-box" >
+     
+        <div class="act-myapply">
+
+                  <div class="act-myapply-info" >
+                        请填写你的报名信，以便接收活动确认短信
+
+                  </div>
+                 
+                  <ul class="myapply-ul">
+                    <li>
+                            <i class="iconfont name">&#xe60a;</i>
+
+                            <input type="text" class="input-width" id="wishName" value="" placeholder="请输入您的姓名" />
+                          
+                    </li>
+                    <li> 
+
+                           <i class="iconfont phone" >&#xe8fe;</i>  
+                          <input type="text" class="input-width" id="phone"  value="" placeholder="默认已绑定的手机号" />
+                       
+                    </li>
+
+                    <li>
+                          <i class="iconfont peopleNum" >&#xe907;</i>  
+                        <input type="text" class="input-width" id="apply-num"  value="" placeholder="参与人数" />
+                      
+
+                    </li>
+
+                  </ul>
+
+                  <div class="myapply-btn">
+                          <button class="btn-sure" id="btn-sure" disabled="disabled" onclick="sureClick()">
+                              确认报名
+                          </button>
+                  </div>
+
+      </div>
+
+
+</div>
+
+</body>
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="../src/js/util/common.js"></script>
+<script src="../src/js/config.js"></script>
+<script src="../src/js/dbutil.js"></script>
+ <script src="../src/js/widget/layer/layer.js" ></script>
+
+<script src="../src/js/webapp/wish/join_apply.js"></script>
+
+
+</html>

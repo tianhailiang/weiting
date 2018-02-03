@@ -1,0 +1,681 @@
+html, body {
+    -webkit-overflow-scrolling: touch;
+    background: #f2f3f4;
+}
+.banner {
+    height: 150px;
+    overflow: hidden;
+    margin: 5px 0;
+}
+.swiper-pagination {
+    top: 170px;
+    left: 43%;
+}
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+}
+.swiper-pagination-bullet-active {
+    width: 10px;
+    height: 10px;
+    background-color: #d9d9d9 !important;
+}
+.filter-box {
+    height: 238px;
+    overflow: hidden;
+    padding: 0 66px;
+}
+.filter-box ul li {
+    width: 28px;
+    float: left;
+}
+.filter-box ul li p {
+    margin-top: 8px;
+}
+.filter-box ul li img {
+    height: 33px;
+    margin: 0 auto;
+}
+.margin-85 {
+    margin: 0 32%;
+}
+.hot-list-title {
+    height: 93px;
+    overflow: hidden;
+
+}
+.hot-list-title > div {
+    border-bottom: 1px solid #f7f7f7;
+    padding-bottom: 18px;
+}
+.pl-7 {
+    padding-left: 7px;
+}
+.hot-list-img {
+    height: 170px !important;
+}
+.swiper-container {
+    height: 200px !important;
+}
+.hot-list-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+.hot-item-check-all {
+    background: white;
+    margin-top: -1px;
+}
+.total {
+    margin-right: 13px;
+}
+.hot-list-item {
+    height: 330px;
+}
+.check-all {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+}
+.hot-item-box ul li {
+    height: 310px;
+    overflow: hidden;
+    float: left;
+    width: 49%;
+    text-align: center;
+}
+.hot-item-box ul li:nth-child(even) {
+    float: right;
+}
+.list-tile p {
+    padding: 0 20px;
+    line-height: 24px;
+}
+.list-tile p:last-child {
+    padding-bottom: 25px;
+}
+.list-item-status {
+    width: 150px;
+    height: 15px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+.green-eye {
+    color: #a1e1a1;
+}
+.red-heart {
+    color: #e8796e;
+}
+.img-hot-item {
+    display: block;
+    width: 59px;
+    margin: 0 auto;
+}
+.top-filter ul li {
+    height: 45px;
+    line-height: 45px;
+}
+.filter-item p a {
+    font-size: 12px;
+    color: #ababab;
+    text-align: center;
+    border-radius: 11px;
+    border: 1px solid white;
+    padding: 4px 7px;
+}
+.filter-item p a.selected {
+    border: 1px solid salmon;
+}
+.hot-item-box{
+    margin-bottom: 80px;
+}
+/*清单详情页样式*/
+.top-nav {
+    height: 44px;
+    line-height: 44px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 22;
+}
+.top-nav span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    line-height: 26px;
+}
+.top-nav span.kefu {
+    font-size: 15px;
+}
+.left-back-bg {
+    background: #7c8086;
+}
+.right-info-bg {
+    background: #3d4046;
+}
+.top-img {
+    height: 240px;
+    overflow: hidden;
+}
+.product-intro-title {
+    width: 240px;
+    margin: 0 auto;
+}
+.product-intro-feature li i {
+    font-size: 12px;
+    margin: 0 5px;
+}
+.prodct-character-item > p {
+    height: 54px;
+    line-height: 54px;
+}
+.character-bg {
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+    margin-right: 12px;
+    position: relative;
+    top: 6px;
+}
+.bg-gongyi {
+    background-image: url("../images/icon-gongyi_03.png");
+    background-repeat: no-repeat;
+}
+.bg-xijie {
+    background-image: url("../images/icon-xijie_03.png");
+    background-repeat: no-repeat;
+}
+.bg-xianggua {
+    background-image: url("../images/icon-xiangguan_06.png");
+    background-repeat: no-repeat;
+}
+.bg-pinpai {
+    background-image: url("../images/icon-pinpai_10.png");
+    background-repeat: no-repeat;
+}
+.bg-changjian {
+    background-image: url("../images/icon-changjian_10.png");
+    background-repeat: no-repeat;
+}
+.bg-tuihuo {
+    background-image: url("../images/icon-tuihuo_12.png");
+    background-repeat: no-repeat;
+}
+.bg-litang{
+    background-image: url("../images/icon-litang_03.png");
+    background-repeat: no-repeat;
+}
+.bg-tebie{
+    background-image: url("../images/icon-tebie_07.png");
+    background-repeat: no-repeat;
+}
+.cloth-charater li {
+    height: 42px;
+    line-height: 42px;
+}
+.cloth-charater li > span:nth-child(1) {
+    width: 75px;
+}
+.cloth-charater li > span:nth-child(2) {
+    width: 78px;
+}
+.cloth-charater li:nth-child(even) span:nth-child(2), .cloth-charater li:nth-child(even) span:nth-child(1) {
+    text-align: right;
+}
+.product-detail img {
+    margin-top: 8px;
+}
+.brand-introduce img {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    float: left;
+    margin-top: 60px;
+    margin-right: 15px;
+}
+.brand-introduce p {
+    width: 250px;
+}
+.left-back-btn-scroll {
+    color: #eb8a80 !important;
+    background: none !important;
+}
+
+/*婚礼堂详情*/
+.wedding-house-img img {
+    display: block;
+    height: 240px;
+}
+.wedding-house-address {
+    height: .54rem;
+    line-height: .54rem;
+    background: #f9fafa;
+    padding-left: 10px;
+}
+.fs26 {
+    font-size: .26rem;
+}
+.fs22 {
+    font-size: .22rem;
+}
+.fs20 {
+    font-size: .2rem;
+}
+.fs24 {
+    font-size: .24rem;
+}
+.font-bold {
+    font-weight: bold;
+}
+.exprice p.server-feature {
+    padding-bottom: 20px;
+    line-height: inherit;
+    margin-left: 15px;
+}
+.exprice p.server-feature span {
+    background: #f2f2f2;
+    color: #999999;
+    padding:5px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 10px;
+    float: left;
+}
+.boder-t-10 {
+    border-top: 10px solid #f8f8f8;
+}
+.boder-b-10 {
+    border-bottom: 10px solid #f8f8f8;
+}
+.white-bg {
+    background: white;
+}
+.wedding-house-title {
+    display: block;
+    width: 100%;
+    height: 42px;
+    background: url("../images/wedding-house-title_02.png") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100%;
+}
+.wedding-house-title a {
+    display: inline-block;
+    width: 50%;
+    height: 40px;
+}
+.plan-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 19;
+}
+.fs12 {
+    font-size: 12px !important;
+}
+.color-gray {
+    color: #c2c3cb;
+}
+.room-pic {
+    width: 150px;
+    height: 105px;
+    margin-right: .42rem;
+}
+.room-pic img {
+    width: 150px;
+    height: 105px;
+}
+.room-pic span {
+    display: inline-block;
+    padding: 3px 10px;
+    color: white;
+    background: black;
+    opacity: 0.7;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    right: 5px;
+    bottom: 5px;
+}
+.room-parameter h2 span {
+    color: #c59721;
+    border: 1px solid #c59721;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.room-parameter p {
+    line-height: 23px;
+    width: 160px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.room-introduce {
+    margin-top: 10px;
+    height: 115px;
+    border-bottom: 1px solid #e1e1e1;
+}
+.exhibition-box {
+    height: 252px;
+    overflow: hidden;
+}
+.exhibition-check-all {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: white;
+}
+.check-all i {
+    width: 14px;
+    height: 8px;
+    display: inline-block;
+    -webkit-background-size: 14px 8px;
+    background-size: 14px 8px;
+}
+.check-all i.icon-down {
+    background: url("../images/icon-down.png");
+}
+.check-all i.icon-up {
+    background: url("../images/icon-up.png");
+}
+.special-device ul li {
+    text-align: center;
+    width: 31%;
+    margin-top: 16px;
+}
+.special-device ul li p {
+    margin-top: 5px;
+}
+.special-device ul li span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    -webkit-background-size: 16px 16px;
+    background-size: 16px 16px;
+    margin: 0 auto;
+}
+.icon-music {
+    background: url("../images/icon-music.png") no-repeat;
+}
+.icon-stage {
+    background: url("../images/icon-stage.png") no-repeat;
+}
+.icon-display {
+    background: url("../images/icon-display.png") no-repeat;
+}
+.city-select {
+    left: 10px;
+    top: 0;
+}
+/*婚礼堂套餐*/
+.packge-tab {
+    margin-top: 20px;
+    background: #f8f8f8;
+}
+.packge-tab > ul {
+    display: -webkit-box;
+    display: box;
+    box-pack: justify;
+}
+.packge-tab > ul > li {
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    color: white;
+    height: 40px;
+    background: #7a7b87;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    font-size: 12px;
+}
+.packge-tab > ul > li.selected {
+    background: #e8796e;
+}
+.packge-tab > ul li p {
+    font-size: 14px;
+    padding-top: 2px;
+}
+.w-33 {
+    width: 33%;
+}
+.w-66 {
+    width: 66.4%;
+}
+.w-66 > ul > li {
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+}
+.w-66 > ul > li a {
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    width:61px;
+    height:18px;
+    line-height:18px;
+    color: #e8796e;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #e8796e;
+    margin-right: 10px;
+}
+.w-66 > ul > li span:nth-child(1) {
+    padding-left: .7rem;
+    padding-right: 57px;
+    font-size: .26rem;
+}
+.w-66 > ul > li span:nth-child(2) {
+    line-height: 36px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+
+}
+.table-border {
+    border: 1px solid #e1e1e1;
+}
+.no-border-t {
+    border-top: 0;
+}
+.no-border-b {
+    border-bottom: 0;
+}
+.w-66:nth-child(2) > li:last-child {
+    border: 0;
+}
+.review {
+    padding-top: 5px;
+    padding-bottom: 12px;
+}
+.review p {
+    margin-top: -15px;
+    margin-bottom: 80px;
+    margin-left: 52px;
+}
+.editer-title {
+    height: 24px;
+    line-height: 24px;
+}
+.review img {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: relative;
+    top: 5px;
+}
+.review span {
+    position: relative;
+    top: -20px;
+    left: 5px;
+}
+.mt-0 {
+    margin-top: 0;
+}
+.package-tab-content > div:nth-child(2), .package-tab-content > div:nth-child(3) {
+    display: none;
+}
+.menu-content {
+    position: fixed;
+    z-index: 99;
+    color: white;
+    top: 170px;
+    left: 0;
+    width: 100%;
+}
+.menu-content > ul > li {
+    border-bottom: 1px solid white;
+    font-size: 13px;
+}
+.menu-content > ul > li p {
+    line-height: 15px;
+    margin-bottom: 15px;
+    display: none;
+}
+.menu-content > h2 {
+    color: #c59721;
+    font-size: 16px;
+    border-bottom: 1px solid white;
+    margin-bottom: 5px;
+}
+.menu-content > h2 i {
+    font-size: 17px;
+    color: white;
+}
+.menu-content > ul {
+    max-height: 156px;
+    overflow: hidden;
+}
+.additional-info span {
+    font-size: 14px;
+    color: #c59721;
+    padding-left: 0 !important;
+}
+.w-66 > ul > li .additional-info p {
+    line-height: 20px;
+    margin-top: -6px;
+
+}
+.exhibition {
+    width: 100%;
+}
+/*.exhibi-fixed {
+    width:100%;
+    position: fixed;
+    background: url("../images/album-bg.png");
+    -webkit-background-size: 100% 100%;
+    background-size: 100%;
+    z-index: 999;
+    top: 0;
+}*/
+.exhibition-album {
+    z-index: 555;
+    width: 375px;
+    left: 0;
+    position: fixed;
+    top: 30%;
+    background: lightcoral;
+}
+.exhibition-album img {
+    display: block;
+    width: 100%;
+}
+.icon-arrow {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url("../images/icon-left-arrow.png") no-repeat;
+    -webkit-background-size: 7px 13px;
+    background-size: 7px 13px;
+    margin-top: 13px;
+}
+.icon-arrow-bottom {
+    background: url("../images/icon-bottom-arrow.png") no-repeat;
+    -webkit-background-size: 13px 7px;
+    background-size: 13px 7px;
+}
+.marry-sale{
+    color: white;
+    padding:0 3px;
+    margin-left: 5px;
+}
+.hall-title{
+    height:55px;
+    line-height:55px;
+}
+/*消息通知列表*/
+.info-list >div{
+    height:72px;
+
+}
+.info-list >div >p:nth-child(1){
+    width:48px;
+    height:48px;
+    line-height:48px;
+    margin-right: 15px;
+}
+.info-list >div div p{
+    width:290px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.notice-txt{
+    width:330px;
+    margin:0 auto;
+    padding:17px;
+    border:1px solid #d9dbdc;
+    border-radius: 8px;
+}
+/*婚礼堂详情*/
+.menu-tab {
+    display: flex;
+}
+/*登录弹窗*/
+.login-dialog{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    height: 100%;
+    z-index: 30;
+}
+.form-box li {
+    position: relative;
+}
+.form-box li input {
+    width: 180px;
+    height: 54px;
+    line-height: 54px;
+    font-size: 14px;
+}
+.form-box li a {
+    width: 72px;
+    height: 19px;
+    font-size: 10px;
+    color: #FFFFFF;
+    line-height: 19px;
+    text-align: center;
+    position: absolute;
+    right: 37px;
+    top: 20px;
+}
+.boder-radius-5 {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.submit-btn {
+    width: 130px;
+    height: 44px;
+    line-height: 44px;
+    margin: 56px auto 0;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.count-down {
+    top: 18px;
+    right: 0;
+    position: absolute;
+}

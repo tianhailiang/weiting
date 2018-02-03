@@ -1,0 +1,16 @@
+{
+  "code": 0,
+  "msg": "成功返回",
+  "data":[
+    {
+      "id":"SUFIDSJFKDSHFKUQHJKDWHKDKSAH",
+      "name":"北京"
+    },
+    {
+      "id":"SUFIDSJFKDSHFKUQHJKDWHKDKSAH",
+      "name":"上海"
+    }
+  ]
+}
+
+

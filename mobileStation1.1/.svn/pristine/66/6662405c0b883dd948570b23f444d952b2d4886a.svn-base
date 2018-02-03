@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>预约详情</title>
+   <link rel="stylesheet" href="http://img.wishlist1314.com/reset.css">
+    <link rel="stylesheet" href="../src/css/order.css"/>
+    <link rel="stylesheet" href="../src/css/global.css"/>
+    <link rel="stylesheet" href="../src/icont/iconfont.css"/>
+</head>
+<body>
+<!--头部导航-->
+<header class="fixed-header white-bg" id="fixed-header pr">
+    <div class="filter-header pa">
+        <span class="icon iconfont" onclick="window.history.go(-1)">&#xe601;</span>
+    </div>
+    <div class="logo pr">
+        <img src="../src/images/logo_03.png" alt="" class="img-width-100">
+    </div>
+    <div class="info-notice pa">
+        <div class="pr">
+            <span class="inline-b"><img src="../src/images/icon-notice_03.png" alt="" class="img-width-100"></span>
+            <span class="inline-b"><img src="../src/images/icon-customServices_03.png" alt=""
+                                        class="img-width-100"></span>
+            <i class="infor-tip pa"></i>
+        </div>
+
+    </div>
+</header>
+<div class="order-detail-box mt-10  white-bg">
+    <!--<script id="order-detail" type="text/html">
+        <div class="banner pr">
+            <img src="{{data.tImg}}" alt="">
+            <div class="pa"></div>
+            <p class="pr shop-name">{{data.tName}}</p>
+    </div>
+        <div class="shop-info border-b">
+            <div class="pa-10">
+                <p class="fs13 mt-15">体验店地址：{{data.location}}</p>
+                <p class="fs13 mt-15">营业时间：{{data.shopHours}}</p>
+                <p class="fs13 mt-15">联系电话：{{data.phoneNum}}</p>
+               &lt;!&ndash; <p class="fs14 color-c59 mt-15">约定日期到店，99999元福袋等你拿</p>&ndash;&gt;
+        </div>
+    </div>
+        <div class="pa-10">
+            <p class="clearfix mt-15 mb-15">
+                <span class="inline-b fl fs13">预约体验</span>
+                <span class="inline-b fr fs11">预约时间：{{data.bookTime}}</span>
+            </p>
+            <div>
+                <img src="{{data.pImg}}" alt=""/>
+                <div class="picDescription">
+                    {{if data.isRent == 1}}
+                    <p><i class="tc clothes-label">可租</i>{{data.pName}}</p>
+                    {{else}}
+                    <p>{{data.pName}}</p>
+                    {{/if}}
+                    {{if data.isPreference == 1}}
+                    <p class="picDescription-money fs13">￥<span>{{data.price}}</span><i class="tc clothes-label ml-15">结婚特惠季</i></p>
+                    {{else}}
+                    <p class="picDescription-money fs13">￥<span>{{data.price}}</span></p>
+                    {{/if}}
+                    <p class="user-operate">
+                        {{if data.isView == 0}}
+                        <span><i class="icon iconfont icon-look">&#xe605;</i><span>{{data.viewNum}}</span></span>
+                        {{else}}
+                        <span><i class="icon iconfont icon-look icon-looked">&#xe605;</i><span>{{data.viewNum}}</span></span>
+                        {{/if}}
+                        {{if data.isKeep == 0}}
+                        <span><i class="icon iconfont icon-look">&#xe62e;</i> <span>{{data.keepNum}}</span></span>
+                        {{else}}
+                        <span><i class="icon iconfont icon-look icon-collected">&#xe62e;</i> <span>{{data.keepNum}}</span></span>
+                        {{/if}}
+                        {{if data.isLike == 0}}
+                        <span><i class="icon iconfont icon-look">&#xe652;</i><span>{{data.likeNum}}</span> </span>
+                        {{else}}
+                        <span><i class="icon iconfont icon-look icon-praised">&#xe652;</i><span>{{data.likeNum}}</span> </span>
+                        {{/if}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </script>-->
+    <div class="pa-22 border-b">
+        <p class="clearfix pt-15">
+            <span class="fs15 color-333 fl">预约体验</span>
+            <span class="fs12 color-999 fr">预约时间:2016-04-4</span>
+        </p>
+        <dl class="clearfix order-detail mt-15 pb-10">
+            <dt class="fl">
+                <img src="../src/images/img-order_06.png" alt="">
+            </dt>
+            <dd class="fl">
+                <p class="fs18 color-333">商品名称</p>
+                <p class="fs15 color-666 mt-41">商品编号: 0000</p>
+                <p class="mt-10 color-red fs15">￥8989</p>
+            </dd>
+        </dl>
+    </div>
+</div>
+</body>
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/swiper-3.3.1.min.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="../src/js/util/common.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js"></script>
+<script src="../src/js/config.js"></script>
+<script src="../src/js/dbutil.js"></script>
+<script>
+    /*$(function () {
+        var queryId = OperationURL.getQueryString("id");
+        var queryType = OperationURL.getQueryString("type");
+        var sendData = {
+            id: queryId,
+            type: queryType
+        };
+        console.log(sendData);
+        getOrderDetailInfo(sendData, true, function (result) {
+            console.log(result);
+            var detailStr = template('order-detail',result);
+            $(".order-detail-box").html(detailStr)
+        })
+    })*/
+</script>
+</html>

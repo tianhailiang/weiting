@@ -1,0 +1,31 @@
+{
+	"code": "0",
+	"msg": "请求成功",
+	"data": [{
+		"iconForList": "http://img.wishlist1314.com/2016101019043361231.png",
+		"viewNum": 224,
+		"keepNum": 6,
+		"subtitle": "带你了解北京时装周都有哪些大牌",
+		"title": "2017北京国际时装周",
+		"editorName": "Mr.Denny",
+		"isView": "1",
+		"isKeep": "0",
+		"location": "北京",
+		"id": "8a9ac45057ad82920157ae4357a201bd",
+		"type": "7"
+	}, {
+		"iconForList": "http://img.wishlist1314.com/2016100920304710878.png",
+		"viewNum": 13,
+		
+		"keepNum": 2,
+		"subtitle": "注册新会员，预约体验，送福袋",
+		"title": "注册新会员，预约体验，送福袋",
+		"editorName": "慌慌",
+		"isView": "1",
+		
+		"isKeep": "1",
+		"location":"上海",
+		"id": "8a9ac45057a83f870157a91f05b7001f",
+		"type": "7"
+	}]
+}

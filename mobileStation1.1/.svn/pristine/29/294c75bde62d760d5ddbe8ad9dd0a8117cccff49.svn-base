@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+	<title>Document</title>
+	 <link rel="stylesheet" href="../src/css/reset.css" >
+     <link rel="stylesheet" href="../src/css/common.css" >
+     <link rel="stylesheet" href="../src/css/wish.css">
+
+</head>
+<body>
+
+       <header  class="header_box top_fixed">
+            <ul>
+                <li class="first" id="btnBack">
+                       
+                       <i class="iconfont icon_back ">&#xe601;</i>
+
+                </li>
+
+                 <li class="second">
+                        
+                          <i class="ico-wish-title"></i>
+                          <span class="header_title">WISH LIST</span>
+
+                 </li>
+              
+              <li class="last">
+
+                   <i class="iconfont icon-service" id="service" >&#xe70d;</i>
+                
+              </li>
+
+            
+            </ul>
+
+      </header>
+	
+     <div class="alive-main-box" id="scr-main">
+               
+                 <script type="text/html" id="template1" >
+                  
+                      <div class="previous-stage alive_list_stage" >
+                           
+
+                            {{each data as value }}
+
+                            <dl onclick="alive('{{value.id}}')">
+                              
+                                <dt>
+                                    <img src="{{value.iconForList}}" />
+                                </dt>
+
+                                <dd>
+
+                                          
+                                                 <p class="previous-title">
+                                                   
+                                                   <i>第{{value.orderNo}}期</i>{{value.title}}
+
+                                                 </p>
+
+                                                 <div class="previous-content" >{{value.content}}</div>
+                                           
+                                         
+
+                                           <div class="alive-form" >
+
+                                                      <div class="from-box">
+
+                                                             <span class="form">Form</span><i class="editorName">{{value.userName}}</i>
+                                                       </div>
+                                                       
+                                                       <div class="address-box">
+
+                                                          <span class="alive-date">{{value.time}}</span>                                                       
+                                                       </div>      
+
+                                            </div>
+
+                                      
+
+                                </dd>
+
+
+                            </dl>
+
+                            {{/each}}
+
+                           
+                   </div>
+
+                    
+
+
+
+                 </script>
+
+     </div>  
+
+
+   <script src="../src/js/lib/jquery-2.2.1.min.js" ></script>
+   <script src="http://img.wishlist1314.com/artTamplate.js" ></script>
+   <script src="http://img.wishlist1314.com/fastclick.js" ></script>
+   <script src="../src/js/util/common.js"></script>
+   <script src="../src/js/config.js" ></script>
+   <script src="../src/js/webapp/wish/alive_list.js"></script>     
+
+
+</body>
+</html>

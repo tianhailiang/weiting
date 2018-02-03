@@ -1,0 +1,69 @@
+!function () {
+    // 筛选滑动
+
+
+    var queryType = OperationURL.getQueryString('type');
+    // 获取筛选条件
+    getFilterInfo(null,true,function (result) {
+        console.log(result);
+        var filterStr1 = template('filter-first',result);
+        $("#filter-1").html(filterStr1);
+        var filterStr2 = template('filter-second',result);
+        $("#filter-2").html(filterStr2);
+        var filterStr3 = template('filter-third',result);
+        $("#filter-3").html(filterStr3);
+        var hotListSwiper1 = new Swiper('#filter-1', {
+            slidesPerView: 4,
+            paginationClickable: true,
+            spaceBetween: 10,
+            freeMode: true
+        });
+        var hotListSwiper2 = new Swiper('#filter-2', {
+            slidesPerView: 4,
+            paginationClickable: true,
+            spaceBetween: 10,
+            freeMode: true
+        });
+        var hotListSwiper3 = new Swiper('#filter-3', {
+            slidesPerView: 4,
+            paginationClickable: true,
+            spaceBetween: 10,
+            freeMode: true
+        });
+
+    });
+    //获取全部数据
+    getHotItemDetailInfo(null, true, function (result) {
+        var hotItemListStr = template('filter-content',result);
+        $(".filter-content").html(hotItemListStr);
+        userOerate();
+        $("img").lazyload({"effect":"fadeIn"});
+    });
+    // 单品查看功能点亮、收藏功能
+    function userOerate() {
+        //增加查看数
+        $('.filter-content >div >img').click(function () {
+            var curEle = $(this).parent().children(".list-item-status").children('.fl');
+            var viewNum = Number(curEle.find('span.fs12').html());
+            viewNum ++;
+            if(!curEle.children('icon').hasClass('green-eye')){
+                curEle.find('span.icon').addClass('green-eye');
+                curEle.find('span.fs12').html(viewNum);
+            }
+            return false
+        });
+
+        //收藏功能
+        $('.collect-btn').one("click",function () {
+            var collectNum = Number($(this).find('.fs12').html());
+
+            if(!$(this).find('.icon').hasClass('red-heart')){
+                $(this).find('.icon').addClass('red-heart');
+                collectNum ++;
+                $(this).find('.fs12').html(collectNum);
+                info_alert('收藏成功');
+            }
+            return false
+        });
+    }
+}();

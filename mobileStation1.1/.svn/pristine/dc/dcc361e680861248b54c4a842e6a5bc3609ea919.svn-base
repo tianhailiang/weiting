@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+	 <meta content="telephone=no" name="format-detection" />
+	<title>我的婚礼</title>
+    <link rel="stylesheet" href="../src/css/reset.css" >
+	<script src="../src/js/lib/rem.js" ></script>
+	<link  rel="stylesheet" href="../src/css/animate.css" >
+	<link rel="stylesheet" href="http://img.wishlist1314.com/swiper-3.3.1.min.css" >
+    <link rel="stylesheet" href="../src/css/common.css" >
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css" >
+    <link rel="stylesheet" href="../src/css/miccenter.css" >
+</head>
+
+
+<body class="bg-f8">
+
+    
+
+    <div class="swiper-container amend-swiper-container" id="swiper-container1" >
+
+
+          <div class="swiper-wrapper" >
+
+            
+               
+                <div class="swiper-slide swiper-no-swiping" data-hash="slide1" id="slide1">
+
+                </div>  
+
+               <div class="swiper-slide swiper-no-swiping" data-hash="slide2">
+                  
+		                  <ul class="myWidding-site-ul">
+		                  	 
+		                  	 <li>
+		                  	 	
+		                  	 	<div class="myWidding-site-li-left">
+		                  	 		
+		                  	 		<i class="iconfont widding-date">&#xe604;</i>
+
+		                  	 	</div>
+
+		                  	 	<input class="myWidding-site-li-right" value=""  placeholder="请输入你的婚期" name="appDate" id="appDate"  type="text"  />
+		                  	         
+
+		                  	 
+
+		                  	 </li>
+
+		                      <li onclick="selectSite()">
+		                  	 	
+		                  	 	<div class="myWidding-site-li-left">
+		                  	 		
+		                  	 		<i class="iconfont hotel">&#xe60b;</i>
+		                  	 	</div>
+
+		                  	 	<div class="myWidding-site-li-right" id="myWidding-site-li-right">
+		                  	          婚宴场地
+
+		                  	 	</div>
+
+		                  	 </li>
+
+
+
+		                  </ul>
+
+		                  <p class="myWidding-site-p" id="widding-date-p">
+		                  	    极致服务的第一步来源于坦诚的相互了解，明确时间地点让我们的设计方案应季更可行。
+
+		                  </p>
+
+		                  <p class="myWidding-site-p" id="Widding-site-p">
+		                  	  WISHLIST拥有全球领先的自营婚礼堂场地，能够为您提供的更好的婚礼现场体验
+		                  </p>
+
+		                  <div class="ball-box" id="ball-box">
+		                  	   <div class="ball-nav" >
+		                  	   	   <span class="ball-cancel" onclick="ballCancel()">取消</span>
+		                  	   	   <span class="ball-sure" onclick="ballSure()">确定</span>
+
+		                  	   </div>
+
+                               <div class="ball-select" >
+                               	
+                                     <span class="has-set has-set-act"><i></i>已定</span>
+                                     <span class="has-no-set"><i></i>未定</span>
+
+                               </div>
+
+
+		                  </div>
+
+
+		                  
+
+
+
+               </div>
+
+               
+             
+               <div class="swiper-slide swiper-no-swiping style-swiper-slide" data-hash="slide3">
+
+                
+
+		                     <div class="widding-main" >
+			                     	
+			                     	<h2 class="widding-color-h2">
+			                     		请勾选你所希望的婚礼的主色 （可多选）
+			                     	</h2>
+
+			                     	<p class="widding-color-p">
+			                     		
+			                     		一场婚礼的主色决定了策划主题的范围、现场装饰的细节以及新人的服装造型，这点至关重要。
+			                     	</p>
+
+			                        <div class="widding-color-nav" id="widColorNav">
+			                        	<span class="widding-color-act" >柔暖</span>
+			                        	<span >明澈</span>
+
+
+					                      <!-- =====animate 指示器===== -->
+
+		                                 <div class="indicate widding-indicate" >
+		                                       
+		                                       <div class="ibox" ></div>
+		                                       
+		                                 </div>
+
+			                        </div>
+
+		                          
+		                              <div class="swiper-container " id="swiper-container2" >
+
+
+                                              <div class="swiper-wrapper" >
+
+                                                 
+                                                    <div class="swiper-slide " >
+                                           
+					                                         <ul class="widding-color-ul" id="widding-color-ul1">
+
+					                                           <script type="text/html" id="template1" >
+
+					                                               {{each data.color as value}}
+
+					                                                 	<li  onclick="colorSelect(this)">
+					                                                 		<i class="iconfont circle-hook">&#xe66c;</i>
+					                                                 		
+					                                                 		<img src="{{value.img}}" />
+					                                                 		<div class="widding-color-name">{{value.name}},</div>
+					                                                 	</li>
+
+					                                               {{/each}}
+
+					                                            </script>   
+
+					                                         </ul>
+
+                                                  </div>
+
+
+                                                    <div class="swiper-slide " >
+		                                       
+	                                     
+						                                     <ul class="widding-color-ul " id="widding-color-ul2">
+						                                   
+							                                       <script type="text/html" id="template2" >
+							                                            {{each data.color1 as value}}
+							                                             	<li onclick="colorSelect(this)">
+							                                             		<i class="iconfont circle-hook">&#xe66c;</i>
+							                                             		 <img src="{{value.img}}" />
+							                                             		 <div class="widding-color-name">{{value.name}},</div>
+							                                             	</li>
+							                                             {{/each}}	
+
+							                                           </script>     
+						                                     
+						                                      </ul>
+
+		                                           </div>
+
+                                           </div>
+
+                                        </div>   
+
+
+
+
+		                       </div>  
+
+	                       
+                        
+
+                </div>
+                
+                <div class="swiper-slide swiper-no-swiping style-swiper-slide" data-hash="slide4">
+                      
+                   
+
+		                        <div class="widding-main" >
+
+
+		                               
+		                               <h2 class="widding-style-h2">
+			                     		请勾选你喜欢的婚礼风格 （可多选）
+			                     	   </h2>
+		                              
+		                               	<p class="widding-style-p">
+			                     		
+			                     	       我们从全球婚礼大数据分析出未来最受欢迎的17种婚礼主题，让小而美的现场击中你的嘉宾。
+			                     	   </p>
+
+		                                 <ul class="widding-style-ul" id="widding-style-ul">
+
+		                                           <script type="text/html" id="template3" >
+		                                                {{each data.style as value}}
+						                                     	<li onclick="styleSelect(this)">
+
+						                                     		<i class="iconfont circle-hook">&#xe66c;</i>
+						                                     		
+					                                                <img src="{{value.img}}" />
+					                                                <div class="widding-style-name" >{{value.name}}<b class="widding-style-comma">,</b></div>
+                                                                   
+
+						                                     	</li>
+			                                     	
+			                                     	{{/each}}
+
+		                                        </script>
+		                                </ul>
+                               
+                                  
+
+                                     </div>
+
+
+	                              
+                         
+                         
+
+                </div>
+               
+                <div class="swiper-slide swiper-no-swiping style-swiper-slide" data-hash="slide5">
+                     
+                    
+  
+
+		                           <div class="widding-main" >
+		                               
+		                               <h2 class="widding-full-h2">
+			                     		 喜欢哪款西装呢？各种款式任你选
+			                     	   </h2>
+		                              
+		                               	<p class="widding-full-p">
+			                     		
+			                     	      韩国欧巴还是英伦绅士，爱人也要凹造型！
+			                     	   </p>
+
+		                                 <ul class=" widding-style-ul" id="widding-full-ul">
+
+		                                      <script type="text/html" id="template4" >
+
+		                                           {{each data.menswear as value}}
+
+				                                     	<li onclick="fullSelect(this)">
+				                                     		<i class="iconfont circle-hook">&#xe66c;</i>
+				                                     		
+			                                                <img src="{{value.img}}"  />
+
+			                                                <div class="widding-full-name">{{value.name}},</div>
+
+				                                     	</li>
+
+			                                      {{/each}}	
+			                                     
+		                                     </script>
+		                                </ul>
+
+                                   </div>
+
+
+								 
+
+                       
+
+                </div>
+
+               <div class="swiper-slide swiper-no-swiping style-swiper-slide" data-hash="slide6">
+                      
+                    
+
+		                          <div class="widding-main" >
+		                               
+		                               <h2 class="widding-full-h2">
+			                     		 喜欢哪款婚纱呢？各种款式任你选
+			                     	   </h2>
+		                              
+		                               	<p class="widding-full-p">
+			                     		
+			                     	     让身体零死角，才是完美真女神！
+			                     	   </p>
+
+		                                 <ul class="widding-dress-ul" id="widding-dress-ul">
+
+		                                        <script type="text/html" id="template5" >
+                                                    {{each data.dressStyle as value}}
+                                                      
+					                                     	<li onclick="dressSelect(this)">
+					                                     		<i class="iconfont circle-hook">&#xe66c;</i>
+					                                     	
+				                                                <img src="{{value.img}}" /> 
+				                                                <div class="widding-dress-name" >{{value.name}},</div>
+
+					                                     	</li>
+
+					                                 {{/each}}   	
+
+			                                    </script> 
+
+		                                </ul>
+
+		                        </div>
+                              
+
+							
+                    
+
+               </div>
+
+             <!--   <div class="swiper-slide swiper-no-swiping " data-hash="slide7">
+
+                      <div class="widding-main" >
+                           
+                             <div class="widding-gift-h2">恭喜您完成我的婚礼喜好</div>
+
+                             <p class="widding-gift-p">
+                             	您已完成WISHLIST的体验第一步，赠送的礼卷可在<i id="mygift">我的礼卷</i>中查询；预约客服到店，向您的婚礼统筹师获取独筹婚手册。
+
+
+                             </p>
+
+                             
+                            <a class="widding-sure" id="widding-btn-sure" href="http://m.wishlist1314.com/wishlist_mobile/mobileStation/miccenter/myWidding.html#slide8" target="_blank">
+                            	确认
+                            </a>
+
+
+                     </div>
+               </div> -->
+
+             <div class="swiper-slide swiper-no-swiping " data-hash="slide8">
+
+                         <ul class="myWidding-amend-ul">
+
+				    	<li>
+				    		<div class="myWidding-amend-li-left">
+				    			婚期
+				    		</div>
+
+				    		<div class="myWidding-amend-li-right" id="widding-date">
+				                
+				    		</div>
+
+				    	</li>
+				    	<li>
+				    		<div class="myWidding-amend-li-left">
+				    			婚宴场地
+				    		</div>
+
+				    		<div class="myWidding-amend-li-right" id="widding-site">
+				                 
+				    		</div>
+
+
+				    	</li>
+				    	<li>
+				    		<div class="myWidding-amend-li-left">
+				    			颜色
+				    		</div>
+
+				    		<div class="myWidding-amend-li-right" id="widding-color">
+				                 
+				                 
+				    		</div>
+
+				    	</li>
+				    	<li>
+				    		<div class="myWidding-amend-li-left">
+				    			风格
+				    			
+				    		</div>
+
+				    		<div class="myWidding-amend-li-right" id="widding-style">
+				                 
+				                  
+				    		</div>
+				    	</li>
+				    	<li>
+				    		<div class="myWidding-amend-li-left">
+				    			婚纱款式
+				    			
+				    		</div>
+
+				    		<div class="myWidding-amend-li-right" id="widding-dress">
+				                  
+				                  
+				    		</div>
+				    	</li>
+				    	<li>
+				    		<div class="myWidding-amend-li-left">
+				    			礼服款式
+				    			
+				    		</div>
+
+				    		<div class="myWidding-amend-li-right " id="full-dress">
+				                  
+				                  
+				    		</div>
+				    	</li>
+				    </ul>
+
+				     <div class="myWidding-btn-amend" >
+
+				          <a class="btn-start" id="widding-btn-amend">修改</a>
+                          
+                        
+
+				      </div>
+
+
+
+
+             </div>
+
+             <!-- ====swiper-wrapper==== -->
+       
+
+          </div>     
+        
+</div>
+
+
+ <div class="go" id="go1">
+	      	<span>
+	      		GO
+	      	</span>
+
+   </div>
+
+
+      <div class="go " id="go2">
+		      	<span>
+		      		GO
+		      	</span>
+
+     </div>
+
+
+ <div class="go " id="go3">
+	      	<span>
+	      		GO
+	      	</span>
+
+</div> 
+
+  <div class="go " id="go4">
+		      	<span>
+		      		GO
+		      	</span>
+
+   </div> 
+
+       <div class="go " id="go5" onclick="widdingRefer()">
+			      	<span>
+			      		GO
+			      	</span>
+
+	    </div> 
+
+
+  
+
+   <script src="../src/js/lib/jquery-2.2.1.min.js" ></script>
+   <script src="http://img.wishlist1314.com/swiper-3.3.1.min.js" ></script>
+   <script src="http://img.wishlist1314.com/artTamplate.js" ></script>
+   <script src="../src/js/lib/fastclick.js" ></script>
+   <script src="../src/js/widget/layer/layer.js" ></script>
+   <script src="../src/js/util/common.js"></script>
+   <script src="../src/js/config.js"></script>
+   <script src="../src/js/dbutil.js" ></script>
+   <!-- 引入iphone-time插件 -->
+
+    <link href="../src/js/widget/jQuery-iphone-time/mobiscroll_002.css" rel="stylesheet" type="text/css">
+    <link href="../src/js/widget/jQuery-iphone-time/mobiscroll.css" rel="stylesheet" type="text/css">
+    <link href="../src/js/widget/jQuery-iphone-time/mobiscroll_003.css" rel="stylesheet" type="text/css">
+    <script src="../src/js/widget/jQuery-iphone-time/jQuery-iphone-time.js" ></script>
+
+   
+
+   <script src="../src/js/webapp/miccenter/myWidding.js" ></script>
+	
+</body>
+</html>

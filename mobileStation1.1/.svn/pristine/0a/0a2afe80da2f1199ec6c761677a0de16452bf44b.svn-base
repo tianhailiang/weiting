@@ -1,0 +1,25 @@
+!function () {
+
+    getAllHotItemInfo(null, true, function (result) {
+        var hotItemStr = template('hot-item-second', result.data);
+        $(".hot-list-box").html(hotItemStr);
+        //图片横向滑动
+        for (var i = 0; i < result.data.hotTopics.length; i++) {
+            var swiperClass = $(".hot-list-swiper" + i);
+            new Swiper(swiperClass, {
+                slidesPerView: 3,
+                paginationClickable: true,
+                spaceBetween: 10,
+                freeMode: true
+            });
+        }
+        // 跳转单品详情页
+        $(".hot-list-item").click(function () {
+            var id = $(this).attr('data-id');
+            window.location.href = "../../../../detailed_account/hot_list_collect_detail.html?id=" + id;
+        })
+    });
+    $("img").lazyload({
+        effect: "show"
+    });
+}();

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>心愿详情</title>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/reset.css">
+    <link rel="stylesheet" href="../src/css/global.css"/>
+    <link rel="stylesheet" href="../src/css/account_list.css"/>
+    <link rel="stylesheet" href="../src/icont/iconfont.css"/>
+    <link rel="stylesheet" href="../src/js/widget/layer.m/need/layer.css"/>
+</head>
+<body>
+
+<!--头部导航-->
+<div class="top-nav">
+    <div class="clearfix pa-7">
+        <span class="fl left-back-bg mt-10 iconfont left-back-btn" onclick="window.history.go(-1)">&#xe601;</span>
+        <div class="fr right-btn">
+            <span class="right-info-bg mt-10 iconfont praise-btn">&#xe616;</span>
+            <span class="right-info-bg mt-10 iconfont kefu kefu-btn" id="kefu-btn"> &#xe70d;</span>
+        </div>
+    </div>
+</div>
+<div class="account-detail-box">
+    <script id="account-detail-box" type="text/html">
+
+        <!--头部图片-->
+        <div class="top-img">
+            <img src="{{data.icon}}" class="img-width-100">
+        </div>
+        <!--产品介绍-->
+        <div class="product-intro pt-30 white-bg">
+            <div class="product-intro-title">
+                <p class="fs14 color-666 tc lineh-24">{{data.name}}</p>
+                <p class="fs13 color-red mt-20 tc">￥ {{data.price}}</p>
+                <p class="color-333 fs13 mt-20 tc">商品编码 {{data.productNum}}</p>
+            </div>
+            <div class="product-intro-txt pa-22 mt-25">
+                <p class="fs13 color-666 lineh-24">{{data.introduce}}</p>
+
+            </div>
+            <ul class="product-intro-feature mt-30 clearfix pa-22 pb-10">
+                {{each data.feature as value}}
+                <li class="fl">
+                    <i class="icon iconfont color-red">&#xe66c;</i>
+                    <span class="fs12 color-888">{{value}}</span>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <!--产品特色 工艺特点-->
+        <div class="mb-60">
+            <div class="product-character white-bg mt-10">
+                <div class="prodct-character-item pa-7 ">
+                    <p class="pa-22 hot-list-bottom">
+                        <i class="inline-b bg-gongyi character-bg"></i>
+                        <span class="fs14 color-333 ">工艺特点</span>
+                    </p>
+                    <ul class="cloth-charater pa-22 clearfix">
+                        {{each data.technology as item}}
+                        <li class="fl">
+                            <span class="fs14 color-666 inline-b">{{item.key}}</span>
+                            <span class="fs14 color-red inline-b">{{item.value}}</span>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <!--细节展示-->
+            <div class="product-character white-bg mt-10">
+                <div class="prodct-character-item pa-7 ">
+                    <p class="pa-22 hot-list-bottom">
+                        <i class="inline-b bg-xijie character-bg"></i>
+                        <span class="fs14 color-333 ">细节展示</span>
+                    </p>
+                    <div class="product-detail pa-22">
+                        {{data.detail}}
+                    </div>
+                </div>
+            </div>
+            <!--相关单品-->
+            <div class="product-character white-bg mt-10">
+                <div class="prodct-character-item pa-7 ">
+                    <p class="pa-22 hot-list-bottom">
+                        <i class="inline-b bg-xianggua character-bg"></i>
+                        <span class="fs14 color-333 ">相关单品</span>
+                    </p>
+                </div>
+                {{each data.commodity as item}}
+                <div class="mt-20 pa-22 pb-20">
+                    <img src="{{item.iconForList}}">
+                    <p class="color-333 mt-25 fs14 tc">{{item.name}}</p>
+                    <p class="color-red mt-20 fs14 tc"> ￥{{item.price}}</p>
+                    <p class="color-888 fs14 mt-20 tc check-detail" data-id="{{item.id}}" data-type="{{item.type}}">查看详情</p>
+                </div>
+                {{/each}}
+            </div>
+            <!--租赁定制介绍-->
+            <div class="product-character white-bg mt-10">
+                <div class="prodct-character-item pa-7 ">
+                    <p class="pa-22 hot-list-bottom">
+                        <i class="inline-b bg-lease character-bg"></i>
+                        <span class="fs14 color-333 ">租赁定制介绍</span>
+                    </p>
+                </div>
+                <div class="mt-10 pa-22 pb-20">
+                    <p class="color-999 fs14 lineh-24">
+                        租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍
+                        租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍
+                    </p>
+                </div>
+            </div>
+            <!--品牌介绍-->
+            <div class="product-character white-bg mt-10">
+                <div class="prodct-character-item pa-7 ">
+                    <p class="pa-22 hot-list-bottom">
+                        <i class="inline-b bg-pinpai character-bg"></i>
+                        <span class="fs14 color-333 ">品牌介绍</span>
+                    </p>
+                </div>
+                <div class="mt-10 pa-22 pb-20">
+                    <div class="brand-introduce clearfix">
+                        <div class="">
+                            <img src="../src/images/img-hotList_47.png" alt="">
+                        </div>
+                        <p class="color-999 fs14 lineh-24 fr">
+                            租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍
+                            租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍租赁定制介绍
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!--常见问题-->
+            <div class="product-character white-bg mt-10">
+                <div class="prodct-character-item pa-7 ">
+                    <p class="pa-22">
+                        <i class="inline-b bg-changjian character-bg"></i>
+                        <span class="fs14 color-333 ">常见问题</span>
+                        <span class="fr icon iconfont fs20">&#xe65b;</span>
+                    </p>
+                </div>
+            </div>
+            <!--退换货说明-->
+            <div class="product-character white-bg mt-10">
+                <div class="prodct-character-item pa-7 ">
+                    <p class="pa-22 hot-list-bottom">
+                        <i class="inline-b bg-tuihuo character-bg"></i>
+                        <span class="fs14 color-333 ">退换货说明</span>
+                    </p>
+                </div>
+                <p class="fs13 color-666 lineh-24 pa-22 pb-20 mt-10">
+                    退换货说明退换货说明退换货说明退换货说明退换货说明退换货说明退换货说明退换货说明退换货说明退换货说明退换货说明
+                    退换货说明退换货说明退换货说明退换货说明退换货说明退换货说明退换货说明
+                </p>
+            </div>
+        </div>
+    </script>
+</div>
+<div class="btn-my-apply" id="order-btn">我要预约</div>
+<!--登录弹窗-->
+<div class="login-dialog hide">
+    <div class="pa-15">
+        <ul class="form-box mt-30">
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-phone inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您的手机号码" class="inline-b fl tele-number"/>
+                <a href="javascript:;" class="bg-red fs12 inline-b fl boder-radius-5 get-invidate-code">获取验证码</a>
+                <span class="fl count-down fs13 color-7a7b"><i>120</i>s</span>
+            </li>
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-validate inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您收到的验证码" class="inline-b fl validate-code"/>
+            </li>
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-invite inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您的邀请码（选填）" class="inline-b fl invite-code"/>
+            </li>
+        </ul>
+        <p class="fs13 mt-15 pl-13 validate-code-tip" style="visibility: hidden">验证码已经发送至填写的手机中，请注意查收！</p>
+        <div class="submit-btn bg-red tc boder-radius-5" id="submit-region-btn">完成提交</div>
+    </div>
+</div>
+
+</body>
+
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/swiper-3.3.1.min.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js"></script>
+
+<script src="../src/js/config.js"></script>
+<script src="../src/js/util/common.js"></script>
+<script src="../src/js/util/global.js"></script>
+<script src="../src/js/util/header.js"></script>
+<script src="../src/js/util/register.js"></script>
+<script src="../src/js/widget/layer.m/layer.m.js"></script>
+<script src="../src/js/widget/layer.m/mobel.js"></script>
+<script src="../src/js/webapp/account/account_dtail.js"></script>
+</html>
+

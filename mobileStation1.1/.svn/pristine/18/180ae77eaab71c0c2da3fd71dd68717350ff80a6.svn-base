@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+	<title>策划师案列详情</title>
+    
+      <!--
+      @require "../src/css/reset.css"
+      @require "../src/css/common.css"
+      @require "../src/css/wish.css"
+
+      @require "../src/js/lib/jquery-2.2.1.min.js"
+   
+      @require "../src/js/webapp/wish/planning_division_detail.js"
+  -->
+
+     <link rel="stylesheet" href="../src/css/reset.css" >
+
+    <link rel="stylesheet" href="../src/css/common.css" >
+ 
+    <link rel="stylesheet" href="../src/css/wish.css">
+
+
+</head>
+<body style="background:#f2f4f5;">
+
+  <div class="alive-main-box" id="scr-main">
+
+  <!--    <script type="text/html" id="template1" > -->
+
+
+                <div class="alive-banner" >
+             
+                    <img src="../src/images/wish/planning-1.jpg" alt=" " />
+
+                </div>
+
+                <h1 class="planning-h1" >白雪公主婚礼</h1>
+
+                 <div class="planning-theme" >
+                 	
+                         	<div class="planning-price">
+                         		
+                         		<i class="icon-free"></i><span>策划价格</span><i>58888元</i>
+
+                         	</div>
+
+                           <div class="planning-price">
+                         		
+                         		<i class="icon-tint"></i><span>主题色彩</span> 
+                                 <ul class="planning-color">
+                                     <li></li>
+                                     <li></li>
+                                     <li></li>
+                                 </ul>
+                               
+                         	</div>
+
+                                <div class="planning-price">
+                        
+                                        <i class="iconfont icon-style">&#xe65e;</i><span>主题风格</span><i class="planning-style">童话#</i><i class="planning-style">梦幻#</i>
+
+                               </div>
+
+
+                                <div class="planning-price">
+                        
+                                        <i class="iconfont icon-site">&#xe70a;</i><span>场地环境</span><i>室内/室外</i>
+
+                                </div>
+
+                                <div class="planning-price">
+                        
+                                        <i class="iconfont icon-date">&#xe607;</i><span>婚礼日期</span><i>2016-11-11</i>
+
+                                </div>
+                               
+                                 <div class="planning-price planning-field">
+                        
+                                        <i class="iconfont icon-location">&#xe608;</i><span>举办场地</span><i>北京市王府井大酒店</i>
+
+                                </div>
+
+                                 
+
+                 </div>
+
+
+                 <div class="planning-wedding" >
+                     
+                         <h2 class="planning-wedding-h2"><i class="icon-inspiration"></i><span>婚礼灵感</span></h2>
+                         
+                         <p class="planning-wedding-p" >
+                             
+                              在网上看着最新款的婚纱眼馋月不知道在哪能找到？担忧代沟了一圈穿上却不适合自己？<br/>
+
+                              WISHLIST来帮你！本期我们准备了时下最吸引眼球的婚纱供你体验，明星同款大牌设计，随你挑选！
+
+                         </p>
+
+                 </div>
+
+                  <div class="planning-wedding" >
+                          <h2 class="planning-wedding-h2"><i class="icon-case"></i><span>案列详情</span></h2>
+
+                          <ul class="planning-wedding-ul">
+                              
+                              <li>
+                                  <img src="../src/images/wish/planning-3.jpg" />
+                              </li>
+                              
+                               <li>
+                                  <img src="../src/images/wish/planning-3.jpg" />
+                              </li>
+
+                          </ul>
+
+                          <div class="planning-wedding-division" >
+                             
+                               <div class="planning-wedding-division-left" >
+                                   
+                                   <span></span>
+                                   <i class="icon-v"></i>
+
+                               </div>
+                               
+                               <div class="planning-wedding-division-center" >
+                                    
+                                   <div class="planning-wedding-name">
+                                       <i>经陆路</i>
+
+                                       <span class="icon-author"></span>
+
+                                   </div>  
+
+                                   
+                                   <div class="planning-works" >
+                                       <span >全部作品</span>
+                                       <span>给Ta留言</span>
+
+                                   </div>
+
+
+                               </div>
+
+                               <div class="planning-wedding-division-right">
+                                   
+                                       <i class="iconfont icon-attention">&#xe662;</i>
+                                       <span>1222222已关注</span>
+
+
+                               </div>
+
+
+
+                          </div>
+                       
+
+                  </div>
+
+
+                    <div class="planning-wedding planning-wedding-dependence" >
+                     
+                         <h2 class="planning-wedding-h2"><i class="icon-single"></i><span>相关单品</span></h2>
+
+
+                 </div>
+
+                    <ul class="dependence-ul">
+                             
+                             <li>
+                                 <img src="../src/images/wish/planning-single-1.jpg" />
+
+                                 <div class="dependence-ul-name" >
+                                    
+                                     Sunset-House
+
+                                 </div>
+
+                                 <div class="dependence-ul-price" >&yen;2345</div>
+
+                             </li>
+
+                              <li>
+                                 <img src="../src/images/wish/planning-single-1.jpg" />
+
+                                 <div class="dependence-ul-name" >
+                                    
+                                     Sunset-House
+
+                                 </div>
+
+                                 <div class="dependence-ul-price" >&yen;2345</div>
+
+                             </li>
+
+                              <li>
+                                 <img src="../src/images/wish/planning-single-1.jpg" />
+
+                                 <div class="dependence-ul-name" >
+                                    
+                                     Sunset-House
+
+                                 </div>
+
+                                 <div class="dependence-ul-price" >&yen;2345</div>
+
+                             </li>
+
+                         </ul>
+
+
+
+     <!--   </script> -->
+       
+   </div>                 
+	
+  
+  <script src="../src/js/webapp/wish/planning_division_detail.js" ></script>
+</body>
+</html>

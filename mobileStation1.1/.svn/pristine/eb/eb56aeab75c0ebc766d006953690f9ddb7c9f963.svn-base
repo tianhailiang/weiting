@@ -1,0 +1,479 @@
+
+ var Id = OperationURL.getQueryString("id");
+
+ var follow=true;
+
+function init(){
+
+
+     var isView= OperationURL.getQueryString("isView");//获取是否被查看
+
+           if(isView=="0"){
+             //如果没被查看则调入
+             operateSee();
+
+           };
+            
+  
+    update();
+
+
+
+        $(window).on("scroll",function(){
+
+          if($(this).scrollTop()>0){
+
+              $(".icon_div").attr("style","opacity:0");
+
+              $(".icon_header").attr("style","color:#666");
+
+          }else{
+             
+               $(".icon_div").attr("style","opacity:0.4");
+               
+               $(".icon_header").attr("style","color:#fff");
+
+          }
+
+          
+           
+       });
+
+
+};
+
+
+function update(){
+
+  var param={
+  	id:Id
+  }
+  
+  planDivision(param,true, function(result){
+
+
+      if (result.code == 0) {
+          
+          console.log(result)
+          
+        $("#scr-main").html(template("template1",{data:result.data}));  
+
+          
+
+          $("#btnBack").click(function(){
+              //返回键 
+               window.history.go(-1);
+
+          })
+
+
+        
+      } else {
+
+        console.log(result.msg);
+      }
+
+  });
+
+
+
+};	
+
+
+function attention(target,id,isfollow){
+  //关注
+
+ 
+
+  var param={
+     
+     id:id
+  };
+  
+  if(isfollow==0 && follow){
+    
+     attentionInfo(param,true,function(result){
+
+            if(result.code==0){
+               
+               $(target).attr("style","color:#666;")
+               $(target).next().text(result.data+"已关注");
+               
+                follow=false;
+             
+            }else{
+
+            	console.log(result.msg);
+            }
+
+
+     });
+
+
+
+  }else{
+
+  	 cancelAttention(param,true,function(result){
+
+          if(result.code==0){
+               
+              $(target).attr("style","color:#e87a6e;")
+
+              $(target).next().text(result.data+"已关注");
+                follow=true;
+          }else{
+
+          	 console.log(result.msg);
+          }
+
+  	 });
+
+  }
+
+
+};
+
+
+
+function dependence(id,type,isView){
+ //相关单品点击
+  
+          
+          var url="../detailed_account/account_item.html?id="+id+ "&type="+type ;  
+          
+      
+         window.location.href = url;
+
+
+
+};
+
+
+function operateCollect(target){
+             //收藏 
+              
+      var that=target;
+
+      var param={
+
+         type:"11",
+
+         actionType:2,
+
+         id:Id
+      }
+   
+        
+
+
+       lpcOperate(param, true, function(result){
+        //调查看接口
+          
+
+            if(result.code==0){
+
+                 $.wishListAlert("<div class='layer-ball-box'>收藏成功</div>");
+
+                 $(that).attr("style","color:#a84eda;");
+                                         
+                 $(that).removeAttr("onclick");
+
+
+            }else if(result.code==3){
+              
+                 window.location.href="../order/bind_phone.html?id="+Id+"&action_type=11";
+               
+            }else{
+
+                console.log(result.msg);
+            }
+
+       });
+
+};
+
+
+function operateSee(){
+     //查看
+
+              var param={
+                 type:"8",
+
+                 actionType:1,
+
+                 id:Id
+              }
+
+
+
+                 lpcOperate(param, true, function(result){
+                   //调查看接口
+                
+
+                  if(result.code==0){
+
+                      
+
+                  }else{
+
+                      console.log(result.msg);
+                  }
+
+             });
+  
+
+};
+
+
+function introduce(id){
+  //连接策划师介绍页
+
+    window.location.href="planning_division_introduce.html?id="+id;
+
+};
+
+
+function planList(id){
+  //连接策划师列表页
+
+  window.location.href="planning_division_list.html?id="+id;
+
+
+};
+
+
+function planWord(id){
+
+  //显示留言评论
+
+       var Top= $("#grade_word_box").offset().top;
+
+   
+      var heig=document.documentElement.clientHeight;
+          
+
+      $("#grade_word_box").attr("style","display:block;top:"+Top+"px;height:"+heig+"px;");
+
+      document.addEventListener('touchmove', myStop,false);
+
+     $("#grade_submit").click(function(){
+       //点击提交 
+                  
+                  var content=$("#grade_txt").val();
+
+                  var phone = $("#grade_iphone").val();
+                 
+                  if(content==""){
+                     
+                     $.wishListAlert("<div class='layer-ball-box'>请填写您的留言</div>");
+
+                     return false;
+
+                 };
+
+                 if (!validate.phone(phone)) {
+
+                   $.wishListAlert("<div class='layer-ball-box'>敢不敢把手机号写对</div>");
+                
+                     return false;
+                 };
+                 
+
+                var param={
+                   
+                   id:id,
+                   phoneNum:phone,
+                   content:content
+
+                } 
+
+              referWord(param,true,function(result){
+                   
+                  if(result.code==0){
+
+                        $("#grade_word_box").hide();
+
+                        document.removeEventListener('touchmove', myStop, false);
+                      
+                       $.wishListAlert("<div class='layer-ball-box'>提交成功</div>");
+                         
+
+
+                  }else if(result.code==3){
+                      
+                      window.location.href="../order/bind_phone.html?id="+Id+"&action_type=11";
+
+                  }else{
+
+                      $.wishListAlert("<div class='layer-ball-box'>"+result.msg+"</div>");
+
+                  }  
+
+              });
+
+
+
+     });
+
+
+
+      $("#grade_cancel").click(function(){
+        
+           $("#grade_box").hide();
+
+           document.removeEventListener('touchmove', myStop, false);
+
+
+      });
+
+
+};
+
+
+
+function myStop(e){
+
+     e.preventDefault();
+};
+
+
+/*==============接口===============*/
+
+var  planDivision= function (param, async, succfun) {
+   
+   //10、查看真实案例详情(新接口)
+
+    var testurl = "../../../../testdata/wish/planning_division_detail.json";
+
+    var useurl = config.getUrl() + "getWorkDetails";
+
+    var url = testurl;
+
+
+    $.ajax({
+        type: config.getType(),
+        url: url,
+        dataType: config.getDataType(),
+        data: param,
+        async: async,
+        success: function (data, status) {
+            succfun(data);
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+};
+
+
+ var attentionInfo = function (param, async, succfun) {
+   
+   //11、关注策划师接口
+
+    var testurl = "../../../../testdata/wish/attention.json";
+
+    var useurl = config.getUrl() + "focusPlanning";
+
+    var url = testurl;
+
+
+    $.ajax({
+        type: config.getType(),
+        url: url,
+        dataType: config.getDataType(),
+        data: param,
+        async: async,
+        success: function (data, status) {
+            succfun(data);
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+};
+
+
+var cancelAttention= function (param, async, succfun) {
+   
+   //11.1、取消关注策划师接口
+
+    var testurl = "../../../../testdata/wish/cancelAttention.json";
+
+    var useurl = config.getUrl() + "focusPlanning";
+
+    var url = testurl;
+
+
+    $.ajax({
+        type: config.getType(),
+        url: url,
+        dataType: config.getDataType(),
+        data: param,
+        async: async,
+        success: function (data, status) {
+            succfun(data);
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+};
+
+
+var lpcOperate = function (param, async, succfun) {
+   
+   //(16、查看、点赞、收藏接口)
+
+
+    var testurl = "/api/lpcOperate";
+
+    var useurl = config.getUrl() + "modifyStatData";
+    var url = useurl;
+
+
+    $.ajax({
+        type: config.getType(),
+        url: url,
+        dataType: config.getDataType(),
+        data: param,
+        async: async,
+        success: function (data, status) {
+            succfun(data);
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+};
+
+
+var  referWord = function (param, async, succfun) {
+   
+   //16、给策划师留言(新加)
+
+
+    var testurl = "../../../../testdata/wish/referWord.json";
+
+    var useurl = config.getUrl() + "messageProblem";
+
+    var url =testurl;
+
+    $.ajax({
+        type: config.getType(),
+        url: url,
+        dataType: config.getDataType(),
+        data: param,
+        async: async,
+        success: function (data, status) {
+            succfun(data);
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+};

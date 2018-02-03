@@ -1,0 +1,12 @@
+!function () {
+    // 筛选滑动
+    var hotListSwiper = new Swiper('#filter-1', {
+        slidesPerView: 6,
+        paginationClickable: true,
+        spaceBetween: 10,
+        freeMode: true
+    });
+
+    var queryType = OperationURL.getQueryString('type');
+    console.log(queryType);
+}();

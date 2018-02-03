@@ -1,0 +1,159 @@
+{
+	"code": "0",
+	"msg": "请求成功",
+	"data": {
+		
+		"time": "Oct,09,2016",
+		"data": [{
+			"iconForList": "http://img.wishlist1314.com/2016101019043361231.png",
+			"viewNum": 224,
+			"keepNum": 6,
+			"subtitle": "带你了解北京时装周都有哪些大牌",
+			"title": "2017北京国际时装周",
+			"editorName": "Mr.Denny",
+			"isView": "1",
+			"isKeep": "0",
+			"location": "北京",
+			"id": "8a9ac45057ad82920157ae4357a201bd",
+			"type": "7"
+		}, 
+        {
+
+        	    "type":"10",
+				"id":"集合id",
+				"title":"wishlist双11 满1000减200",
+				"description":"最美新娘鲜活攻略体验活动",
+				"recommendList":[
+					{
+						"iconForList":"http://img.wishlist1314.com/2016100920304710878.png",
+						"price":"4500"
+					},{
+						"iconForList":"http://img.wishlist1314.com/2016101021101430111.png",
+						"price":"4800"
+					},
+					{
+						"iconForList":"http://img.wishlist1314.com/2016101016190496051.png",
+						"price":"4800"
+					}
+                    
+
+				],
+                "num":"11",
+				"viewNum": 13,
+				"keepNum": 1,
+				"isView": "0",
+				"isKeep": "0"
+			},
+
+			{
+				"iconForList": "http://img.wishlist1314.com/2016101016190496051.png",
+				"viewNum": 78,
+				
+				"keepNum": 11,
+				"subtitle": "工体周边的CHIC酒店",
+				"title": "【礼堂检验官】第一期： 左岸清幽，右岸浮华",
+				"editorName": "离离",
+				"isView": "1",
+			
+				"isKeep": "0",
+				
+				"id": "8a9ac45057a986a90157a9b5400a0044",
+				 "type": "8"
+			},
+			{
+				"id":"JILDSUILEFWJKLJHKFHDSKGHGHJG",
+				"type":"11",  
+				"iconForList":"http://img.wishlist1314.com/2016100920304710878.png",
+				"title":"标题",
+				"editorName":"慌慌",
+				"style":["童话梦幻","童话王子"],
+				"environment":"0",
+				"main":["a9d7c4","bcb293","e5c764"],
+				"viewNum":"11",
+				"keepNum":"11",
+				"isView":"0",
+				"isKeep":"0"
+		
+	      },
+	         {  
+	         	"type":"1",
+	            "id":"123",
+				"title":"【Goddess Sries】",
+				"iconForList":"../src/images/wish/yarn.jpg",
+				
+				"viewNum":"11",
+				"keepNum":"12",
+				"isView":"0",
+				"isKeep":"0",
+				"price":"3500"
+
+	        },
+	        {  
+	         	"type":"2",
+	            "id":"123",
+				"title":"【Goddess Sries】",
+				"iconForList":"../src/images/wish/full.jpg",
+				
+				"viewNum":"11",
+				"keepNum":"12",
+				"isView":"0",
+				"isKeep":"0",
+				"price":"4500"
+
+	        },
+	         {  
+	         	"type":"3",
+	            "id":"123",
+				"title":"【Goddess Sries】",
+				"iconForList":"../src/images/wish/male.jpg",
+				
+				"viewNum":"11",
+				"keepNum":"12",
+				"isView":"0",
+				"isKeep":"0",
+				"price":"4500"
+
+	        },
+	        {  
+	         	"type":"4",
+	            "id":"123",
+				"title":"【Goddess Sries】",
+				"iconForList":"../src/images/wish/match.jpg",
+				
+				"viewNum":"11",
+				"keepNum":"12",
+				"isView":"0",
+				"isKeep":"0",
+				"price":"4500"
+
+	        },
+	         {  
+	         	"type":"9",
+	            "id":"123",
+				"title":"【Goddess Sries】",
+				"iconForList":"../src/images/wish/answer.jpg",
+				
+				"viewNum":"11",
+				"keepNum":"12",
+				"isView":"0",
+				"isKeep":"0",
+				"price":"4500"
+
+	        },
+
+	         {  
+	         	"id":"JILDSUILEFWJKLJHKFHDSKGHGHJG",
+				"type":"6",
+				"AWord":"国际时装周爱都不释手的几款婚纱",
+				"iconForList":"../src/images/wish/house.jpg",
+				"title":"北京诺衡会婚礼堂",
+				"location":"北京",
+				"viewNum":"11",
+				"keepNum":"12",
+				"isView":"0",
+				"isKeep":"0"
+
+	        }
+		]
+	}
+}

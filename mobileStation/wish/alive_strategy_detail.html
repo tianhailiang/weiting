@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+	<title>鲜货攻略详情</title>
+    <link rel="stylesheet" href="../src/css/reset.css" >
+	<script src="../src/js/lib/rem.js" ></script>
+  
+    <link rel="stylesheet" href="../src/css/common.css" >
+    <link rel="stylesheet" href="../src/css/wish.css">
+
+</head>
+
+<body class="bg-f8" >
+	
+	 
+
+             <div class="scr-main alive-main-box" id="scr-main">
+               
+                 <script type="text/html" id="template1" >
+
+                  
+                   <div class="alive-banner" >
+                   
+                         <img src="{{data.topImg}}" alt=" " />
+
+                   </div>
+
+                  <div class="act-content alive-content" id="act-ontent">
+
+                   
+                  </div>
+
+               
+
+                   <ul class="alive-ul">
+                       
+                       {{each data.recommends as value index}}
+
+                        <li onclick="detailClick('{{value.productId}}','{{value.type}}')">
+                        	
+                           <div class="alive-commodity" >
+                                   
+                                   <div class="oImg" >
+
+                                       {{if value.isSoldOut==0}}
+
+                                       {{else}}
+                                        <div class="alive-sell-out ico-sell-out" ></div>
+
+                                        {{/if}}
+
+                                        {{if value.type==1}}
+
+                                           <img src="{{value.icon}}" class="alive-detail-img"  />
+
+                                        {{else}}  
+
+                                           <img src="{{value.icon}}" class=" alive-img"  /> 
+
+                                        {{/if}}
+                                     
+                                   </div>   
+
+                                    <div class="alive-price" >&yen; <i>{{value.price}}</i></div> 
+                           </div>
+                           
+                           <div class="alive-describe" >
+                               
+                                <h2>{{value.name}}</h2>
+
+                                <p>
+                                    {{value.introduce}}
+                                </p>
+
+                           </div>
+
+                           
+                            <ul class="operate iconfont-ul">
+                                  
+                                        <li >
+                                                 <a>
+                                                    <i class="iconfont eye ">&#xe605;</i> <span class="num">{{value.viewNum}}</span>
+                                                 </a>
+                      
+                                        </li>
+
+                                   
+
+                                      <li >
+                                                 <a>
+                                                    <i class="iconfont star ">&#xe62e;</i><span class="num">{{value.keepNum}}</span>
+                                                 
+                                                  </a>
+                                      </li>
+
+                                  
+
+                                        <li >
+                                             <a>
+                                                <i class="iconfont love ">&#xe652;</i><span class="num">{{value.likeNum}}</span>
+                                             </a>
+                                       </li>
+
+                              
+                            </ul>
+
+
+                             
+                              <div class="alive-check" >
+                              	  
+                                    <span>查看详情</span>
+                              </div>
+
+                        </li>
+
+                        {{/each}}
+
+                   </ul> 
+
+               </script>
+
+             </div>
+
+       
+
+
+
+</body>
+ 
+   <script src="../src/js/lib/jquery-2.2.1.min.js" ></script>
+   <script src="http://img.wishlist1314.com/artTamplate.js" ></script>
+   <script src="http://img.wishlist1314.com/fastclick.js" ></script>
+   <script src="../src/js/util/common.js"></script>
+   <script src="../src/js/config.js" ></script>
+   <script src="../src/js/dbutil.js" ></script>
+  
+   <script src="../src/js/webapp/wish/alive_strategy_detail.js" ></script>
+
+</html>
+

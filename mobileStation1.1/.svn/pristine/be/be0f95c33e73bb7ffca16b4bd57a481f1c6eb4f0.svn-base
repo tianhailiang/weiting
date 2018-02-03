@@ -1,0 +1,37 @@
+!function () {
+    var queryId = OperationURL.getQueryString("id");
+    var sendData = {id: queryId};
+    getHotItemDetailInfo(sendData, true, function (result) {
+        var hotItemListStr = template('hot-item-list',result);
+        $(".hot-item-list").html(hotItemListStr);
+        userOerate();
+       $("img").lazyload({"effect":"fadeIn"});
+    });
+    // 单品查看功能点亮、收藏功能
+    function userOerate() {
+        //增加查看数
+        $('.list-detail >div >img').click(function () {
+            var curEle = $(this).parent().children(".list-item-status").children('.fl');
+            var viewNum = Number(curEle.find('span.fs12').html());
+            viewNum ++;
+            if(!curEle.children('icon').hasClass('green-eye')){
+                curEle.find('span.icon').addClass('green-eye');
+                curEle.find('span.fs12').html(viewNum);
+            }
+            return false
+        });
+        //收藏功能
+        $('.collect-btn').one("click",function () {
+            var collectNum = Number($(this).find('.fs12').html());
+
+            if(!$(this).find('.icon').hasClass('red-heart')){
+                $(this).find('.icon').addClass('red-heart');
+                collectNum ++;
+                $(this).find('.fs12').html(collectNum);
+                info_alert('收藏成功');
+            }
+            return false
+        });
+
+    }    
+}();

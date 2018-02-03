@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">   
+
+  <meta content="yes" name="apple-mobile-web-app-capable">
+
+  <meta content="yes" name="apple-touch-fullscreen">
+
+  <meta content="telephone=no,email=no" name="format-detection">
+
+  <title>心愿清单</title>
+
+   <link rel="stylesheet" href="/wishlist_mobile/mobileStation/src/css/reset.css" >
+
+     <script src="/wishlist_mobile/mobileStation/src/js/lib/rem.js" ></script>
+
+     <link rel="stylesheet" href="/wishlist_mobile/mobileStation/src/css/swiper-3.3.1.min.css" >
+
+     <link rel="stylesheet" href="/wishlist_mobile/mobileStation/src/css/common.css" >
+
+     <link rel="stylesheet" href="/wishlist_mobile/mobileStation/src/js/widget/layer/need/layer.css">
+
+     <link rel="stylesheet" href="/wishlist_mobile/mobileStation/src/css/index.css" >
+
+ 
+
+</head>
+
+
+
+
+
+<body class="bg-f8">
+
+
+
+   
+
+
+
+           <div  class="index-box" >
+
+              
+
+                               <div class="swiper-container-box" id="swiper-container-box">
+
+                               
+
+                                          <div class="swiper-container " id="swiper-container1">
+
+                                               
+
+
+
+                                                   <div class="swiper-wrapper" id="banner">
+
+
+
+                                                          <script type="text/html"  id="bannerTemplate">
+
+                                                             {{each data as value}}
+
+
+
+                                                              <div class="swiper-slide " >
+
+                                                                      <a href="{{value.link}}"><img src="{{value.bannerUrl}}" alt="" class="carousel-img"  /></a>
+
+                                                              </div>
+
+                                                         
+
+                                                             {{/each}}
+
+                                                         </script>
+
+                                                       
+
+                                                   </div>
+
+
+
+                                                     <div class="swiper-pagination"></div>
+
+
+
+                                                  
+
+                                        </div>
+
+                            
+
+                              </div>
+
+
+
+
+
+                             
+
+                                <nav class="nav-box" id="nav-box1">
+
+
+
+                                    <ul >
+
+                                          <li>
+
+
+
+                                             
+
+                                            <a class="act">心愿精选
+
+                                                
+
+                                            </a>
+
+
+
+                                          </li>
+
+                                          <li>
+
+
+
+                                           
+
+                                            <a >鲜货攻略</a>
+
+
+
+                                          </li>
+
+                                          <li>
+
+
+
+                                            
+
+                                             <a >体验活动</a>
+
+
+
+                                          </li>
+
+                                          <li>
+
+
+
+                                           
+
+                                             <a>婚礼堂</a>
+
+
+
+                                          </li>
+
+                                  
+
+                                        </ul>
+
+
+
+
+
+
+
+                                  <!-- =====animate 指示器===== -->
+
+
+
+                                 <div class="indicate" >
+
+                                       
+
+                                       <div class="ibox" ></div>
+
+                                       
+
+                                 </div>
+
+
+
+
+
+                            
+
+                            </nav>
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+                          <div class="swiper-container " id="swiper-container2">
+
+
+
+
+
+                                  <div class="swiper-wrapper">
+
+                                                            
+
+                                                 <div class="swiper-slide " >
+
+
+
+                                                               <div class="date" >
+
+                                                                    —<i id="date"></i>—
+
+
+
+
+
+                                                               </div>  
+
+
+
+                                                                <ul class="wrapper-ul0 wrapper-ul" >
+
+
+
+                                                                </ul>
+
+
+
+                                                      
+
+
+
+                                                 
+
+                                                 </div>        
+
+                                                 
+
+                                                <div class="swiper-slide " >
+
+                                              
+
+                                                         <ul class="wrapper-ul1 wrapper-ul" >
+
+
+
+                                                         </ul>
+
+
+
+                                                             
+
+                                                            
+
+                                               </div>   
+
+
+
+                                               
+
+                                              <div class="swiper-slide " >
+
+                                         
+
+
+
+                                                         <ul class="wrapper-ul2 wrapper-ul" >
+
+
+
+                                                         </ul>
+
+                                                                      
+
+                                                         
+
+
+
+                                               </div> 
+
+
+
+
+
+                                               <div class="swiper-slide " >
+
+                                   
+
+
+
+                                                         <ul class="wrapper-ul3 wrapper-ul" >
+
+
+
+                                                         </ul>
+
+                                                                      
+
+                                                          
+
+
+
+                                                </div>           
+
+
+
+                                      
+
+                                            <!-- ===swiper-wrapper====== -->
+
+
+
+                                    </div>
+
+                                   
+
+                                            <!-- ==滚动条== -->
+
+                                         <!--   <div class="swiper-scrollbar"></div> -->
+
+
+
+                            </div>  
+
+
+
+                       <div class="pullUp" id="pullUp">
+
+
+
+                             <i class="ico-loading"></i>  <span>正在加载...</span>
+
+                       </div>
+
+
+
+
+
+                  </div>  
+
+              
+
+
+
+
+     <footer class="footer-box footer-fixed" id="infooter" >
+
+
+
+         <nav>
+
+          
+
+              <ul >
+
+
+
+              
+
+                <li>
+
+                    
+
+                  <a  href="/wishlist_mobile/mobileStation/index.html">
+
+                            <span class="ico-wish ico-current-wish"></span>
+
+                            <i>心愿</i>
+
+                  </a>
+
+
+
+                </li>
+
+
+
+    
+
+                <li>
+
+                    <a   href="/wishlist_mobile/mobileStation/detailed_account/account_list.html">
+
+
+
+                           <span class="ico-list"></span>
+
+
+
+                            <i>清单</i>
+
+                    </a>
+
+                </li>
+
+                <li >
+
+                    <a  onclick="userOrder(event)">
+
+                            <span class="ico-order"></span>
+
+                            <i>预约</i>
+
+                    </a>
+
+                </li>
+
+                  
+
+                <li >
+
+                    <a   onclick="personClick(event)">
+
+                            <span class="ico-miccenter"></span>
+
+                            <i>我的</i>
+
+                    </a>
+
+                </li>
+
+
+
+ 
+
+              </ul>
+
+         </nav>
+
+
+
+
+
+</footer>
+
+
+<!-- ==模拟nav== -->
+
+
+
+   <nav class="nav-box" id="nav-box2">
+
+
+
+                      <ul >
+
+                            <li>
+
+
+
+                               
+
+                              <a class="act">心愿精选
+
+                                  
+
+                              </a>
+
+
+
+                            </li>
+
+                            <li>
+
+
+
+                             
+
+                              <a >鲜货攻略</a>
+
+
+
+                            </li>
+
+                            <li>
+
+
+
+                              
+
+                               <a >体验活动</a>
+
+
+
+                            </li>
+
+                            <li>
+
+
+
+                             
+
+                               <a>婚礼堂</a>
+
+
+
+                            </li>
+
+                    
+
+                          </ul>
+
+
+
+
+
+
+
+                    <!-- =====animate 指示器===== -->
+
+
+
+                   <div class="indicate" >
+
+                         
+
+                         <div class="ibox" ></div>
+
+                         
+
+                   </div>
+
+
+
+
+
+              
+
+     </nav>
+
+
+
+   <!-- ======弹框注册登录==== -->
+
+
+
+ <div class="pa-15 ball-login" id="islogin">
+
+          <ul class="form-box mt-30">
+
+              <li class="h-46 pl-13 clearfix border-b">
+
+                  <i class="icon-phone inline-b pr fl mr-20"></i>
+
+                  <input type="text" maxlength="11" placeholder="请输入您的手机号码" class="inline-b fl tele-number" id="tele-number" />
+
+                  <a href="javascript:;" class="bg-c59 fs12 inline-b fl boder-radius-5 get-invidate-code" onclick="getInvidateCode(this)">获取验证码</a>
+
+                  <span class="fl count-down fs13 pr color-7a7b"><i>120</i>s</span>
+
+              </li>
+
+              <li class="h-46 pl-13 clearfix border-b">
+
+                  <i class="icon-validate inline-b pr fl mr-20"></i>
+
+                  <input type="text" maxlength="11" placeholder="请输入您收到的验证码" class="inline-b fl validate-code" id="validate-code" value="" />
+
+              </li>
+
+              <li class="h-46 pl-13 clearfix border-b">
+
+                  <i class="icon-invite inline-b pr fl mr-20"></i>
+
+                  <input type="text" maxlength="11" placeholder="请输入您的邀请码（选填）" class="inline-b fl invite-code" id="invite-code" />
+
+              </li>
+
+          </ul>
+
+
+
+          <p class="fs13 mt-15 pl-13">验证码已经发送至填写的手机中，请注意查收！</p>
+
+
+
+          <div class="submit-btn tc boder-radius-5 btn-finish" onclick="bindPhone()" id="finish-btn" disabled="disabled" >完成提交</div>
+
+
+
+</div>
+
+
+   <script src="/wishlist_mobile/mobileStation/src/js/lib/jquery-2.2.1.min.js" ></script>
+
+   <script src="/wishlist_mobile/mobileStation/src/js/lib/swiper-3.3.1.min.js" ></script>
+
+   <script src="/wishlist_mobile/mobileStation/src/js/lib/artTamplate.js" ></script>
+
+   <script src="/wishlist_mobile/mobileStation/src/js/lib/fastclick.js" ></script> 
+
+   <script src="/wishlist_mobile/mobileStation/src/js/util/common.js"></script>
+
+   <script src="/wishlist_mobile/mobileStation/src/js/config.js"></script>
+
+   <script src="/wishlist_mobile/mobileStation/src/js/dbutil.js" ></script>
+
+   <script src="/wishlist_mobile/mobileStation/src/js/widget/layer/layer.js"></script>
+
+   <script src="/wishlist_mobile/mobileStation/src/js/widget/lazyload/jquery.lazyload.js"></script>
+
+   <script src="/wishlist_mobile/mobileStation/src/js/webapp/index.js" ></script>   
+
+
+
+
+   <script type="text/html" id="template0" >
+
+       
+
+             {{each data.data as value index}}
+
+                   
+
+                 <li class="mar-t7" onclick="detailClick(this,'{{value.id}}','{{value.isView}}')" data-type="{{value.type}}">
+
+                       <h2 class="caption">
+
+                        <span class="ico-pen"></span>
+
+                          
+
+                           {{if value.type==8}}
+
+
+
+                             <i>鲜货攻略</i>
+
+
+
+                           {{else if value.type==7}}
+
+                                 <i>体验活动</i>
+
+
+
+                            {{else}}   
+
+                                  <i>婚礼堂</i>
+
+
+
+                            {{/if}}      
+
+
+
+                       </h2>
+
+           
+
+                   <dl>
+
+                 
+
+                    {{if value.type==8}}
+
+                           
+
+                        <dt class="alive">
+
+
+
+                             <p class="art-top">{{value.title}}</p>
+
+                         
+
+
+
+                              <img  class="lazy-img alive-img"   data-original="{{value.icon}}"  width="100%"  height="200" />
+
+
+
+                             <p class="art-bot">{{value.subtitle}}</p>
+
+
+
+                        </dt>
+
+
+
+                        <dd>
+
+
+
+                        <div class="come"> 
+
+                             <span>Form</span><i>{{value.editorName}}</i>
+
+
+
+                        </div>
+
+
+
+                    {{else if value.type==6}} 
+
+
+
+                         
+
+
+
+
+
+                                    <dt>
+
+                                             <img  class="lazy-img widdingHouse-img"   data-original="{{value.icon}}" width="100%" heihgt="200" />
+
+                                    </dt>
+
+
+
+                                    <dd>
+
+
+
+                                     <div class="describe">
+
+
+
+                                         <div class="title">
+
+                                              <h3>{{value.title}}</h3><span class="address">{{value.location}}</span>
+
+                                         </div> 
+
+                                        <p>{{value.subtitle}}</p>
+
+
+
+                                   </div>
+
+                                    
+
+                    {{else}}
+
+
+
+                                  <dt>
+
+                                          <img  class="lazy-img experience-img"   data-original="{{value.icon}}"  width="100%" heihgt="200" />
+
+                                  </dt>
+
+
+
+                                  <dd>
+
+
+
+                                <div class="describe">
+
+
+
+                                     <div class="title">
+
+                                          <h3>{{value.title}}</h3><span class="address">{{value.location}}</span>
+
+                                          
+
+                                      </div> 
+
+                                </div>
+
+                                
+
+                                  <div class="come"> 
+
+
+
+                                       <span>Form</span><i>{{value.editorName}}</i>
+
+
+
+                                  </div>
+
+
+
+                             
+
+
+
+                    {{/if}}   
+
+
+
+                        <ul class="operate iconfont-ul">
+
+                               {{if value.isView==1}}
+
+                                    <li >
+
+                                             <a>
+
+                                                <i class="iconfont eye ">&#xe605;</i> <span class="num">{{value.viewNum}}</span>
+
+                                             </a>
+
+                  
+
+                                    </li>
+
+
+
+                                {{else}}
+
+
+
+                                     <li  >
+
+                                           <a>
+
+                                              <i class="iconfont eye bg-c">&#xe605;</i> <span class="num">{{value.viewNum}}</span>
+
+                                           </a>
+
+                    
+
+                                      </li>
+
+                                     
+
+                               {{/if}}
+
+
+
+                             
+
+
+
+                              {{if value.isKeep==1}}
+
+
+
+                                  <li >
+
+                                             <a>
+
+                                                <i class="iconfont star ">&#xe62e;</i><span class="num">{{value.keepNum}}</span>
+
+                                             
+
+                                              </a>
+
+                                  </li>
+
+
+
+                               {{else}}
+
+
+
+                                    <li onclick="operate(this,event,'{{value.type}}','{{value.id}}')" >
+
+                                         <a>
+
+                                            <i class="iconfont star bg-c">&#xe62e;</i><span class="num">{{value.keepNum}}</span>
+
+                                         
+
+                                          </a>
+
+                                    </li>
+
+
+
+                              {{/if}}
+
+
+
+
+
+                               {{if value.isLike==1}}
+
+
+
+                                    <li >
+
+                                         <a>
+
+                                            <i class="iconfont love ">&#xe652;</i><span class="num">{{value.likeNum}}</span>
+
+                                         </a>
+
+                                   </li>
+
+
+
+                               {{else}}
+
+
+
+                                     <li class="last-li" onclick="operate(this,event,'{{value.type}}','{{value.id}}')" >
+
+                                             <a>
+
+                                                <i class="iconfont love bg-c">&#xe652;</i><span class="num">{{value.likeNum}}</span>
+
+                                             </a>
+
+                                     </li>
+
+
+
+                               {{/if}}
+
+
+
+                          
+
+                        </ul>
+
+
+
+                  </dd>
+
+
+
+                 </dl>
+
+
+
+                </li>
+
+
+
+             {{/each}}
+
+
+
+
+
+  </script>
+
+
+
+  
+
+  <script type="text/html" id="template1" >
+
+                                           
+
+     
+
+
+
+        {{each data as value index}}
+
+            
+
+            <li class="mar-t7" onclick="detailClick(this,'{{value.id}}','{{value.isView}}')" data-type="8">
+
+
+
+                <dl>
+
+                   <dt class="alive">
+
+                             <p class="art-top">{{value.title}}</p>
+
+                                <img  class="lazy-img alive-img"   data-original="{{value.icon}}"  width="100%"  height="200" />
+
+
+
+                             <p class="art-bot">{{value.subtitle}}</p>
+
+                     </dt>
+
+
+
+                      <dd>
+
+
+
+                             <div class="come"> 
+
+                                <span>Form</span><i>{{value.editorName}}</i>
+
+
+
+                             </div>
+
+                              <ul class="operate iconfont-ul">
+
+                               {{if value.isView==1}}
+
+                                    <li >
+
+                                             <a>
+
+                                                <i class="iconfont eye ">&#xe605;</i> <span class="num">{{value.viewNum}}</span>
+
+                                             </a>
+
+                  
+
+                                    </li>
+
+
+
+                                {{else}}
+
+
+
+                                     <li  >
+
+                                           <a>
+
+                                              <i class="iconfont eye bg-c">&#xe605;</i> <span class="num">{{value.viewNum}}</span>
+
+                                           </a>
+
+                    
+
+                                      </li>
+
+                                     
+
+                               {{/if}}
+
+
+
+                             
+
+
+
+                              {{if value.isKeep==1}}
+
+
+
+                                  <li >
+
+                                             <a>
+
+                                                <i class="iconfont star ">&#xe62e;</i><span class="num">{{value.keepNum}}</span>
+
+                                             
+
+                                              </a>
+
+                                  </li>
+
+
+
+                               {{else}}
+
+
+
+                                    <li onclick="operate(this,event,'{{value.type}}','{{value.id}}')" >
+
+                                         <a>
+
+                                            <i class="iconfont star bg-c">&#xe62e;</i><span class="num">{{value.keepNum}}</span>
+
+                                         
+
+                                          </a>
+
+                                    </li>
+
+
+
+                              {{/if}}
+
+
+
+
+
+                               {{if value.isLike==1}}
+
+
+
+                                    <li >
+
+                                         <a>
+
+                                            <i class="iconfont love ">&#xe652;</i><span class="num">{{value.likeNum}}</span>
+
+                                         </a>
+
+                                   </li>
+
+
+
+                               {{else}}
+
+
+
+                                     <li class="last-li" onclick="operate(this,event,'{{value.type}}','{{value.id}}')" >
+
+                                             <a>
+
+                                                <i class="iconfont love bg-c">&#xe652;</i><span class="num">{{value.likeNum}}</span>
+
+                                             </a>
+
+                                     </li>
+
+
+
+                               {{/if}}
+
+
+
+                          
+
+                        </ul>
+
+
+
+                       </dd>
+
+
+
+                </dl>
+
+
+
+            </li>
+
+
+
+        {{/each}}
+
+
+
+
+
+                          
+
+</script>
+
+
+
+
+
+  <script type="text/html" id="template2" >
+
+  
+
+  
+
+
+
+         {{each data as value index}}
+
+         
+
+      <li class="mar-t7" onclick="detailClick(this,'{{value.id}}','{{value.isView}}')" data-type="7">
+
+     
+
+             <dl>
+
+
+
+              <dt>
+
+                <img  class="lazy-img experience-img"   data-original="{{value.icon}}" width="100%" height="200" />
+
+              </dt>
+
+
+
+              <dd>
+
+                  <div class="describe">
+
+                          <div class="title">
+
+    
+
+                              <h3>{{value.title}}</h3><span class="address">{{value.location}}</span>
+
+
+
+                          </div>
+
+                    </div>
+
+                    
+
+                    <div class="come"> 
+
+                        <span>Form</span><i>{{value.editorName}}</i>
+
+
+
+                    </div>
+
+
+
+        
+
+                       
+
+                        <ul class="operate iconfont-ul">
+
+                               {{if value.isView==1}}
+
+                                    <li >
+
+                                             <a>
+
+                                                <i class="iconfont eye ">&#xe605;</i> <span class="num">{{value.viewNum}}</span>
+
+                                             </a>
+
+                  
+
+                                    </li>
+
+
+
+                                {{else}}
+
+
+
+                                     <li  >
+
+                                           <a>
+
+                                              <i class="iconfont eye bg-c">&#xe605;</i> <span class="num">{{value.viewNum}}</span>
+
+                                           </a>
+
+                    
+
+                                      </li>
+
+                                     
+
+                               {{/if}}
+
+
+
+                             
+
+
+
+                              {{if value.isKeep==1}}
+
+
+
+                                  <li >
+
+                                             <a>
+
+                                                <i class="iconfont star ">&#xe62e;</i><span class="num">{{value.keepNum}}</span>
+
+                                             
+
+                                              </a>
+
+                                  </li>
+
+
+
+                               {{else}}
+
+
+
+                                    <li onclick="operate(this,event,'{{value.type}}','{{value.id}}')" >
+
+                                         <a>
+
+                                            <i class="iconfont star bg-c">&#xe62e;</i><span class="num">{{value.keepNum}}</span>
+
+                                         
+
+                                          </a>
+
+                                    </li>
+
+
+
+                              {{/if}}
+
+
+
+
+
+                               {{if value.isLike==1}}
+
+
+
+                                    <li >
+
+                                         <a>
+
+                                            <i class="iconfont love ">&#xe652;</i><span class="num">{{value.likeNum}}</span>
+
+                                         </a>
+
+                                   </li>
+
+
+
+                               {{else}}
+
+
+
+                                     <li class="last-li" onclick="operate(this,event,'{{value.type}}','{{value.id}}')" >
+
+                                             <a>
+
+                                                <i class="iconfont love bg-c">&#xe652;</i><span class="num">{{value.likeNum}}</span>
+
+                                             </a>
+
+                                     </li>
+
+
+
+                               {{/if}}
+
+
+
+                          
+
+                        </ul>
+
+
+
+              </dd>
+
+
+
+             </dl>
+
+
+
+            </li>
+
+
+
+
+
+        {{/each}}
+
+
+
+                          
+
+ </script>
+
+
+
+  <script type="text/html" id="template3" >
+
+                                       
+
+    
+
+
+
+            {{each data as value index}}
+
+                 
+
+                <li class="mar-t7" onclick="detailClick(this,'{{value.id}}','{{value.isView}}')" data-type="6">
+
+                   
+
+                       <dl>
+
+                        <dt>
+
+                               <img  class="lazy-img widdingHouse-img"   data-original="{{value.icon}}" width="100%" height="200"  />
+
+                        </dt>
+
+
+
+                        <dd>
+
+
+
+                         <div class="describe">
+
+
+
+                                     <div class="title">
+
+                                          <h3>{{value.title}}</h3><span class="address">{{value.location}}</span>
+
+                                     </div> 
+
+                                  <p>{{value.subtitle}}</p>
+
+
+
+                          </div>
+
+                             
+
+                       
+
+                          <ul class="operate iconfont-ul">
+
+                               {{if value.isView==1}}
+
+                                    <li >
+
+                                             <a>
+
+                                                <i class="iconfont eye ">&#xe605;</i> <span class="num">{{value.viewNum}}</span>
+
+                                             </a>
+
+                  
+
+                                    </li>
+
+
+
+                                {{else}}
+
+
+
+                                     <li  >
+
+                                           <a>
+
+                                              <i class="iconfont eye bg-c">&#xe605;</i> <span class="num">{{value.viewNum}}</span>
+
+                                           </a>
+
+                    
+
+                                      </li>
+
+                                     
+
+                               {{/if}}
+
+
+
+                             
+
+
+
+                              {{if value.isKeep==1}}
+
+
+
+                                  <li >
+
+                                             <a>
+
+                                                <i class="iconfont star ">&#xe62e;</i><span class="num">{{value.keepNum}}</span>
+
+                                             
+
+                                              </a>
+
+                                  </li>
+
+
+
+                               {{else}}
+
+
+
+                                    <li onclick="operate(this,event,'{{value.type}}','{{value.id}}')" >
+
+                                         <a>
+
+                                            <i class="iconfont star bg-c">&#xe62e;</i><span class="num">{{value.keepNum}}</span>
+
+                                         
+
+                                          </a>
+
+                                    </li>
+
+
+
+                              {{/if}}
+
+
+
+
+
+                               {{if value.isLike==1}}
+
+
+
+                                    <li >
+
+                                         <a>
+
+                                            <i class="iconfont love ">&#xe652;</i><span class="num">{{value.likeNum}}</span>
+
+                                         </a>
+
+                                   </li>
+
+
+
+                               {{else}}
+
+
+
+                                     <li class="last-li" onclick="operate(this,event,'{{value.type}}','{{value.id}}')" >
+
+                                             <a>
+
+                                                <i class="iconfont love bg-c">&#xe652;</i><span class="num">{{value.likeNum}}</span>
+
+                                             </a>
+
+                                     </li>
+
+
+
+                               {{/if}}
+
+
+
+                          
+
+                        </ul>
+
+
+
+                        </dd>
+
+
+
+                      </dl>
+
+
+
+                  </li>
+
+
+
+           {{/each}}
+
+
+
+       
+
+ </script>
+
+
+
+</body>
+
+</html>

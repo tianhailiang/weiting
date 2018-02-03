@@ -1,0 +1,21 @@
+{
+  "code":"0",
+  "msg":"请求成功",
+  "data":[
+    {
+      "img":"../src/images/yarn_list12.png",
+      "name":"商品名称1",
+      "pid":"402882bb566e45b401566e4650210008"
+    },
+    {
+      "img":"../src/images/yarn_list12.png",
+      "name":"商品名称2",
+      "pid":"402882bb566e45b401566e4650210008"
+    },
+    {
+      "img":"../src/images/yarn_list12.png",
+      "name":"商品名称3",
+      "pid":"402882bb566e45b401566e4650210008"
+    }
+  ]
+}

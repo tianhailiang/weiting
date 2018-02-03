@@ -1,0 +1,72 @@
+{
+	"code":0,
+	"msg":"业务信息",
+	"data":{
+
+          "pubDate":"May,16,2016",
+          "data":
+
+			  [
+				   {
+
+				   
+					"icon":"src/images/wish/wish_sele_1.png",
+					"title":"国际最流行的婚纱你都试了吗",
+					 "subtitle":" ",
+					"location":"北京市",
+					 "type":"7",
+		             "id":"50",
+		             "editorNameName":"元婴",
+		             "viewNum":"5721",
+		             "keepNum":"2313",
+		             "likeNum":"5123"
+		           
+
+		           
+					},
+
+				   {
+
+					   
+						"icon":"src/images/wish/wish_sele_2.png",
+						"title":"上海罗恒科技婚礼中心",
+						 "subtitle":"以婚礼完美演绎为宗旨,为新人们创造涌流回忆的梦",
+						"location":"北京市",
+						 "type":"6",
+			             "id":"60",
+			             "editorName":"元婴",
+			             "viewNum":"5721",
+			             "keepNum":"2313",
+			             "likeNum":"5123"
+		           
+				     
+					},
+
+
+					 {
+
+					   
+						"icon":"src/images/wish/wish_sele_3.png",
+						"title":"今日的清空里，飘得是秒茶味的风",
+						 "subtitle":"萨满阳光的午后，缀满万花的从中。一口抹茶，融入我心",
+						"location":"北京市",
+						 "type":"8",
+			             "id":"70",
+			             "editorName":"元婴",
+			             "viewNum":"5721",
+			             "keepNum":"2313",
+			             "likeNum":"5123"
+		           
+				     
+					}
+					
+
+		           
+					
+
+				]	
+
+		}		
+	
+}
+

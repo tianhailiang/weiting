@@ -1,0 +1,1570 @@
+
+
+/*=====experience_activity_detail.html=====*/
+
+
+.act-banner{
+	width:100%;
+	position:relative;
+}
+
+.act-img{
+	width:100%;
+	height:271.5px;
+}
+
+.act-img img{
+	width: 100%;
+	height:240px;
+}
+
+
+.act-header{
+	position:absolute;
+	left:50%;
+	bottom:74px;
+	width:63px;
+	height:63px;
+	margin-left:-31.5px;
+	border:2.5px solid #d9d9de;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	z-index:99;
+
+
+}
+
+
+
+.act-figcaption{
+	width:100%;
+	height:74px;
+
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+
+	-webkit-box-orient:vertical;
+
+	-webkit-box-direction:normal;
+
+	-webkit-flex-direction:column;
+
+	   -moz-box-orient:vertical;
+
+	   -moz-box-direction:normal;
+
+	    -ms-flex-direction:column;
+
+	        flex-direction:column;
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	   -moz-box-align:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+	  padding-top: 15px;
+	  box-sizing: border-box;           
+
+}
+
+.act-editor span{
+	font-size:13px;
+	color:#2d2d34;
+	line-height: 13px;
+	
+	
+}
+
+.act-editor i{
+
+	font-size:13px;
+	color:#2d2d34;
+	line-height: 13px; 
+	margin-left: 10px;
+}
+
+.act-icont-ul{
+
+	-webkit-box-pack:center;
+	-webkit-justify-content:center;
+	   -moz-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	        height:37px;
+
+	        -webkit-box-align:center;
+
+	        -webkit-align-items:center;
+
+	           -moz-box-align:center;
+
+	            -ms-flex-align:center;
+
+	                align-items:center;
+}
+
+
+
+
+/*以下样式为临时需要*/
+
+
+.act-essay{
+	padding:13px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	-webkit-flex-direction:column;
+	   -moz-box-orient:vertical;
+	   -moz-box-direction:normal;
+	    -ms-flex-direction:column;
+	        flex-direction:column;
+	
+	-webkit-box-align:center;
+	
+	-webkit-align-items:center;
+	
+	   -moz-box-align:center;
+	
+	    -ms-flex-align:center;
+	
+	        align-items:center;
+	
+
+}
+
+.act-essay p{
+	font-size:0.22rem;
+	color:#2d2d34;
+	line-height:0.36rem;
+}
+
+.act-essay span{
+	font-size:0.22rem;
+	color:#2d2d34;
+}
+
+
+
+
+.article-ul{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+}
+
+.article-ul li{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	   -moz-box-flex:1;
+	    -ms-flex:1;
+	        flex:1;
+	border:2.5px solid #d9d9de;
+	height:195px;
+   
+}
+
+.article-ul li:nth-of-type(1){
+	margin-right:10px;
+}
+
+.article-ul li img{
+	width:100%;
+	height:191px;
+}
+
+
+
+
+
+
+
+
+.act-apply{
+    
+    width:100%;
+	padding-left:17px;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	        font-size:12px;
+	        color:#666666;
+}
+
+.act-h1{
+	width:100%;
+	height:85px;
+	text-align: center;
+	padding-top: 40px;
+	box-sizing: border-box;
+	font-size: 17px;
+	color:#333;
+
+}
+
+.act-apply-cost{
+	height:42.5px;
+	display: flex;
+}
+
+.act-apply span{
+	margin:0 15px;
+}
+
+.cost-icont{
+	display: block;
+	width:19px;
+	height:17px;
+	background:green;
+}
+
+
+
+.act-apply-time{
+
+	height:42.5px;
+	display: flex;
+}
+
+.act-apply-address{
+	 height:60px;
+	 display: flex;
+}
+
+
+.act-content{
+
+	padding:0 7.5px;
+}
+
+
+.exper-attend{
+
+	padding:0 7.5px;
+	margin:10px 0;
+   background:#fff;
+
+}
+
+.attend-title{
+
+	width:100%;
+	height:55px;
+	box-sizing: border-box;
+	display: flex;
+	padding-left: 10px;
+	position: relative;
+	align-items:center;
+}
+
+
+.attend-title i{
+	display: block;
+	width:24px;
+	height:24px;
+	
+	margin-right: 15px;
+}
+
+.attend-title span{
+	 color:#333;
+    font-size: 14px;
+
+}
+
+
+
+.attend-title:after{
+   content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+  -moz-transform: scaleY(0.5);
+   -ms-transform: scaleY(0.5);
+       transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+
+ -webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		 -ms-transform-origin:0 0;
+	     transform-origin:0 0;
+
+
+}
+
+.attend-ul{
+	width:100%;
+	padding-top: 20px;
+		padding-left: 10px;
+}
+
+.attend-ul li{
+
+	height:26px;
+	display: flex;
+	padding-left: 9px;
+	line-height: 11px;
+}
+
+.attend-ul li i{
+	display: block;
+	width:4px;
+	height:4px;
+	background:#666666;
+	margin-right: 15px;
+	margin-top: 4px;
+	border-radius: 50%;
+}
+
+.attend-ul li span{
+	font-size: 11px;
+	color:#999;
+}
+
+
+.icon-join{
+	background:url(../images/wish/icon-join.png?__sprite) no-repeat 0 0;
+}
+
+.icon-prompt{
+	background:url(../images/wish/icon-prompt.png?__sprite) no-repeat 0 0;
+}
+
+/*====我要报名======*/
+
+
+.act-myapply-box{
+	width:100%;
+	height:100%;
+    padding:0 10px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.act-myapply{
+
+  padding-left:0.14rem;
+  padding-right: 0.21rem;
+
+}
+
+.act-myapply-info{
+	width:100%;
+	height:0.81rem;
+	
+	line-height:0.81rem;
+	font-size:0.26rem;
+	color:#2d2d34;
+}
+
+
+.myapply-ul{
+	width:100%;
+	background:#fff;
+
+}
+
+.myapply-ul li{
+	width:100%;
+	height:0.92rem;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	position:relative;
+	padding-left:10px;
+	
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	   -moz-box-align:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+	-webkit-box-pack:justify;
+	-webkit-justify-content:space-between;
+	   -moz-box-pack:justify;
+	    -ms-flex-pack:justify;
+	        justify-content:space-between;
+}
+
+.myapply-ul li i{
+	
+	margin-right: 0.4rem;
+
+}
+
+.myapply-ul li input{
+    -webkit-box-flex:1;
+    -webkit-flex:1;
+       -moz-box-flex:1;
+        -ms-flex:1;
+            flex:1;
+	height:100%;
+}
+
+
+
+
+.myapply-ul li:nth-of-type(2):before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: #e1e2e4;
+  -moz-transform: scaleY(0.5);
+   -ms-transform: scaleY(0.5);
+       transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+ -webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		 -ms-transform-origin:0 0;
+	     transform-origin:0 0;
+}
+
+.myapply-ul li:nth-of-type(2):after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #e1e2e4;
+  -moz-transform: scaleY(0.5);
+   -ms-transform: scaleY(0.5);
+       transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+
+ -webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		 -ms-transform-origin:0 0;
+	     transform-origin:0 0;
+
+}
+
+
+.myapply-btn{
+	width:100%;
+	padding-top:68px;
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack:center;
+	-webkit-justify-content:center;
+	   -moz-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+}
+
+
+/*=====报名成功提示=====*/
+
+.act-success{
+	 width:302px;
+     height:225px;
+	position:absolute;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	display:none;
+   
+
+}
+
+
+.act-success-box{
+    width:100%;
+    height:100%;
+     background-color:#000;
+
+     display:-webkit-box;
+
+     display:-webkit-flex;
+
+     display:-moz-box;
+
+     display:-ms-flexbox;
+
+     display:flex;
+     -webkit-box-orient:vertical;
+     -webkit-box-direction:normal;
+     -webkit-flex-direction:column;
+        -moz-box-orient:vertical;
+        -moz-box-direction:normal;
+         -ms-flex-direction:column;
+             flex-direction:column;
+    -webkit-box-align:center;
+    -webkit-align-items:center;
+       -moz-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    padding-top:47px;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+
+}
+
+.act-hook{
+	display:inline-block;
+	font-size:64px;
+	color:#fff;
+	width:64px;
+	height:64px;
+	line-height:64px;
+
+}
+
+.act-success-box span{
+	margin-top:40px;
+	font-size:12px;
+	color:#fff;
+	line-height:12px;
+}
+
+
+/*====alive_strategy_detail.html====*/
+
+.alive-main-box{
+
+	 position: absolute;
+ 
+   -webkit-overflow-scrolling : touch;
+   width:100%;
+
+}
+
+.alive-banner{
+	width:100%;
+	height:240px;
+}
+
+.alive-banner img{
+	width:100%;
+	height:240px;
+}
+
+.alive-content{
+	
+	background:#fff;
+	padding:0 22.5px;
+
+}
+
+.alive_h1{
+	height:58px;
+	font-size: 18px;
+	color:#333;
+	line-height: 18px;
+	padding:0 22.5px;
+}
+
+
+.alive-ul{
+	width:100%;
+	background:#f2f4f5;
+	padding-top: 10px;
+
+
+}
+
+.alive-ul li{
+	margin-bottom:10px;
+	background:#fff;
+	padding-left:7.5px;
+	padding-right: 7.5px;
+}
+
+.alive-commodity{
+	width:100%;
+	padding-top:25px;
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	-webkit-flex-direction:column;
+	   -moz-box-orient:vertical;
+	   -moz-box-direction:normal;
+	    -ms-flex-direction:column;
+	        flex-direction:column;
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	   -moz-box-align:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+
+
+	
+	font-size:13px;
+	       
+
+}
+
+.oImg{
+	position:relative;
+	height:200px;
+
+}
+
+.alive-detail-img{
+  width:100%;
+  height:200px;
+   
+}
+
+.alive-sell-out{
+
+	width:0.53rem;
+    height:0.6rem;
+    font-size:0.18rem;
+    color:#fff;
+
+    text-align: center;
+    line-height: 0.6rem;
+
+    position:absolute;
+    left:0;
+    top:0.08rem;
+
+}
+
+.alive-name{
+	height:70px;
+	padding-top: 30px;
+	box-sizing: border-box;
+	font-size: 12px;
+	line-height: 12px;
+	font-weight: bold;
+	color:#333333;
+}
+
+.alive-price{
+  height: 35px;
+  color:#e8796e;
+  font-size: 11px;
+
+}
+
+
+
+.alive-describe{
+
+	padding-left:20px;
+	padding-right:16.5px;
+}
+
+.alive-describe h2{
+	height:0.56rem;
+	font-size:0.26rem;
+	font-weight: bold;
+	color:#2d2d34;
+}
+
+.alive-describe p{
+	font-size:14px;
+	color:#959595;
+	line-height: 30px;
+}
+
+
+
+
+.alive-check{
+	width:100%;
+	height:49px;
+	text-align:center;
+	
+	color:#e8796e;
+	font-size:12px;
+	padding-top: 7.5px;
+	box-sizing: border-box;
+}
+
+
+.previous-stage{
+	margin-top: 10px;
+	padding:0 7.5px;
+
+}
+
+
+.alive-pre-h2{
+  width:100%;
+  height:65px;
+  position: relative;
+  display: flex;
+  padding-top: 15px;
+  box-sizing: border-box;
+}
+
+
+.ico-previously{
+  
+  display: block;
+  width:24px;
+  height:24px;
+ 
+  margin-left: 22.5px;
+  margin-right: 15px;
+  background:url(../images/wish/icon-previously.png?__sprite) no-repeat 0 0;
+
+
+}
+
+
+.previous-stage dl{
+   
+   position: relative;
+  
+   display: flex;
+   padding:20px 0;
+}
+
+
+.previous-stage dl:before{
+   content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+  -moz-transform: scaleY(0.5);
+   -ms-transform: scaleY(0.5);
+       transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+  
+ -webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		 -ms-transform-origin:0 0;
+	     transform-origin:0 0;
+}
+
+
+
+
+.previous-stage dl dt img{
+	width:140px;
+}
+
+.previous-stage dl dd{
+	  padding-left:15px;
+		padding-right:15px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		box-sizing: border-box;
+}
+
+.previous-title{
+
+	color:#333333;
+   font-size: 13px;
+   line-height: 22px;
+
+}
+
+.previous-title i{
+   margin-right: 23px;
+}
+
+.previous-content{
+	font-size: 12px;
+	color:#666666;
+   
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+   
+}
+
+
+
+.alive-form{
+	
+	
+	display: flex;
+	justify-content:space-between;
+	height:16px;
+	margin-bottom: 2px;
+
+}
+
+.alive-date{
+	font-size: 9px;
+	
+	color:#888888;
+}
+
+
+.stage-detail{
+    width:100%;
+	height:130px;
+	display: flex;
+	justify-content:center;
+	padding-top: 34px;
+	box-sizing: border-box;
+}
+
+.stage-detail span{
+	font-size:14px;
+	color:#e8796e;
+}
+
+
+
+/*==========alive_list.html==========*/
+
+.alive_list_stage{
+
+	position: absolute;
+	top:44px;
+
+	margin-top: 0;
+}
+
+
+
+
+
+/*====planning _division_detail.html====*/
+
+.planning-h1{
+
+	width:100%;
+	height:98px;
+    text-align: center;
+    line-height: 98px;
+    font-size: 18px;
+    color:#333333;
+    background:#fff;
+
+}
+
+.planning-theme{
+ width:100%;
+ padding-left: 30px;
+ box-sizing: border-box;
+  background:#fff;
+
+}
+
+.planning-price{
+
+
+	display: flex;
+	margin-bottom: 30px;
+
+	font-size: 13px;
+	color:#666;
+}
+
+
+.planning-theme span{
+	margin:0 15px;
+}
+
+.planning-color{
+	display: flex;
+}
+
+.planning-color li{
+
+	width:17px;
+	height:17px;
+	background:#bcb293;
+	margin-right: 5px;
+	border-radius: 50%;
+}
+
+.planning-style{
+
+	margin-right: 17.5px;
+}
+
+.planning-field{
+	padding-bottom: 22px;
+	margin-bottom: 0;
+}
+
+.icon-free{
+    display: block;
+    width:17px;
+    height:15px;
+    background:url(../images/wish/icon-free.png?__sprite) no-repeat 0 0;
+}
+
+.icon-tint{
+	display: block;
+	width:15px;
+	height:15px;
+	background:url(../images/wish/icon-tint.png?__sprite) no-repeat 0 0;
+}
+
+.icon-style{
+	font-size: 17px;
+	color:#e87a6e;
+	line-height: 17px;
+}
+
+.icon-site{
+	font-size: 14px;
+	color:#e87a6e;
+	margin-top: 2px;
+}
+
+.icon-date{
+	font-size: 16px;
+	color:#e87a6e;
+}
+
+.icon-location{
+
+	font-size: 14px;
+	color:#e87a6e;
+}
+
+
+
+
+.planning-wedding{
+
+	padding:0 7.5px;
+	background:#fff;
+    margin:10px 0;
+
+}
+
+.planning-wedding-h2{
+
+  width:100%;
+  height:55px;
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 15px;
+  display: flex;
+  align-items:center;
+
+}
+
+.planning-wedding-h2:after{
+   content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+  -moz-transform: scaleY(0.5);
+   -ms-transform: scaleY(0.5);
+       transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+
+ -webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		 -ms-transform-origin:0 0;
+	     transform-origin:0 0;
+
+
+}
+
+.planning-wedding-h2 i{
+	display: block;
+	width:24px;
+	height:24px;
+	
+	margin-right: 15px;
+}
+
+.planning-wedding-h2 span{
+
+	font-size: 15px;
+	color:#333;
+}
+
+
+.icon-inspiration{
+   
+   background:url(../images/wish/icon-inspiration.png?__sprite) no-repeat 0 0;
+}
+
+.icon-case{
+	background:url(../images/wish/icon-case.png?__sprite) no-repeat 0 0;
+}
+
+.icon-single{
+	background:url(../images/wish/icon-single.png?__sprite) no-repeat 0 0;
+}
+
+
+.planning-wedding-p{
+	padding-left:15px;
+	padding-right: 17.5px;
+
+	line-height: 32px;
+	font-size: 13px;
+	color:#666666;
+
+	padding-top: 12.5px;
+	padding-bottom: 12.5px;
+}
+
+
+
+
+
+.planning-wedding-division{
+
+	padding-left:15px;
+	padding-right:17px;
+
+	display: flex;
+
+	padding-top: 5px;
+	padding-bottom: 15px;
+	position: relative;
+}
+
+.planning-wedding-division-box{
+	display: flex;
+}
+
+.planning-wedding-division-left{
+	width:65px;
+	height:65px;
+	margin-right: 10px;
+	position: relative;
+}
+
+.planning-wedding-division-left span{
+	display: block;
+	width:65px;
+	height:65px;
+
+	
+	border-radius: 50%;
+	overflow: hidden;
+	
+}
+
+.planning-wedding-division-center{
+   padding-top: 15px;
+}
+
+
+.planning-wedding-name{
+	display: flex;
+}
+.planning-wedding-name i{
+	font-size: 13px;
+	color:#666;
+	line-height: 13px;
+	margin-right: 5px;
+}
+
+.icon-author{
+   
+   display: block;
+   width:10px;
+   height:10px; 
+   background:url(../images/wish/icon-author.png?__inline) no-repeat 0 0;
+   background-size:10px 10px;
+   margin-top: 3px;
+}
+
+.planning-works{
+	font-size: 12px;
+	color:#e87a6e;
+	margin-top: 20px;
+}
+
+.planning-works span{
+	line-height: 12px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.planning-wedding-division-right{
+	display: flex;
+	flex-direction:column;
+	
+	align-items: center;
+    position: absolute;
+    right:17px;  
+
+}
+
+.planning-wedding-division-right i{
+	display: block;
+
+	margin-top: 16px;
+}
+
+.icon-attention{
+	font-size:20px;
+	color:#e87a6e;
+}
+
+
+.planning-wedding-division-right span{
+	display: block;
+	margin-top: 8px;
+	font-size:8px;
+	color:#666;
+}
+
+
+.planning-wedding-dependence{
+	margin-bottom: 0;
+}
+
+.dependence-ul{
+	padding:20px 5px 0 5px;
+
+	display: flex;
+	flex-wrap: wrap;
+	background:#fff;
+
+}
+
+.dependence-ul li{
+	display: flex;
+    flex-direction:column;
+    width:50%;
+    box-sizing: border-box;
+
+}
+
+.dependence-ul li:nth-of-type(odd){
+	padding-right: 2.5px;
+}
+
+.dependence-ul li:nth-of-type(even){
+	padding-left: 2.5px;
+}
+
+
+.dependence-ul li img{
+	
+	height:250px;
+}
+
+.dependence-ul-name{
+	height:37px;
+	line-height: 37px;
+	text-align: center;
+	font-size: 14px;
+	color:#333;
+}
+
+.dependence-ul-price{
+	height:31px;
+	text-align: center;
+	font-size: 11px;
+	color:#e8796e;
+	line-height: 11px;
+}
+
+
+/*====planning_division_introduce.html====*/
+
+.planIntroduce{
+
+	top:44px;
+}
+
+.introduce-teacher{
+
+	width:100%;
+	padding-top: 17.5px;
+	padding:17.5px 22.5px 0 22.5px;
+	box-sizing: border-box;
+	display: flex;
+
+	flex-direction: column;
+    align-items: center;
+
+	position: relative;
+	background:#fff;
+}
+
+.introduce-attention{
+
+	position: absolute;
+	right:22.5px;
+}
+
+.introduce-head{
+	width:65px;
+	height:65px;
+    margin-top: 2.5px;
+    position: relative;
+}
+
+
+
+.introduce-head span{
+    display: block;
+    width:65px;
+	height:65px;
+
+	background:url(../images/wish/planning-teacher.jpg) no-repeat center;
+	background-size: cover;
+	border-radius: 50%;
+	overflow: hidden;
+
+
+}
+
+.icon-v{
+
+	display: block;
+	width:14px;
+	height:14px;
+	position: absolute;
+
+	bottom:0;
+	right:7.5px;
+
+	background:url(../images/wish/v.png?__sprite) no-repeat 0 0;
+}
+
+
+.introduce-name{
+	display: flex;
+	margin-top: 10px;
+}
+
+.introduce-name i{
+	font-size: 14px;
+	color:#666666;
+	line-height: 14px;
+	margin-right: 5px;
+}
+
+
+.introduce-information{
+	display: flex;
+	height:54px;
+	align-items:center;
+
+}
+
+.introduce-information i{
+	margin-right: 10px;
+	font-size: 13px;
+	color:#999;
+}
+
+.average-price{
+
+	font-size: 13px;
+	color:#e8796e;
+	line-height: 13px;
+}
+
+.average-price i{
+	margin-right: 10px;
+}
+
+.introduce-sub-title{
+	height:53px;
+	display: flex;
+	align-items:center;
+	font-size: 13px;
+	color:#999;
+}
+
+.introduce-ul-server{
+
+	display: flex;
+	flex-wrap:wrap;
+	padding:5px 0;
+}
+
+.introduce-ul-server li{
+	padding-left:17px;
+	height:34px;
+	display: flex;
+	align-items:center;
+}
+
+.icon-circle{
+	font-size: 14px;
+	color:#e8796e;
+	margin-right: 5px;
+	margin-top: 2px;
+}
+
+.introduce-ul-server li span{
+	color:#999;
+	font-size: 12px;
+}
+
+.introduce-problem-h2{
+	position:relative;
+}
+
+.introduce-problem-h2:after{
+   height:0;
+}
+
+.icon-advance{
+	display: block;
+	position: absolute;
+	right:10px;
+	color:#666666;
+	font-size: 24px;
+
+   
+
+}
+
+
+.introduce-works-show{
+	padding:0 15px;
+	position: relative;
+}
+
+.introduce-works-show:after{
+	  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+  -moz-transform: scaleY(0.5);
+   -ms-transform: scaleY(0.5);
+       transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+
+ -webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		 -ms-transform-origin:0 0;
+	     transform-origin:0 0;
+
+}
+
+
+.introduce-works-show img{
+	width:100%;
+	height:240px;
+}
+
+
+
+
+
+.introduce-works-title{
+	padding-top: 25px;
+	padding-bottom: 20px;
+	display: flex;
+}
+
+
+.introduce-caption{
+	font-size: 15px;
+	color:#333;
+	line-height: 15px;
+}
+
+.introduce-works-title i{
+	font-size: 11px;
+	color:#e8796e;
+	padding:2px 5px 2px 5px;
+	border-radius: 10px;
+	border:1px solid #e8796e;
+	margin-left: 10px;
+	line-height: 11px;
+}
+
+
+.introduce-planner{
+	height:54px;
+	display: flex;
+	align-items:center;
+}
+
+.introduce-planner i{
+	margin-right: 5px;
+	font-size: 9px;
+	padding:4px;
+	border:1px solid #e8796e;
+	border-radius: 5px;
+	line-height: 9px;
+}
+
+.introduce-planner span{
+	font-size: 12px;
+	color:#333;
+}
+
+
+.icon-server{
+  background:url(../images/wish/icon-server.png?__sprite) no-repeat 0 0;
+}
+
+.icon-problem{
+	background:url(../images/wish/icon-problem.png?__sprite) no-repeat 0 0;
+}
+
+.icon-newest{
+	background:url(../images/wish/icon-newest.png?__sprite) no-repeat 0 0;
+}
+
+
+/*====策划师等级介绍====*/
+
+.grade_box{
+	width:100%;
+	position: absolute;
+	z-index:100;
+	
+	
+	padding:0 22.5px;
+	display: none;
+	box-sizing: border-box;
+	z-index: 150;
+
+}
+
+.grade{
+
+  width:330px;
+  background:#fff;
+ 
+  height:172px;
+  z-index: 200;
+  position: absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  margin:auto;
+  
+  box-sizing: border-box;
+
+  padding-left: 30px;
+  padding-right:10px;
+
+
+}
+
+.grade_title{
+  width:100%;
+  height:60px;
+  position: relative;
+  display: flex;
+  align-items:center;
+
+}
+
+
+.grade_title span{
+	font-size: 15px;
+	color:#333;
+}
+
+
+
+.icon_circle_x{
+    font-size: 18px;
+    color:#000000;
+    position: absolute;
+    right:0;
+    top:10px;
+    display: block;
+    width:18px;
+    height:18px;
+
+}
+
+.grade_ul li{
+	width:100%;
+	height:37.5px;
+	display: flex;
+}
+
+.grade_v{
+
+	display: block;
+    width: 14px;
+    height: 14px;
+
+    background:url(../images/wish/v.png?__sprite) no-repeat 0 0;
+    margin-right: 22px;
+}
+
+.grade_ul li span{
+	font-size: 12px;
+	color:#333;
+}
+
+.grade_mask{
+
+	position: absolute;
+   left:0;
+   width:100%;
+   height:100%;
+   background: #1f1f1f;
+   opacity: 0.7;
+       z-index: 150;
+
+}
+
+
+/*====planning_division_list.html====*/
+
+.plan_list_li{
+  
+  background:#fff;
+  margin-top: 10px;
+  padding:15px 7.5px 0 7.5px;
+  display: flex;
+  flex-direction:column;
+}
+
+
+.plan_list_li img{
+	width:100%;
+	height:200px;
+}
+
+
+.plan_introduce_li{
+	margin-top: 0;
+	margin-bottom: 10px;
+	padding-top: 0;
+}
+
+.plan_introduce-wedding{
+	margin-bottom:0;
+}

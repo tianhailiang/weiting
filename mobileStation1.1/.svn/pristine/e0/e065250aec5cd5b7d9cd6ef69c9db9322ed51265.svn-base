@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>我的收藏</title>
+
+    <link rel="stylesheet" href="../src/css/reset.css">
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel=stylesheet href="../src/js/widget/layer/need/layer.css" >
+    <link rel="stylesheet" href="../src/css/miccenter.css">
+
+</head>
+
+<body style="background:#f2f4f5;" >
+
+  <nav class="fav_nav" >
+    
+      <ul class="fav_nav_ul">
+         <li>
+             <span class="fav_nav_act">白纱</span>
+         </li>
+         
+         <li>
+             <span>礼服</span>
+        </li>
+        <li>
+             <span>男装</span>
+        </li>
+        <li>
+             <span>礼堂</span>
+        </li>
+
+        <li>
+             <span>回礼</span>
+        </li>
+        
+        <li>
+             <span>活动</span>
+        </li>
+        <li>
+             <span>攻略</span>
+        </li>
+       
+        <li>
+             <span>专题</span>
+        </li>
+
+      </ul>
+
+
+
+  </nav> 
+
+  
+
+   <!--最外层box -->
+   
+    <div class="fav_box" id="fav_box">
+
+       <script type="text/html" id="template1">
+                       
+                    {{if data==""}}
+
+                             <div class="no-favorite" >
+                                 
+                                    <p>你暂时没有收藏，快去<a href="../index.html" style="color:#e8796e;">心愿</a>狂狂吧</p>
+
+                                     <div class="iconfont ico-no-fav">&#xe6a7;</div>
+
+                             </div>
+
+                        {{else}}
+                              
+                                <ul class="mic_fav_ul" >
+
+                                    {{each data as value}}
+                                          
+
+                                             <li class="mic_fav_li">
+                                               
+                                                 <div class="mic_fav_li_left" >
+
+                                                    <img  class="lazy-img mic_fav_img"   data-original="{{value.iconForList}}" width="140px" height="195px" />
+
+                                                 </div>
+
+                                                 <div class="mic_fav_li_right" >
+                                                     
+                                                      <p class="mic_fav_name">{{value.title}}</p>
+                                                      
+                                                      {{if value.type==1 || value.type==2 || value.type==3 || value.type==4 || value.type==9}}
+
+                                                           <span class="mic_fav_edit">商品编号：{{value.productNum}}</span>
+                                                          
+                                                           <i class="mic_fav_price">&yen;2345</i>
+
+
+                                                      {{else if value.type==7 || value.type==6 || value.type==8}} 
+
+                                                            <p class="mic_fav_subtitle">{{value.subtitle}}</p>
+
+                                                            {{if  value.type==7 || value.type==6}}
+
+                                                               <div class="mic_fav_adress" >
+                                                                    
+                                                                     <i class="iconfont icon_location">&#xe604;</i>
+                                                                     <span class="address">{{value.location}}</span>
+
+                                                               </div>
+
+                                                            {{/if}}
+
+
+
+                                                      {{else if value.type==11}}
+                                                      
+                                                           <span class="mic_fav_case" >
+                                                                 
+                                                                    {{each value.style as item}}
+                                                         
+                                                                          <i>{{item}}</i>
+
+                                                                    {{/each}}   
+
+                                                                      {{if value.environment==1}}
+
+                                                                           <i>室内</i>
+
+                                                                      {{else}}
+
+                                                                           <i>室外</i>
+
+                                                                      {{/if}}
+                                                    
+
+                                                           </span>
+
+
+
+                                                           
+
+                                                       {{/if}}
+
+                                                         <ul class="iconfont-ul fav_iconfont_ul">
+
+                                                                    <li >
+
+                                                                             <a>
+
+                                                                                <i class="iconfont eye ">&#xe620;</i> <span class="num">{{value.viewNum}}</span>
+
+                                                                             </a>
+
+                                                                    </li>
+
+                                                                   <li class="last-li" onclick="removeFav(this,event,'{{value.type}}','{{value.id}}')" >
+
+                                                                           <a>
+
+                                                                              <i class="iconfont love" >&#xe616;</i><span class="num">{{value.keepNum}}</span>
+
+                                                                           </a>
+
+                                                                   </li>
+
+                                                        </ul>
+
+                                                 </div>
+
+                                             </li>
+
+
+                                    {{/each}}
+
+                            </ul> 
+
+
+
+                {{/if}}
+
+                    
+
+
+          </script>
+
+
+
+  </div>
+
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/swiper-3.3.1.min.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js"></script>
+<script src="../src/js/util/common.js"></script>
+<script src="../src/js/config.js"></script>
+<script src="../src/js/widget/layer/layer.js" ></script>
+<script src="../src/js/widget/lazyload/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../src/js/webapp/miccenter/myfavorite.js"></script>
+
+
+</body>
+</html>

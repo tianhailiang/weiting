@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>我的礼券</title>
+    <link rel="stylesheet" href="../src/css/reset.css" />
+    <link rel="stylesheet" href="../src/css/common.css"/>
+    <link rel="stylesheet" href="../src/css/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="../src/css/miccenter.css"/>
+   
+  
+</head>
+<body style="background:#f2f4f5;">
+
+      <header  class="header_box top_fixed" style="background:#fff;">
+         
+                  <ul>
+                     <li class="first" id="btnBack">
+
+                           <i class="iconfont icon_back" >&#xe601;</i>
+
+                      </li>
+
+                    <li class="second">
+                          <i class="ico-wish-title"></i>
+                          <span class="header_title">WISH LIST</span>
+
+                    </li>
+                    
+                    <li class="last">
+
+                      
+                      <span class="icon-bell-box">
+
+                         <i class="iconfont icon-bell" id="bell">&#xe618;</i>
+                         <i class="icon-red-circle hide" id="news"></i>
+
+                      </span>
+
+                         <i class="iconfont icon-service" id="service" >&#xe70d;</i>
+                      
+                    </li>
+
+                </ul>
+
+        </header>
+
+    <!--列表切换选项卡-->
+    
+        <ul class="mic_gift_ul" id="mic_gift_ul">
+
+            <li ><span class="gift_active" >可用礼券</span></li>
+
+            <li ><span>过期礼券</span></li>
+
+              <!-- =====animate 指示器===== -->
+
+             <div class="gift_indicate" >
+
+                   <div class="gift_ibox" ></div>
+
+             </div>
+
+        </ul>
+
+       
+
+
+
+        <!--列表内容-->
+        
+        <div class="gift_box" id="gift_box">
+
+              <script id="template1" type="text/html">
+
+            <div class="swiper-container" id="swiper-container1">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide ">
+                      
+                       
+                                {{if data.able !="" }}
+                                    
+                                      <ul class="gift_slide_ul">   
+
+                                            {{ each data.able as value}}
+                                               <li>
+
+                                                      <img src="{{value.validImg}}" alt="">
+                                                      
+                                                     <div class="gift_rule" >
+
+                                                        <span class="gift_date">有效日期: {{value.receiveDate}}-{{value.deadline}}</span>
+                                                        <p class="gift_rule_p">
+                                                            {{value.description}}
+                                                        </p>
+
+                                                     </div>   
+                                                       
+                                               </li>
+
+                                          {{/each}}
+
+                                      </ul>
+
+                                {{else}}
+
+                                 
+
+                                     <div class="no-favorite" >
+                               
+                                            <p>您还没有可用的礼卷</p>
+
+                                           <div class="iconfont ico-no-fav">&#xe6a7;</div>
+
+                                       </div>
+
+
+                                {{/if}}
+
+                          
+                      
+
+                    </div>
+                    <div class="swiper-slide ">
+
+                          
+                                 {{if data.disable !="" }}
+                                    
+                                      <ul class="gift_slide_ul">   
+
+                                            {{ each data.disable as value}}
+                                               <li>
+
+                                                      <img src="{{value.validImg}}" alt="">
+                                                      
+                                                     <div class="gift_rule" >
+
+                                                        <span class="gift_date">有效日期: {{value.receiveDate}}-{{value.deadline}}</span>
+                                                        <p class="gift_rule_p">
+                                                            {{value.description}}
+                                                        </p>
+
+                                                     </div>   
+
+                                                   
+                                                          
+                                                          <div class="gift_pastDue"></div>  
+                                                       
+                                                    {{ if value.status == 1}}
+                                                          <span class="ico_used"></span>
+
+                                                     {{else}}
+
+                                                           <span class="ico-past-sign"></span>
+
+                                                     {{/if}}
+
+                                                       
+                                               </li>
+                                               
+                                          {{/each}}
+
+                                      </ul>
+
+                                {{else}}
+
+                                 
+
+                                     <div class="no-favorite" >
+                               
+                                            <p>您还没有可用的礼卷</p>
+
+                                           <div class="iconfont ico-no-fav">&#xe6a7;</div>
+
+                                       </div>
+
+
+                                {{/if}}
+                          
+                    </div>
+
+                </div>
+            </div>
+            
+              </script>
+   
+      </div>
+
+
+</body>
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/swiper-3.3.1.min.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="../src/js/util/common.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js"></script>
+<script src="../src/js/config.js"></script>
+
+<script src="../src/js/webapp/miccenter/mygift.js"></script>
+
+</html>

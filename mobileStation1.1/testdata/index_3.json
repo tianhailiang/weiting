@@ -1,0 +1,33 @@
+{
+	"code": "0",
+	"msg": "请求成功",
+	"data": [{
+		"id":"JILDSUILEFWJKLJHKFHDSKGHGHJG",
+		"type":"11",  
+		"iconForList":"http://img.wishlist1314.com/2016100920304710878.png",
+		"title":"白雪公主婚礼",
+		"editorName":"慌慌",
+		"style":["童话梦幻","童话王子"],
+		"environment":"0",
+		"main":["a9d7c4","bcb293","e5c764"],
+		"viewNum":"11",
+		"keepNum":"11",
+		"isView":"0",
+		"isKeep":"0"
+		
+	}, 
+	{
+		"id":"JILDSUILEFWJKLJHKFHDSKGHGHJG",
+		"type":"11",  
+		"iconForList":"http://img.wishlist1314.com/2016100920304710878.png",
+		"title":"白雪公主婚礼",
+		"editorName":"慌慌",
+		"style":["童话梦幻","童话王子"],
+		"environment":"0",
+		"main":["a9d7c4","bcb293","e5c764"],
+		"viewNum":"11",
+		"keepNum":"11",
+		"isView":"0",
+		"isKeep":"0"
+	}]
+}

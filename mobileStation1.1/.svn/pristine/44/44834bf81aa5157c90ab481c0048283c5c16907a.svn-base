@@ -1,0 +1,21 @@
+{
+	"code":0,
+	"msg":"业务信息",
+	"data":{       
+
+    "id":"345",
+    "isKeep":"0",
+    "isSign":"0",
+    "icon":"http://img.wishlist1314.com/2016100923040021790.png",
+    "title":"新手注册领福袋",
+    "price":"免费",
+    "content":"文本内容",
+    "startdate":"2016年10月10日",
+    "enddate":"2016年10月11日",
+    "area":"北京市朝阳区百子湾路无界空间",
+    "notice":["",""], 
+    "reminder":["",""]  
+           
+	}
+
+}

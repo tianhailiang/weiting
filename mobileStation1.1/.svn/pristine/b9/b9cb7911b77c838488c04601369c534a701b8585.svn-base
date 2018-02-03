@@ -1,0 +1,69 @@
+
+
+function init(){
+
+  update();
+
+};
+
+
+function update(){
+    
+
+
+ aliveList(null, true, function(result){
+
+
+      if (result.code == 0) {
+
+
+         $("#scr-main").html(template("template1",{data:result.data}));  
+
+        
+      } else {
+
+        console.log(result.msg);
+      }
+
+  });
+
+}
+
+function alive(id){
+
+
+    window.location.href ="alive_strategy_detail.html?id="+id;
+
+};
+
+
+/*=============接口================*/
+
+
+var aliveList = function (param, async, succfun) {
+   
+   //7 查询攻略列表(新加) 
+
+    var testurl = "../../../../testdata/wish/alive_list.json";
+
+    var useurl = config.getUrl() + "getGuideList";
+    var url = testurl;
+
+
+    $.ajax({
+        type: config.getType(),
+        url: url,
+        dataType: config.getDataType(),
+        data: param,
+        async: async,
+        success: function (data, status) {
+            succfun(data);
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+};
+
+

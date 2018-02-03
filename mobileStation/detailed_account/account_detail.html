@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>心愿详情</title>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/reset.css">
+    <!--  <link rel="stylesheet" href="../src/css/reset.css">-->
+    <link rel="stylesheet" href="../src/css/common.css"/>
+    <link rel="stylesheet" href="../src/css/account_list.css"/>
+    <link rel="stylesheet" href="../src/icont/iconfont.css"/>
+    <!--<link rel="stylesheet" href="../src/css/swiper-3.3.1.min.css">-->
+    <link rel="stylesheet" href="http://img.wishlist1314.com/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="../src/js/widget/layer.m/need/layer.css"/>
+    <script src="http://img.wishlist1314.com/rem.js"></script>
+    <!--<script src="../src/js/lib/rem.js"></script>-->
+</head>
+<body>
+<div id="main-box">
+    <section class="section-box scr-section">
+        <div id="scroll-div">
+            <div class="product-img-box pa-10">
+                <script id="account-detail" type="text/html">
+                    <div class="product-img">
+                        <img src="{{data.topImg}}" alt=""/>
+                    </div>
+                    <div class="product-infor">
+                        <h2 class="mt-30">{{data.name}}</h2>
+                        {{if data.isPreference == 1}}
+                        <p class="mt-30 product-price">¥{{data.activityPrice}}<span class="marry-sale">结婚季特惠</span></p>
+                        {{else}}
+                        <p class="mt-30 product-price">¥{{data.activityPrice}}</p>
+                        {{/if}}
+
+                        <p class="mt-30 sale-price">价格:<span>¥ {{data.price}}</span></p>
+                        <p class="mt-30 product-intro">{{data.introduce}}</p>
+                    </div>
+                    <div class="exprice">
+                        <h2>极致体验</h2>
+                        <p>
+                            {{each data.feature as value}}
+                            <span><i class="icon iconfont">&#xe66c;</i>{{value}}</span>
+                            {{/each}}
+                        </p>
+                    </div>
+                    <div class="drap-view-details clearfix tc">
+                        继续滑动,查看图文详情
+                        <p class="fl"></p>
+                        <p class="fr"></p>
+                    </div>
+                    <!--列表切换选项卡-->
+                    <div class="tab-box">
+                        <ul class="swiper-nav tab-btn">
+                            <li class="selected">商品详情</li>
+                            <li>产品参数</li>
+                            <li>品牌介绍</li>
+                        </ul>
+                        <!--列表内容-->
+                        <!--<div id="aa"></div>-->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide tab-content-1">
+                                    <div class="product-details">
+                                        <div class="product-details-1"></div>
+                                        <div class="drap-view-details clearfix tc mt-55 mb-55 no-border">
+                                            猜你喜欢
+                                            <p class="fl"></p>
+                                            <p class="fr"></p>
+                                        </div>
+                                        <ul class="guess-like clearfix">
+                                            {{ each data.guessYouLike as value}}
+                                            <li class="" data-pid="{{value.pid}}" data-ptype="{{value.type}}">
+                                                <img src="{{value.img}}" alt=""/>
+                                                <p>{{value.brand}}</p>
+                                            </li>
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide tab-content-2 ">
+                                    <div class="product-details hide">
+                                        <ul>
+                                            {{each data.parameter as item}}
+                                            <li>
+                                                <span>{{item.key}}</span>
+                                                <span>{{item.value}}</span>
+                                            </li>
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide tab-content-3 ">
+                                    <div class="product-details hide"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </script>
+            </div>
+        </div>
+    </section>
+    <div class="btn-my-apply" id="order-btn">我要预约</div>
+    <ul class="swiper-nav tab-btn tab-hide" id="tab-btn-fixed">
+        <li class="selected">商品详情</li>
+        <li>产品参数</li>
+        <li>品牌介绍</li>
+    </ul>
+</div>
+
+
+</body>
+
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/swiper-3.3.1.min.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js"></script>
+
+<script src="../src/js/util/common.js"></script>
+<script src="../src/js/config.js"></script>
+<script src="../src/js/dbutil.js"></script>
+<script src="../src/js/widget/layer.m/layer.m.js"></script>
+<script src="../src/js/widget/layer.m/mobel.js"></script>
+<script src="../src/js/webapp/account/account_dtail.js"></script>
+</html>

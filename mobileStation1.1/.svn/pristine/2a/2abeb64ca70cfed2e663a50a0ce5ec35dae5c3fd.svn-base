@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+	<title>我的活动</title>
+      <link rel="stylesheet" href="../src/css/reset.css" >
+	
+    <link rel="stylesheet" href="../src/css/common.css" >
+    <link rel="stylesheet" href="../src/css/miccenter.css" >
+
+
+</head>
+<body  style="background:#f2f4f5;">
+
+    	   <header  class="header_box top_fixed" style="background:#fff;">
+                      <ul>
+                         <li class="first" id="btnBack">
+
+                               <i class="iconfont icon_back" >&#xe601;</i>
+
+                          </li>
+
+                        <li class="second">
+                         
+
+                        </li>
+                        
+                        <li class="last">
+
+                          
+                          <span class="icon-bell-box">
+
+                             <i class="iconfont icon-bell">&#xe618;</i>
+                             <i class="icon-red-circle"></i>
+
+                          </span>
+
+                             <i class="iconfont icon-service">&#xe70d;</i>
+                          
+                        </li>
+
+                      
+                      </ul>
+        </header>
+
+          <div class="scr-main" id="scr-main">
+
+            
+              <ul class="wrapper-ul act_ul" id="active-ul">
+
+                 <script type="text/html" id="template" >
+
+                     {{if data==""}}
+
+                           <div class="no-favorite" >
+                               
+                                  <p>你暂时没有活动，快去心愿狂狂吧</p>
+
+                                  <div class="no-favorite-bg ico-no-fav"></div>
+
+                           </div>
+
+                      {{else}}
+
+
+                               {{each data as value}}
+
+                                    {{if value.isExpired==1}}
+
+                                                  <li  onclick="detailClick(this,'{{value.id}}','{{value.isView}}','{{value.type}}')" >
+
+                                                         <dl>
+
+                                                          <dt>
+
+                                                            <img  class="lazy-img experience-img"   data-original="{{value.iconForList}}" width="100%" height="200" />
+
+                                                          </dt>
+
+                                                          <dd>
+
+                                                              <div class="describe">
+
+                                                                               <p class="mic_act_top">{{value.title}}</p>
+
+                                                                               <div class="come act_come"> 
+
+                                                                                   <div class="from-box">
+                                                                                           
+                                                                                           <span class="act_endtime">活动截止时间：{{value.endDate}}</span>
+                                                                                        
+                                                                                   </div>
+                                                                                   
+                                                                                   <div class="address-box">
+
+                                                                                       <i class="iconfont icon_location">&#xe604;</i>
+                                                                                       <span class="address">{{value.location}}</span>
+                                                                                     
+
+                                                                                   </div>      
+
+                                                                               </div>
+
+                                                                               <p class="mic_act_bot" >{{value.introduce}}</p>  
+
+                                                              </div>
+
+                                                          </dd>
+
+
+
+                                                         </dl>
+
+                                                        </li>
+
+
+
+                                       {{else}}
+                                               
+                                                 <li  onclick="detailClick(this,'{{value.id}}','{{value.isView}}','{{value.type}}')" >
+
+                                                         <dl>
+
+                                                          <dt>
+
+                                                            <img  class="lazy-img experience-img"   data-original="{{value.iconForList}}" width="100%" height="200" />
+
+                                                          </dt>
+
+                                                          <dd>
+
+                                                              <div class="describe">
+
+                                                                               <p class="mic_act_top">{{value.title}}</p>
+
+                                                                               <div class="come act_come"> 
+
+                                                                                   <div class="from-box">
+                                                                                           
+                                                                                           <span class="act_endtime">活动截止时间：{{value.endDate}}</span>
+                                                                                        
+                                                                                   </div>
+                                                                                   
+                                                                                   <div class="address-box">
+
+                                                                                       <i class="iconfont icon_location">&#xe604;</i>
+                                                                                       <span class="address">{{value.location}}</span>
+                                                                                     
+
+                                                                                   </div>      
+
+                                                                               </div>
+
+                                                                               <p class="mic_act_bot" >{{value.introduce}}</p>  
+
+
+
+                                                              </div>
+
+                                                          </dd>
+
+                                                         </dl>
+
+                                                        </li>
+
+                                         {{/if}}
+
+                                   
+
+                                    {{/each}}
+
+
+
+                          {{/if}}          
+
+                    </script>
+
+             </ul>
+
+
+          </div>
+
+     
+
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="../src/js/util/common.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js" ></script>
+
+<script src="../src/js/config.js"></script>
+<script src="../src/js/webapp/miccenter/myactivities.js" ></script>
+
+</body>
+</html>

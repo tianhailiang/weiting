@@ -1,0 +1,219 @@
+
+
+
+
+
+var flag = 0;
+
+ var param = {
+        type: "1",
+
+    };
+
+
+function init() {
+
+       
+
+
+      update();
+
+      
+        $(window).on("scroll",function(){
+           
+
+              $(".lazy-img").lazyload({
+
+                       placeholder: ""
+                                  
+
+              });
+
+           
+
+        });
+
+
+         $("#service").click(function(){
+          //点击客服进入
+
+             window.location.href = "detailed_account/kefu_1.1.html?phoneNum=" +  localStorage.userPhoneNum +"&sid=128324&entry=5&ref=link";
+          
+
+        });
+
+
+         $("#fav_nav_ul li").click(function(){
+            
+             param.type=$(this).attr("data-type");
+             
+             update();
+
+         });
+
+
+
+};
+
+
+
+function update() {
+
+   
+
+        favoriteInfo(param, true, function (result) {
+
+            var listData = result.data;
+
+                if (result.code == 0) {
+                   
+                     console.log(result)
+
+
+                     $("#fav_box").html(template("template1" , {data: listData}))
+
+                      $(".lazy-img").lazyload({
+
+                           placeholder: "",
+                            
+                       });
+
+  
+
+
+                } else {
+
+                    console.log(result.msg);
+                }
+
+        });
+
+
+
+
+};
+
+
+
+
+
+
+function favoriteDetail(curId, curType) {
+ /*收藏页面跳转详情页*/
+
+    if (curType == 1 || curType == 2 || curType == 3) { // 白纱 礼服 男装
+
+        window.location.href = "../detailed_account/account_detail.html?id=" + curId + "&type=" + curType;
+
+    } else if (curType == 4 || curType == 5) { // 周边配饰
+
+        window.location.href = "../detailed_account/accountAround_detail.html?id=" + curId + "&type=" + curType;
+
+    } else if (curType == 6) {  // 婚礼堂
+
+      window.location.href = "../detailed_account/weddingHouse_detail.html?id=" + curId + "&type=" + curType;
+
+    } else if (curType == 7) {  // 活动
+        window.location.href="../wish/experience_activity_detail.html?id=" + curId;
+
+    } else if (curType == 8) {   // 攻略
+       
+       window.location.href="../wish/alive_strategy_detail.html?id=" +curId;
+    }
+
+
+};
+
+
+
+
+function removeFav(target,evnet,type,id){
+ 
+ //删除收藏
+ event.stopPropagation();
+ 
+
+    var param={
+        id:id,
+        type:type,
+    }
+
+      delFavorite(param,true,function(result){
+
+        
+           if(result.code==0){
+
+               $.wishListAlert("<div class='layer-ball-box'>删除成功</div>");
+             
+             
+                  
+               $(target).parent().parent().parent().remove();
+
+
+           }else{
+
+              $.wishListAlert("<div class='layer-ball-box'>"+result.msg+"</div>");
+           }
+
+
+      });
+
+ 
+
+};
+
+
+
+/*==========接口=============*/
+
+
+
+var favoriteInfo = function (param, async, succfun) {
+  //我的收藏展示接口 (4、获取会员的收藏列表)
+
+    var testurl = "/api/micfavorite" + param.type;
+
+    var useurl = config.getUrl() + "getMemberCollection";
+    var url = useurl;
+
+
+    $.ajax({
+        type: config.getType(),
+        url: url,
+        dataType: config.getDataType(),
+        data: param,
+        async: async,
+        success: function (data, status) {
+            succfun(data);
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+
+};
+
+
+var delFavorite = function (param, async, succfun) {
+
+  //12、删除收藏功能
+    
+    var url = config.getUrl() + "delMemberCollection";
+
+    $.ajax({
+        type: config.getType(),
+        url: url,
+        dataType: config.getDataType(),
+        data: param,
+        async: async,
+        success: function (data, status) {
+            succfun(data);
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+
+};

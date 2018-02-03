@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+	<title>体验活动详情</title>
+    <link rel="stylesheet" href="../src/css/reset.css" >
+
+    <link rel="stylesheet" href="../src/css/common.css" >
+ 
+    <link rel="stylesheet" href="../src/css/wish.css">
+
+</head>
+<body style="background:#f2f4f5;">
+
+  <div class="alive-main-box" id="scr-main">
+
+     <script type="text/html" id="template1" >
+
+
+                <div class="alive-banner" >
+             
+                    <img src="{{data.topImg}}" alt=" " />
+
+               </div>
+               
+               <article >
+
+                      <div class="act-apply" >
+
+                                
+                                  <h1 class="act-h1">新手注册领福袋</h1>
+                                    
+                                     <div class="act-apply-cost" ><i class="cost-icont"></i><span>活动费用</span><i>免费</i></div>
+
+                                    <div class="act-apply-time" >
+                                       <i class="cost-icont"></i> <span>活动时间</span><i>{{data.startDate}}</i>-<i>{{data.endDate}}</i>
+                                    </div>
+                                    
+                                    <div class="act-apply-address" >
+
+                                        <i class="cost-icont"></i><span>活动地址</span> <i>{{data.area}}</i>
+                                   </div>
+                                   
+                               
+
+                          </div>
+                          
+
+                         <div class="act-content" id="act-ontent">
+                           
+                              
+                        </div>
+
+                        <div class="exper-attend">
+                            
+                            <div class="attend-title">
+                               
+                               <i></i><span>参加须知</span>
+
+                            </div>
+
+                            <ul class="attend-ul">
+                                  <li><i></i><span>必须拿着本人身份证才能参加</span></li>
+                                  <li><i></i><span>必须拿着本人身份证才能参加</span></li>
+                                  <li><i></i><span>必须拿着本人身份证才能参加</span></li>
+
+                            </ul>
+
+
+                        </div>
+
+
+                          <div class="exper-attend">
+                            
+                                  <div class="attend-title">
+                                     
+                                     <i></i><span>温馨提示</span>
+
+                                  </div>
+
+                                  <ul class="attend-ul">
+                                        <li><i></i><span>乘车路线：地铁十号线双井</span></li>
+                                        <li><i></i><span>今天坑会下雨啊</span></li>
+                                      
+
+                                  </ul>
+
+
+                        </div>
+
+                
+
+               </article>
+
+              
+
+
+            {{if data.isSign==0}}
+
+                        <a class="btn-my-apply" onclick="myapply('{{data.activityId}}')">
+
+                                  <span>我要报名</span>
+                        </a>
+
+            {{else}}
+
+                              <a class="btn-my-apply " >
+
+                                   <span>已报名</span>
+                             </a>
+
+            {{/if}}
+                    
+            
+          </script>
+    
+</div>
+
+ 
+
+</body>
+ 
+   <script src="../src/js/lib/jquery-2.2.1.min.js" ></script>
+   <script src="http://img.wishlist1314.com/artTamplate.js" ></script>
+   <script src="http://img.wishlist1314.com/fastclick.js" ></script>
+   <script src="../src/js/util/common.js"></script>
+   <script src="../src/js/config.js" ></script>
+   <script src="../src/js/dbutil.js" ></script>
+   <script src="../src/js/webapp/wish/experience_activity_detail.js" ></script>
+
+</html>

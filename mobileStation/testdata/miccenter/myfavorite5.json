@@ -1,0 +1,73 @@
+{
+  "code": 0,
+  "msg": "请求成功",
+  "data": 
+   
+
+     [
+
+      {
+            "id":"8080",
+
+            "type":"6",     
+            "icon":"../src/images/miccenter/active-1.jpg",
+            "title":"国际最流行的婚纱你都试了吗",      
+            "subtitle":"已婚礼完美演绎为宗旨,为新人们创造永流回忆的梦",    
+            "price":"",     
+            "activityPrice":"", 
+            "activityName":"", 
+            "author":"元婴",       
+            "location":"北京",
+            "viewNum":"5782",
+            "likeNum":"4564",
+            "keepNum":"1500"   
+           
+        
+      
+      },
+        
+         {
+            "id":"8080",
+
+            "type":"6",     
+            "icon":"../src/images/miccenter/active-2.jpg",
+            "title":"复古婚纱专场,看我范儿",      
+            "subtitle":"已婚礼完美演绎为宗旨,为新人们创造永流回忆的梦",    
+            "price":"",     
+            "activityPrice":"", 
+            "activityName":"", 
+            "author":"",       
+            "location":"北京",
+            "viewNum":"5782",
+            "likeNum":"4564",
+            "keepNum":"1500"   
+           
+      
+      
+      },
+        {
+            "id":"8080",
+
+            "type":"6",     
+            "icon":"../src/images/miccenter/active-1.jpg",
+            "title":"国际最流行的婚纱你都试了吗",      
+            "subtitle":"已婚礼完美演绎为宗旨,为新人们创造永流回忆的梦",    
+            "price":"",     
+            "activityPrice":"", 
+            "activityName":"", 
+            "author":"元婴",       
+            "location":"北京",
+            "viewNum":"5782",
+            "likeNum":"4564",
+            "keepNum":"1500"   
+           
+      
+      
+      }
+     
+       
+
+
+    ]
+  
+}

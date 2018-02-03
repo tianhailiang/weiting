@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>策划师介绍</title>
+    <link rel="stylesheet" href="../src/css/reset.css" >
+
+    <link rel="stylesheet" href="../src/css/common.css" >
+ 
+    <link rel="stylesheet" href="../src/css/wish.css">
+
+</head>
+
+<body style="background:#f2f4f5;">
+
+<div class="alive-main-box" id="scr-main">
+   
+    <div class="introduce-teacher" >
+
+             <i class="iconfont icon-attention introduce-attention">&#xe662;</i>
+      
+	        <div class="introduce-head" >
+
+	          <span></span>
+
+	          <i class="icon-v"></i>
+
+	        </div>
+
+
+
+            <div class="introduce-name" >
+            	
+            	<i>金露露</i><span class="icon-author"></span>
+
+            </div>
+
+
+            <div class="introduce-information" >
+                
+                <i>射手座</i> <i>北京</i><i>|</i> <i>关注</i><i>1222222</i>
+
+            </div>
+            
+            <div class="average-price" >
+            	
+            	<i>策划场均价</i> <span>58888</span>元
+            </div>
+
+            <div class="introduce-sub-title" >
+            	
+            	伴娘是现在婚礼上的不可缺少的人，让好闺蜜陪你一起出嫁！
+            </div>
+
+
+    </div>
+
+     <div class="planning-wedding" >
+            
+            <h2 class="planning-wedding-h2"><i class="icon-server"></i><span>提供服务形式</span></h2>
+
+            <ul class="introduce-ul-server">
+            	<li>
+            		<i class="iconfont icon-circle"> &#xe66c;</i> <span>全程跟进每一个细节</span>
+            	</li>
+            	<li>
+            		<i class="iconfont icon-circle"> &#xe66c;</i> <span>提供部分策划婚礼工作</span>
+
+            	</li>
+            	<li>
+            		<i class="iconfont icon-circle"> &#xe66c;</i> <span>婚礼当天帮忙协调执行</span>
+
+            	</li>
+            </ul>
+
+     </div>
+
+
+     <div class="planning-wedding " >
+
+            <h2 class="planning-wedding-h2 introduce-problem-h2"><i class="icon-problem"></i><span>常见问题</span><div class="iconfont icon-advance">&#xe65b;</div></h2>
+
+
+     </div>
+
+      <div class="planning-wedding plan_introduce-wedding" >
+
+            <h2 class="planning-wedding-h2 introduce-problem-h2"><i class="icon-newest"></i><span>最新作品</span><div class="iconfont icon-advance">&#xe65b;</div></h2>
+
+           
+         
+
+      </div>
+
+        <ul>
+
+			           <li class="plan_list_li plan_introduce_li">
+			                  
+			                  
+			                  	  
+			                  	  <img src="../src/images/wish/planning-3.jpg" />
+			                      
+			                      <div class="describe">
+			                           
+				                         <div class="introduce-works-title" >
+				                         	  
+				                         	  <span class="introduce-caption">白雪公主主题婚礼</span>
+
+				                         	 
+				                         	  	<i>童话梦幻</i>
+				                         	  	<i>室外</i>
+				                         	
+
+				                         </div>  
+
+				                           <ul class="planning-color">
+			                                     <li></li>
+			                                     <li></li>
+			                                     <li></li>
+			                               </ul>
+
+			                               <div class="introduce-planner" >
+			                               	   
+			                               	   <i>Wedding Planner</i> <span>金露露</span>
+
+			                               </div>
+
+			                      </div>
+
+
+			                      <ul class="iconfont-ul">
+
+			                         <!--     {{if value.isView==1}}
+			 -->
+			                                  <li >
+
+			                                           <a>
+
+			                                              <i class="iconfont eye ">&#xe620;</i> <span class="num">122</span>
+
+			                                           </a>
+
+			                
+
+			                                  </li>
+
+
+
+			                           <!--    {{else}}
+
+
+
+			                                   <li  >
+
+			                                         <a>
+
+			                                            <i class="iconfont eye bg-c">&#xe620;</i> <span class="num">{{value.viewNum}}</span>
+
+			                                         </a>
+
+			                  
+
+			                                    </li>
+
+			                                   
+
+			                             {{/if}}
+
+
+
+
+			                            {{if value.isKeep==1}} -->
+
+			                                  <li >
+
+			                                       <a>
+
+			                                          <i class="iconfont love ">&#xe616;</i><span class="num">122</span>
+
+			                                       </a>
+
+			                                 </li>
+
+
+
+			                        <!--      {{else}}
+
+
+
+			                                   <li class="last-li" onclick="operate(this,event,'{{value.type}}','{{value.id}}')" >
+
+			                                           <a>
+
+			                                              <i class="iconfont love bg-c">&#xe616;</i><span class="num">{{value.likeNum}}</span>
+
+			                                           </a>
+
+			                                   </li>
+
+
+
+
+			                            {{/if}}
+			 -->
+			                        
+
+			                      </ul>
+
+
+			            </li>
+
+         </ul>
+
+
+        <a class="btn-my-apply " >
+
+               <span>给他留言</span>
+        </a>
+
+
+	
+</div>
+
+</body>
+</html>

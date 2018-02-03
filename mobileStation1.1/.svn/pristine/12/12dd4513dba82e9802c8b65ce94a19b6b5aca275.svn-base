@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="x5-orientation" content="portrait">
+    <title>全部热门清单详情</title>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/reset.css">
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/icont/iconfont.css"/>
+    <link rel="stylesheet" href="../src/css/account_list.css"/>
+    <!--<link rel="stylesheet" href="../src/css/order.css"/>-->
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css"/>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/swiper-3.3.1.min.css">
+<body>
+<!--头部导航-->
+<header class="fixed-header white-bg" id="fixed-header pr">
+    <div class="filter-header pa">
+        <span class="icon iconfont" onclick="window.history.go(-1)">&#xe601;</span>
+    </div>
+    <div class="logo pr">
+        <img src="../src/images/logo_03.png" alt="" class="img-width-100">
+    </div>
+    <div class="info-notice pa">
+        <div class="pr">
+            <span class="inline-b"><img src="../src/images/icon-notice_03.png" alt="" class="img-width-100"></span>
+            <span class="inline-b"><img src="../src/images/icon-customServices_03.png" alt=""
+                                        class="img-width-100"></span>
+            <i class="infor-tip pa"></i>
+        </div>
+    </div>
+</header>
+<!--热门清单列表详情-->
+<div class="mt-20 white-bg pa-7 hot-item-list">
+    <script id="hot-item-list" type="text/html">
+    <div class="list-tile pt-30 hot-list-bottom">
+        <p class="fs15 color-666">{{data.title}}</p>
+        <p class="fs12 color-999 mt-20">{{data.description}}</p>
+    </div>
+    <div class="list-detail">
+        {{each data.commodity as value}}
+        <div class="mt-25 pa-7">
+            <img src="{{value.iconForList}}" alt="" data-original="{{value.iconForList}}">
+            <p class="mt-25 color-333 fs14 tc">【{{value.name}}】</p>
+            <p class="mt-20 color-red fs13 tc pb-20 hot-list-bottom">￥{{value.price}}</p>
+            <div class="list-item-status pt-10 clearfix">
+                {{ if value.isView == 0}}
+                <p class="fl"><span class="icon iconfont mr-10 green-eye">&#xe620;</span><span class="fs12 color-999">101</span></p>
+                {{else}}
+                <p class="fl"><span class="icon iconfont mr-10">&#xe620;</span><span class="fs12 color-999">101</span></p>
+                {{/if}}
+                {{ if value.isKeep == 0}}
+                <p class="fr collect-btn"><span class="icon iconfont mr-10">&#xe616;</span><span class="fs12 color-999">102</span>
+                </p>
+                {{else}}
+                <p class="fr collect-btn"><span class="icon iconfont mr-10 red-heart">&#xe616;</span><span
+                        class="fs12 color-999">102</span></p>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    </script>
+</div>
+<!--登录弹窗-->
+<div class="login-dialog hide">
+    <div class="pa-15">
+        <ul class="form-box mt-30">
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-phone inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您的手机号码" class="inline-b fl tele-number"/>
+                <a href="javascript:;" class="bg-red fs12 inline-b fl boder-radius-5 get-invidate-code">获取验证码</a>
+                <span class="fl count-down fs13 color-7a7b"><i>120</i>s</span>
+            </li>
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-validate inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您收到的验证码" class="inline-b fl validate-code"/>
+            </li>
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-invite inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您的邀请码（选填）" class="inline-b fl invite-code"/>
+            </li>
+        </ul>
+        <p class="fs13 mt-15 pl-13 validate-code-tip" style="visibility: hidden">验证码已经发送至填写的手机中，请注意查收！</p>
+        <div class="submit-btn bg-red tc boder-radius-5" id="submit-region-btn">完成提交</div>
+    </div>
+</div>
+
+</body>
+
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/swiper-3.3.1.min.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js"></script>
+
+<script src="../src/js/config.js"></script>
+<script src="../src/js/util/common.js"></script>
+<script src="../src/js/util/global.js"></script>
+<script src="../src/js/util/header.js"></script>
+
+<script src="../src/js/widget/layer/layer.js"></script>
+<script src="../src/js/widget/layer.m/mobel.js"></script>
+<script src="../src/js/webapp/account/jquery.lazyload.min.js"></script>
+<script src="../src/js/webapp/account/hot_list_collect_detail.js"></script>
+</html>

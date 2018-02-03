@@ -1,0 +1,109 @@
+{
+  "data": {
+    "hotTopics": [
+      {
+        "id":1111,
+        "title": "标题1",
+        "description": "描述1",
+        "recommendList": [
+          {
+            "icon": "http://img.wishlist1314.com/2016101017512266323.png",
+            "price": "222"
+          },
+          {
+            "icon": "http://img.wishlist1314.com/2016101017512266323.png",
+            "price": "2222"
+          },
+          {
+            "icon": "http://img.wishlist1314.com/2016101017512266323.png",
+            "price": "22233"
+          },
+          {
+            "icon": "http://img.wishlist1314.com/2016101017512266323.png",
+            "price": "222"
+          },
+          {
+            "icon": "http://img.wishlist1314.com/2016101017512266323.png",
+            "price": "44445"
+          }
+        ],
+        "num": "产品数量"
+      },
+      {
+        "id":1111,
+        "title": "标题2",
+        "description": "描述2",
+        "recommendList": [
+          {
+            "icon": "http://img.wishlist1314.com/2016100923373940162.png",
+            "price": "1111"
+          },
+          {
+            "icon": "http://img.wishlist1314.com/2016100923373940162.png",
+            "price": "2222"
+          },{
+            "icon": "http://img.wishlist1314.com/2016100923373940162.png",
+            "price": "333"
+          },
+          {
+            "icon": "http://img.wishlist1314.com/2016100923373940162.png",
+            "price": "4444"
+          },{
+            "icon": "http://img.wishlist1314.com/2016100923373940162.png",
+            "price": "555"
+          },
+          {
+            "icon": "http://img.wishlist1314.com/2016100923373940162.png",
+            "price": "6666"
+          },{
+            "icon": "http://img.wishlist1314.com/2016100923373940162.png",
+            "price": "价格"
+          },
+          {
+            "icon": "http://img.wishlist1314.com/2016100923373940162.png",
+            "price": "6666"
+          }
+        ],
+        "num": "产品数量"
+      }
+    ],
+    "commodity": [
+      {
+        "iconForList": "http://127.0.0.1:8080/src/images/img-single_11.png",
+        "name": "系列名11",
+        "price": "3333"
+      },
+      {
+        "iconForList": "http://127.0.0.1:8080/src/images/img-single_11.png",
+        "name": "系列名2222",
+        "price": "333"
+      },
+      {
+        "iconForList": "http://127.0.0.1:8080/src/images/img-single_11.png",
+        "name": "系列名2222",
+        "price": "333"
+      },{
+        "iconForList": "http://127.0.0.1:8080/src/images/img-single_11.png",
+        "name": "系列名2222",
+        "price": "333"
+      },
+      {
+        "iconForList": "http://127.0.0.1:8080/src/images/img-single_11.png",
+        "name": "系列名2222",
+        "price": "333"
+      },
+      {
+        "iconForList": "http://127.0.0.1:8080/src/images/img-single_11.png",
+        "name": "系列名2222",
+        "price": "333"
+      },
+      {
+        "iconForList": "http://127.0.0.1:8080/src/images/img-single_11.png",
+        "name": "系列名2222",
+        "price": "333"
+      }
+    ]
+  },
+  "code": "0",
+  "msg": "请求成功"
+}

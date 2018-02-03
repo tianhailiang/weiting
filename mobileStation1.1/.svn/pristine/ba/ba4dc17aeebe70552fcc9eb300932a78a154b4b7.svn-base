@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+	<title>个人信息</title>
+    <link rel="stylesheet" href="../src/css/reset.css" >
+	<script src="../src/js/lib/rem.js" ></script>
+   <link rel="stylesheet" href="../src/css/common.css" >
+   <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css" >
+  <link rel="stylesheet" href="../src/css/miccenter.css" >
+
+
+</head>
+<body class="bg-f8">
+
+<div class="perInfo-box" id="perInfo-box">
+	
+     <ul class="perInfo-ul">
+         	<li onclick="chopHead()">
+         		<span >头像</span>
+
+         		<div class="perInfo-li-right" >
+                     <div class="perInfo-header mar-r10" id="perInfo-header"></div>
+                     <i class="iconfont advance">&#xe65b;</i>
+
+         		</div>
+
+         	</li>
+         	<li onclick="preAmendName()">
+         		<span>姓名</span>
+            
+            <div class="perInfo-li-right" >
+
+                      <div class="mar-r10" id="perInfo-userName"></div>
+         		          <i class="iconfont advance">&#xe65b;</i>
+
+            </div>         
+
+         	</li>
+         	<li onclick="preAmendPhone()">
+         		   <span>电话</span>
+               <div class="perInfo-li-right" >
+
+                     <div class="mar-r10" id="perInfo-phone"></div>
+         		         <i class="iconfont advance">&#xe65b;</i>
+
+               </div>     
+         	</li>
+         	<li onclick="preAmendSex()">
+         		<span>性别</span>
+
+             <div class="perInfo-li-right" >
+
+                  <div class="mar-r10" id="perInfo-sex"></div>
+         		       <i class="iconfont advance">&#xe65b;</i>
+
+              </div>    
+         	</li>
+         	<li >
+         		<span>生日</span>
+            <div class="perInfo-li-right" >
+
+                  <div class="mar-r10" id="perInfo-birthday"></div>
+         		      <i class="iconfont advance">&#xe65b;</i>
+
+            </div>
+             
+            <input class="myWidding-site-li-right preInfo-input-birthday" value="" name="appDate" id="appDate"  type="text"  />
+
+         	</li>
+     
+     </ul>
+
+
+
+        <a class="btn-my-apply fixed" onclick="preInfoSave()">
+        
+                              <span>保存</span>
+        </a>
+
+   
+   </div>
+  <!-- ====弹窗=== -->
+
+<div class="cpm-box" id="cpm-box">
+
+    <div class="cpm" >
+
+    </div>
+
+    <ul class="cpm-head">
+            <li id="photo">拍照</li>
+            
+            <li id="chooseImg">从手机相册选择</li>
+
+            <li class="cpm-head-li-last" id="preCancel">取消</li>
+
+    </ul>
+
+</div>
+
+
+<!-- ===修改姓名== -->
+
+<div class="amend-box" id="amend-box-name">
+
+    <div class="amend-name" >
+
+        <span>姓名</span>
+
+        <input type="text" id="pre-input-name" />
+
+    </div>
+
+   <div class="pre-btn-save">
+
+       <a class="btn-start"  onclick="preSaveName()">
+           确认
+       </a>
+   </div>
+
+</div>
+
+<!-- ====修改电话==== -->
+
+<div class="amend-box" id="amend-box-phone">
+
+    <div class="amend-name" >
+
+        <span>电话</span>
+
+        <input type="text" id="pre-input-phone" />
+
+    </div>
+
+   <div class="pre-btn-save">
+
+       <a class="btn-start"  onclick="preSavePhone()">
+           确认
+       </a>
+   </div>
+
+</div>
+
+
+<!-- =选择男女=== -->
+<div class="cpm-box" id="cpm-box-sex">
+
+    <div class="cpm" >
+
+    </div>
+
+    <ul class="cpm-head">
+            <li style="color:#c0c0c9;">性别</li>
+            <li onclick="selectMan(this)">男</li>
+            <li onclick="selectWoman(this)">女</li>
+            <li class="cpm-head-li-last" onclick="preSexCancel()">取消</li>
+
+    </ul>
+
+</div>
+
+
+
+</body>
+
+  <script src="http://img.wishlist1314.com/jweixin-1.0.0.js" type="text/javascript" ></script>
+  <script src="../src/js/lib/jquery-2.2.1.min.js" ></script>
+  <script src="http://img.wishlist1314.com/fastclick.js" ></script>
+  <script src="../src/js/util/common.js"></script>
+  <script src="../src/js/config.js"></script>
+  <script src="../src/js/dbutil.js" ></script>
+  <script src="../src/js/widget/layer/layer.js" ></script>
+
+   <!-- 引入iphone-time插件 -->
+
+  <link href="../src/js/widget/jQuery-iphone-time/mobiscroll_002.css" rel="stylesheet" type="text/css">
+  <link href="../src/js/widget/jQuery-iphone-time/mobiscroll.css" rel="stylesheet" type="text/css">
+  <link href="../src/js/widget/jQuery-iphone-time/mobiscroll_003.css" rel="stylesheet" type="text/css">
+  <script src="../src/js/widget/jQuery-iphone-time/jQuery-iphone-time.js" ></script>
+
+   <script src="../src/js/webapp/miccenter/personal_information.js" ></script>
+
+
+</html>

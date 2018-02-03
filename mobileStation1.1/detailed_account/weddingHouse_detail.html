@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>婚礼堂详情</title>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/reset.css">
+    <link rel="stylesheet" href="../src/css/global.css"/>
+    <link rel="stylesheet" href="../src/css/account_list.css"/>
+    <link rel="stylesheet" href="../src/icont/iconfont.css"/>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/swiper-3.3.1.min.css">
+</head>
+<body>
+<!--头部导航-->
+<div class="top-nav">
+    <div class="clearfix pa-7">
+        <span class="fl left-back-bg mt-10 iconfont left-back-btn" onclick="window.history.go(-1)">&#xe601;</span>
+        <div class="fr right-btn">
+            <span class="right-info-bg mt-10 iconfont praise-btn">&#xe616;</span>
+            <span class="right-info-bg mt-10 iconfont kefu kefu-btn"> &#xe70d;</span>
+        </div>
+    </div>
+</div>
+
+<div class="product-img-box">
+    <div class="product-top">
+        <script id="webbing-house" type="text/html">
+            <!--头部图片-->
+            <div class="product-img wedding-house-img">
+                <div class="top-img">
+                    <img src="{{data.hImgs[0]}}" class="img-width-100">
+                </div>
+            </div>
+            <div class="product-infor pa-15 white-bg pb-20">
+                <h2 class="fs15 color-333 pt-20">{{data.hName}}</h2>
+                <p class="pt-20 product-price color-red"><span
+                        class="fs14 color-666 mr-5">花费:  </span>￥{{data.hPrice}}<span class="marry-sale fs12 bg-red">超值精选  一价全包套餐</span>
+                </p>
+                <p class="pt-10 sale-price fs14 color-666"><span class="fs14 color-666 mr-5">地址:  </span>{{data.hLocation}}
+                </p>
+            </div>
+            <div class="mt-10 white-bg">
+                <p class="mt-10 fs15 color-333 hall-title hot-list-bottom" style="padding-left: 23px"><i
+                        class="inline-b bg-litang character-bg"></i>礼堂介绍</p>
+                <div class="mt-15  pa-15 product-intro fs14 color-666">
+                    <p class="lineh-30">{{data.introduce}}</p>
+                </div>
+                <div class="exprice boder-b-10 mt-15">
+                    <p class="server-feature clearfix">
+                        {{ each data.special as item}}
+                        <span class="fs12">{{item}}</span>
+                        {{/each}}
+                    </p>
+                </div>
+            </div>
+
+            <div class="wedding-house-title boder-b-10 clearfix">
+                <a href="javascript:;" class="fl plan-btn"></a>
+                <a href="#package" class="fl price-contain"></a>
+            </div>
+            <div class="exhibition white-bg">
+                <div class="exhibition-box pr">
+                    {{each data.banquetHalls as item}}
+                    <div>
+                        <dl class="clearfix room-introduce pa-10">
+                            <dt class="fl room-pic pr">
+                                <img src="{{item.tImgs[0]}}" alt=""/>
+                                <span class="pa">{{item.tImgs.length}}张</span>
+                            </dt>
+                            <dd class="fl room-parameter">
+                                {{if item.hasPillar == 0}}
+                                <h2 class="font-bold fs24">{{item.tName}} <span>无柱子</span></h2>
+                                {{else}}
+                                <h2 class="font-bold fs24">{{item.tName}} <span>有柱子</span></h2>
+                                {{/if}}
+                                <p class="fs22">位置：{{item.tLocation}}</p>
+                                <p class="fs22">层高：{{item.height}} </p>
+                                <p class="fs22">面积：{{item.area}}㎡</p>
+                                <p class="fs22">桌数：{{item.table}}桌</p>
+                            </dd>
+                        </dl>
+                        <div class="exhibition-album hide">
+                            <div class="swiper-container swiper-album">
+                                <div class="swiper-wrapper">
+                                    {{each item.tImgs as value }}
+                                    <div class="swiper-slide"><img src="{{value}}"></div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="check-all"><span>查看全部</span><i class="icon iconfont icon-change icon-down"></i></div>
+            </div>
+
+
+        </script>
+    </div>
+
+    <div class="product-bottom">
+        <div class="mt-10 packge-tab pa-15" id="package">
+            <ul class="menu-tab clearfix">
+                <script type="text/html" id="meal-menu-tab">
+                    {{each data as value index}}
+                    {{ if index == 0}}
+                    <li class="tc selected">
+                        <p>{{value.cName}}</p>
+                        <span>{{value.cPrice}}/桌</span>
+                    </li>
+                    {{else}}
+                    <li class="tc">
+                        <p>{{value.cName}}</p>
+                        <span>{{value.cPrice}}/桌</span>
+                    </li>
+                    {{/if}}
+                    {{/each}}
+                </script>
+            </ul>
+        </div>
+        <div class="package-tab-content pa-15">
+            <!--套餐A-->
+            <div>
+                <div class="menu clearfix pr">
+                    <div class="w-33 tc menu-left fl table-border no-border-t">菜单</div>
+                    <div class="w-66 menu-right fl">
+                        <script id="menu-gird" type="text/html">
+                            <ul>
+                                {{ each menus as value }}
+                                <li class="clearfix">
+                                    <span class="fl">{{value.mName}}</span>
+                                    <span class="fr"><a href="javascript:;" class="menu-btn">查看清单</a></span>
+                                    <div class="menu-content hide pa">
+                                        <h2 class="font-bold">{{value.mName}}<i class="icon iconfont fr close-menu">
+                                            &#xe603;</i>
+                                        </h2>
+                                        <ul>
+                                            {{ each value.dishs as item}}
+                                            <li>{{item.dName}}</li>
+                                            {{/each}}
+                                        </ul>
+                                        <p class="tc check-menu-all hide">展开查看全部 <i class="iconfont">&#xe6ce;</i>
+                                        </p>
+                                        <div class="additional-info">
+                                            <span>*附加信息</span>
+                                            <p>{{value.remarks}}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </script>
+                    </div>
+                    <div class="menu clearfix">
+                        <div class="w-33 tc plan-left fl table-border no-border-t">策划</div>
+                        <div class="w-66 plan-right fl">
+                            <script id="plan-gird" type="text/html">
+                                <ul>
+                                    {{ each plans as value }}
+                                    <li class="clearfix">
+                                        <span class="fl">{{value.pName}}</span>
+                                        <span class="fr"><a href="javascript:;">查看清单</a></span>
+                                        <div class="menu-content hide">
+                                            <h2 class="font-bold">{{value.pName}}<i class="icon iconfont fr close-menu">
+                                                &#xe603;</i>
+                                            </h2>
+                                            <ul class="plan-content">
+                                                {{ each value.detail as item}}
+                                                <li>
+                                                    {{item.name}}<i class="icon-arrow fr"></i>
+                                                    <p>{{item.value}}</p>
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                            <p class="tc check-menu-all">展开查看全部 <i class="iconfont">&#xe6ce;</i>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    {{/each}}
+
+                                </ul>
+                            </script>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--特别设施-->
+        <div class="exprice white-bg">
+            <p class="mt-10 fs15 color-333 hall-title hot-list-bottom" style="padding-left: 23px"><i
+                    class="inline-b bg-tebie character-bg"></i>特别设施</p>
+            <div class="special-device white-bg pb-30">
+                <ul class="clearfix speical-device-box">
+                    <script id="special-service" type="text/html">
+                        {{each data as value}}
+                        <li class="fl">
+                            <span><img src="{{value.yImg}}" alt=""/></span>
+                            <p class="fs12">{{value.yName}}</p>
+                        </li>
+                        {{/each}}
+                    </script>
+                </ul>
+            </div>
+        </div>
+        <!--小编观后感-->
+        <div class="review  white-bg pa-22 mt-10">
+            <script type="text/html" id="editor-review">
+                <div class=" pa-10">
+                    <!--<img src="{{data.headPortrait}}" alt=""/>-->
+                    <img src="../src/images/img-hotList_47.png" alt="">
+                    <span class="fs12 color-333">小编观后感</span>
+                    <p class="fs12 color-666 lineh-24">{{data.recommended}}</p>
+                </div>
+            </script>
+        </div>
+    </div>
+</div>
+<div class="btn-my-apply" id="order-btn">我要预约</div>
+<!--统筹弹窗-->
+<div class="plan-dialog hide">
+    <img src="../src/images/liucheng.png" alt="">
+</div>
+<!-- 遮罩层-->
+<div class="black-layer pa hide"></div>
+<!--登录弹窗-->
+<div class="login-dialog hide">
+    <div class="pa-15">
+        <ul class="form-box mt-30">
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-phone inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您的手机号码" class="inline-b fl tele-number"/>
+                <a href="javascript:;" class="bg-red fs12 inline-b fl boder-radius-5 get-invidate-code">获取验证码</a>
+                <span class="fl count-down fs13 color-7a7b"><i>120</i>s</span>
+            </li>
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-validate inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您收到的验证码" class="inline-b fl validate-code"/>
+            </li>
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-invite inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您的邀请码（选填）" class="inline-b fl invite-code"/>
+            </li>
+        </ul>
+        <p class="fs13 mt-15 pl-13 validate-code-tip" style="visibility: hidden">验证码已经发送至填写的手机中，请注意查收！</p>
+        <div class="submit-btn bg-red tc boder-radius-5" id="submit-region-btn">完成提交</div>
+    </div>
+</div>
+</body>
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/swiper-3.3.1.min.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js"></script>
+<script src="../src/js/util/common.js"></script>
+<script src="../src/js/util/global.js"></script>
+<script src="../src/js/util/register.js"></script>
+
+<script src="../src/js/config.js"></script>
+<script src="../src/js/dbutil.js"></script>
+<script src="../src/js/webapp/account/weddingHouse_detail.js"></script>
+</html>

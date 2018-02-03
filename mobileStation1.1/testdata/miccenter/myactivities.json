@@ -1,0 +1,36 @@
+{
+  "code": 0,
+  "msg": "请求成功",
+  "data": 
+   
+
+     [
+
+      {
+        "activityId":"402882bb566e45b401566e4650210008",        
+        "isExpired":"1",                                       
+        "icon":"../src/images/miccenter/active-1.jpg",
+        "title":"超IN婚纱试穿？",
+        "introduce":"在网上看着最新款的婚纱眼馋越不知道在哪能买到？担忧代购了一圈穿上",
+        "endDate":"2016-08-29" ,             
+        "location":"北京"
+
+        },
+        {
+           "activityId":"402882bb566e45b401566e4650210008",        
+            "isExpired":"0",                                       
+            "icon":"../src/images/miccenter/active-1.jpg",
+            "title":"超IN婚纱试穿？",
+            "introduce":"在网上看着最新款的婚纱眼馋越不知道在哪能买到？担忧代购了一圈穿上",
+            "endDate":"2016-08-29",
+             "location":"北京"  
+
+
+        }
+       
+       
+
+
+    ]
+  
+}

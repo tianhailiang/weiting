@@ -1,0 +1,118 @@
+
+
+
+function init(){
+
+  personCenter();
+
+};
+
+
+function personCenter(){
+
+  //调取个人信息接口
+  
+
+	personalInfo(null,true,function(result){
+
+	        if(result.code==0){
+	        
+            
+	             if(result.data.headImg!=""){
+                      $("#mic-header").attr("style","background:url("+result.data.headImg+") no-repeat center;background-size:cover;");
+	             }else{
+
+                 
+
+	             	$("#mic-header").attr("style","background:url(../src/images/miccenter/personal-bg.png) no-repeat center;background-size:cover;");
+	             }
+	           
+                if(result.data.userName!=""){
+
+                    $("#micUserName").html(result.data.userName);
+
+                }else{
+
+                	  $("#micUserName").html(result.data.nickname);
+                }
+
+                
+
+
+	        }else{
+
+              
+
+	             $.wishListAlert("<div class='layer-ball-box'>"+result.msg+"</div>");
+	        }
+	});
+
+};
+
+	
+function perInfomation(){
+   
+   window.location.href="personal_information.html";
+
+};
+
+
+
+function myfavorite(){
+
+	window.location.href="myfavorite.html";
+
+};
+
+function myactivity(){
+  
+  window.location.href="myactivities.html";
+
+};
+
+function myOrder(){
+  //我的预约
+
+  window.location.href="../order/my_order.html";
+
+  
+};
+
+
+function myCoupon(){
+
+  window.location.href="mygift.html";
+};
+
+
+
+
+/*==============接口=================*/
+
+
+var personalInfo = function (param, async, succfun) {
+
+   // 个人中心接口 （2、获取个人信息接口）
+    var testurl = "/api/personalInfo";
+
+    var useurl = config.getUrl() + "getMemberInfo";
+
+    var url = useurl;
+
+
+    $.ajax({
+        type: config.getType(),
+        url: url,
+        dataType: config.getDataType(),
+        data: param,
+        async: async,
+        success: function (data, status) {
+            succfun(data);
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+
+};

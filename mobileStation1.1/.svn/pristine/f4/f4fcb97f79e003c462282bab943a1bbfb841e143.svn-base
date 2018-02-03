@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>策划师介绍</title>
+    <link rel="stylesheet" href="../src/css/reset.css" >
+
+    <link rel="stylesheet" href="../src/css/common.css" >
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+ 
+    <link rel="stylesheet" href="../src/css/wish.css">
+
+</head>
+
+<body style="background:#f2f4f5;">
+
+  <header  class="header_box top_fixed" style="background:#fff;">
+            <ul>
+                <li class="first" id="btnBack">
+
+                       <i class="iconfont icon_back" >&#xe601;</i>
+
+                </li>
+
+
+              <li class="second">
+                
+                  <i class="ico-wish-title"></i>
+                  <span class="header_title">WISH LIST</span>
+
+              </li>
+
+              <li class="last">
+
+                        <span class="icon-bell-box">
+
+                           <i class="iconfont icon-bell">&#xe618;</i>
+                           <i class="icon-red-circle"></i>
+
+                        </span>
+
+
+                       <i class="iconfont icon-service " >&#xe70d;</i>
+                
+                 
+              </li>
+
+            
+            </ul>
+
+  </header>
+
+
+<div class="alive-main-box planIntroduce" id="scr-main">
+   
+    <script type="text/html" id="template1" >
+
+			    <div class="introduce-teacher" >
+
+			             {{if data.isfollow==0}}
+                             
+                              <i class="iconfont icon-attention introduce-attention"  onclick="attention(this,'{{data.plannerId}}','{{data.isfollow}}');">&#xe662;</i>
+
+			             {{else}}
+
+			                   <i class="iconfont icon-attention introduce-attention">&#xe662;</i>
+
+			             {{/if}}
+			      
+				        <div class="introduce-head" id="introduce-head">
+
+				          <span style="background:url('{{data.head}}') no-repeat center;background-size:cover;"></span>
+
+				          <i class="icon-v"></i>
+
+				        </div>
+
+
+
+			            <div class="introduce-name" >
+			            	
+			            	<i>{{data.name}}</i><span class="icon-author"></span>
+
+			            </div>
+
+
+			            <div class="introduce-information" >
+			                
+			                <i>{{data.star}}</i> <i>{{data.city}}</i><i>|</i> <i>关注</i><i id="fans">{{data.fans}}</i>
+
+			            </div>
+			            
+			            <div class="average-price" >
+			            	
+			            	<i>策划场均价</i> <span>{{data.price}}元</span>
+			            </div>
+
+			            <div class="introduce-sub-title" >
+			            	
+			            	{{data.profile}}
+			            </div>
+
+
+			    </div>
+
+			     <div class="planning-wedding" >
+			            
+			            <h2 class="planning-wedding-h2"><i class="icon-server"></i><span>提供服务形式</span></h2>
+
+			            <ul class="introduce-ul-server">
+                           
+                           {{each data.service as value}}
+
+			            	<li>
+			            		<i class="iconfont icon-circle"> &#xe66c;</i> <span>{{value}}</span>
+			            	</li>
+			            	
+
+                            {{/each}}
+
+			            </ul>
+
+			     </div>
+
+
+			     <div class="planning-wedding " >
+
+			            <h2 class="planning-wedding-h2 introduce-problem-h2" >
+			               <i class="icon-problem"></i><span>常见问题</span>
+
+				            <div class="advance_box">
+	                            <div class="iconfont icon-advance">&#xe65b;</div>
+	                         
+	                         </div>
+
+			            </h2>
+
+
+			     </div>
+
+			      <div class="planning-wedding plan_introduce-wedding" >
+
+			            <h2 class="planning-wedding-h2 introduce-problem-h2" onclick="planList('{{data.id}}')">
+				            <i class="icon-newest"></i><span>最新作品</span>
+				            <div class="advance_box">
+
+	                            <div class="iconfont icon-advance">&#xe65b;</div>
+	                         
+	                         </div>
+
+			            </h2>
+
+			      </div>
+
+			        <ul>
+
+						         <li class="plan_list_li plan_introduce_li" onclick="detailClick('{{data.latestWorks.id}}')">
+						                  
+						                  
+						                  	  
+						                  	  <img src="{{data.latestWorks.iconForList}}" />
+						                      
+						                      <div class="describe">
+						                           
+							                         <div class="introduce-works-title" >
+							                         	  
+							                         	  <span class="introduce-caption">{{data.latestWorks.theme}}</span>
+
+							                         	  {{each data.latestWorks.style as value}}
+
+							                         	  
+							                         	   <i>value</i>
+							                         	
+							                         	 {{/each}}
+
+							                         	 {{if data.latestWorks.environment==1}}
+
+							                         	   <i>室内</i>
+
+							                         	 {{else}}
+
+                                                            <i>室外</i>
+
+							                         	 {{/if}}
+
+							                         </div>  
+
+							                           <ul class="planning-color">
+						                                    
+                                                              {{each data.latestWorks.main as value}}
+                                                                
+                                                                 <li style="background:#{{value}}"></li>
+
+
+
+                                                              {{/each}}
+
+						                               </ul>
+
+						                               <div class="introduce-planner" >
+						                               	   
+						                               	   <i>Wedding Planner</i> <span>{{data.latestWorks.planner}}</span>
+
+						                               </div>
+
+						                      </div>
+
+
+
+						             <ul class="iconfont-ul">
+
+					                             {{if data.latestWorks.isView==1}}
+
+					                                  <li >
+
+					                                           <a>
+
+					                                              <i class="iconfont eye ">&#xe620;</i> <span class="num">{{data.latestWorks.viewNum}}</span>
+
+					                                           </a>
+
+					                
+
+					                                  </li>
+
+
+
+					                              {{else}}
+
+					                                   <li  >
+
+					                                         <a>
+
+					                                            <i class="iconfont eye bg-c">&#xe620;</i> <span class="num">{{data.latestWorks.viewNum}}</span>
+
+					                                         </a>
+
+					                  
+
+					                                    </li>
+
+					                                   
+
+					                             {{/if}}
+
+
+					                            {{if data.latestWorks.isKeep==1}}
+
+					                                  <li >
+
+					                                       <a>
+
+					                                          <i class="iconfont love ">&#xe616;</i><span class="num">{{data.latestWorks.keepNum}}</span>
+
+					                                       </a>
+
+					                                 </li>
+
+					                             {{else}}
+
+					                                   <li class="last-li" onclick="operateCollect(this,event,'{{data.latestWorks.id}}')" >
+
+					                                           <a>
+
+					                                              <i class="iconfont love bg-c">&#xe616;</i><span class="num">{{data.latestWorks.keepNum}}</span>
+
+					                                           </a>
+
+					                                   </li>
+
+					                            {{/if}}
+
+					                        
+
+					                      </ul>
+
+
+					               </li>
+
+			         </ul>
+
+			          <a class="btn-my-apply " onclick="planWord('{{data.id}}')">
+
+                           <span>给他留言</span>
+                      </a>
+
+
+       </script>  
+
+
+	
+</div>
+
+  <div class="grade_box" id="grade_box">
+
+		<div class="grade" >
+			 
+			 <div class="grade_title" >
+		         
+		         <span>策划师等级介绍</span>
+
+		         <i class="iconfont icon_circle_x" id="icon_circle_x">&#xe61c;</i>
+
+			 </div>
+
+			 <ul class="grade_ul">
+			 	<li>
+			 		<i class="grade_v"></i>
+			 		<span>策划师de</span>
+
+			 	</li>
+			 	<li>
+			 			<i class="grade_v"></i>
+			 		    <span>策划师de</span>
+			 	</li>
+			 	<li>
+			 	    <i class="grade_v"></i>
+			 		<span>策划师de</span>
+
+			 	</li>
+
+			 </ul>
+
+
+
+     </div>
+ 
+     <div class="grade_mask" ></div>
+
+</div>   
+
+
+<div class="grade_box" id="grade_word_box">
+
+      <div class="grade_word"  >
+
+          <div class="grade_word_child" >
+          
+                <textarea class="grade_txt" placeholder="我想和你说点什么" id="grade_txt"></textarea>
+                
+                <input type="text" placeholder="手机号" class="grade_iphone" id="grade_iphone" />
+
+                <div class="grade_btn_box" >
+                  
+                    <span class="grade_submit" id="grade_submit" >提交</span>
+
+                    <span id="grade_cancel" class="grade_cancel">取消</span>
+
+                </div>
+
+          </div>      
+
+      </div>
+ 
+     <div class="grade_mask" ></div>
+
+</div>   
+
+
+    <script src="../src/js/lib/jquery-2.2.1.min.js" ></script>
+    <script src="http://img.wishlist1314.com/artTamplate.js" ></script>
+    <script src="http://img.wishlist1314.com/fastclick.js" ></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js" ></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/webapp/wish/planning_division_introduce.js" ></script>
+
+</body>
+</html>

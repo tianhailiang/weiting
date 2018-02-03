@@ -1,0 +1,22 @@
+{
+	"code":0,
+	"msg":"业务信息",
+	"data":
+	  [
+		   {
+
+		   	"bannerUrl":"src/images/wish/wish_banner.png"
+
+		   },
+
+		   {
+		   	 	"bannerUrl":"src/images/wish/wish_sele_1.png"
+		   	},
+		   	{
+		   	   "bannerUrl":"src/images/wish/wish_sele_2.png"
+		   	}
+
+
+	  ]	   	
+
+}

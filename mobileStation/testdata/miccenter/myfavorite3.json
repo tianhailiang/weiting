@@ -1,0 +1,73 @@
+{
+  "code": 0,
+  "msg": "请求成功",
+  "data": 
+   
+
+     [
+
+      {
+            "id":"8080",
+
+            "type":"3",     
+            "icon":"../src/images/wish/wish_sele_2.png",
+            "title":"上海罗坑国际婚礼中心",      
+            "subtitle":"已婚礼完美演绎为宗旨,为新人们创造永流回忆的梦",    
+            "price":"",     
+            "activityPrice":"", 
+            "activityName":"", 
+            "author":"",       
+            "location":"北京",
+            "viewNum":"5782",
+            "likeNum":"4564",
+            "keepNum":"1500"   
+           
+        
+      
+      },
+        
+         {
+            "id":"8080",
+
+            "type":"3",     
+            "icon":"../src/images/wish/wish_sele_2.png",
+            "title":"上海罗坑国际婚礼中心",      
+            "subtitle":"已婚礼完美演绎为宗旨,为新人们创造永流回忆的梦",    
+            "price":"",     
+            "activityPrice":"", 
+            "activityName":"", 
+            "author":"",       
+            "location":"北京",
+            "viewNum":"5782",
+            "likeNum":"4564",
+            "keepNum":"1500"   
+           
+      
+      
+      },
+        {
+            "id":"8080",
+
+            "type":"3",     
+            "icon":"../src/images/wish/wish_sele_2.png",
+            "title":"上海罗坑国际婚礼中心",      
+            "subtitle":"已婚礼完美演绎为宗旨,为新人们创造永流回忆的梦",    
+            "price":"",     
+            "activityPrice":"", 
+            "activityName":"结婚特惠季", 
+            "author":"元婴",       
+            "location":"北京",
+            "viewNum":"5782",
+            "likeNum":"4564",
+            "keepNum":"1500"   
+           
+      
+      
+      }
+     
+       
+
+
+    ]
+  
+}

@@ -1,0 +1,1925 @@
+
+
+/*=====personal.html=======*/
+
+.mic-top{
+	width:100%;
+	height:173px;
+	
+	display:flex;
+   
+    flex-direction:column;
+ 
+     align-items:center;
+     padding-top:38px;
+     box-sizing: border-box;
+     background:#fff;
+
+}
+
+
+.mic-header-box{
+
+  	display:-webkit-box;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -webkit-flex-direction:column;
+       -moz-box-orient:vertical;
+       -moz-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
+   -webkit-box-align:center;
+   -webkit-align-items:center;
+      -moz-box-align:center;
+       -ms-flex-align:center;
+           align-items:center;
+
+}
+
+
+.mic-header{
+
+	width:74px;
+	height:74px;
+	-webkit-border-radius: 50%;
+	 border-radius: 50%;
+	
+}
+
+.mic-name{
+	margin-top:12.5px;
+	font-size:15px;
+	color:#333;
+    line-height:15px;
+
+}
+
+.mic-name span{
+	font-weight: bold;
+}
+
+.mic-name i{
+	margin-left: 10px;
+	color:#333;
+}
+
+
+.mic-ul{
+	width:100%;
+	margin-top: 10px;
+	background:#fff;
+} 
+
+.mic-ul li{
+  width:100%;
+  
+   
+   display: flex;
+
+   justify-content:space-between;
+
+   align-items:center;
+   padding-left:22px;
+   padding-right:14px;
+   position:relative;
+   height:57px;
+  
+   box-sizing: border-box;
+
+}
+
+
+
+.mic-ul li:after{
+	content:"";
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:1px;
+	background-color:#e5e5e5;
+
+	-webkit-transform:scaleY(0.5);
+	 -moz-transform:scaleY(0.5);
+	  -ms-transform:scaleY(0.5);
+	     transform:scaleY(0.5);
+	  
+
+	-webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		 -ms-transform-origin:0 0;
+	     transform-origin:0 0;
+
+
+}
+
+.mic-ul li div{
+	
+	display: flex;
+	
+	align-items:center;
+	font-size:14px;
+	color:#333;
+
+}
+
+.mic-li-left i{
+
+	display: block;
+	width:30px;
+	height:30px;
+	margin-right: 19px;
+}
+
+
+
+
+/*======personal_information.html========*/
+
+.perInfo-box{
+	width:100%;
+	
+	position:relative;
+}
+
+
+
+.perInfo-ul{
+	width:100%;
+
+}
+
+
+.perInfo-ul li{
+	width:100%;
+	height:58.5px;
+	position:relative;
+
+	display:flex;
+
+	  align-items:center;
+	 
+	justify-content:space-between;
+	padding-left:25px;
+	padding-right: 14px;
+	
+    box-sizing: border-box;
+    background:#fff;
+}
+
+.perInfo-ul li:nth-of-type(1){
+	height:78px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+
+.perInfo-ul li:after{
+	content:"";
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:1px;
+	background-color:#e5e5e5;
+
+	
+	-webkit-transform:scaleY(0.5);
+	 -moz-transform:scaleY(0.5);
+	  -ms-transform:scaleY(0.5);
+	     transform:scaleY(0.5);
+	  
+
+	-webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		 -ms-transform-origin:0 0;
+	     transform-origin:0 0;
+}
+
+.perInfo-ul li span{
+	font-size:13px;
+	font-weight: bold;
+	color:#333;
+}
+
+.perInfo-li-right{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	   -moz-box-align:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+}
+
+.perInfo-li-right div{
+	font-size: 12px;
+	color:#999;
+}
+
+
+.perInfo-header{
+	width:39px;
+	height:39px;
+	
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+}
+
+
+.per_btn_save{
+
+	display: block;
+	width:100px;
+	height:30px;
+	text-align: center;
+	line-height: 30px;
+	background:#e8796e;
+	color:#fff;
+	font-size: 14px;
+	border-radius: 10px;
+	margin-top: 50px;
+	position: relative;
+	left:50%;
+	margin-left: -50px;
+}
+
+
+
+
+
+/*=====弹窗====*/
+
+.cpm-box{
+	display:none;
+}
+
+.cpm{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	background-color:#000;
+	z-index:99;
+	opacity: 0.5;
+
+}
+
+.cpm-head{
+
+	position:fixed;
+	left:0;
+	bottom:0;
+	width:100%;
+    z-index:100;
+	background-color:#747476;
+	
+}
+
+.cpm-head li{
+	width:100%;
+	height:43px;
+	position:relative;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+   background-color:#f4f4f6;
+   text-align: center;
+   line-height: 43px;
+   font-size:10px;
+   color:#2d2d34;
+   font-weight: bold;
+
+}
+
+.cpm-head li:before{
+	content:"";
+	position:absolute;
+	left:0;
+	top:0px                                                                                                                                                              ;
+	width:100%;
+	height:1px;
+	background-color:#a4a4a4;
+
+	
+	-webkit-transform:scaleY(0.5);
+	 -moz-transform:scaleY(0.5);
+	  -ms-transform:scaleY(0.5);
+	     transform:scaleY(0.5);
+	  
+
+ 
+}
+
+.cpm-head li:after{
+	content:"";
+	position:absolute;
+	left:0;
+	bottom:0px;
+	width:100%;
+	height:1px;
+	background-color:#a4a4a4;
+
+	
+	-webkit-transform:scaleY(0.5);
+	 -moz-transform:scaleY(0.5);
+	  -ms-transform:scaleY(0.5);
+	     transform:scaleY(0.5);
+	  
+
+	  
+}
+
+.cpm-head-li-last{
+	margin-top:5px;
+}
+
+
+
+.amend-box{
+	width:100%;
+	
+	
+	position:relative;
+	left:100%;
+
+	display: none;
+	overflow: hidden;
+
+}
+
+.amend-name{
+	width:100%;
+	height:44px;
+	margin-top:10px;
+	position:relative;
+	padding:0 20px;
+		display:-webkit-box;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	   -moz-box-align:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+	 
+	
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	        background:#fff;
+}
+
+
+.amend-name:before{
+  
+   content:"";
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:1px;
+	background-color:#c9c9c0;
+
+	
+	-webkit-transform:scaleY(0.5);
+	 -moz-transform:scaleY(0.5);
+	  -ms-transform:scaleY(0.5);
+	     transform:scaleY(0.5);
+     
+	     	-webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		 -ms-transform-origin:0 0;
+	     transform-origin:0 0;
+	}
+
+
+.amend-name:after{
+  
+   content:"";
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:1px;
+	background-color:#c9c9c0;
+
+	
+	-webkit-transform:scaleY(0.5);
+	 -moz-transform:scaleY(0.5);
+	  -ms-transform:scaleY(0.5);
+	     transform:scaleY(0.5);
+
+	     	-webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		 -ms-transform-origin:0 0;
+	     transform-origin:0 0;
+	 }
+
+.amend-name span{
+
+	font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.amend-name input{
+
+	margin-left: 10px;
+	height:15px;
+}
+
+.pre-btn-save{
+	width:100%;
+	margin-top:54px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack:center;
+	-webkit-justify-content:center;
+	   -moz-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+}
+
+
+
+
+/*======myactivities.html========*/
+
+.act_ul{
+	margin-top: 10px;
+}
+
+.mic_act_top{
+	width: 100%;
+    height: 35px;
+    padding-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    box-sizing: border-box;
+    line-height: 14px;
+}
+
+.act_come{
+	height:15px;
+}
+
+.act_endtime{
+	font-size: 11px;
+	color:#999;
+	line-height: 11px;
+}
+
+.mic_act_bot{
+	font-size: 14px;
+	color:#666;
+	line-height: 22.5px;
+	padding-bottom: 5px;
+}
+
+
+
+.pastDue{
+	width:100%;
+	height:2.58rem;
+	position:absolute;
+	left:0;
+	top:15px;
+
+	opacity:0.33;
+	background-color:#000; 
+}
+
+
+.past-sign{
+	
+	width:1.51rem;
+	height:1.51rem;
+	position:absolute;
+	right:0.05rem;
+	top:19px;
+	
+	z-index:150;
+	
+	
+	
+}
+
+
+/*============myfavorite.html====================*/
+
+.no-favorite {
+    width: 100%;
+    margin-top: 150px;
+   
+    display: flex;
+  
+    flex-direction: column;
+  
+    align-items: center;
+}
+
+.no-favorite p {
+    font-size: 0.28rem;
+    color: #9b9ca5;
+}
+
+
+.no-favorite-bg {
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+}
+
+.fav_box{
+	width:100%;
+	position: absolute;
+	top:110px;
+}
+
+.fav_nav{
+	width:100%;
+	background:#fff;
+	top:54px;
+	position: absolute;
+}
+
+.fav_nav_ul{
+
+	width:100%;
+	display: flex;
+}
+
+.fav_nav_ul li{
+	flex:1;
+	height:46px;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.fav_nav_ul li span{
+
+	font-size: 12px;
+	color:#999;
+	display: block;
+	width:32px;
+	height:16px;
+	text-align: center;
+	line-height: 16px;
+	border-radius: 10px;
+	box-sizing: border-box;
+
+}
+
+.fav_nav_ul li span.fav_nav_act{
+
+  border:1px solid #e8796e;
+  color:#e8796e;
+
+}
+
+
+.mic_fav_ul{
+	width:100%;
+}
+
+
+.mic_fav_li{
+	background:#fff;
+	padding:5px 7.5px;
+	position: relative;
+	display: flex;
+}
+
+.mic_fav_li:after{
+  
+    content:"";
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:1px;
+	
+    background:#e5e5e5;
+	
+	-webkit-transform:scaleY(0.5);
+	 -moz-transform:scaleY(0.5);
+	  -ms-transform:scaleY(0.5);
+	     transform:scaleY(0.5);
+	  
+
+	-webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		 -ms-transform-origin:0 0;
+	     transform-origin:0 0;
+
+}
+
+.mic_fav_img{
+
+	width:140px;
+	height:195px;
+   background-color: #c0c0c9;
+}
+
+
+.mic_fav_li_right{
+	display: flex;
+	padding: 10px 30px 0;
+	flex-direction:column;
+}
+
+.mic_fav_name{
+   line-height: 25px;
+   color:#333;
+   font-size: 14px;
+
+}
+
+
+.mic_fav_edit{
+	display: block;
+
+	font-size: 14px;
+	color:#666;
+	margin-top: 10px;
+	
+	line-height: 14px;
+	margin-bottom: 5px;
+}
+
+.mic_fav_price{
+	font-size: 12px;
+	color:#e8796e;
+
+}
+
+.fav_iconfont_ul{
+
+	padding-left: 0;
+	margin-top: 25px;
+}
+
+.mic_fav_subtitle{
+
+	line-height: 25px;
+    color: #666;
+    font-size: 12px;
+}
+
+.mic_fav_adress{
+	display: flex;
+	margin-top: 5px;
+}
+
+
+.mic_fav_case{
+	display: flex;
+	margin-top: 5px;
+}
+
+
+.mic_fav_case i{
+    
+     font-size: 11px;
+  color:#e8796e;
+  padding:2px 5px 2px 5px;
+  border-radius: 10px;
+  border:1px solid #e8796e;
+  margin-left: 10px;
+  line-height: 11px;
+
+}
+
+
+/*===============myWidding.html========================*/
+
+
+.micWidding-ul{
+	width:100%;
+	padding:0 10px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding-top:0.55rem;
+
+}
+
+.micWidding-ul li{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+
+
+}
+
+
+.micWidding-ul li:nth-of-type(2){
+	margin-top:1.57rem;
+}
+
+.micWidding-li-left{
+	width:1.95rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack:center;
+	-webkit-justify-content:center;
+	   -moz-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+
+
+
+}
+
+.micWidding-li-right{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	   -moz-box-flex:1;
+	    -ms-flex:1;
+	        flex:1;
+	padding-right:0.45rem;
+	font-size: 0.24rem;
+	color:#7a7b87;
+	line-height: 0.4rem;
+}
+
+
+.myWidding-btn-start{
+	margin-top:2.04rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack:center;
+	-webkit-justify-content:center;
+	   -moz-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+}
+
+
+
+
+.amend-swiper-container{
+	width:100%;
+	height:100%;
+}
+
+
+/*====婚宴场地=====*/
+
+.myWidding-site-ul{
+	width:100%;
+	padding:0 10px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+
+}
+
+.myWidding-site-ul li{
+	width:100%;
+	height:1.04rem;
+	position:relative;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.myWidding-site-ul li:nth-of-type(1):after{
+   
+    content:"";
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:1px;
+	
+    background:#e2e2e2;
+	
+	-webkit-transform:scaleY(0.5);
+	 -moz-transform:scaleY(0.5);
+	  -ms-transform:scaleY(0.5);
+	     transform:scaleY(0.5);
+	  
+
+	-webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		 -ms-transform-origin:0 0;
+	     transform-origin:0 0;
+    
+}
+
+
+.myWidding-site-li-left{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack:center;
+	-webkit-justify-content:center;
+	   -moz-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	   -moz-box-align:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+	width:0.77rem;
+	height:100%;
+   
+
+
+}
+
+
+
+
+
+.myWidding-site-li-right{
+	width:100%;
+	height:100%;
+	text-align:center;
+	line-height:1.04rem;
+	color:#2d2d34;
+	font-size:0.3rem;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:99;
+-webkit-appearance: none;
+
+
+
+}
+
+.preInfo-input-birthday{
+	opacity: 0;
+}
+
+
+.myWidding-site-p{
+	width:100%;
+	margin-top:0.65rem;
+	padding-left: 1.06rem;
+	padding-right:1.18rem;
+	color:#7a7b87;
+	font-size:0.26rem;
+	line-height:0.39rem;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+
+	display: none;
+}
+
+
+/*====弹框===*/
+
+.ball-box{
+
+	width:100%;
+	height:3.72rem;
+	position:absolute;
+	left:0;
+	bottom:0;
+	display: none;
+}
+
+.ball-nav{
+	width:100%;
+	height:0.68rem;
+	background-color:#eff4f9;
+
+	position: relative;
+
+	display: -webkit-box;
+
+	display: -webkit-flex;
+
+	display: -moz-box;
+
+	display: -ms-flexbox;
+
+	display: flex;
+	-webkit-box-pack:justify;
+	-webkit-justify-content:space-between;
+	   -moz-box-pack:justify;
+	    -ms-flex-pack:justify;
+	        justify-content:space-between;
+
+}
+
+.ball-nav:before{
+	content:"";
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:1px;
+	
+    background:#d2d4d6;
+	
+	-webkit-transform:scaleY(0.5);
+	 -moz-transform:scaleY(0.5);
+	  -ms-transform:scaleY(0.5);
+	     transform:scaleY(0.5);
+	  
+
+	-webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		 -ms-transform-origin:0 0;
+	     transform-origin:0 0;
+
+}
+
+.ball-nav span{
+	display: block;
+	width:0.86rem;
+	height:100%;
+	line-height: 0.68rem;
+  
+   font-size:0.3rem;
+   color:#939393;
+   position:relative;
+   z-index:9;
+
+}
+
+.ball-cancel{
+	 padding-left:0.27rem;
+}
+
+.ball-nav .ball-sure{
+	padding-right:0.27rem;
+	color:#c59721;
+}
+
+.ball-select{
+	width:100%;
+	height:3.06rem;
+	background:#fff;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack:center;
+	-webkit-justify-content:center;
+	   -moz-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	   -moz-box-align:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+
+}
+
+.ball-select span{
+	display: inline-block;
+	font-size:0.34rem;
+	color:#848484;
+
+}
+
+.has-set{
+
+	margin-right:1.7rem;
+}
+
+.ball-select .has-set-act{
+	color:#c59721;
+}
+
+
+.ball-select span i{
+
+	width:0.1rem;
+	height:0.1rem;
+	border:1px solid #848484;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	vertical-align: middle;
+	margin-right:0.2rem;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.ball-select .has-set-act i{
+	background-color: #c59721;
+	border:0;
+}
+
+.go{
+	width:100%;
+	height:1.22rem;
+	background-color:#fff;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+    border-top:0.02rem solid #cecece;
+    line-height: 1.22rem;
+ 
+
+ 
+   z-index:120;
+
+   display: none;
+  position:fixed;
+   left:0;
+   bottom:0;
+
+
+}
+
+
+
+.go span{
+	
+	width:0.5rem;
+	padding-bottom: 0.05rem;
+	border-bottom:0.03rem solid #c59721;
+    color:#c59721;
+    font-size:0.3rem;
+
+}
+
+#go1{
+	  
+   padding-left: 1.7rem;
+}
+
+/*=====婚礼颜色======*/
+
+.myWidding-box{
+	width:100%;
+	height:100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	-webkit-flex-direction:column;
+	   -moz-box-orient:vertical;
+	   -moz-box-direction:normal;
+	    -ms-flex-direction:column;
+	        flex-direction:column;
+}
+
+
+.widding-main{
+
+	width:100%;
+	
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding:0 10px 1.27rem;
+	
+   min-height: 101%;
+
+
+   
+}
+
+
+.widding-color-h2{
+	width:100%;
+	height:1.04rem;
+	text-align: center;
+	padding-top:0.46rem;
+	padding-bottom: 0.26rem;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	font-size:0.3rem;
+	color:#c59721;
+}
+
+.widding-color-p{
+	width:100%;
+	height:1.9rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack:center;
+	-webkit-justify-content:center;
+	   -moz-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	   -moz-box-align:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+	font-size:0.26rem;
+	color:#5f5f5f;
+	line-height: 0.36rem;
+
+	-webkit-box-sizing: border-box;
+
+	   -moz-box-sizing: border-box;
+
+	        box-sizing: border-box;
+	padding-left:0.5rem;
+	padding-right:0.55rem;
+}
+
+.widding-color-nav{
+	width:100%;
+	height:0.64rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+}
+
+
+.widding-color-nav span{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	   -moz-box-flex:1;
+	    -ms-flex:1;
+	        flex:1;
+	display: block;
+	text-align: center;
+	line-height: 0.64rem;
+	font-size:0.3rem;
+	color:#c1c1c1;
+
+	position:relative;
+
+}
+
+
+/*==指示器==*/
+
+.widding-indicate{
+	bottom:0;
+	left:0;
+}
+
+.widding-indicate .ibox{
+	width:50%;
+}
+
+
+.widding-color-nav .widding-color-act{
+	color:#ff5d5d;
+}
+
+
+.widding-color-ul{
+	width:100%;
+
+	padding-top:0.3rem;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	overflow:auto;
+	zoom:1;
+
+	
+}
+
+
+
+.widding-color-ul li{
+	float:left;
+	width:32.22%;
+	height:1.92rem;
+
+	
+	margin-bottom: 5px;
+	position:relative;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+	overflow: hidden;
+
+}
+
+
+.widding-color-ul li:nth-of-type(3n+2){
+  margin:0 5px;
+}
+
+
+.widding-color-ul li img{
+	width:100%;
+	height:100%;
+}
+
+
+.widding-color-ul li i{
+	 position:absolute;
+    top:0.16rem;
+    right:0.19rem;
+}
+
+.widding-color-ul li span{
+	 position:absolute;
+    top:0.16rem;
+    right:0.19rem;
+}
+
+.widding-color-name{
+	display: none;
+}
+
+
+
+#go2{
+	
+	padding-left:2.32rem;
+	
+}
+
+
+
+/*=========婚礼风格==========*/
+
+.style-swiper-slide{
+	overflow-y: scroll;
+	overflow-x: hidden;
+	 -webkit-overflow-scrolling : touch;
+}
+
+.widding-style-h2{
+	width:100%;
+	
+	padding-top:0.22rem;
+	padding-bottom: 0.28rem;
+	text-align:center;
+	font-size:0.3rem;
+	color:#c59721;
+
+}
+
+.widding-style-p{
+	width:100%;
+	height:1.32rem;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding-left:0.55rem;
+	padding-right:0.55rem;
+	font-size: 0.26rem;
+	color:#5f5f5f;
+	line-height: 0.37rem;
+}
+
+
+.widding-style-ul{
+	width:100%;
+	
+	-webkit-box-sizing: border-box;
+	
+	   -moz-box-sizing: border-box;
+	
+	        box-sizing: border-box;
+	overflow:auto;
+	zoom:1;
+}
+
+
+.widding-style-ul li{
+	height:2.95rem;
+	float:left;
+	width:32.22%;
+    height:2.95rem;
+
+	background-color:#fce2c4;
+	margin-top: 5px;
+	position:relative;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+	overflow: hidden;
+}
+
+.widding-style-ul li:nth-of-type(3n+2){
+	margin:5px 5px 0;
+}
+
+.widding-style-ul li img{
+	width:100%;
+	height:100%;
+
+}
+
+
+
+
+.widding-style-ul li i{
+	 position:absolute;
+    top:0.16rem;
+    right:0.19rem;
+}
+
+.widding-style-ul li span{
+	 position:absolute;
+    top:0.16rem;
+    right:0.19rem;
+}
+
+.widding-style-name{
+	width:100%;
+	position:absolute;
+	left:0;
+	bottom:0;
+   background:rgba(0,0,0,0.4);
+  color:#fff;
+  text-align: center;
+  height:0.43rem;
+  line-height: 0.43rem;
+  font-size: 0.24rem;
+
+}
+
+.widding-style-comma{
+	display: none;
+}
+
+#go3{
+
+ 
+	padding-left: 0;
+	text-align: center;
+}
+
+
+
+/*========礼服款式=======*/
+
+.widding-full-h2{
+
+  width:100%;
+  height:1.04rem;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top:0.25rem;
+  padding-bottom:0.5rem;
+  	text-align:center;
+	font-size:0.3rem;
+	color:#c59721;
+
+}
+
+
+.widding-full-p{
+	width:100%;
+	height:0.77rem;
+	text-align:center;
+	font-size: 0.26rem;
+	color:#5f5f5f;
+	line-height: 0.37rem;
+}
+
+.widding-full-name{
+	display: none;
+}
+
+
+
+
+#go4{
+	
+	padding-left: 3.57rem;
+}
+
+
+
+
+/*======婚纱款式=======*/
+
+.widding-dress-ul{
+
+	width:100%;
+	
+	-webkit-box-sizing: border-box;
+	
+	   -moz-box-sizing: border-box;
+	
+	        box-sizing: border-box;
+	overflow:hidden;
+	zoom:1;
+
+
+}
+
+
+.widding-dress-ul li{
+
+	
+	float:left;
+	width:50%;
+    height:4rem;
+  
+	margin-top: 5px;
+	position:relative;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+	overflow: hidden;
+     -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+             box-sizing: border-box;
+
+}
+
+.widding-dress-ul li:nth-of-type(odd){
+	padding-right:0.05rem;
+}
+
+.widding-dress-ul li:nth-of-type(even){
+	padding-left:0.05rem;
+}
+
+
+
+.widding-dress-ul li img{
+	width:100%;
+	height:100%;
+
+}
+
+
+
+.widding-dress-ul li i{
+	 position:absolute;
+    top:0.16rem;
+    right:0.19rem;
+}
+
+.widding-dress-ul li span{
+	 position:absolute;
+    top:0.16rem;
+    right:0.19rem;
+}
+
+
+#go5{
+
+
+	padding-left: 4.19rem;
+}
+
+
+
+/*======我的专属计划=====*/
+
+
+
+.widding-gift-h2{
+	width:100%;
+	height:3.97rem;
+	text-align: center;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding-top:2.6rem;
+	
+
+	font-size:0.3rem;
+	color:#c59721;
+}
+
+
+
+.widding-gift-p{
+	width:100%;
+	
+	
+	font-size: 0.26rem;
+	color:#5f5f5f;
+	line-height: 0.5rem;
+
+	padding-left: 0.74rem;
+	padding-right: 0.65rem;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	text-indent: 0.5rem;        
+}
+
+.widding-gift-p i{
+	font-size:0.3rem;
+	color:#c59721;
+	display: inline;
+}
+
+
+.widding-gift-roll{
+	width:3.94rem;
+	height:3.37rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	position:absolute;
+	left:50%;
+	margin-left: -1.97rem;
+
+    -webkit-box-orient:vertical;
+
+    -webkit-box-direction:normal;
+
+    -webkit-flex-direction:column;
+
+       -moz-box-orient:vertical;
+
+       -moz-box-direction:normal;
+
+        -ms-flex-direction:column;
+
+            flex-direction:column;
+
+  -webkit-box-align:center;
+
+  -webkit-align-items:center;
+
+     -moz-box-align:center;
+
+      -ms-flex-align:center;
+
+          align-items:center;
+}
+
+
+.widding-gift-price{
+   display: block;
+	margin-top:0.77rem;
+	font-size:0.24rem;
+	color:#6b581b;
+	line-height: 0.24rem;
+
+}
+
+.widding-gift-price i{
+	font-size: 0.6rem;
+	color:#b652e4;
+	line-height: 0.6rem;
+}
+
+
+.widding-gift-text{
+	display: block;
+	margin-top:0.57rem;
+	font-size: 0.24rem;
+	color:#6b581b;
+	line-height: 0.24rem;
+
+}
+
+
+.widding-gift-date{
+    display: block;
+    margin-top:0.4rem;
+    font-size: 0.18rem;
+    color:#fff;
+    line-height: 0.15rem;
+
+}
+
+.widding-sure{
+	display: block;
+	padding-bottom: 0.1rem;
+	border-bottom: 0.03rem solid #c59721;
+	font-size: 0.32rem;
+	color:#c59721;
+   position: absolute;
+   left:50%;
+   margin-left: -0.16rem;
+   bottom:0.98rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========修改完成==========*/
+
+.myWidding-amend-ul{
+	width:100%;
+	padding-top: 0.1rem;
+}
+
+.myWidding-amend-ul li{
+	width:100%;
+	margin-top: 0.25rem;
+	height:0.7rem;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	position:relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding-left:0.5rem;
+
+}
+
+.myWidding-amend-ul li:before{
+	content:"";
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:1px;
+	background-color:#c9c9c0;
+
+	
+	-webkit-transform:scaleY(0.5);
+	 -moz-transform:scaleY(0.5);
+	  -ms-transform:scaleY(0.5);
+	     transform:scaleY(0.5);
+	  
+
+	-webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		 -ms-transform-origin:0 0;
+	     transform-origin:0 0;
+}
+	
+.myWidding-amend-ul li:after{
+	content:"";
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:1px;
+	background-color:#c9c9c0;
+
+	
+	-webkit-transform:scaleY(0.5);
+	 -moz-transform:scaleY(0.5);
+	  -ms-transform:scaleY(0.5);
+	     transform:scaleY(0.5);
+	  
+
+	-webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		 -ms-transform-origin:0 0;
+	     transform-origin:0 0;
+}	
+
+
+.myWidding-amend-li-left{
+	width:1.14rem;
+	height:100%;
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	   -moz-box-align:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+	font-size:0.28rem;
+	color:#292934;
+	margin-right: 0.65rem;
+
+}
+
+.myWidding-amend-li-right{
+
+	-webkit-box-flex:1;
+
+	-webkit-flex:1;
+
+	   -moz-box-flex:1;
+
+	    -ms-flex:1;
+
+	        flex:1;
+	height:100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+ 
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+     -moz-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+
+  font-size: 0.28rem;
+  color:#9d9ea6;
+
+}
+
+
+
+
+
+.myWidding-btn-amend{
+	width:100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack:center;
+	-webkit-justify-content:center;
+	   -moz-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	margin-top: 0.6rem;
+}
+
+
+
+/*====滚动条===*/
+
+
+
+.swiper-container-horizontal>.swiper-scrollbar {
+    position: absolute;
+
+    left: 0;
+     top:0;
+    z-index: 120;
+    height:1px;
+    width: 98%;
+    background-color:#f8f8f8;
+    padding:0 10px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+
+
+/*====滚动块===*/
+
+.swiper-scrollbar-drag {
+    height: 100%;
+  
+    position: relative;
+
+    background-color:#ff5d5d;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    left: 0;
+    top: 0;
+
+    margin-left: 0.28rem;
+
+  
+
+
+}
+
+
+
+/*===============mygift.html========================*/
+
+
+
+.tab-btn{
+    height: 52px;
+    line-height: 52px;
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+    box-pack: justify;
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index: 20;
+}
+.tab-btn li{
+    text-align: center;
+    color: #7b7a87;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    font-size: .28rem;
+    height: 40px;
+}
+.tab-btn li a{
+    color: #7b7a87;
+    line-height: 25px;
+}
+.tab-btn li a.selected{
+    display: inline-block;
+    color: #c59721;
+    border-bottom: 2px solid #c59721;
+}
+.coupon-list{
+    margin-top: 30px;
+}
+.coupon-list >div {
+    margin-bottom: 10px;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background: #FFFFFF;
+}
+.coupon-list >div img{
+    -webkit-border-radius:10px 10px 0 0;
+            border-radius:10px 10px 0 0;
+}
+.coupon-list >div p{
+    font-size: .18rem;
+    color: #7a7b87;
+    margin-top: 8px;
+}
+.coupon-list >div section{
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    border:1px solid #d8d8d8;
+    padding:5px 12px;
+    margin-top: -7px;
+}
+.overdue{
+    width:151px;
+    height:151px;
+    top:0;
+    right:-50px;
+}
+.overdue img{
+    width:75px;
+    height:75px;
+}
+.gray {
+    -webkit-filter: grayscale(90%);
+    -moz-filter: grayscale(90%);
+    -ms-filter: grayscale(90%);
+    -o-filter: grayscale(90%);
+    filter: grayscale(90%);
+    -webkit-filter: gray;
+            filter: gray;
+}
+.no-content{
+    margin-top: 35%;
+}
+.no-content img{
+    display: block;
+    width:80px;
+    height:80px;
+}
+.no-content p{
+    padding-bottom: 20px;
+    font-size: 14px;
+}

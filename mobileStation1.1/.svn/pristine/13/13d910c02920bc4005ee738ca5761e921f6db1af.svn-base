@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="x5-orientation" content="portrait">
+    <title>心愿清单-item</title>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/reset.css">
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/icont/iconfont.css"/>
+    <link rel="stylesheet" href="../src/css/account_list.css"/>
+    <link rel="stylesheet" href="../src/js/widget/layer.m/need/layer.css"/>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/swiper-3.3.1.min.css">
+<body>
+<!--头部导航-->
+<header class="fixed-header white-bg" id="fixed-header pr">
+    <div class="filter-header pa">
+        <span class="icon iconfont" onclick="window.history.go(-1)">&#xe601;</span>
+    </div>
+    <div class="logo pr">
+        <img src="../src/images/logo_03.png" alt="" class="img-width-100">
+    </div>
+    <div class="info-notice pa">
+        <div class="pr">
+            <span class="inline-b" id="notify-btn"><img src="../src/images/icon-notice_03.png" alt="" class="img-width-100"></span>
+            <span class="inline-b" id="kefu-btn"><img src="../src/images/icon-customServices_03.png" alt=""
+                                        class="img-width-100"></span>
+            <i class="infor-tip pa"></i>
+        </div>
+
+    </div>
+</header>
+<!--筛选栏-->
+<div class="top-filter mt-10 white-bg">
+    <ul class="account-filter-box">
+        <li class="hot-list-bottom">
+            <div class="pa-10">
+                <div class="swiper-container" id="filter-1">
+                    <script type="text/html" id="filter-first">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide filter-item filter-item-first">
+                                <p class="tc"><a href="javascript:;" class="selected" data-code="leixing" data-id="000">全部</a></p>
+                            </div>
+                            {{each data.leixing as item}}
+                            <div class="swiper-slide filter-item filter-item-first">
+                                <p class="tc"><a href="javascript:;" data-id="{{item.id}}" data-code="{{item.code}}">{{item.name}}</a></p>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </script>
+                </div>
+            </div>
+        </li>
+        <li class="hot-list-bottom">
+            <div class="pa-10">
+                <div class="swiper-container" id="filter-2">
+                    <script type="text/html" id="filter-second">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide filter-item filter-item-second">
+                                <p class="tc"><a href="javascript:;" class="selected" data-code="fashion" data-id="000">全部</a></p>
+                            </div>
+                            {{each data.fashion as item}}
+                            <div class="swiper-slide filter-item filter-item-second">
+                                <p class="tc"><a href="javascript:;" data-id="{{item.id}}" data-code="{{item.code}}">{{item.name}}</a></p>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </script>
+                </div>
+            </div>
+        </li>
+        <li class="hot-list-bottom">
+            <div class="pa-10">
+                <div class="swiper-container" id="filter-3">
+                    <script type="text/html" id="filter-third">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide filter-item filter-item-third">
+                                <p class="tc"><a href="javascript:;" class="selected" data-code="color" data-id="000">全部</a></p>
+                            </div>
+                            {{each data.color as item}}
+                            <div class="swiper-slide filter-item filter-item-third">
+                                <p class="tc" ><a href="javascript:;" data-id="{{item.id}}" data-code="{{item.code}}">{{item.name}}</a></p>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </script>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="filter-content">
+    <script type="text/html" id="filter-content">
+        {{each data as value}}
+        <div class="mt-10 white-bg pa-7" data-id="{{value.id}}" data-type="{{value.type}}">
+            <img src="../src/images/loading.gif" class="pt-15" data-original="{{value.iconForList}}">
+            <p class="mt-25 color-333 fs14 tc">【{{value.name}}】</p>
+            <p class="mt-20 color-red fs13 tc pb-20 hot-list-bottom">￥{{value.price}}</p>
+            <div class="list-item-status pt-10 clearfix">
+                {{ if value.isView == 0}}
+                <p class="fl"><span class="icon iconfont mr-10 ">&#xe620;</span><span class="fs12 color-999">{{value.viewNum}}</span></p>
+                {{else}}
+                <p class="fl"><span class="icon iconfont mr-10 green-eye">&#xe620;</span><span class="fs12 color-999">{{value.viewNum}}</span></p>
+                {{/if}}
+                {{ if value.isKeep == 0}}
+                <p class="fr collect-btn" data-id="{{value.id}}" data-type="{{value.type}}"><span class="icon iconfont mr-10 ">&#xe616;</span><span class="fs12 color-999">{{value.keepNum}}</span>
+                </p>
+                {{else}}
+                <p class="fr collect-btn"><span class="icon iconfont mr-10 red-heart">&#xe616;</span><span
+                        class="fs12 color-999">{{value.keepNum}}</span></p>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
+    </script>
+</div>
+<!--登录弹窗-->
+<div class="login-dialog hide">
+    <div class="pa-15">
+        <ul class="form-box mt-30">
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-phone inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您的手机号码" class="inline-b fl tele-number"/>
+                <a href="javascript:;" class="bg-red fs12 inline-b fl boder-radius-5 get-invidate-code">获取验证码</a>
+                <span class="fl count-down fs13 color-7a7b"><i>120</i>s</span>
+            </li>
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-validate inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您收到的验证码" class="inline-b fl validate-code"/>
+            </li>
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-invite inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您的邀请码（选填）" class="inline-b fl invite-code"/>
+            </li>
+        </ul>
+        <p class="fs13 mt-15 pl-13 validate-code-tip" style="visibility: hidden">验证码已经发送至填写的手机中，请注意查收！</p>
+        <div class="submit-btn bg-red tc boder-radius-5" id="submit-region-btn">完成提交</div>
+    </div>
+</div>
+</body>
+
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/swiper-3.3.1.min.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js"></script>
+
+<script src="../src/js/config.js"></script>
+<script src="../src/js/util/global.js"></script>
+<script src="../src/js/util/header.js"></script>
+<script src="../src/js/util/common.js"></script>
+<script src="../src/js/util/register.js"></script>
+<script src="../src/js/widget/layer.m/layer.m.js"></script>
+<script src="../src/js/widget/layer.m/mobel.js"></script>
+<script src="../src/js/webapp/account/jquery.lazyload.min.js"></script>
+<script src="../src/js/webapp/account/account_item.js"></script>
+</html>

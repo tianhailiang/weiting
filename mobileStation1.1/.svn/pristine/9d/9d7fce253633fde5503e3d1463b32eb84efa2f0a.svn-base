@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="x5-orientation" content="portrait">
+    <title>心愿清单</title>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/reset.css">
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/icont/iconfont.css"/>
+    <link rel="stylesheet" href="../src/css/account_list.css"/>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/swiper-3.3.1.min.css">
+<body>
+<!--头部导航-->
+<header class="fixed-header white-bg" id="fixed-header pr">
+    <div class="filter-header pa">
+        <span class="city">北京</span><i class=""><img src="../src/images/icon-drop-down.png" alt=""></i>
+    </div>
+    <div class="logo pr">
+        <img src="../src/images/logo_03.png" alt="" class="img-width-100">
+    </div>
+    <div class="info-notice pa">
+        <div class="pr">
+            <span class="inline-b" id="notify-btn"><img src="../src/images/icon-notice_03.png" alt=""
+                                                        class="img-width-100"></span>
+            <span class="inline-b"><img src="../src/images/icon-customServices_03.png" alt=""
+                                        class="img-width-100"></span>
+            <i class="infor-tip pa"></i>
+        </div>
+
+    </div>
+    <div class="pa city-selct-box">
+        <ul class="type hide">
+            <script id="area" type="text/html">
+                {{each data as value index}}
+                <li class="pr" data-cid="{{value.id}}">{{value.name}}</li>
+                {{/each}}
+            </script>
+        </ul>
+    </div>
+    <!-- 遮罩层-->
+    <div class="black-layer pa hide"></div>
+</header>
+<!--轮播图-->
+<section class="banner">
+    <div class="swiper-container" id="banner-container">
+        <div class="swiper-wrapper swiper-banner">
+            <script type="text/html" id="swiper-banner">
+                {{each data as value}}
+                <div class="swiper-slide">
+                    <a href="{{value.link}}"><img src="{{value.bannerUrl}}" alt=""></a>
+                </div>
+                {{/each}}
+            </script>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</section>
+<!--分类-->
+<div class="filter-box white-bg">
+    <p class="tc fs15 mt-25">分类</p>
+    <p class="tc fs12 mt-10">FILTER</p>
+    <ul class="clearfix mt-20 filter-item">
+        <li data-type="1">
+            <a href="javascript:;"><img src="../src/images/icon-baisha_11.png" alt=""></a>
+            <p class="fs11">白纱</p>
+        </li>
+        <li class="margin-85" data-type="2">
+            <a href="javascript:;"><img src="../src/images/icon-lifu_13.png" alt="" class=""></a>
+            <p class="fs11">礼服</p>
+        </li>
+        <li data-type="3">
+            <a href="javascript:;"><img src="../src/images/icon-nanzhuang_16.png" alt=""></a>
+            <p class="fs11">男装</p>
+        </li>
+    </ul>
+    <ul class="clearfix mt-20 filter-item">
+        <li data-type="4">
+            <a href="javascript:;"><img src="../src/images/icon-shipin_28.png" alt=""></a>
+            <p class="fs11">饰品</p>
+        </li>
+        <li class="margin-85" data-type="6">
+            <a href="javascript:;"><img src="../src/images/icon-huili_25.png" alt=""></a>
+            <p class="fs11">回礼</p>
+        </li>
+        <li data-type="9">
+            <a href="javascript:;"><img src="../src/images/icon-litang_22.png" alt=""></a>
+            <p class="fs11">礼堂</p>
+        </li>
+    </ul>
+</div>
+<!--热门清单-->
+<div class="white-bg mt-10">
+    <div class="hot-list-title pa-7">
+        <div>
+            <p class="tc fs15 mt-25">热门清单</p>
+            <p class="tc fs12 mt-10"><img src="../src/images/img-hot-item_07.png" class="img-hot-item"></p>
+        </div>
+    </div>
+    <div class="hot-list hot-list-box">
+        <script id="hot-item-second" type="text/html">
+            {{ each hotTopics as value index}}
+            <div class=" hot-list-bottom hot-list-item" data-id="{{value.id}}">
+                <p class="fs15 color-666 mt-17 pl-7">{{value.title}}</p>
+                <p class="fs12 color-999 mt-10 pl-7 mb-20">{{value.description}}</p>
+                <div class="swiper-container pl-7 hot-list-swiper{{index}}">
+                    <div class="swiper-wrapper">
+                        {{each value.recommendList as item}}
+                        <div class="swiper-slide hot-list-img">
+                            <img src="{{item.icon}}" class="img-width-100">
+                            <p class="color-red fs12 tc mt-15">￥{{item.price}}</p>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="total fs12 fr color-888 mt-20">共{{value.recommendList.length}}件商品</div>
+            </div>
+            {{/each}}
+        </script>
+    </div>
+    <div class="hot-item-check-all">
+        <a class="check-all color-red fs14 tc inline-b clearfix" href="./hot_list_collect.html">查看全部热门</a>
+    </div>
+</div>
+<!--热门单品-->
+<div class="hot-item-box white-bg mt-10">
+    <p class="tc pt-25">热门单品</p>
+    <p class="tc mt-10"><img src="../src/images/img-hot-list_03.png" class="img-hot-item"></p>
+    <ul class="clearfix pa-7 hot-single-box pb-20">
+        <script id="hot-single-box" type="textml">
+            {{each commodity as value}}
+            <li data-type="{{value.type}}" data-id="{{value.id}}">
+                <img src="../src/images/loading.gif" class="mt-12"  data-original="{{value.icon}}">
+                <p class="mt-12 color-333 fs14">【{{value.name}}】</p>
+                <p class="fs14 color-red mt-12">￥{{value.price}}</p>
+            </li>
+            {{/each }}
+
+
+        </script>
+    </ul>
+</div>
+<!--footer 底部-->
+<footer class="footer-box footer-fixed" id="infooter">
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html"> <span class="ico-wish "></span> <i>心愿</i> </a>
+            </li>
+            <li>
+                <a href="../detailed_account/account_list.html"> <span class="ico-list ico-current-wish"></span>
+                    <i>清单</i></a>
+            </li>
+            <li>
+                <a onclick="personClick(event)"><span class="ico-miccenter"></span> <i>我的</i></a>
+            </li>
+        </ul>
+    </nav>
+
+
+</footer>
+<!-- 遮罩层-->
+<div class="black-layer pa hide"></div>
+<!--登录弹窗-->
+<div class="login-dialog white-bg hide">
+    <div class="pa-15">
+        <ul class="form-box mt-30">
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-phone inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您的手机号码" class="inline-b fl tele-number"/>
+                <a href="javascript:;" class="bg-c59 fs12 inline-b fl boder-radius-5 get-invidate-code">获取验证码</a>
+                <span class="fl count-down fs13 color-7a7b"><i>120</i>s</span>
+            </li>
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-validate inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您收到的验证码" class="inline-b fl validate-code"/>
+            </li>
+            <li class="h-46 pl-13 clearfix border-b">
+                <i class="icon-invite inline-b pr fl mr-20"></i>
+                <input type="tel" maxlength="11" placeholder="请输入您的邀请码（选填）" class="inline-b fl invite-code"/>
+            </li>
+        </ul>
+        <p class="fs13 mt-15 pl-13 validate-code-tip" style="visibility: hidden">验证码已经发送至填写的手机中，请注意查收！</p>
+        <div class="submit-btn bg-c59 tc boder-radius-5" id="submit-region-btn">完成提交</div>
+    </div>
+</div>
+</body>
+
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/swiper-3.3.1.min.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js"></script>
+
+
+<script src="../src/js/config.js"></script>
+<script src="../src/js/util/global.js"></script>
+<script src="../src/js/util/header.js"></script>
+<script src="../src/js/webapp/account/jquery.lazyload.min.js"></script>
+<script src="../src/js/webapp/account/account_list.js"></script>
+</html>

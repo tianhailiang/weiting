@@ -1,0 +1,64 @@
+{
+		"code":"0",
+		"msg":"请求成功",
+		"data":{
+
+					"able":[
+							{
+								"receiveDate":"2016年8月7日",					
+								"deadline":"2016年8月24日",						
+								"validImg":"../src/images/gift_1.jpg",                        
+								"description":"使用规则：本卷不得与其他活动同时使用，本卷单笔消费仅限一张，本卷本卷不得与其他活动同时使用，本卷单笔消费仅限一张", 	                        
+								"status":"0"                                  
+							},
+							{
+								"receiveDate":"2016年8月7日",						
+								"deadline":"2016年8月24日",	
+								"validImg":"../src/images/gift_1.jpg",  					
+								"description":"使用规则：本卷不得与其他活动同时使用，本卷单笔消费仅限一张，本卷本卷不得与其他活动同时使用，本卷单笔消费仅限一张",	                        
+								"status":"0"                             
+							},
+							{
+								"receiveDate":"2016年8月7日",						
+								"deadline":"2016年8月24日",	
+								"validImg":"../src/images/gift_1.jpg",  					
+								"description":"使用规则：本卷不得与其他活动同时使用，本卷单笔消费仅限一张，本卷本卷不得与其他活动同时使用，本卷单笔消费仅限一张",	                        
+								"status":"0"                             
+							},
+							{
+								"receiveDate":"2016年8月7日",						
+								"deadline":"2016年8月24日",	
+								"validImg":"../src/images/gift_1.jpg",  					
+								"description":"使用规则：本卷不得与其他活动同时使用，本卷单笔消费仅限一张，本卷本卷不得与其他活动同时使用，本卷单笔消费仅限一张",	                        
+								"status":"0"                             
+							},
+							{
+								"receiveDate":"2016年8月7日",						
+								"deadline":"2016年8月24日",	
+								"validImg":"../src/images/gift_1.jpg",  					
+								"description":"使用规则：本卷不得与其他活动同时使用，本卷单笔消费仅限一张，本卷本卷不得与其他活动同时使用，本卷单笔消费仅限一张",	                        
+								"status":"0"                             
+							}
+						],
+
+					"disable":[
+							{ 
+								"receiveDate":"2016年8月7日",					
+								"deadline":"2016年8月24日",						
+								"validImg":"../src/images/gift_1.jpg",                          
+								"description":"使用规则：本卷不得与其他活动同时使用，本卷单笔消费仅限一张，本卷本卷不得与其他活动同时使用，本卷单笔消费仅限一张", 	                        
+								"status":"1"                                  
+							},
+							{
+								"receiveDate":"2016年8月7日",						
+								"deadline":"2016年8月24日",						
+								"validImg":"../src/images/gift_1.jpg",                           
+								"description":"使用规则：本卷不得与其他活动同时使用，本卷单笔消费仅限一张，本卷本卷不得与其他活动同时使用，本卷单笔消费仅限一张", 	                        
+								"status":"2"                                
+							}
+						]
+				}
+		
+
+
+	}

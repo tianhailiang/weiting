@@ -1,0 +1,47 @@
+{
+	"code":0,
+	"msg":"业务信息",
+
+	"data":{
+
+		
+		"id":"123",
+		"isKeep":"0",
+		"icon":"../src/images/wish/planning-1.jpg",
+		"title":"白雪公主主题婚礼",
+		"price":"58888",
+		"main":["a9d7c4","bcb293","e5c764"],
+		"style":["童话#","梦幻#"],  
+		"environment":"1",
+		"weddingDate":"2016-11-11",
+		"place":"北京市王府井大酒店",
+		"inspiration":"在网上看着最新款的婚纱眼馋月不知道在哪能找到？担忧代沟了一圈穿上却不适合自己？WISHLIST来帮你！本期我们准备了时下最吸引眼球的婚纱供你体验，明星同款大牌设计，随你挑选！",
+		"plannerId":"456",
+		"plannerIcon":"../src/images/wish/planning-teacher.jpg",
+		"plannerName":"金露露",
+		"isfollow":"0",
+		"followNum":"122222",
+		"detail":"案例详情",
+		"abouts":[  
+			{
+				"iconForList":"../src/images/wish/planning-3.jpg",
+				"name":"  Sunset-House",
+				"price":"2345",
+				"id":"123",
+				"type":"1"
+			
+			},
+			{
+				"iconForList":"../src/images/wish/planning-3.jpg",
+				"name":"  Sunset-House",
+				"price":"2345",
+				"id":"123",
+				"type":"2"
+				
+			}
+		]
+
+	}
+}
+
+  

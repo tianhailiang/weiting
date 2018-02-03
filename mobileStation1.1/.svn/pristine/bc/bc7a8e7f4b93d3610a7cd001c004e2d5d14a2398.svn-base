@@ -1,0 +1,23 @@
+// 获取消息通知
+
+getNoticeInfo(null, true, function (result) {
+    var getNoticeNumber = Number(result.data.count);
+    if (getNoticeNumber > Number(localStorage.noticeNumber)) {
+        $(".infor-tip").show();
+    } else {
+        $(".infor-tip").hide();
+    }
+    localStorage.noticeNumber = result.data.count;
+    getNotice()
+});
+function getNotice() {
+    $("#notify-btn").click(function () {
+        if ($(".infor-tip").is(":visible")) {
+            $(".infor-tip").hide();
+        }
+        window.location.href = "../../../../detailed_account/message_notify.html";
+    });
+}
+$("#kefu-btn").click(function () {
+    window.location.href = "../../../../detailed_account/kefu_1.1.html";
+})

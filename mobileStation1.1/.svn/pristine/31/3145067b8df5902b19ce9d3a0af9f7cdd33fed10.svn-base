@@ -1,0 +1,85 @@
+{
+  "cdoe": 0,
+  "msg": "请求成功",
+  "data": {
+    "store": {
+      "img": "",
+      "name": "xxxw体验店"
+    },
+
+    "list": [
+      {
+        "id": 111,
+        "type": "婚纱",
+        "icon": "../src/images/yarn_list6.png",
+        "title": "这是主标题",
+        "subtitle": "这是副标题",
+        "price": 7708,
+        "activityPrice": 22223,
+        "activityName": "这是活动名称",
+        "location": "北京市",
+        "viewNum": 3435,
+        "likeNum": 2900,
+        "keepNum": 989,
+        "isView":1,
+        "isLike":0,
+        "isKeep":0
+      },
+       {
+        "id": 111,
+        "type": "婚纱",
+        "icon": "../src/images/yarn_list7.png",
+        "title": "这是主标题",
+        "subtitle": "这是副标题",
+        "price": 7708,
+        "activityPrice": 22223,
+        "activityName": "这是活动名称",
+        "location": "北京市",
+        "viewNum": 3435,
+        "likeNum": 2900,
+        "keepNum": 989,
+        "isView":1,
+        "isLike":0,
+        "isKeep":0
+      },
+       {
+        "id": 111,
+        "type": "婚纱",
+        "icon": "../src/images/yarn_list8.png",
+        "title": "这是主标题",
+        "subtitle": "这是副标题",
+        "price": 7708,
+        "activityPrice": 22223,
+        "activityName": "这是活动名称",
+        "location": "北京市",
+        "viewNum": 3435,
+        "likeNum": 2900,
+        "keepNum": 989,
+        "isView":1,
+        "isLike":0,
+        "isKeep":0
+      },
+       {
+        "id": 111,
+        "type": "婚纱",
+        "icon": "../src/images/yarn_list6.png",
+        "title": "这是主标题",
+        "subtitle": "这是副标题",
+        "price": 7708,
+        "activityPrice": 22223,
+        "activityName": "这是活动名称",
+        "location": "北京市",
+        "viewNum": 3435,
+        "likeNum": 2900,
+        "keepNum": 989,
+        "isView":1,
+        "isLike":0,
+        "isKeep":0
+      }
+
+
+
+
+    ]
+  }
+}

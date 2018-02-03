@@ -1,0 +1,76 @@
+
+body{
+     -webkit-overflow-scrolling : touch;
+    background: #f2f4f5;
+}
+/*预约详情*/
+.order-detail dt{
+    width:140px;
+    height:195px;
+    margin-right:30px;
+    overflow: hidden;
+}
+.order-detail dt img{
+    width:140px;
+    height:195px;
+}
+.mt-41{
+    margin-top: 41px;
+}
+.color-2d2d{
+    color: #2d2d34;
+}
+.order-box dl{
+    display: -webkit-box;
+}
+.order-box dl dd p{
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    width: 4.2rem;
+    margin-top: 5px;
+}
+.no-content{
+    margin-top: 300px;
+}
+.no-content img{
+    display: block;
+    width:80px;
+    height:80px;
+}
+.no-content p{
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+/*填写参与信息*/
+.join-info p{
+    height:48px;
+    line-height:48px;
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    padding:0 10px;
+    margin-bottom: 10px;
+}
+.join-info p >span:nth-child(1){
+
+    width:145px;
+    display: inline-block;
+}
+.confirm-order{
+    width:100px;
+    height:30px;
+    line-height:30px;
+    color: white;
+    font-size: 14px;
+    margin:50px auto 0;
+    border-radius:5px;
+}
+.bg-red{
+    background: #e8796e;
+}
+
+
+
+
+

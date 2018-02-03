@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+	<title>体验活动详情</title>
+    <link rel="stylesheet" href="../src/css/reset.css" >
+	  <script src="../src/js/lib/rem.js" ></script>
+    <link rel="stylesheet" href="../src/css/weui.css" >
+    <link rel="stylesheet" href="../src/css/common.css" >
+ 
+    <link rel="stylesheet" href="../src/css/wish.css">
+
+</head>
+<body class="bg-f8">
+
+   <div id="main-box" >
+
+     <script type="text/html" id="template1" >
+
+       <section class="section-box scr-section">
+
+          <div class="scr-main" >
+          	  
+                    <figure class="act-banner">
+                    
+        					  		  <div src=""  class="act-img" >
+
+        					  		  	   <img src="{{data.topImg}}" alt=" " />
+                               
+        					  		  </div>
+
+        				              <div class="act-header" id="actHeader"> 
+                                             
+        				              </div>
+                
+        	  		             <figcaption id="shopName" class="act-figcaption">
+
+        	  		                 <div class="act-editor">主编<i>{{data.editor}}</i></div>
+
+        	  		                   <ul class="iconfont-ul act-icont-ul">
+        				                          <li>
+        				                             <a >
+        				                                 <i class="iconfont eye " style="color:#e2cb90;">&#xe605;</i> <span>{{data.viewNum}}</span>
+
+        				                              </a>
+
+        				                          </li>
+        				                          <li>
+        				                             <a>
+        				                                  <i class="iconfont star">&#xe62e;</i><span>{{data.keepNum}}</span>
+        				                             </a>
+        				                          </li>
+        				                            
+        				                            <li class="last-li">
+        				                             <a>
+        				                                 <i class="iconfont love">&#xe652;</i><span>{{data.likeNum}}</span>
+        				                             
+        				                             </a>
+        				                          </li>
+
+                                         </ul>
+
+
+        	  		             </figcaption>
+
+  	  	         </figure>
+               
+               <article>
+
+                 <div class="article-top" >
+                      <div class="act-title">
+                             <h1>{{data.title}}</h1>
+                             <span>{{data.subtitle}}</span>
+
+                      </div>
+
+                 </div>
+
+                 <div class="act-content" id="act-ontent">
+                   
+                      
+                </div>
+
+                 <div class="act-apply" >
+
+                    <div class="act-apply-time" >
+                       <span>活动时间：</span><i>{{data.startDate}}</i>-<i>{{data.endDate}}</i>
+                    </div>
+                    
+                    <div class="act-apply-cost" ><span>费用: </span><i>免费</i></div>
+                    
+                    <div class="act-apply-address" ><span>地址: </span> <i>{{data.area}}</i></div>
+                    <div class="act-apply-want" >
+                           点击下方<b>“我要报名”</b>来预约吧!
+                    </div>
+
+                  
+                       
+                    
+                    
+                 </div>
+
+
+               </article>
+
+              
+
+             
+
+          </div>
+
+
+       </section>
+
+
+      {{if data.isSign==0}}
+
+                  <a class="btn-my-apply" onclick="myapply('{{data.activityId}}')">
+
+                            <span>我要报名</span>
+                  </a>
+
+      {{else}}
+
+                        <a class="btn-my-apply " >
+
+                             <span>已报名</span>
+                       </a>
+
+      {{/if}}
+              
+      
+    </script>
+    
+</div>
+
+   
+   
+
+
+ <!-- ======弹框注册登录==== -->
+
+ <div class="pa-15 ball-login" id="islogin">
+    <ul class="form-box mt-30">
+        <li class="h-46 pl-13 clearfix border-b">
+            <i class="icon-phone inline-b pr fl mr-20"></i>
+            <input type="text" maxlength="11" placeholder="请输入您的手机号码" class="inline-b fl tele-number" id="tele-number" />
+            <a href="javascript:;" class="bg-c59 fs12 inline-b fl boder-radius-5 get-invidate-code" onclick="getInvidateCode(this)">获取验证码</a>
+            <span class="fl count-down fs13 pr color-7a7b"><i>120</i>s</span>
+        </li>
+        <li class="h-46 pl-13 clearfix border-b">
+            <i class="icon-validate inline-b pr fl mr-20"></i>
+            <input type="text" maxlength="11" placeholder="请输入您收到的验证码" class="inline-b fl validate-code" id="validate-code" value="" />
+        </li>
+        <li class="h-46 pl-13 clearfix border-b">
+            <i class="icon-invite inline-b pr fl mr-20"></i>
+            <input type="text" maxlength="11" placeholder="请输入您的邀请码（选填）" class="inline-b fl invite-code" id="invite-code" />
+        </li>
+    </ul>
+
+    <p class="fs13 mt-15 pl-13">验证码已经发送至填写的手机中，请注意查收！</p>
+
+    <div class="submit-btn tc boder-radius-5 btn-finish" onclick="bindPhone()" id="finish-btn" disabled="disabled" >完成提交</div>
+
+</div>
+
+
+
+
+</body>
+ 
+   <script src="../src/js/lib/jquery-2.2.1.min.js" ></script>
+   <script src="http://img.wishlist1314.com/artTamplate.js" ></script>
+   <script src="http://img.wishlist1314.com/fastclick.js" ></script>
+   <script src="../src/js/util/common.js"></script>
+   <script src="../src/js/config.js" ></script>
+   <script src="../src/js/dbutil.js" ></script>
+   <script src="../src/js/webapp/wish/experience_activity_detail.js" ></script>
+
+</html>

@@ -1,0 +1,193 @@
+
+
+
+function init(){
+
+
+   update();
+
+   
+
+   
+
+};
+
+
+function update(){
+
+   getCouponInfo(null,true,function(result){
+       
+       if(result.code==0){
+
+          $("#gift_box").html(template("template1", {data: result.data}));
+
+                    var mySwiper = new Swiper('#swiper-container1', {
+                      //轮播切换
+                       
+                        onSlideChangeStart: function (swiper) {
+
+
+                            var distance = (swiper.activeIndex) * 350 +"%" ;
+                         
+                           document.getElementsByClassName("gift_ibox")[0].style.webkitTransform = "translateX(" + distance + ")";
+                          
+
+                           $(".gift_ibox").attr("style", "transform:translateX(" + distance + ")");
+
+                         
+                         },
+
+
+                        onSlideChangeEnd: function (swiper) {
+                             
+                             $("#mic_gift_ul>li").find("span").removeClass('gift_active');
+                             
+                             $("#mic_gift_ul>li").eq(swiper.activeIndex).find("span").addClass("gift_active");
+                           
+                        }
+
+
+                   });
+
+
+                     $("#mic_gift_ul>li").click(function(){
+                        //点击切换
+
+
+                           mySwiper.slideTo($(this).index() , 500, false);
+
+                          $("#mic_gift_ul>li").find("span").removeClass('gift_active');
+
+                          $("#mic_gift_ul>li").eq($(this).index()).find("span").addClass("gift_active");
+
+
+                           var distance = ($(this).index()) * 350 +"%" ;
+                         
+                           document.getElementsByClassName("gift_ibox")[0].style.webkitTransform = "translateX(" + distance + ")";
+                          
+
+                           $(".gift_ibox").attr("style", "transform:translateX(" + distance + ")");
+
+                     });     
+
+
+
+       }else{
+
+          console.log(result.msg);
+       }
+
+
+   });
+
+   
+
+};
+
+
+
+/*===========接口===============*/
+
+
+
+var getCouponInfo = function (param, async, succfun) {
+   
+    //获取用户礼券列表券  (6 提交会员婚礼信息接口)
+   
+    var testurl="../../../../testdata/miccenter/gift.json";
+
+    var url = config.getUrl() + "getMemberCoupons";
+
+    $.ajax({
+        type: config.getType(),
+        url: testurl,
+        dataType: config.getDataType(),
+        data: param,
+        async: async,
+        success: function (data, status) {
+            succfun(data);
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+
+};
+
+
+
+
+
+
+// !function () {
+
+//     // swiperTab 切换
+//     function swiperTab() {
+//         var ininH = $(document).height() - 50;
+
+//         var mySwiper = new Swiper('.swiper-container', {
+//             onInit: function (mySwiper) {
+//                 var j = mySwiper.activeIndex;
+//                 var curLength = $(".swiper-slide").eq(j).find(".coupon-list >div").length;
+//                 var curWidth = $(".coupon-list >div").width()-70;
+//                 if(curLength == 0 ){
+//                     $(".swiper-wrapper").height(ininH);
+//                 }else{
+//                     $(".swiper-wrapper").height(curLength*curWidth);
+//                 }
+//             },
+//             onSlideChangeStart: function (mySwiper) {
+//                 var j = mySwiper.activeIndex;
+//                 $('.swiper-nav li a').removeClass('selected').eq(j).addClass('selected');
+//                 var curLength = $(".swiper-slide").eq(j).find(".coupon-list >div").length;
+//                 var curWidth = $(".coupon-list >div").width()-70;
+//                 if(curLength < 0 ){
+//                     $(".swiper-wrapper").height(ininH)
+//                 }else{
+//                     $(".swiper-wrapper").height(curLength*curWidth)
+//                 }
+
+
+//             }
+
+//         });
+
+//         $('.swiper-nav li').on('touchstart mousedown', function (e) {
+//             e.preventDefault();
+//             var i = $(this).index();
+//             var ininH = $(document).height() - 50;
+//             // var H = $(".coupon-list").eq(i).height() + 40;
+//             var curLength = $(".swiper-slide").eq(i).find(".coupon-list >div").length;
+//             var curWidth = $(".coupon-list >div").width()-70;
+//             if(curLength == 0 ){
+//                 $(".swiper-wrapper").height(ininH);
+//             }else{
+//                 $(".swiper-wrapper").height(curLength*curWidth);
+//             }
+
+//          /*   $(".swiper-slide").css('height', H + 'px');
+//             $(".swiper-wrapper").css('height', H + 'px');*/
+//             $('.swiper-nav li a').removeClass('selected').eq(i).addClass('selected');
+//             mySwiper.slideTo(i, 1000, false);
+//         });
+//     }
+
+
+//     swiperTab();
+
+//     getCouponInfo(null, true, function (result) {
+
+//         var ableData = result.data.able;
+//         var disableData = result.data.disable;
+//         var ableStr = template("able", {data: ableData});
+//         $(".coupon-able-list").html(ableStr);
+//         var disableStr = template("disable", {data: disableData});
+//         $(".coupon-disable-list").html(disableStr);
+        
+//     })
+// }();
+
+
+
+

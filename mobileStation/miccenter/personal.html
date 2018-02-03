@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="../src/css/reset.css">
+    <script src="http://img.wishlist1314.com/rem.js"></script>
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+    <link rel="stylesheet" href="../src/css/miccenter.css">
+
+</head>
+<body class="bg-f8">
+
+<div class="mic-top">
+
+    <div id="mic-header-box" class="mic-header-box" onclick="perInfomation()">
+                <div class="mic-header" id="mic-header"></div>
+                <a class="mic-name" ><span id="micUserName"></span><i class="iconfont">&#xe621;</i></a>
+
+    </div>
+</div>
+
+<ul class="mic-ul">
+
+
+    <li onclick="myWidding()">
+        <div class="mic-li-left">
+
+            <span class="mar-l7">我的婚礼</span>
+
+        </div>
+        <div class="mic-li-right">
+            <span class="mar-r10 new">完善婚礼需求获取新手礼金</span>
+            <i class="iconfont advance">&#xe65b;</i>
+        </div>
+    </li>
+
+    <li onclick="myactivity()">
+        <div class="mic-li-left">
+
+            <span class="mar-l7">我的活动</span>
+
+        </div>
+        <div class="mic-li-right">
+            <i class="iconfont advance">&#xe65b;</i>
+        </div>
+    </li>
+
+    <li onclick="myOrder()">
+        <div class="mic-li-left">
+
+
+            <span class="mar-l7">我的预约</span>
+
+        </div>
+
+        <div class="mic-li-right">
+            <span class="mar-r10 new">New</span>
+            <i class="iconfont advance">&#xe65b;</i>
+        </div>
+
+    </li>
+
+    <li onclick="myfavorite()">
+        <div class="mic-li-left">
+
+
+            <span class="mar-l7">我的收藏</span>
+
+        </div>
+
+        <div class="mic-li-right">
+            <i class="iconfont advance">&#xe65b;</i>
+        </div>
+
+    </li>
+
+
+    <li onclick="myCoupon()">
+        <div class="mic-li-left">
+
+            <span class="mar-l7">我的礼券</span>
+
+        </div>
+
+        <div class="mic-li-right">
+
+            <i class="iconfont advance">&#xe65b;</i>
+        </div>
+
+    </li>
+</ul>
+
+<footer class="footer-box footer-fixed" id="infooter">
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html"> <span class="ico-wish "></span><i>心愿</i> </a>
+            </li>
+            <li>
+                <a href="../detailed_account/account_list.html">  <span class="ico-list"></span><i>清单</i> </a>
+            </li>
+            <li onclick="personOrder()">
+                <a > <span class="ico-order"></span> <i>预约</i> </a>
+            </li>
+
+            <li>
+                <a href="personal.html"><span class="ico-miccenter ico-current-miccenter"></span><i>我的</i></a>
+            </li>
+        </ul>
+    </nav>
+</footer>
+
+
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="../src/js/widget/layer/layer.js"></script>
+<script src="../src/js/util/common.js"></script>
+
+<script src="../src/js/config.js"></script>
+<script src="../src/js/dbutil.js"></script>
+<script src="../src/js/webapp/miccenter/personal.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+!function () {
+    var queryId = OperationURL.getQueryString("id");
+    var queryType = OperationURL.getQueryString("type");
+    var queryPhoneNum = OperationURL.getQueryString("phoneNum");
+
+
+    $("#user-phone").val(queryPhoneNum);
+
+    // 获取预约地区信息
+    getOrderAreaInfo(null,true,function (result) {
+        console.log(result);
+        var areaStr = template("area-select",result);
+        $("#user-select").html(areaStr);
+        selectCity();
+        // 默认显示第一条
+        var defalutCity = result.data[0].name;
+        var defalutHouse = result.data[0].weddingHall[0].name;
+         $("#user-select_dummy").val(defalutCity+'   '+defalutHouse)
+    });
+    // 城市体验店选择
+    function selectCity () {
+        $('#user-select').mobiscroll().treelist({
+            theme: 'mobiscroll',
+            display: 'bottom',
+            lang: 'zh',
+            fixedWidth: [90, 160, 170],
+            labels: ['省', '婚礼堂'],
+            onSelect: function (valueText) {
+                console.log(valueText);
+                var selectAry = valueText.split(' ');
+                var area = selectAry[0];
+                var house = selectAry[1];
+                var areaId = $(this).children("li").children('div:contains(' + area + ')').attr('data-id');
+                var houseId = $(this).children("li").find('ul>li:contains(' + house + ')').attr('data-id');
+                console.log(areaId, houseId);
+            }
+        });
+    }
+   /* $(".submit-btn").click(function () {
+        var userName = $(".user-name").val();
+        var userPhone = $(".user-phone").val();
+        var joinNumber = $(".join-number").val();
+        var sendData = {
+            id:queryId,
+            type:queryType,
+            name:userName,
+            phoneNum: userPhone,
+            inNum :joinNumber
+        };
+        if(userName =='' || userPhone =='' || joinNumber == ''){
+            hint_info('请完整填写信息');
+        }
+        console.log(sendData);
+        var url = "../detailed_account/kefu.html";
+        submitConfirmOrder(sendData, false, function (result) {
+            console.log(result.data)
+            var userInfo = JSON.stringify(result);
+            if (result.code == 0) {
+                var name = result.data.name;
+                var phoneNum = result.data.phoneNum;
+                var bookNum = result.data.bookNum;
+                var isNum = result.data.inNum;
+                var bookTime = result.data.bookTime;
+                var pcName = result.data.pcName;
+                var link = result.data.link;
+
+                window.location.href = url + "?custromInfo="+userInfo;
+                
+                 //window.location.href = url + "&oid=" + phoneNum + "&magic=[{key:'手机号码',val:'" + phoneNum + "'},{key:'姓名',val:'" + name + "'},{key:'预约单号',val:'" + bookNum + "'},{key:'预约时间',val:'" + bookTime + "'},{key:'预约商品名称',val:'" + pcName + "'},{key:'预约人数',val:'" + isNum + "'}]";
+            } else if (result.code == 1) {
+                hint_info('系统异常')
+            } else if (result.code == 3) {
+                hint_info('用户未登录')
+            } else if (result.code == 4){
+                hint_info('参数错误')
+            }else if (result.code == 5){
+                hint_info('用户已经预约过')
+            }
+        });
+    })*/
+}();

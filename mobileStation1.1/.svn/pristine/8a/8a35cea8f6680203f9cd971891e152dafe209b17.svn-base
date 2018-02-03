@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+	<title>鲜货攻略详情</title>
+    <link rel="stylesheet" href="../src/css/reset.css" >
+	
+  
+    <link rel="stylesheet" href="../src/css/common.css" >
+    <link rel="stylesheet" href="../src/css/wish.css">
+
+</head>
+
+<body  >
+	
+	 
+
+             <div class="alive-main-box" id="scr-main">
+               
+                 <script type="text/html" id="template1" >
+
+                  
+                   <figure class="act-banner">
+                    
+                          <div src=""  class="act-img" >
+
+                               <img src="{{data.topImg}}" alt=" " />
+                               
+                          </div>
+
+                              <div class="act-header" id="actHeader"> 
+                                             
+                              </div>
+                
+                             <figcaption id="shopName" class="act-figcaption">
+
+                                 <div class="act-editor">主编:<i>{{data.editor}}</i></div>
+
+                                
+                             </figcaption>
+
+                 </figure>
+               
+
+                  <div class="act-content alive-content" id="act-ontent">
+
+                   
+                  </div>
+
+               
+
+                   <ul class="alive-ul">
+                       
+                       {{each data.recommends as value index}}
+
+                        <li onclick="detailClick('{{value.productId}}','{{value.type}}')">
+                        	
+                           <div class="alive-commodity" >
+                                   
+                                   <div class="oImg" >
+
+                                       {{if value.isSoldOut==0}}
+
+                                       {{else}}
+                                        <div class="alive-sell-out ico-sell-out" ></div>
+
+                                        {{/if}}
+
+                                        {{if value.type==1}}
+
+                                           <img src="{{value.icon}}" class="alive-detail-img"  />
+
+                                        {{else}}  
+
+                                           <img src="{{value.icon}}" class=" alive-img"  /> 
+
+                                        {{/if}}
+                                     
+                                   </div>   
+                                        <h2 class="alive-name">{{value.name}}</h2>
+
+                                    <div class="alive-price" >&yen; <i>{{value.price}}</i></div> 
+                           </div>
+                           
+                           <div class="alive-describe" >
+                               
+                             
+
+                                <p>
+                                    {{value.introduce}}
+                                </p>
+
+                           </div>
+
+                           
+                             
+                              <div class="alive-check" >
+                              	  
+                                    <span>查看详情</span>
+                              </div>
+
+                        </li>
+
+                        {{/each}}
+
+                   </ul> 
+
+                    <div class="previous-stage" >
+                            
+                            <h2 class="alive-pre-h2">
+                                <i></i>
+                                <span>往期攻略</span>
+
+                            </h2>
+
+                            <dl>
+                              
+                                <dt>
+                                    <img src="../src/images/alive-detail-1.jpg" />
+                                </dt>
+
+                                <dd>
+
+                                          
+                                                 <p class="previous-title">
+                                                   
+                                                   <i>第三期</i>发现你的最美婚纱，不穿也可以是最亮的星
+
+                                                 </p>
+
+                                                 <p class="previous-content">金秋10月2017北京时装周拉开帷幕</p>
+                                           
+                                         
+
+                                           <div class="alive-form" >
+
+                                                      <div class="from-box">
+
+                                                             <span class="form">Form</span><i class="editorName">MR.thg</i>
+                                                       </div>
+                                                       
+                                                       <div class="address-box">
+
+                                                          <span class="alive-date">2016-11-11</span>
+                                                         
+
+                                                       </div>      
+
+                                            </div>
+
+                                      
+
+                                </dd>
+
+
+                            </dl>
+
+                             <dl>
+                              
+                                <dt>
+                                    <img src="../src/images/alive-detail-1.jpg" />
+                                </dt>
+
+                                <dd>
+
+                                         
+                                                 <p class="previous-title">
+                                                   
+                                                   <i>第三期</i>发现你的最美婚纱
+
+                                                 </p>
+
+                                                 <p class="previous-content">金秋10月2017北京时装周拉开帷幕你啊hi啊 哈哈哈哈哈</p>
+                                           
+                                        
+
+                                           <div class="alive-form" >
+
+                                                      <div class="from-box">
+
+                                                             <span class="form">Form</span><i class="editorName">MR.thg</i>
+                                                       </div>
+                                                       
+                                                       <div class="address-box">
+
+                                                          <span class="alive-date">2016-11-11</span>
+                                                         
+
+                                                       </div>      
+
+                                            </div>
+
+                                      
+
+                                </dd>
+
+
+                            </dl>
+
+
+                            <div class="stage-detail">
+                              
+                                  <span>查看详情</span>
+
+                            </div>
+
+
+
+
+                   </div>
+
+
+               </script>
+
+
+
+
+             </div>
+
+
+            
+
+
+</body>
+ 
+   <script src="../src/js/lib/jquery-2.2.1.min.js" ></script>
+   <script src="http://img.wishlist1314.com/artTamplate.js" ></script>
+   <script src="http://img.wishlist1314.com/fastclick.js" ></script>
+   <script src="../src/js/util/common.js"></script>
+   <script src="../src/js/config.js" ></script>
+   <script src="../src/js/dbutil.js" ></script>
+  
+   <script src="../src/js/webapp/wish/alive_strategy_detail.js" ></script>
+ 
+
+</html>
+

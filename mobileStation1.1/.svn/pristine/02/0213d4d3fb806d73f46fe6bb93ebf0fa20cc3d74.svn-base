@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+	<title>策划师列表</title>
+
+	 <link rel="stylesheet" href="../src/css/reset.css" >
+
+     <link rel="stylesheet" href="../src/css/common.css" >
+ 
+     <link rel="stylesheet" href="../src/css/wish.css">
+
+
+</head>
+<body style="background:#f2f4f5;">
+
+  <div class="alive-main-box" id="scr-main">
+
+      <ul >
+       
+            <li class="plan_list_li">
+                  
+                  
+                  	  
+                  	  <img src="../src/images/wish/planning-3.jpg" />
+                      
+                      <div class="describe">
+                           
+	                         <div class="introduce-works-title" >
+	                         	  
+	                         	  <span class="introduce-caption">白雪公主主题婚礼</span>
+
+	                         	 
+	                         	  	<i>童话梦幻</i>
+	                         	  	<i>室外</i>
+	                         	
+
+	                         </div>  
+
+	                           <ul class="planning-color">
+                                     <li></li>
+                                     <li></li>
+                                     <li></li>
+                               </ul>
+
+                               <div class="introduce-planner" >
+                               	   
+                               	   <i>Wedding Planner</i> <span>金露露</span>
+
+                               </div>
+
+                      </div>
+
+
+                      <ul class="iconfont-ul">
+
+                         <!--     {{if value.isView==1}}
+ -->
+                                  <li >
+
+                                           <a>
+
+                                              <i class="iconfont eye ">&#xe620;</i> <span class="num">122</span>
+
+                                           </a>
+
+                
+
+                                  </li>
+
+
+
+                           <!--    {{else}}
+
+
+
+                                   <li  >
+
+                                         <a>
+
+                                            <i class="iconfont eye bg-c">&#xe620;</i> <span class="num">{{value.viewNum}}</span>
+
+                                         </a>
+
+                  
+
+                                    </li>
+
+                                   
+
+                             {{/if}}
+
+
+
+
+                            {{if value.isKeep==1}} -->
+
+                                  <li >
+
+                                       <a>
+
+                                          <i class="iconfont love ">&#xe616;</i><span class="num">122</span>
+
+                                       </a>
+
+                                 </li>
+
+
+
+                        <!--      {{else}}
+
+
+
+                                   <li class="last-li" onclick="operate(this,event,'{{value.type}}','{{value.id}}')" >
+
+                                           <a>
+
+                                              <i class="iconfont love bg-c">&#xe616;</i><span class="num">{{value.likeNum}}</span>
+
+                                           </a>
+
+                                   </li>
+
+
+
+
+                            {{/if}}
+ -->
+                        
+
+                      </ul>
+
+
+            </li>
+
+
+              <li class="plan_list_li">
+                  
+                  
+                  	  
+		                  	  <img src="../src/images/wish/planning-3.jpg" />
+		                      
+		                      <div class="describe">
+		                           
+			                         <div class="introduce-works-title" >
+			                         	  
+			                         	  <span class="introduce-caption">白雪公主主题婚礼</span>
+
+			                         	 
+			                         	  	<i>童话梦幻</i>
+			                         	  	<i>室外</i>
+			                         	
+
+			                         </div>  
+
+			                           <ul class="planning-color">
+		                                     <li></li>
+		                                     <li></li>
+		                                     <li></li>
+		                               </ul>
+
+		                               <div class="introduce-planner" >
+		                               	   
+		                               	   <i>Wedding Planner</i> <span>金露露</span>
+
+		                               </div>
+
+		                      </div>
+
+
+                
+
+
+                      <ul class="iconfont-ul">
+
+                         <!--     {{if value.isView==1}}
+ -->
+                                  <li >
+
+                                           <a>
+
+                                              <i class="iconfont eye ">&#xe620;</i> <span class="num">122</span>
+
+                                           </a>
+
+                
+
+                                  </li>
+
+
+
+                           <!--    {{else}}
+
+
+
+                                   <li  >
+
+                                         <a>
+
+                                            <i class="iconfont eye bg-c">&#xe620;</i> <span class="num">{{value.viewNum}}</span>
+
+                                         </a>
+
+                  
+
+                                    </li>
+
+                                   
+
+                             {{/if}}
+
+
+
+
+                            {{if value.isKeep==1}} -->
+
+                                  <li >
+
+                                       <a>
+
+                                          <i class="iconfont love ">&#xe616;</i><span class="num">122</span>
+
+                                       </a>
+
+                                 </li>
+
+
+
+                        <!--      {{else}}
+
+
+
+                                   <li class="last-li" onclick="operate(this,event,'{{value.type}}','{{value.id}}')" >
+
+                                           <a>
+
+                                              <i class="iconfont love bg-c">&#xe616;</i><span class="num">{{value.likeNum}}</span>
+
+                                           </a>
+
+                                   </li>
+
+
+
+
+                            {{/if}}
+ -->
+                        
+
+                      </ul>
+
+
+            </li>
+            
+              <li class="plan_list_li">
+                  
+                  
+                  	  
+		                  	  <img src="../src/images/wish/planning-3.jpg" />
+		                      
+		                       <div class="describe">
+		                           
+			                         <div class="introduce-works-title" >
+			                         	  
+			                         	  <span class="introduce-caption">白雪公主主题婚礼</span>
+
+			                         	 
+			                         	  	<i>童话梦幻</i>
+			                         	  	<i>室外</i>
+			                         	
+
+			                         </div>  
+
+			                           <ul class="planning-color">
+		                                     <li></li>
+		                                     <li></li>
+		                                     <li></li>
+		                               </ul>
+
+		                               <div class="introduce-planner" >
+		                               	   
+		                               	   <i>Wedding Planner</i> <span>金露露</span>
+
+		                               </div>
+
+		                      </div>
+
+
+              
+
+
+                      <ul class="iconfont-ul">
+
+                         <!--     {{if value.isView==1}}
+ -->
+                                  <li >
+
+                                           <a>
+
+                                              <i class="iconfont eye ">&#xe620;</i> <span class="num">122</span>
+
+                                           </a>
+
+                
+
+                                  </li>
+
+
+
+                           <!--    {{else}}
+
+
+
+                                   <li  >
+
+                                         <a>
+
+                                            <i class="iconfont eye bg-c">&#xe620;</i> <span class="num">{{value.viewNum}}</span>
+
+                                         </a>
+
+                  
+
+                                    </li>
+
+                                   
+
+                             {{/if}}
+
+
+
+
+                            {{if value.isKeep==1}} -->
+
+                                  <li >
+
+                                       <a>
+
+                                          <i class="iconfont love ">&#xe616;</i><span class="num">122</span>
+
+                                       </a>
+
+                                 </li>
+
+
+
+                        <!--      {{else}}
+
+
+
+                                   <li class="last-li" onclick="operate(this,event,'{{value.type}}','{{value.id}}')" >
+
+                                           <a>
+
+                                              <i class="iconfont love bg-c">&#xe616;</i><span class="num">{{value.likeNum}}</span>
+
+                                           </a>
+
+                                   </li>
+
+
+
+
+                            {{/if}}
+ -->
+                        
+
+                      </ul>
+
+
+            </li>
+         
+
+
+
+         
+         </ul>
+
+  </div>
+
+	
+</body>
+</html>

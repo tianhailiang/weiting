@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="x5-orientation" content="portrait">
+    <title>消息通知列表</title>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/reset.css">
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/icont/iconfont.css"/>
+    <link rel="stylesheet" href="../src/css/account_list.css"/>
+<body>
+<!--头部导航-->
+<header class="fixed-header white-bg" id="fixed-header pr">
+    <div class="filter-header pa">
+        <span class="icon iconfont" onclick="window.history.go(-1)">&#xe601;</span>
+    </div>
+    <div class="logo pr">
+        <img src="../src/images/logo_03.png" alt="" class="img-width-100">
+    </div>
+    <div class="info-notice pa">
+        <div class="pr">
+            <span class="inline-b"><img src="../src/images/icon-customServices_03.png" alt=""
+                                        class="img-width-100"></span>
+        </div>
+
+    </div>
+</header>
+<div class="message-list">
+    <script type="text/html" id="message-list">
+        {{each data.userMsgList as value}}
+        <div class="border-b info-list pa-10" data-type="{{value.type}}">
+            {{if value.type == 0}}
+            <div class="clearfix">
+                <p class="fl mt-12"><img src="../src/images/icon-infor_03.png" alt=""></p>
+                <div class="fl mt-20">
+                    <p class="clearfix"><span class="fl fs13 color-333">通知消息</span><span
+                            class="fr fs12 color-999">{{value.time}}</span></p>
+                    <p class="fs12 color-666 mt-10">【通知】{{value.content}}</p>
+                </div>
+            </div>
+            {{else}}
+            <div class="clearfix">
+                <p class="fl mt-12"><img src="../src/images/icon-active-info_06.png" alt=""></p>
+                <div class="fl mt-20">
+                    <p class="clearfix"><span class="fl fs13 color-333">活动消息</span><span class="fr fs12 color-999">{{value.time}}</span></p>
+                    <p class="fs12 color-666 mt-10">【通知】 {{value.content}}</p>
+                </div>
+            </div>
+            {{/if}}
+        </div>
+        {{/each}}
+    </script>
+</div>
+</body>
+
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/swiper-3.3.1.min.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js"></script>
+
+<script src="../src/js/util/common.js"></script>
+<script src="../src/js/config.js"></script>
+<script src="../src/js/util/global.js"></script>
+<script>
+    //获取消息通知
+    getNoticeInfo(null, true, function (result) {
+        var messageStr = template('message-list',result);
+        $(".message-list").html(messageStr);
+        messageDetail();
+    });
+    function messageDetail() {
+        $(".message-list >div").click(function () {
+            var curType = $(this).attr('data-type');
+            window.location.href = "./message_notify_detail.html?type="+curType;
+        })
+    }
+</script>
+</html>

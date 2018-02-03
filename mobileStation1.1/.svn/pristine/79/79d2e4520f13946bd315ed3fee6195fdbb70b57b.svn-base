@@ -1,0 +1,79 @@
+{
+  "code": 0,
+  "msg": "请求成功",
+  "data": 
+   
+
+     [
+
+      {
+            "id":"8080",
+
+            "type":"1",     
+            "icon":"../src/images/yarn_list6.png",
+            "title":"Sunset-House",      
+            "subtitle":"",    
+            "price":"7708",     
+            "activityPrice":"", 
+            "activityName":"结婚特惠季", 
+            "author":"",       
+            "location":"",
+            "viewNum":"5782",
+            "likeNum":"4564",
+            "keepNum":"1500"   
+           
+      
+     
+       
+      
+      },
+        {
+       
+           "id":"8081",
+
+            "type":"1",     
+            "icon":"../src/images/yarn_list7.png",
+            "title":"Sunset-House",      
+            "subtitle":"",    
+            "price":"7708",     
+            "activityPrice":"", 
+            "activityName":"", 
+            "author":"",       
+            "location":"",
+            "viewNum":"5782",
+            "likeNum":"4564",
+            "keepNum":"1500"   
+           
+      
+      
+      
+       },
+       
+       {
+       
+      
+       
+           "id":"8082",
+
+            "type":"1",     
+            "icon":"../src/images/yarn_list8.png",
+            "title":"Sunset-House",      
+            "subtitle":"",    
+            "price":"7708",     
+            "activityPrice":"", 
+            "activityName":"结婚特惠季", 
+            "author":"",       
+            "location":"",    
+            "viewNum":"5782",
+            "likeNum":"4564",
+            "keepNum":"1500"
+      
+       }
+       
+     
+       
+
+
+    ]
+  
+}

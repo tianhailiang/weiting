@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+	<title>我的活动</title>
+      <link rel="stylesheet" href="../src/css/reset.css" >
+	<script src="../src/js/lib/rem.js" ></script>
+    <link rel="stylesheet" href="../src/css/common.css" >
+    <link rel="stylesheet" href="../src/css/miccenter.css" >
+
+
+</head>
+<body >
+	
+   <div id="main-box" >
+	
+       <section class="section-box scr-section">
+
+          <div class="scr-main" id="scr-main">
+
+             <ul class="active-ul" id="active-ul">
+
+                 <script type="text/html" id="template" >
+
+                     {{if data==""}}
+
+                           <div class="no-favorite" >
+                               
+                                  <p>你暂时没有活动，快去心愿狂狂吧</p>
+
+                                  <div class="no-favorite-bg ico-no-fav"></div>
+
+                           </div>
+
+                      {{else}}
+
+
+                               {{each data as value}}
+
+                                    {{if value.isExpired==1}}
+
+                                              <li>
+                                                    <div class="active-li-left" >
+                                                            <img src="{{value.icon}}" alt="" />
+                                                           
+                                                    </div>
+
+                                                    <div class="active-li-right" >
+                                                      <h2>{{value.title}}</h2>
+                                                      <p>{{value.introduce}}</p>
+                                                            
+                                                      <span>有效期至：<i >{{value.endDate}}</i></span>
+
+                                                    </div>
+                                                   <div class="pastDue">
+
+                                                        
+                                                     
+                                                   </div>
+                                                    <div class="past-sign ico-past-sign"></div>
+
+                                            </li>  
+
+
+                                       {{else}}
+                                               
+                                               <li onclick=" detailClick('{{value.activityId}}')">
+                                                    <div class="active-li-left" >
+                                                            <img src="{{value.icon}}" alt="" />
+                                                           
+                                                    </div>
+
+                                                    <div class="active-li-right" >
+                                                      <h2>{{value.title}}</h2>
+                                                      <p>{{value.introduce}}</p>
+                                                            
+                                                      <span>有效期至：<i >{{value.endDate}}</i></span>
+
+                                                    </div>
+                                                 
+
+                                              </li>  
+
+
+
+                                         {{/if}}
+
+                                   
+                                   
+
+                                    {{/each}}
+
+
+
+                          {{/if}}          
+
+                    </script>
+
+             </ul>
+
+
+          </div>
+
+       </section>
+
+
+    
+
+</div>
+
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="../src/js/util/common.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js" ></script>
+
+<script src="../src/js/config.js"></script>
+<script src="../src/js/dbutil.js" ></script>
+<script src="../src/js/webapp/miccenter/myactivities.js" ></script>
+
+</body>
+</html>

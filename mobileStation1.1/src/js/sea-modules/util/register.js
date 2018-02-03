@@ -1,0 +1,77 @@
+var bindPhone = {
+    register:function () {
+        var sendData = {};
+        $(".login-dialog").show();
+
+        //获取验证码
+        function getInvidateCode() {
+            $(".get-invidate-code").on("click", function () {
+                var teleNumber = $.trim($(".tele-number").val());
+                sendData = {phoneNum: teleNumber};
+                if (!validate.phone(teleNumber)) {
+                    hint_info('请填写手机号码');
+                    $(".tele-number").val('');
+                } else {
+                    countDown();
+                    //获取短信验证码
+                    getInvidateCodeInfo(sendData, false, function () {
+                        $(".validate-code-tip").css("visibility", "visible");
+                    })
+                }
+            });
+        }
+
+        getInvidateCode();
+        // 120s倒计时
+        function countDown() {
+            $(".get-invidate-code").off("click");
+            var countDownTime = 120;
+            var timer = window.setInterval(function () {
+                countDownTime--;
+                $(".count-down").children('i').html(countDownTime);
+                if (countDownTime == 0) {
+                    clearInterval(timer);
+                    countDownTime = 120;
+                    $(".count-down").children('i').html(countDownTime);
+                    getInvidateCode();
+                }
+            }, 1000);
+        }
+
+        //完成提交注册
+        function submitPhone() {
+            $("#submit-region-btn").click(function () {
+                load_start('正在提交....');
+                var teleNumber = $.trim($(".tele-number").val());
+                var validateCode = $(".validate-code").val();
+                var userInviteCode = $(".invite-code").val();
+                if (teleNumber == "" || validateCode == "") {
+                    hint_info('请将信息填写完整');
+                    return
+                }
+                sendData.phoneNum = teleNumber;
+                sendData.yzm = validateCode;
+                sendData.inviteCode = userInviteCode;
+
+                sumbitPhoneNuber(sendData, false, function (result) {
+                    console.log(result);
+                    if (result.code == 0) {
+                        load_stop();
+                        $(".login-dialog").hide();
+                        hint_info('注册成功~~');
+                    } else if (result.code == 1) {
+                        hint_info('系统异常');
+                    } else if (result.code == 3) {
+                        hint_info('手机号填写错误');
+                    } else if (result.code == 4) {
+                        hint_info('验证码填写错误');
+                    }
+                });
+            });
+        }
+
+        submitPhone();
+    }
+};
+
+

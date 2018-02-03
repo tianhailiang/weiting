@@ -1,0 +1,146 @@
+
+ var Id = OperationURL.getQueryString("id");
+
+ function init(){
+
+     update();
+
+ };
+
+
+ function update(){
+
+   var param={
+     	id:Id
+   }
+
+   planListInfo(param,true,function(result){
+      
+       if(result.code==0){
+
+
+           
+           $("#scr-main").html(template("template1",{data:result.data}));  
+           
+
+       }else{
+          
+         console.log(result.msg);
+       }
+
+
+   });
+  
+
+ };
+
+function detailClick(id,isView){
+
+   window.location.href="planning_division_detail.html?id="+id+"&isView="+isView;
+
+
+};
+
+
+function operateCollect(target,event,id){
+             //收藏 
+      event.stopPropagation();  
+
+      var that=target;
+
+      var param={
+
+         type:"11",
+
+         actionType:2,
+
+         id:id
+      }
+   
+        
+
+
+       lpcOperate(param, true, function(result){
+        //调查看接口
+          
+
+            if(result.code==0){
+
+                 $.wishListAlert("<div class='layer-ball-box'>收藏成功</div>");
+
+                 $(that).attr("style","color:#a84eda;");
+                                         
+                 $(that).removeAttr("onclick");
+
+
+            }else if(result.code==3){
+              
+                 window.location.href="../order/bind_phone.html?id="+id+"&action_type=11";
+               
+            }else{
+
+                console.log(result.msg);
+            }
+
+       });
+
+};
+
+
+
+/*=============接口===========*/
+
+var  planListInfo = function (param, async, succfun) {
+   
+   //14、策划师作品列表(新加)
+
+    var testurl = "../../../../testdata/wish/planning_division_list.json";
+
+    var useurl = config.getUrl() + "getPlanningWorks";
+
+    var url = useurl;
+
+
+    $.ajax({
+        type: config.getType(),
+        url: url,
+        dataType: config.getDataType(),
+        data: param,
+        async: async,
+        success: function (data, status) {
+            succfun(data);
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+};
+
+
+var lpcOperate = function (param, async, succfun) {
+   
+   //(16、查看、点赞、收藏接口)
+
+
+    var testurl = "/api/lpcOperate";
+
+    var useurl = config.getUrl() + "modifyStatData";
+    var url = useurl;
+
+
+    $.ajax({
+        type: config.getType(),
+        url: url,
+        dataType: config.getDataType(),
+        data: param,
+        async: async,
+        success: function (data, status) {
+            succfun(data);
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+};

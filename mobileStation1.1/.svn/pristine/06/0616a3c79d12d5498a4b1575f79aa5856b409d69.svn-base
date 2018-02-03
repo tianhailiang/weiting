@@ -1,0 +1,13 @@
+
+	{
+		"code":"0",
+		"msg":"请求成功",
+		"data":{
+					"headImg":"../src/images/yarn_list7.png",		
+					"nickname":"野花",								
+					"userName":"李梅",								
+					"phoneNum":"13754867854",					
+					"sex":"1",										
+					"birthday":"1993-08-22"							
+				}
+	}

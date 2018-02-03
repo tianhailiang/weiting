@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+	<title>体验活动详情</title>
+    <link rel="stylesheet" href="../src/css/reset.css" >
+
+    <link rel="stylesheet" href="../src/css/common.css" >
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+    <link rel="stylesheet" href="../src/css/wish.css">
+
+</head>
+<body style="background:#f2f4f5;">
+
+  <div class="alive-main-box pad_bot" id="scr-main">
+
+     <script type="text/html" id="template1" >
+                
+                   <header  class="header_box top_fixed">
+                        <ul>
+                            <li class="first" id="btnBack">
+
+                               <span class="icon_back-box" > 
+                                   
+                                   <i class="icon_div"></i>
+                                   <i class="iconfont icon_back icon_header" style="color:#fff;">&#xe601;</i>
+
+                                </span>
+
+                            </li>
+
+                        
+                          
+                          <li class="last">
+
+                              <span class="icon_back-box mar-r10" > 
+                                   <i class="icon_div"></i>
+
+                                   {{if data.isKeep==0}}
+                                     
+                                         <i class="iconfont icon_love " id="icon_collect" onclick="operateCollect(this)" style="color:#fff;">&#xe616;</i>
+                                         
+                                   {{else}}
+
+                                        <i class="iconfont icon_love" id="icon_collect" style="color:#e8796e;">&#xe616;</i>
+
+                                    {{/if}}  
+                              </span>  
+
+                               <span class="icon_back-box " id="service" > 
+                                   <i class="icon_div"></i>   
+
+                                   <i class="iconfont icon-service icon_header" style="color:#fff;">&#xe70d;</i>
+                            
+                              </span>
+
+                          </li>
+
+                        
+                        </ul>
+
+               </header>
+
+
+                <div class="alive-banner" >
+             
+                    <img src="{{data.icon}}" alt=" " />
+
+               </div>
+               
+               <article >
+
+                      <div class="act-apply" >
+
+                                
+                                  <h1 class="act-h1">{{data.title}}</h1>
+                                    
+                                     <div class="act-apply-cost" ><i class="iconfont icon-free"></i><span>活动费用</span><i>{{data.price}}</i></div>
+
+                                    <div class="act-apply-time" >
+                                       <i class="iconfont icon-time">&#xe632;</i> <span>活动时间</span><i>{{data.startdate}}</i>-<i>{{data.enddate}}</i>
+                                    </div>
+                                    
+                                    <div class="act-apply-address" >
+
+                                        <i class="iconfont icon-location">&#xe608;</i><span>活动地址</span> <i>{{data.area}}</i>
+                                   </div>
+                                   
+                               
+
+                          </div>
+                          
+
+                         <div class="act-content" id="act-ontent">
+
+                             {{data.content}}
+                              
+                        </div>
+
+                        <div class="exper-attend">
+                            
+                            <div class="attend-title">
+                               
+                               <i class="icon-join"></i><span>参加须知</span>
+
+                            </div>
+
+                            <ul class="attend-ul">
+                                  <li><i></i><span>必须拿着本人身份证才能参加</span></li>
+                                  <li><i></i><span>必须拿着本人身份证才能参加</span></li>
+                                  <li><i></i><span>必须拿着本人身份证才能参加</span></li>
+
+                            </ul>
+
+
+                        </div>
+
+
+                          <div class="exper-attend">
+                            
+                                  <div class="attend-title">
+                                     
+                                     <i class="icon-prompt"></i><span>温馨提示</span>
+
+                                  </div>
+
+                                  <ul class="attend-ul">
+                                        <li><i></i><span>乘车路线：地铁十号线双井</span></li>
+                                        <li><i></i><span>今天坑会下雨啊</span></li>
+                                      
+
+                                  </ul>
+
+
+                        </div>
+                           
+                
+
+               </article>
+
+              
+            
+          </script>
+
+           
+    
+</div>
+
+   <a class="btn-my-apply" id="apply" >
+
+              <span></span>
+   </a> 
+
+ 
+
+</body>
+ 
+   <script src="../src/js/lib/jquery-2.2.1.min.js" ></script>
+   <script src="http://img.wishlist1314.com/artTamplate.js" ></script>
+   <script src="http://img.wishlist1314.com/fastclick.js" ></script>
+   <script src="../src/js/util/common.js"></script>
+   <script src="../src/js/config.js" ></script>
+   <script src="../src/js/widget/layer/layer.js"></script>
+   <script src="../src/js/webapp/wish/experience_activity_detail.js" ></script>
+
+</html>

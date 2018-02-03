@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">   
+
+  <meta content="yes" name="apple-mobile-web-app-capable">
+
+  <meta content="yes" name="apple-touch-fullscreen">
+
+  <meta content="telephone=no,email=no" name="format-detection">
+
+  <title>心愿清单</title>
+
+     <link rel="stylesheet" href="src/css/reset.css" >
+
+     <link rel="stylesheet" href="src/css/swiper-3.3.1.min.css" >
+
+     <link rel="stylesheet" href="src/css/common.css" >
+
+     <link rel="stylesheet" href="src/js/widget/layer/need/layer.css">
+
+     <link rel="stylesheet" href="src/css/index.css" > 
+
+
+   
+  <!-- <link rel="stylesheet" href="src/css/reset.css" >
+
+     <link rel="stylesheet" href="src/css/swiper-3.3.1.min.css" >
+
+     <link rel="stylesheet" href="src/css/common.css" >
+
+     <link rel="stylesheet" href="src/js/widget/layer/need/layer.css">
+
+     <link rel="stylesheet" href="src/css/index.css" >
+     -->
+
+</head>
+
+
+<body style="background:#f2f4f5;" >
+
+           <header  class="header_box " style="background:#fff;">
+                    <ul>
+                        <li class="first" id="header_city_box">
+                            <span class="header_city" id="header_city"></span>
+                           <i class="iconfont icon_down">&#xe64a;</i>
+                        </li>
+
+                      <li class="second">
+                        
+                          <i class="ico-wish-title"></i>
+                          <span class="header_title">WISH LIST</span>
+
+                      </li>
+                      
+                      <li class="last">
+
+                        
+                        <span class="icon-bell-box" >
+
+                           <i class="iconfont icon-bell" id="bell">&#xe618;</i>
+                           <i class="icon-red-circle hide" id="news" ></i>
+
+                        </span>
+
+                           <i class="iconfont icon-service" id="service">&#xe70d;</i>
+                        
+                      </li>
+
+                    </ul>
+
+           </header>
+
+            <div class="city_selct_box hide" id="city_box">
+
+                    <ul class="city_ul" id="city_ul">
+
+                    </ul>
+
+                    <div class="Mask" ></div>
+            </div>
+
+
+           <div  class="index-box" >
+
+              
+
+                               <div class="swiper-container-box" >
+
+                                          <div class="swiper-container " id="swiper-container1">
+
+                                                   <div class="swiper-wrapper" id="banner">
+
+                                                          <script type="text/html"  id="bannerTemplate">
+
+                                                             {{each data as value}}
+
+
+                                                              <div class="swiper-slide " >
+
+                                                                      <a href="{{value.link}}"><img src="{{value.bannerUrl}}" alt="" class="carousel-img"  /></a>
+
+                                                              </div>
+
+                                                         
+                                                             {{/each}}
+
+                                                         </script>
+
+                                                   </div>
+
+                                                     <div class="swiper-pagination"></div>
+
+                                        </div>
+
+                              </div>
+
+
+                                <nav class="nav-box" id="nav-box1">
+
+                                    <ul >
+
+                                          <li>
+
+
+                                            <a class="act">心愿精选
+
+
+                                            </a>
+
+                                          </li>
+
+                                          <li>
+
+                                            <a >鲜货攻略</a>
+
+
+                                          </li>
+
+                                          <li>
+
+                                             <a >体验活动</a>
+
+                                          </li>
+
+                                          <li>
+
+                                             <a>真实案例</a>
+
+                                          </li>
+
+                                  
+
+                                        </ul>
+
+                                  <!-- =====animate 指示器===== -->
+
+
+
+                                 <div class="indicate" >
+
+                                       
+
+                                       <div class="ibox" ></div>
+
+                                       
+
+                                 </div>
+
+                            </nav>
+
+
+
+                          <div class="swiper-container " id="swiper-container2">
+
+                                  <div class="swiper-wrapper">
+
+                                                            
+
+                                                 <div class="swiper-slide " >
+
+                                                                 <div class="date" >
+
+                                                                   
+                                                                             <span>『</span><i id="date_time"></i><span>』</span>
+                                                                 
+                                                                      
+                                                               </div>  
+
+                                                                <ul class="wrapper-ul0 wrapper-ul" >
+                                                                          
+
+                                                                </ul>
+
+
+
+                                                 </div>        
+
+                                                 
+
+                                                <div class="swiper-slide " >
+
+                                                         
+
+                                                         <ul class="wrapper-ul1 wrapper-ul" >
+
+
+
+                                                         </ul>
+
+
+                                               </div>   
+
+
+
+                                               
+
+                                              <div class="swiper-slide " >
+
+                                         
+
+                                                         <ul class="wrapper-ul2 wrapper-ul" >
+
+
+
+                                                         </ul>
+
+                                                        
+
+                                               </div> 
+
+
+
+
+
+                                               <div class="swiper-slide " >
+
+                                                       
+
+                                                         <ul class="wrapper-ul3 wrapper-ul" >
+
+
+
+                                                         </ul>
+
+
+                                                </div>           
+
+
+
+                                            <!-- ===swiper-wrapper====== -->
+
+
+
+                                    </div>
+
+                                   
+
+                                            <!-- ==滚动条== -->
+
+                                         <!--   <div class="swiper-scrollbar"></div> -->
+
+
+
+                            </div>  
+
+
+
+                  </div>  
+
+              
+
+
+
+
+     <footer class="footer-box footer-fixed" id="infooter" >
+
+         <nav>
+
+
+              <ul >
+
+                <li>
+
+                  <a  href="index.html">
+
+                            <span class="ico-wish ico-current-wish"></span>
+
+                            <i style="color:#e8796e;">心愿</i>
+
+                  </a>
+
+
+                </li>
+
+                <li>
+
+                    <a   href="detailed_account/account_list.html">
+
+                           <span class="ico-list"></span>
+
+                            <i>清单</i>
+
+                    </a>
+
+                </li>
+
+                <li >
+                    <a id="perCenter">
+
+                            <span class="ico-miccenter"></span>
+
+                            <i>我的</i>
+
+                    </a>
+
+                </li>
+
+              </ul>
+
+         </nav>
+
+</footer>
+
+
+<!-- ==模拟nav== -->
+
+
+
+   <nav class="nav-box" id="nav-box2">
+
+                      <ul >
+
+                            <li>
+
+
+                              <a class="act" >心愿精选
+
+                              </a>
+
+                            </li>
+
+                            <li>
+
+                              <a >鲜货攻略</a>
+
+                            </li>
+
+                            <li>
+
+                               <a >体验活动</a>
+
+                            </li>
+
+                            <li>
+
+                               <a>真实案列</a>
+
+                            </li>
+
+                          </ul>
+
+
+                    <!-- =====animate 指示器===== -->
+
+
+                   <div class="indicate" >
+
+                         <div class="ibox" ></div>
+
+                   </div>
+
+     </nav>
+
+
+
+   <!-- ======弹框注册登录==== -->
+
+
+
+ <div class="pa-15 ball-login" id="islogin">
+
+          <ul class="form-box mt-30">
+
+              <li class="h-46 pl-13 clearfix border-b">
+
+                  <i class="icon-phone inline-b pr fl mr-20"></i>
+
+                  <input type="text" maxlength="11" placeholder="请输入您的手机号码" class="inline-b fl tele-number" id="tele-number" />
+
+                  <a href="javascript:;" class="bg-c59 fs12 inline-b fl boder-radius-5 get-invidate-code" onclick="getInvidateCode(this)">获取验证码</a>
+
+                  <span class="fl count-down fs13 pr color-7a7b"><i>120</i>s</span>
+
+              </li>
+
+              <li class="h-46 pl-13 clearfix border-b">
+
+                  <i class="icon-validate inline-b pr fl mr-20"></i>
+
+                  <input type="text" maxlength="11" placeholder="请输入您收到的验证码" class="inline-b fl validate-code" id="validate-code" value="" />
+
+              </li>
+
+              <li class="h-46 pl-13 clearfix border-b">
+
+                  <i class="icon-invite inline-b pr fl mr-20"></i>
+
+                  <input type="text" maxlength="11" placeholder="请输入您的邀请码（选填）" class="inline-b fl invite-code" id="invite-code" />
+
+              </li>
+
+          </ul>
+
+
+
+          <p class="fs13 mt-15 pl-13">验证码已经发送至填写的手机中，请注意查收！</p>
+
+
+
+          <div class="submit-btn tc boder-radius-5 btn-finish" onclick="bindPhone()" id="finish-btn" disabled="disabled" >完成提交</div>
+
+
+
+</div>
+
+
+   <script src="src/js/lib/jquery-2.2.1.min.js" ></script>
+
+   <script src="src/js/lib/swiper-3.3.1.min.js" ></script>
+
+   <script src="src/js/lib/artTamplate.js" ></script>
+
+   <script src="src/js/lib/fastclick.js" ></script> 
+
+   <script src="src/js/util/common.js"></script>
+
+   <script src="src/js/config.js"></script>
+
+   <script src="src/js/dbutil.js" ></script>
+
+   <script src="src/js/widget/layer/layer.js"></script>
+
+   <script src="src/js/widget/lazyload/jquery.lazyload.js"></script>
+
+   <script src="src/js/webapp/index.js" ></script>   
+
+ <!--   <script src="src/js/lib/jquery-2.2.1.min.js" ></script>
+
+   <script src="src/js/lib/swiper-3.3.1.min.js" ></script>
+
+   <script src="src/js/lib/artTamplate.js" ></script>
+
+   <script src="src/js/lib/fastclick.js" ></script> 
+
+   <script src="src/js/util/common.js"></script>
+
+   <script src="src/js/config.js"></script>
+
+   <script src="src/js/widget/layer/layer.js"></script>
+
+   <script src="src/js/widget/lazyload/jquery.lazyload.js"></script>
+
+   <script src="src/js/webapp/index.js" ></script>  
+ -->
+
+
+   <script type="text/html" id="template0" >
+
+       
+
+             {{each data.data as value index}}
+
+                   
+
+              <li  data-id="{{value.id}}" data-isView="{{value.isView}}" data-type="{{value.type}}">
+
+                  {{if value.type==10}}
+
+                      <h2 class="activity-h2">
+
+                         {{value.title}}
+                          
+                      </h2>
+
+                      <h3 class="activity-h3">{{value.description}}</h3>
+                      
+                          <div class="swiper-container swiper-container3" >
+
+                                     <div class="swiper-wrapper" >
+
+
+
+                                               {{each value.recommendList as item}}
+
+
+
+                                                <div class="swiper-slide " >
+
+                                                      <img src="{{item.iconForList}}" alt=""  class="activity-img"/>
+
+                                                      <span class="activity-price">{{item.price}}</span>
+
+                                                </div>
+
+                                           
+
+                                               {{/each}}
+
+
+                                     </div>
+
+
+
+                          </div>
+
+                         
+                           <div class="activity-num">
+                               
+                               <span> {{value.num}}件商品</span>
+
+                           </div>
+
+
+
+                  {{else if value.type==8 || value.type==7}}
+
+                          <dl>
+
+                                       
+                              <dt class="alive">
+
+                                        <img  class="lazy-img"   data-original="{{value.iconForList}}"  width="100%"  height="200" />
+
+
+                             </dt>
+
+                            <dd>
+
+                                <div class="describe">
+
+                                             <p class="art-top">{{value.title}}</p>
+
+                                               {{if value.type==8}}
+
+                                                  <p class="art-bot">{{value.subtitle}}</p>
+
+                                               {{/if}}    
+
+
+                                             <div class="come"> 
+
+                                                  <div class="from-box" >
+
+                                                    <span class="form">Form</span><i class="editorName">{{value.editorName}}</i>
+
+                                                  </div>
+
+                                                  {{if value.type==7}}
+                                                     
+                                                         <div class="address-box">
+
+                                                                     <i class="iconfont icon_location">&#xe604;</i>
+                                                                     <span class="address">{{value.location}}</span>
+                                                                 
+                                                          </div>      
+
+                                                  {{/if}} 
+
+
+                                             </div>
+
+
+                                </div>
+
+                                  
+
+                             </dd>   
+
+                           </dl>        
+
+                    {{else if value.type==11}} 
+
+                             <dl>
+
+                                  <dt>
+
+                                      <img  class="lazy-img"   data-original="{{value.iconForList}}" width="100%" heihgt="200" />
+
+                                  </dt>
+
+
+
+                                  <dd>
+
+                                       <div class="describe">
+
+                                              <div class="introduce-works-title" >
+                        
+                                                    <span class="introduce-caption">{{value.title}}</span>
+                                                        
+                                                        {{each value.style as item}}
+                                                         
+                                                          <i>{{item}}</i>
+
+                                                        {{/each}}  
+
+                                                        {{if value.environment==1}}
+
+                                                           <i>室内</i>
+
+                                                        {{else}}
+
+                                                            <i>室外</i>
+
+                                                        {{/if}}
+                                                    
+                                               </div>  
+
+                                                 <ul class="planning-color">
+                                                       {{each value.main as item}}
+                                                        
+                                                         <li style="background:{{item}}"></li>
+
+                                                       {{/each}}
+
+                                                   </ul>
+
+                                                   <div class="introduce-planner" >
+                                                       
+                                                       <i>Wedding Planner</i> <span>{{value.editorName}}</span>
+
+                                                   </div>
+
+
+                                        </div>
+
+                                       
+                                 </dd>
+
+                              </dl>    
+               
+
+                   
+                  {{else if value.type==1 || value.type==2 || value.type==3 || value.type==4 || value.type==9}}
+                    
+                      <dl>
+
+                         <dt class="alive">
+
+                                 {{if  value.type==4 || value.type==9}}
+
+                                      <img  class="lazy-img "   data-original="{{value.iconForList}}"  width="100%"  height="200" />
+                                 {{else}}
+                                     <img  class="lazy-img "   data-original="{{value.iconForList}}"  width="100%"  height="500" />
+                                 
+                                 {{/if}}
+                         </dt>
+
+                         <dd>
+                             
+                               <div class="dress" >
+                                     
+                                     <span class="dress_name">{{value.title}}</span>
+
+                                     <span class="dress_price" >{{value.price}}</span>
+                                    
+                              </div>
+                            
+
+                         </dd>
+
+
+                      </dl>
+
+                   
+
+                       
+
+                   {{else if value.type==6}}
+                     
+                        <dl>
+
+                                 <dt>
+
+                                       <img  class="lazy-img experience-img"   data-original="{{value.iconForList}}" width="100%" height="200" />
+
+                                 </dt>
+
+                                  <dd>
+
+                                        <div class="describe">
+
+                                                         <p class="art-top">{{value.title}}</p>
+
+                                                         <div class="house_box">
+                                                               <p class="art-bot">
+
+                                                                       {{value.AWord}}
+
+                                                                       
+                                                               </p>
+                                                               <div class="address-box house_address">
+
+                                                                         <i class="iconfont icon_location">&#xe604;</i>
+                                                                         <span class="address">{{value.location}}</span>
+                                                               
+
+                                                               </div>     
+
+
+                                                        </div>
+                                                         
+
+
+                                        </div>
+
+
+                              </dd>
+
+
+                        </dl>
+
+
+
+                  {{/if}}
+
+                  {{if value.type==1 ||  value.type==2 || value.type==3 || value.type==4 || value.type==9}}
+
+                            <ul class="iconfont-ul dress_iconfont_ul">
+
+                             {{if value.isView==1}}
+
+                                  <li >
+
+                                           <a>
+
+                                              <i class="iconfont eye " >&#xe620;</i> <span class="num">{{value.viewNum}}</span>
+
+                                           </a>
+
+                
+
+                                  </li>
+
+
+
+                              {{else}}
+
+
+
+                                   <li  >
+
+                                         <a>
+
+                                            <i class="iconfont eye " style="color:#999;">&#xe620;</i> <span class="num">{{value.viewNum}}</span>
+
+                                         </a>
+
+                  
+
+                                    </li>
+
+                                   
+
+                             {{/if}}
+
+
+
+
+                            {{if value.isKeep==1}}
+
+                                  <li >
+
+                                       <a>
+
+                                          <i class="iconfont love ">&#xe616;</i><span class="num">{{value.keepNum}}</span>
+
+                                       </a>
+
+                                 </li>
+
+
+
+                             {{else}}
+
+
+
+                                   <li class="last-li collect_li"   data-type="{{value.type}}" data-id="{{value.id}}" >
+
+                                           <a>
+
+                                              <i class="iconfont love" style="color:#999;">&#xe616;</i><span class="num">{{value.keepNum}}</span>
+
+                                           </a>
+
+                                   </li>
+
+
+                            {{/if}}
+
+                        
+
+                      </ul>
+
+
+                  {{else}}
+
+                         <ul class="iconfont-ul">
+
+                             {{if value.isView==1}}
+
+                                  <li >
+
+                                           <a>
+
+                                              <i class="iconfont eye ">&#xe620;</i> <span class="num">{{value.viewNum}}</span>
+
+                                           </a>
+
+                
+
+                                  </li>
+
+
+
+                              {{else}}
+
+
+
+                                   <li  >
+
+                                         <a>
+
+                                            <i class="iconfont eye" style="color:#999;">&#xe620;</i> <span class="num">{{value.viewNum}}</span>
+
+                                         </a>
+
+                  
+
+                                    </li>
+
+                                   
+
+                             {{/if}}
+
+
+
+
+                            {{if value.isKeep==1}}
+
+                                  <li >
+
+                                       <a>
+
+                                          <i class="iconfont love ">&#xe616;</i><span class="num">{{value.keepNum}}</span>
+
+                                       </a>
+
+                                 </li>
+
+
+
+                             {{else}}
+
+
+
+                                   <li class="last-li collect_li"   data-type="{{value.type}}" data-id="{{value.id}}" >
+
+                                           <a>
+
+                                              <i class="iconfont love" style="color:#999;">&#xe616;</i><span class="num">{{value.keepNum}}</span>
+
+                                           </a>
+
+                                   </li>
+
+
+                            {{/if}}
+
+                        
+
+                      </ul>
+
+
+
+
+                   {{/if}}
+
+
+                </li>
+
+
+
+          {{/each}}
+
+
+
+  </script>
+
+
+
+  
+
+  <script type="text/html" id="template1" >
+
+           
+
+
+        {{each data as value index}}
+
+            
+
+            <li  data-id="{{value.id}}" data-isView="{{value.isView}}" data-type="{{value.type}}" >
+
+
+
+                <dl>
+
+                   <dt class="alive">
+
+                                <img  class="lazy-img alive-img"   data-original="{{value.iconForList}}"  width="100%"  height="200" />
+
+
+                     </dt>
+
+
+
+                      <dd>     
+                              <div class="describe">
+
+                                   <p class="art-top">{{value.title}}</p>
+
+                                   <p class="art-bot">{{value.subtitle}}</p>
+
+
+                                   <div class="come"> 
+                                      <div class="from-box" >
+
+                                        <span class="form">Form</span><i class="editorName">{{value.editorName}}</i>
+
+                                      </div>
+                                   </div>
+
+
+                              </div>
+
+                             
+
+                       </dd>
+
+                </dl>
+
+                 <ul class="iconfont-ul">
+
+                             {{if value.isView==1}}
+
+                                  <li >
+
+                                           <a>
+
+                                              <i class="iconfont eye ">&#xe620;</i> <span class="num">{{value.viewNum}}</span>
+
+                                           </a>
+
+                
+
+                                  </li>
+
+
+
+                              {{else}}
+
+
+
+                                   <li  >
+
+                                         <a>
+
+                                            <i class="iconfont eye" style="color:#999;">&#xe620;</i> <span class="num">{{value.viewNum}}</span>
+
+                                         </a>
+
+                  
+
+                                    </li>
+
+                                   
+
+                             {{/if}}
+
+
+
+
+                            {{if value.isKeep==1}}
+
+                                  <li >
+
+                                       <a>
+
+                                          <i class="iconfont love ">&#xe616;</i><span class="num">{{value.keepNum}}</span>
+
+                                       </a>
+
+                                 </li>
+
+
+
+                             {{else}}
+
+
+
+                                   <li class="last-li collect_li"   data-type="{{value.type}}" data-id="{{value.id}}" >
+
+                                           <a>
+
+                                              <i class="iconfont love" style="color:#999;">&#xe616;</i><span class="num">{{value.keepNum}}</span>
+
+                                           </a>
+
+                                   </li>
+
+
+                            {{/if}}
+
+                        
+
+                      </ul>
+
+
+            </li>
+
+
+
+        {{/each}}
+
+
+
+
+
+                          
+
+</script>
+
+
+
+
+
+  <script type="text/html" id="template2" >
+
+  
+
+  
+
+
+
+         {{each data as value index}}
+
+         
+
+      <li  data-id="{{value.id}}" data-isView="{{value.isView}}" data-type="{{value.type}}" >
+
+     
+
+             <dl>
+
+
+
+              <dt>
+
+                <img  class="lazy-img experience-img"   data-original="{{value.iconForList}}" width="100%" height="200" />
+
+              </dt>
+
+
+
+              <dd>
+
+                  <div class="describe">
+
+                                   <p class="art-top">{{value.title}}</p>
+
+                                 
+
+
+                                   <div class="come"> 
+                                       <div class="from-box">
+
+                                             <span class="form">Form</span><i class="editorName">{{value.editorName}}</i>
+                                       </div>
+                                       
+                                       <div class="address-box">
+
+                                          <i class="iconfont icon_location">&#xe604;</i>
+                                         <span class="address">{{value.location}}</span>
+                                         
+
+                                       </div>      
+
+
+
+                                   </div>
+
+
+                  </div>
+
+              </dd>
+
+
+
+             </dl>
+
+                <ul class="iconfont-ul">
+
+                             {{if value.isView==1}}
+
+                                  <li >
+
+                                           <a>
+
+                                              <i class="iconfont eye ">&#xe620;</i> <span class="num" >{{value.viewNum}}</span>
+
+                                           </a>
+
+                
+
+                                  </li>
+
+
+
+                              {{else}}
+
+
+
+                                   <li  >
+
+                                         <a>
+
+                                            <i class="iconfont eye" style="color:#999;">&#xe620;</i> <span class="num">{{value.viewNum}}</span>
+
+                                         </a>
+
+                  
+
+                                    </li>
+
+                                   
+
+                             {{/if}}
+
+
+
+
+                            {{if value.isKeep==1}}
+
+                                  <li >
+
+                                       <a>
+
+                                          <i class="iconfont love ">&#xe616;</i><span class="num">{{value.keepNum}}</span>
+
+                                       </a>
+
+                                 </li>
+
+
+
+                             {{else}}
+
+
+
+                                   <li class="last-li collect_li"   data-type="{{value.type}}" data-id="{{value.id}}" >
+
+                                           <a>
+
+                                              <i class="iconfont love" style="color:#999;">&#xe616;</i><span class="num">{{value.keepNum}}</span>
+
+                                           </a>
+
+                                   </li>
+
+
+                              
+
+
+
+                            {{/if}}
+
+                        
+
+                      </ul>
+
+
+
+            </li>
+
+
+
+
+
+        {{/each}}
+
+
+
+                          
+
+ </script>
+
+
+
+  <script type="text/html" id="template3" >
+
+            {{each data as value index}}
+
+                 
+
+                <li  data-id="{{value.id}}" data-isView="{{value.isView}}" data-type="{{value.type}}" >
+
+
+                       <dl>
+
+                            <dt>
+
+                                   <img  class="lazy-img widdingHouse-img"   data-original="{{value.iconForList}}" width="100%" height="200"  />
+
+                            </dt>
+
+
+
+                            <dd>
+
+                                     <div class="describe">
+
+                                            <div class="introduce-works-title" >
+                      
+                                                  <span class="introduce-caption">{{value.title}}</span>
+                                                      
+                                                      {{each value.style as item}}
+                                                       
+                                                        <i>{{item}}</i>
+
+                                                      {{/each}}  
+
+
+                                                      {{if value.environment==1}}
+
+                                                           <i>室内</i>
+
+                                                        {{else}}
+
+                                                            <i>室外</i>
+
+                                                        {{/if}}
+                                                  
+                                             </div>  
+
+                                               <ul class="planning-color">
+                                                     {{each value.main as item}}
+                                                      
+                                                       <li style="background:{{item}}"></li>
+
+                                                     {{/each}}
+
+                                                 </ul>
+
+                                                 <div class="introduce-planner" >
+                                                     
+                                                     <i>Wedding Planner</i> <span>{{value.editorName}}</span>
+
+                                                 </div>
+
+
+                                      </div>
+
+                          </dd>
+
+
+
+                      </dl>
+
+                         <ul class="iconfont-ul">
+
+                             {{if value.isView==1}}
+
+                                  <li >
+
+                                           <a>
+
+                                              <i class="iconfont eye ">&#xe620;</i> <span class="num">{{value.viewNum}}</span>
+
+                                           </a>
+
+                
+
+                                  </li>
+
+
+
+                              {{else}}
+
+
+
+                                   <li  >
+
+                                         <a>
+
+                                            <i class="iconfont eye" style="color:#999;">&#xe620;</i> <span class="num">{{value.viewNum}}</span>
+
+                                         </a>
+
+                  
+
+                                    </li>
+
+                                   
+
+                             {{/if}}
+
+
+
+
+                            {{if value.isKeep==1}}
+
+                                  <li >
+
+                                       <a>
+
+                                          <i class="iconfont love ">&#xe616;</i><span class="num">{{value.keepNum}}</span>
+
+                                       </a>
+
+                                 </li>
+
+
+
+                             {{else}}
+
+
+
+                                   <li class="last-li collect_li"   data-type="{{value.type}}" data-id="{{value.id}}">
+
+                                           <a>
+
+                                              <i class="iconfont love" style="color:#999;">&#xe616;</i><span class="num">{{value.keepNum}}</span>
+
+                                           </a>
+
+                                   </li>
+
+
+                              
+
+
+
+                            {{/if}}
+
+                        
+
+                      </ul>
+
+
+
+                  </li>
+
+
+
+           {{/each}}
+
+
+ </script>
+
+
+
+</body>
+
+</html>

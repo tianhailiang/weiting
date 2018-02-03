@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">  
+	<title>鲜货攻略详情</title>
+    <link rel="stylesheet" href="../src/css/reset.css" >
+    <link rel="stylesheet" href="../src/css/common.css" >
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+    <link rel="stylesheet" href="../src/css/wish.css">
+
+</head>
+
+<body  style="background:#f2f4f5;">
+	 
+
+             <div class="alive-main-box" id="scr-main">
+               
+                 <script type="text/html" id="template1" >
+                 
+                  
+                <header  class="header_box top_fixed">
+                        <ul>
+                              <li class="first" id="btnBack">
+
+                                 <span class="icon_back-box" > 
+                                     
+                                     <i class="icon_div"></i>
+                                     <i class="iconfont icon_back icon_header" style="color:#fff;">&#xe601;</i>
+
+                                  </span>
+
+                              </li>
+
+                              <li class="last">
+
+                                  <span class="icon_back-box mar-r10" > 
+                                       <i class="icon_div"></i>
+
+                                       {{if data.isKeep==0}}
+                                         
+                                             <i class="iconfont icon_love " id="icon_collect" onclick="operateCollect(this)" style="color:#fff;">&#xe616;</i>
+                                             
+                                       {{else}}
+
+                                            <i class="iconfont icon_love" id="icon_collect" style="color:#e8796e;">&#xe616;</i>
+
+                                        {{/if}}  
+                                  </span>  
+
+                                   <span class="icon_back-box " id="service" > 
+                                       <i class="icon_div"></i>   
+
+                                       <i class="iconfont icon-service icon_header" style="color:#fff;">&#xe70d;</i>
+                                
+                                  </span>
+
+                              </li>
+
+                        
+                        </ul>
+
+               </header>
+
+
+                  
+                   <figure class="act-banner">
+                    
+                          <div src=""  class="act-img" >
+
+                               <img src="{{data.icon}}" alt=" " />
+                               
+                          </div>
+
+                              <div class="act-header"  style="background:url('{{data.editorIcon}}') no-repeat center;background-size:cover;"> 
+                                             
+                              </div>
+                
+                             <figcaption id="shopName" class="act-figcaption">
+
+                                 <div class="act-editor"><span>主编:</span><i>{{data.editorName}}</i></div>
+
+                                
+                             </figcaption>
+
+                 </figure>
+
+                 <h1 class="alive_h1" >{{data.title}}</h1>
+               
+
+                  <div class="act-content alive-content" id="act-content">
+                        
+                        {{data.content}}
+                   
+                  </div>
+
+               
+
+                   <ul class="alive-ul">
+                       
+                       {{each data.recommends as value index}}
+
+                        <li onclick="detailClick('{{value.id}}','{{value.type}}')">
+                        	
+                           <div class="alive-commodity" >
+                                   
+                                              
+
+                                           <img src="{{value.iconForList}}" class="alive-img"  /> 
+
+                                 
+
+                                        <h2 class="alive-name">{{value.name}}</h2>
+
+                                    <div class="alive-price" >&yen; <i>{{value.price}}</i></div> 
+                           </div>
+                           
+                           <div class="alive-describe" >
+                               
+                             
+
+                                <p>
+                                    {{value.introduce}}
+                                </p>
+
+                           </div>
+
+                           
+                             
+                              <div class="alive-check" >
+                              	  
+                                    <span>查看详情</span>
+                              </div>
+
+                        </li>
+
+                        {{/each}}
+
+                   </ul> 
+
+                    <div class="previous-stage" >
+                            
+                            <h2 class="alive-pre-h2">
+                                <i class="iconfont ico-previously"></i>
+                                <span>往期攻略</span>
+
+                            </h2>
+
+                            {{each data.lateRaiders as value }}
+
+                            <dl onclick="alive('{{value.id}}')">
+                              
+                                <dt>
+                                    <img src="{{value.iconForList}}" />
+                                </dt>
+
+                                <dd>
+
+                                          
+                                                 <p class="previous-title">
+                                                   
+                                                   <i>第{{value.orderNo}}期</i>{{value.title}}
+
+                                                 </p>
+
+                                                 <div class="previous-content">{{value.content}}</div>
+                                           
+                                         
+
+                                           <div class="alive-form" >
+
+                                                      <div class="from-box">
+
+                                                             <span class="form">Form</span><i class="editorName">{{value.userName}}</i>
+                                                       </div>
+                                                       
+                                                       <div class="address-box">
+
+                                                          <span class="alive-date">{{value.time}}</span>                                                       
+                                                       </div>      
+
+                                            </div>
+
+                                      
+
+                                </dd>
+
+
+                            </dl>
+
+                            {{/each}}
+
+                            
+
+                            <div class="stage-detail">
+                              
+                                  <span onclick="aliveList()">查看全部</span>
+
+                            </div>
+
+
+
+
+                   </div>
+
+
+               </script>
+
+
+
+
+             </div>
+
+
+            
+
+
+</body>
+ 
+   <script src="../src/js/lib/jquery-2.2.1.min.js" ></script>
+   <script src="http://img.wishlist1314.com/artTamplate.js" ></script>
+   <script src="http://img.wishlist1314.com/fastclick.js" ></script>
+   <script src="../src/js/util/common.js"></script>
+   <script src="../src/js/config.js" ></script>
+   <script src="../src/js/widget/layer/layer.js"></script>
+   <script src="../src/js/webapp/wish/alive_strategy_detail.js" ></script>
+ 
+
+</html>
+

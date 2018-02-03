@@ -1,0 +1,20 @@
+
+{
+	"code":0,
+	"msg":"业务信息",
+	"data":{
+
+            
+					"id":"154124asdfasdfasdfwerasdfasdfe",
+									
+					"weddingDate":"2015-08-26",				
+					
+					"hotel":"月桂酒店",
+					"color":"白色 红色",
+					"style":"森系 日系",
+					"dressStyle":"鱼尾裙 直筒裙摆",
+					"menswear":"燕尾服 晨礼服"
+
+		}	
+	
+}

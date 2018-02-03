@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>我的礼券</title>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/reset.css">
+    <script src="http://img.wishlist1314.com/rem.js"></script>
+    <link rel="stylesheet" href="../src/css/common.css"/>
+    <link rel="stylesheet" href="../src/css/miccenter.css"/>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/swiper-3.3.1.min.css"/>
+  
+</head>
+<body>
+<div id="main-box">
+    <!--列表切换选项卡-->
+    <div class="tab-box">
+        <ul class="swiper-nav tab-btn clearfix" id="nav-box">
+            <li class="fs14 tc"><a href="javascript:;" class="selected fs14">可用礼券</a></li>
+            <li class="fs14 tc"><a href="javascript:;">已用/过期礼券</a></li>
+        </ul>
+        <!--列表内容-->
+        <section class="mt-30">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide tab-content-1">
+                        <div class="coupon-list coupon-able-list">
+                            <script id="able" type="text/html">
+                                {{if data.length !==0 }}
+                                {{ each data as value}}
+                                <div class="pa-10">
+                                    <img src="{{value.validImg}}" alt="">
+                                    <section>
+                                        <p>有效日期:{{value.receiveDate}}-{{value.deadline}}</p>
+                                        <p>使用规则：{{value.description}}</p>
+                                    </section>
+                                </div>
+                                {{/each}}
+                                {{else}}
+                                <div class="no-content pa-10 tc no-able-content">
+                                    <p class="fs15">您还没有可用的礼券</p>
+                                    <i><img src="../src/images/no-favorite-bg.png" alt=""></i>
+                                </div>
+                                {{/if}}
+                            </script>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide tab-content-2">
+                        <div class="coupon-list coupon-disable-list">
+                            <script id="disable" type="text/html">
+                                {{if data.length !==0 }}
+                                {{ each data as value index}}
+                                <div class="pa-10 pr">
+                                    <img src="{{value.validImg}}" alt="" class="gray">
+                                    <section>
+                                        <p>有效日期:{{value.receiveDate}}-{{value.deadline}}</p>
+                                        <p>使用规则：{{value.description}}</p>
+                                    </section>
+                                    {{ if value.status == 1}}
+                                    <div class="pa overdue">
+                                        <img src="../src/images/miccenter/icon-used.png" alt="">
+                                    </div>
+                                    {{else}}
+                                    <div class="pa overdue">
+                                        <img src="../src/images/miccenter/past-sign.png" alt="">
+                                    </div>
+                                    {{/if}}
+                                </div>
+                                {{/each}}
+                                {{else}}
+                                <div class="no-content pa-10 tc no-disable-content">
+                                    <p class="fs15">您还没有已用/过期的礼券</p>
+                                    <i><img src="../src/images/no-favorite-bg.png" alt=""></i>
+                                </div>
+                                {{/if}}
+                            </script>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+</body>
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/swiper-3.3.1.min.js"></script>
+<script src="http://img.wishlist1314.com/iscroll.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="../src/js/util/common.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js"></script>
+<script src="../src/js/config.js"></script>
+<script src="../src/js/dbutil.js"></script>
+<script src="../src/js/webapp/miccenter/mygift.js"></script>
+
+</html>

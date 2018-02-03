@@ -1,0 +1,121 @@
+
+
+var memberId=getCookie("WISHLIST_MEMBER_ID");
+
+
+function init(){
+
+      if( localStorage.newNoticeNumber > localStorage.noticeNumber){
+           //判断有没有新消息
+
+            $("#news").show();
+         
+      }else{
+
+          $("#news").hide();
+      }
+
+        
+        $("#bell").click(function(){
+          
+          //点击进入系统消息。 
+
+            window.location.href="../detailed_account/message_notify.html";     
+
+        });
+
+       
+       $("#service").click(function(){
+          //点击客服进入
+           
+              if(memberId!=""){
+                //根据用户Id判断登没登陆
+
+                  window.location.href = "../detailed_account/kefu.html?phoneNum=" +  localStorage.userPhoneNum +"&sid=128324&entry=5&ref=link";
+             }else{
+
+                  window.location.href = "../order/bind_phone.html";
+
+             }
+
+
+       });
+
+      
+       
+  
+       update();
+
+};
+
+
+
+
+function update(){
+
+
+
+  myActivityInfo(null, true, function(result){
+
+       var listData=result.data;
+
+        if (result.code == 0) {
+
+            console.log(result)
+
+          $("#scr-main").html(template("template",{data:listData}));
+         
+
+
+        } else {
+
+          console.log(result.msg);
+        }
+
+  });
+
+
+};
+
+
+
+
+function detailClick(id) { 
+   // 点击商品跳转到对应商品详情页。
+    
+
+   window.location.href = "../wish/experience_activity_detail.html?id="+id;
+
+
+}
+
+
+/*============接口===============*/
+
+
+
+var myActivityInfo = function (param, async, succfun) {
+   //我的活动展示接口  (7.获取用户参与活动列表)
+
+    var testurl = "/api/micactivity";
+
+    var useurl = config.getUrl() + "getMemberActivities";
+    var url = testurl;
+
+
+    $.ajax({
+        type: config.getType(),
+        url: url,
+        dataType: config.getDataType(),
+        data: param,
+        async: async,
+        success: function (data, status) {
+            succfun(data);
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("Error " + textStatus);
+        }
+    });
+
+};

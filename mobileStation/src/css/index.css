@@ -1,0 +1,74 @@
+
+@font-face {
+    font-family: '313';
+
+    src:url(../icont/313.ttf) format('truetype');/* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ 
+}
+
+
+
+.swiper-container-box {
+  width: 100%;
+  height: 150px;
+ position:relative;
+  z-index:99;
+ background:#f8f8f8;
+ 
+}
+
+.carousel-img {
+  height: 150px;
+  width: 100%;
+}
+
+
+.index-box{
+
+   width:100%;
+   position: absolute;
+ 
+  
+   -webkit-overflow-scrolling : touch;
+
+   padding-bottom: 0.98rem;
+   
+}
+
+
+
+
+#nav-box2{
+
+  display: none;
+
+  position:fixed;
+  left:0;
+  top:0;
+
+}
+
+
+
+.date {
+    width: 100%;
+  height:28px;
+    text-align: center;
+    font-size: 13px;
+    color: #2d2d34;
+    font-family: "313";
+
+
+}
+
+
+
+.date i {
+
+    
+    margin:0 7.5px;
+
+}
+
+
+
+

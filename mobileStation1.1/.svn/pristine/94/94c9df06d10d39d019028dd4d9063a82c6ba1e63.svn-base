@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="x5-orientation" content="portrait">
+    <title>全部热门清单</title>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/reset.css">
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/icont/iconfont.css"/>
+    <link rel="stylesheet" href="../src/css/account_list.css"/>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/swiper-3.3.1.min.css">
+
+<body>
+<!--头部导航-->
+<header class="fixed-header white-bg" id="fixed-header pr">
+    <div class="filter-header pa">
+        <span class="icon iconfont" onclick="window.history.go(-1)">&#xe601;</span>
+    </div>
+    <div class="logo pr">
+        <img src="../src/images/logo_03.png" alt="" class="img-width-100">
+    </div>
+    <div class="info-notice pa">
+        <div class="pr">
+            <span class="inline-b"><img src="../src/images/icon-notice_03.png" alt="" class="img-width-100"></span>
+            <span class="inline-b"><img src="../src/images/icon-customServices_03.png" alt=""
+                                        class="img-width-100"></span>
+            <i class="infor-tip pa"></i>
+        </div>
+    </div>
+</header>
+<!--热门清单-->
+<div class="hot-list-box white-bg mt-10">
+    <div class="hot-list">
+        <script id="hot-item-second" type="text/html">
+            {{ each hotTopics as value index}}
+            <div class=" hot-list-bottom hot-list-item" data-id="{{value.id}}">
+                <p class="fs15 color-666 pt-15 pl-7">{{value.title}}</p>
+                <p class="fs12 color-999 mt-10 pl-7 mb-20">{{value.description}}</p>
+                <div class="swiper-container pl-7 hot-list-swiper{{index}}">
+                    <div class="swiper-wrapper">
+                        {{each value.recommendList as item}}
+                        <div class="swiper-slide hot-list-img">
+                            <img src="{{item.icon}}" class="img-width-100">
+                            <p class="color-red fs12 tc mt-15">￥{{item.price}}</p>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="total fs12 fr color-888 mt-20">共{{value.recommendList.length}}件商品</div>
+            </div>
+            {{/each}}
+        </script>
+    </div>
+</div>
+
+</body>
+
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/swiper-3.3.1.min.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js"></script>
+
+<script src="../src/js/config.js"></script>
+<script src="../src/js/util/global.js"></script>
+<script src="../src/js/util/header.js"></script>
+<!--<script src="../src/js/widget/layer/layer.js"></script>
+<script src="../src/js/widget/layer.m/mobel.js"></script>-->
+<script src="../src/js/webapp/account/jquery.lazyload.min.js"></script>
+<script src="../src/js/webapp/account/hot_list_collect.js"></script>
+</html>

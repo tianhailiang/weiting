@@ -1,0 +1,34 @@
+{
+	"code": "0",
+	"msg": "请求成功",
+	"data": [{
+		"iconForList": "http://img.wishlist1314.com/2016101021101430111.png",
+		"viewNum": 432,
+		
+		"keepNum": 9,
+		"subtitle": "国际时装周都爱不释手的几款婚纱",
+		"title": "【Denny Say】第一期：发现你的最美婚纱",
+		"editorName": "Mr.Denny",
+		"isView": "1",
+		
+		"isKeep": "0",
+		
+		"id": "8a9ac45057a986a90157aa0110fa006b",
+		"type": "8"
+	}, {
+		"iconForList": "http://img.wishlist1314.com/2016101016190496051.png",
+		"viewNum": 78,
+		
+		"keepNum": 11,
+		"subtitle": "工体周边的CHIC酒店",
+		"title": "【礼堂检验官】第一期： 左岸清幽，右岸浮华",
+		"editorName": "离离",
+		"isView": "1",
+	
+		"isKeep": "0",
+		
+		"id": "8a9ac45057a986a90157a9b5400a0044",
+		"type": "8"
+	}]
+}
+

@@ -1,0 +1,149 @@
+
+body{
+     -webkit-overflow-scrolling : touch;
+}
+
+
+.banner {
+    height: 152px;
+    font-size: .14rem;
+    overflow: hidden;
+}
+.banner img {
+    display: block;
+    width: 100%;
+    height: 152px;
+}
+.banner div {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    background: white;
+    opacity: 0.5;
+    bottom: 0;
+}
+.banner div p {
+    padding-left: 10px;
+}
+.shop-name {
+    top: -20px;
+    left: 10px;
+}
+.shop-descr {
+    font-size: .23rem;
+    padding: .35rem .56rem;
+    line-height: .4rem;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 10px;
+}
+.shop-info {
+    padding-bottom: 15px;
+}
+.picDescription {
+    margin-top: 1px;
+    font-size: .24rem;
+    padding-bottom: 30px;
+}
+.picDescription p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.picDescription p:nth-child(1){
+    height:20px;
+    line-height:20px;
+}
+.clothes-label {
+    display: inline-block;
+    width: 0.45rem;
+    background-color: #c59721;
+    color: #fff;
+    font-size: 0.15rem;
+    text-align: center;
+    line-height: 0.15rem;
+    padding: 0.05rem 0;
+    margin-bottom: 5px;
+    -webkit-border-radius: 2.5px;
+    border-radius: 2.5px;
+    margin-right: 0.1rem;
+}
+.border-radius-5 {
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+}
+.mr-5 {
+    margin-right: 5px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.mr-10{
+    margin-right: 10px;
+}
+.icon-look {
+    color: #c0c0c9;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+.icon-looked{
+    color: #e2cb90;
+}
+.icon-collected{
+    color: #e5a400;
+}
+.icon-praised{
+    color: #a84eda;
+}
+.user-operate >span{
+    margin-right: .75rem;
+}
+.order-box dl dt{
+    width: 105px;
+    height: 90px;
+    overflow: hidden;
+}
+.order-box dl dt img{
+    width:100%;
+    min-height: 90px;
+    overflow: hidden;
+}
+.fs15{
+    font-size: .3rem;
+}
+.color-2d2d{
+    color: #2d2d34;
+}
+.order-box dl{
+    display: -webkit-box;
+}
+.order-box dl dd p{
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    width: 4.2rem;
+    margin-top: 5px;
+}
+.no-content{
+    margin-top: 300px;
+}
+.no-content img{
+    display: block;
+    width:80px;
+    height:80px;
+}
+.no-content p{
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+

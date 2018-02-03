@@ -1,0 +1,27 @@
+{
+	"code":0,
+	"msg":"业务信息",
+	"data":{
+
+          
+
+    
+         "topImg":"../src/images/wish/wish_sele_1.png",
+         "headImg":"../src/images/wish/wish_sele_1.png",
+         "editor":"元婴",
+          "viewNum":"5721",
+          "keepNum":"2313",
+          "likeNum":"5123",
+          "title":"超IN婚纱试试穿？",
+          "subtitle":"国际最流行的婚纱你都试穿了吗",
+          "content":"<div class='act-essay' ><p >在网上看到最新款的婚纱眼馋却不知道在哪能买到？担忧代购了一圈穿上却不适合自己？ ＷＩＳＨＬＩＳＴ来帮你！本期我们准备时下最吸引眼球的婚纱供你体验，明星同款 </p><span>大牌设计，随你挑选！</span></div><ul class='article-ul'> <li> <img src='../src/images/wish/act-1.jpg'  /></li><li><img src='../src/images/wish/act-2.jpg'/></li></ul>",    
+           
+            "startDate":"8月10日",
+            "endDate":"8月30日",
+            "area":"北京无界.空间",
+            "activityId":"4028"           
+                          
+           
+	}
+
+}

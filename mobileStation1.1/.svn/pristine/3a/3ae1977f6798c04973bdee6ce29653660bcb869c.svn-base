@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>参与报名</title>
+    <link rel="stylesheet" href="http://img.wishlist1314.com/reset.css">
+    <link rel="stylesheet" href="../src/css/common.css"/>
+    <link rel="stylesheet" href="../src/css/wish.css"/>
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">   
+   
+</head>
+<body style="background:#f2f4f5;">
+
+      <header  class="header_box top_fixed" style="background:#fff;">
+            <ul>
+                <li class="first" id="btnBack">
+
+                       <i class="iconfont icon_back" >&#xe601;</i>
+
+                </li>
+
+
+              <li class="second">
+                
+                  <i class="ico-wish-title"></i>
+                  <span class="header_title">WISH LIST</span>
+
+              </li>
+
+              <li class="last">
+
+                       <i class="iconfont icon-service " >&#xe70d;</i>
+                
+                 
+              </li>
+
+            
+            </ul>
+
+  </header>
+<!-- ==我要报名== -->
+
+ <div class="act-myapply-box" >
+
+                  <div class="act-myapply-info" >
+                        请填写您的信息，以便接收确认短信
+
+                  </div>
+                 
+                  <ul class="myapply-ul">
+                    <li>
+                            <i>姓名</i>
+
+                            <input type="text" class="input-width" id="wishName" value="" placeholder="请输入您的姓名" />
+                          
+                    </li>
+                    <li> 
+
+                          <i>联系电话</i>
+                          <input type="text" class="input-width" id="phone"  value="" placeholder="默认已绑定的手机号" />
+                       
+                    </li>
+
+                  
+
+                  </ul>
+
+                  <div class="myapply-btn">
+                          <button class="btn-sure" id="btn-sure" disabled="disabled" onclick="sureClick()">
+                              确定保存
+                          </button>
+                  </div>
+
+     
+
+
+</div>
+
+</body>
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="../src/js/util/common.js"></script>
+<script src="../src/js/config.js"></script>
+
+<script src="../src/js/widget/layer/layer.js" ></script>
+
+<script src="../src/js/webapp/wish/join_apply.js"></script>
+
+
+</html>

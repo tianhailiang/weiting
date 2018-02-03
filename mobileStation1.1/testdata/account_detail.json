@@ -1,0 +1,46 @@
+{
+  "data": {
+    "id": "2334242",
+    "type": " 1",
+    "isKeep": 0,
+    "icon": "http://127.0.0.1:8080/src/images/icon-pinpai_10.png",
+    "name": "名称名称名称名称",
+    "price": "66666",
+    "introduce": "简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介",
+    "productNum": "acde4534ad",
+    "feature": ["aa", "bbbb","ccc"],
+"technology":[
+{
+"key": "颜色",
+"value": "红色"
+},
+{
+"key": "style",
+"value": "拖地纱"
+},{
+    "key": "颜色",
+    "value": "红色"
+  },
+  {
+    "key": "style",
+    "value": "拖地纱"
+  },{
+    "key": "颜色",
+    "value": "红色"
+  }
+],
+"detail": "细节",
+"commodity": {
+"id":"主键id",
+"iconForList": "../a.png",
+"name": "名称+",
+"price": "价格"
+},
+"brandIntroduction": "品牌介绍以文本形式",
+"IntroductionLease":"租赁定制介绍",
+"returnPolicy": "退货说明",
+"isSign": 0
+},
+"code": "0",
+"msg": "请求成功"
+}

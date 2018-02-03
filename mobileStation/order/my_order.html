@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>我的预约</title>
+   <link rel="stylesheet" href="http://img.wishlist1314.com/reset.css">
+    <link rel="stylesheet" href="../src/css/order.css"/>
+    <link rel="stylesheet" href="../src/css/common.css"/>
+    <link rel="stylesheet" href="../src/icont/iconfont.css"/>
+    <script src="http://img.wishlist1314.com/rem.js"></script>
+</head>
+<body>
+<div class="pa-10">
+    <div class="order-box">
+        <script id="order-list" type="text/html">
+            {{ each data as value}}
+            <dl class="mt-10 clearfix" data-orderid="{{value.id}}" data-ordertype="{{value.type}}">
+                <dt class="mr-10"><img src="{{value.img}}" alt=""/></dt>
+                <dd>
+                    <p class="fs15 mt-10 color-2d2d">{{value.name}}</p>
+                    <p class="fs12 color-7a7b mt-10">{{value.introduce}}</p>
+                    <p class="fs12 mt-10 color-2d2d">体验地址:{{value.location}}</p>
+                </dd>
+            </dl>
+            {{/each}}
+        </script>
+    </div>
+    <div class="no-content pa-10 tc hide">
+        <p class="fs15">还没有预约哦，请前往&nbsp;&nbsp;&nbsp;<a href="../detailed_account/account_list.html" class="fs12">“清单”</a>&nbsp;&nbsp;&nbsp;挑选你喜欢的商品吧</p>
+        <i><img src="../src/images/no-favorite-bg.png" alt=""></i>
+    </div>
+</div>
+</body>
+<script src="http://img.wishlist1314.com/jquery-2.2.1.min.js"></script>
+<script src="http://img.wishlist1314.com/swiper-3.3.1.min.js"></script>
+<script src="http://img.wishlist1314.com/fastclick.js"></script>
+<script src="../src/js/util/common.js"></script>
+<script src="http://img.wishlist1314.com/artTamplate.js"></script>
+<script src="../src/js/config.js"></script>
+<script src="../src/js/dbutil.js"></script>
+<script>
+    !function () {
+        // 获取预约列表
+        getMyOrderInfo(null, true, function (result) {
+            if (result.data == null) {
+                $(".no-content").show()
+            } else {
+                var orderStr = template("order-list", result);
+                $(".order-box").html(orderStr);
+                jumpOrderDetail();
+            }
+
+        });
+
+        //跳转预约详情
+        function jumpOrderDetail() {
+            $(".order-box >dl").click(function () {
+                var orderId = $(this).attr('data-orderid');
+                var orderType = $(this).attr('data-ordertype');
+                var url = "http://m.wishlist1314.com/wishlist_mobile/mobileStation/order/order_detail.html?id="+ orderId + "&type=" + orderType;
+                window.location.href = url;
+            })
+        }
+    }()
+
+</script>
+</html>
